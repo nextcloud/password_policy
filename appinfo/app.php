@@ -19,4 +19,20 @@
  *
  */
 
+use Symfony\Component\EventDispatcher\GenericEvent;
+
 \OCP\App::registerAdmin('password_policy', 'settings/settings-admin');
+
+$passwordPolicyConfig = new \OCA\Password_Policy\PasswordPolicyConfig(\OC::$server->getConfig());
+$validator = new \OCA\Password_Policy\PasswordValidator(
+	$passwordPolicyConfig,
+	\OC::$server->getL10N('password_policy')
+);
+
+$eventDispatcher = \OC::$server->getEventDispatcher();
+
+$eventDispatcher->addListener('OCP\PasswordPolicy::validate',
+	function(GenericEvent $event) use ($validator) {
+		$validator->validate($event->getSubject());
+	}
+);
