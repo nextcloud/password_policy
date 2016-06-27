@@ -19,8 +19,6 @@
  *
  */
 
-\OC_Util::checkAdminUser();
-
 $config = new \OCA\Password_Policy\PasswordPolicyConfig(\OC::$server->getConfig());
 
 $template = new OCP\Template('password_policy', 'settings-admin');
