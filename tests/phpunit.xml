@@ -14,6 +14,7 @@
 			<directory suffix=".php">../../password_policy</directory>
 			<exclude>
 				<directory suffix=".php">../../password_policy/l10n</directory>
+				<directory suffix=".php">../../password_policy/lists</directory>
 				<directory suffix=".php">../../password_polciy/tests</directory>
 			</exclude>
 		</whitelist>

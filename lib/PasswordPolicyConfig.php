@@ -57,6 +57,20 @@ class PasswordPolicyConfig {
 	}
 
 	/**
+	 * Whether non-common passwords should be enforced
+	 *
+	 * @return int
+	 */
+	public function getEnforceNonCommonPassword() {
+		$enforceNonCommonPasswords = $this->config->getAppValue(
+			'password_policy',
+			'enforceNonCommonPassword',
+			'1'
+		);
+		return $enforceNonCommonPasswords === '1';
+	}
+
+	/**
 	 * does the password need to contain upper and lower case characters
 	 *
 	 * @return bool

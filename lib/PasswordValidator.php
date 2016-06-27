@@ -52,6 +52,7 @@ class PasswordValidator {
 	 * @throws HintException
 	 */
 	public function validate($password) {
+		$this->checkCommonPasswords($password);
 		$this->checkPasswordLength($password);
 		$this->checkNumericCharacters($password);
 		$this->checkUpperLowerCase($password);
@@ -127,6 +128,27 @@ class PasswordValidator {
 				'Password need to contain at least one special character.'
 			);
 			throw new HintException($message, $message_t);
+		}
+	}
+
+
+	/**
+	 * Checks if password is within the 100,000 most used passwords.
+	 *
+	 * @param string $password
+	 * @throws HintException
+	 */
+	protected function checkCommonPasswords($password) {
+		$enforceNonCommonPassword = $this->config->getEnforceNonCommonPassword();
+		if($enforceNonCommonPassword) {
+			$commonPasswords = require_once __DIR__ . '/../lists/10_million_password_list_top_100000.php';
+			if (isset($commonPasswords[strtolower($password)])) {
+				$message = 'Password is within the 100,000 most common passwords. Please choose another one.';
+				$message_t = $this->l->t(
+					'Password is within the 100,000 most common passwords. Please choose another one.'
+				);
+				throw new HintException($message, $message_t);
+			}
 		}
 	}
 

@@ -36,6 +36,13 @@ var passwordPolicy = {
 };
 
 $(document).ready(function(){
+	$('#password-policy-enforce-non-common-password').click(function() {
+		var value = '0';
+		if (this.checked) {
+			value = '1';
+		}
+		OC.AppConfig.setValue('password_policy', 'enforceNonCommonPassword', value);
+	});
 	$('#password-policy-enforce-upper-lower-case').click(function() {
 		var value = '0';
 		if (this.checked) {
