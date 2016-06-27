@@ -52,7 +52,7 @@ class PasswordPolicyConfig {
 	 * @return int
 	 */
 	public function getMinLength() {
-		$minLength = $this->config->getAppValue('password_policy', 'minLength', '8');
+		$minLength = $this->config->getAppValue('password_policy', 'minLength', '10');
 		return (int)$minLength;
 	}
 
