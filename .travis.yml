@@ -24,7 +24,7 @@ before_install:
 
 script:
   # Test lint
-  - cd ../core/apps/password_policy
+  - cd ../server/apps/password_policy
   - find . -name \*.php -exec php -l "{}" \;
 
   # Run phpunit tests
