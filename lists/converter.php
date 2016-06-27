@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright Copyright (c) 2016 Bjoern Schiessle <bjoern@schiessle.org>
+ * @copyright Copyright (c) 2016 Lukas Reschke <lukas@statuscode.ch>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -19,16 +19,22 @@
  *
  */
 
-\OC_Util::checkAdminUser();
+if (php_sapi_name() !== 'cli') {
+	die('Script can only be invoked via CLI');
+}
 
-$config = new \OCA\Password_Policy\PasswordPolicyConfig(\OC::$server->getConfig());
+if(count($argv) !== 3) {
+	die('php converter.php 10_million_password_list_top_1000000.txt 10_million_password_list_top_1000000.php');
+}
 
-$template = new OCP\Template('password_policy', 'settings-admin');
+$passwords = [];
 
-$template->assign('minLength', $config->getMinLength());
-$template->assign('enforceNonCommonPassword', $config->getEnforceNonCommonPassword());
-$template->assign('enforceUpperLowerCase', $config->getEnforceUpperLowerCase());
-$template->assign('enforceNumericCharacters', $config->getEnforceNumericCharacters());
-$template->assign('enforceSpecialCharacters', $config->getEnforceSpecialCharacters());
+$separator = "\r\n";
 
-return $template->fetchPage();
+$file = fopen(__DIR__ . '/' . $argv[1], 'r');
+while(!feof($file)){
+	$passwords[trim(strtolower(fgets($file)))] = true;
+}
+fclose($file);
+
+file_put_contents($argv[2], "<?php\nreturn ".var_export($passwords, true).";");

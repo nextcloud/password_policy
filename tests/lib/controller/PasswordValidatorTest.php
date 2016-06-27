@@ -190,6 +190,27 @@ class PasswordValidatorTest extends TestCase {
 		$this->invokePrivate($instance, 'checkSpecialCharacters', [$password]);
 	}
 
+	/**
+	 * @expectedException \OC\HintException
+	 */
+	public function testCheckCommonPasswordsFail() {
+		$password = 'banana';
+
+		$this->config->expects($this->once())->method('getEnforceNonCommonPassword')->willReturn(true);
+		$instance = $this->getInstance();
+
+		$this->invokePrivate($instance, 'checkCommonPasswords', [$password]);
+	}
+
+	public function testCheckCommonPasswordsPass() {
+		$password = 'banana1038462';
+
+		$this->config->expects($this->once())->method('getEnforceNonCommonPassword')->willReturn(true);
+		$instance = $this->getInstance();
+
+		$this->invokePrivate($instance, 'checkCommonPasswords', [$password]);
+	}
+
 	public function testValidate() {
 
 		$password = 'password';
@@ -199,7 +220,8 @@ class PasswordValidatorTest extends TestCase {
 				'checkPasswordLength',
 				'checkUpperLowerCase',
 				'checkNumericCharacters',
-				'checkSpecialCharacters'
+				'checkSpecialCharacters',
+				'checkCommonPasswords',
 			]
 		);
 
@@ -207,6 +229,7 @@ class PasswordValidatorTest extends TestCase {
 		$instance->expects($this->once())->method('checkUpperLowerCase')->with($password);
 		$instance->expects($this->once())->method('checkNumericCharacters')->with($password);
 		$instance->expects($this->once())->method('checkSpecialCharacters')->with($password);
+		$instance->expects($this->once())->method('checkCommonPasswords')->with($password);
 
 		$instance->validate($password);
 	}

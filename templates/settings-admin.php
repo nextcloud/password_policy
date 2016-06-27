@@ -35,6 +35,11 @@ style('password_policy', 'settings-admin');
 			<input id="password-policy-min-length" type="text" value="<?php p($_['minLength']) ?>" />
 		</label>
 	</p>
+	<p id="enforceNonCommonPassword">
+		<input type="checkbox" name="password-policy-enforce-non-common-password" id="password-policy-enforce-non-common-password" class="checkbox"
+			   value="1" <?php if ($_['enforceNonCommonPassword']) print_unescaped('checked="checked"'); ?> />
+		<label for="password-policy-enforce-non-common-password"><?php p($l->t('Forbid common passwords'));?></label><br/>
+	</p>
 	<p id="enforceLowerUpperCase">
 		<input type="checkbox" name="password-policy-enforce-upper-lower-case" id="password-policy-enforce-upper-lower-case" class="checkbox"
 			   value="1" <?php if ($_['enforceUpperLowerCase']) print_unescaped('checked="checked"'); ?> />
@@ -50,5 +55,4 @@ style('password_policy', 'settings-admin');
 			   value="1" <?php if ($_['enforceSpecialCharacters']) print_unescaped('checked="checked"'); ?> />
 		<label for="password-policy-enforce-special-characters"><?php p($l->t('Enforce special characters'));?></label><br/>
 	</p>
-
 </div>
