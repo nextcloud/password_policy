@@ -55,6 +55,19 @@ class ConfigTest extends TestCase {
 			$this->instance->getMinLength()
 			);
 	}
+	/**
+	 * @dataProvider configTestData
+	 */
+	public function testGetEnforceNonCommonPassword($appConfigValue, $expected) {
+
+		$this->config->expects($this->once())->method('getAppValue')
+			->with('password_policy', 'enforceNonCommonPassword', '1')
+			->willReturn($appConfigValue);
+
+		$this->assertSame($expected,
+			$this->instance->getEnforceNonCommonPassword()
+		);
+	}
 
 	/**
 	 * @dataProvider configTestData

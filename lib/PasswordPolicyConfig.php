@@ -59,7 +59,7 @@ class PasswordPolicyConfig {
 	/**
 	 * Whether non-common passwords should be enforced
 	 *
-	 * @return int
+	 * @return bool
 	 */
 	public function getEnforceNonCommonPassword() {
 		$enforceNonCommonPasswords = $this->config->getAppValue(
