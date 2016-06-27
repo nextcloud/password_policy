@@ -95,7 +95,7 @@ class PasswordValidator {
 	}
 
 	/**
-	 * check if password contaon at least one numeric character
+	 * check if password contain at least one numeric character
 	 *
 	 * @param string $password
 	 * @throws HintException
