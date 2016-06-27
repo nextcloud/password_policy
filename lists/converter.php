@@ -23,18 +23,25 @@ if (php_sapi_name() !== 'cli') {
 	die('Script can only be invoked via CLI');
 }
 
-if(count($argv) !== 3) {
-	die('php converter.php 10_million_password_list_top_1000000.txt 10_million_password_list_top_1000000.php');
+if(count($argv) !== 2) {
+	die('php converter.php 10_million_password_list_top_10000000.txt');
 }
 
-$passwords = [];
-
+$passwordLengthArray = [];
 $separator = "\r\n";
 
+$maxPasswordFileLength = 15;
+$count = [];
 $file = fopen(__DIR__ . '/' . $argv[1], 'r');
 while(!feof($file)){
-	$passwords[trim(strtolower(fgets($file)))] = true;
+	$password = trim(strtolower(fgets($file)));
+	if($password !== '') {
+		$count[strlen($password)] = isset($count[strlen($password)]) ? $count[strlen($password)] + 1 : 1;
+		$passwordLengthArray[strlen($password)][$password] = true;
+	}
 }
 fclose($file);
 
-file_put_contents($argv[2], "<?php\nreturn ".var_export($passwords, true).";");
+foreach($passwordLengthArray as $length => $passwords) {
+	file_put_contents(__DIR__ . '/list-'.$length.'.php', "<?php\nreturn ".var_export($passwords, true).";");
+}

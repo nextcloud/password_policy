@@ -23,11 +23,8 @@ before_install:
   - bash ./before_install.sh password_policy $CORE_BRANCH $DB
 
 script:
-  # Test if app is compliant
-  - cd ../server
-  - ./occ app:check-code password_policy
-
   # Test lint
+  - cd ../server
   - cd apps/password_policy
   - find . -name \*.php -exec php -l "{}" \;
 

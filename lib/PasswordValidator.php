@@ -141,13 +141,16 @@ class PasswordValidator {
 	protected function checkCommonPasswords($password) {
 		$enforceNonCommonPassword = $this->config->getEnforceNonCommonPassword();
 		if($enforceNonCommonPassword) {
-			$commonPasswords = require_once __DIR__ . '/../lists/10_million_password_list_top_100000.php';
-			if (isset($commonPasswords[strtolower($password)])) {
-				$message = 'Password is within the 100,000 most common passwords. Please choose another one.';
-				$message_t = $this->l->t(
-					'Password is within the 100,000 most common passwords. Please choose another one.'
-				);
-				throw new HintException($message, $message_t);
+			$passwordFile = __DIR__ . '/../lists/list-'.strlen($password).'.php';
+			if(file_exists($passwordFile)) {
+				$commonPasswords = require_once $passwordFile;
+				if (isset($commonPasswords[strtolower($password)])) {
+					$message = 'Password is within the 1,000,000 most common passwords. Please choose another one.';
+					$message_t = $this->l->t(
+						'Password is within the 1,000,000 most common passwords. Please choose another one.'
+					);
+					throw new HintException($message, $message_t);
+				}
 			}
 		}
 	}
