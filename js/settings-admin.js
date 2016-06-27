@@ -60,10 +60,10 @@ $(document).ready(function(){
 
 	$('#password-policy-min-length').keyup(function (e) {
 		if (e.keyCode == 13) {
-			passwordPolicy.saveMinLength($(this).val())
+			passwordPolicy.saveMinLength($(this).val());
 		}
 	}).focusout(function (e) {
-		passwordPolicy.saveMinLength($(this).val())
+		passwordPolicy.saveMinLength($(this).val());
 	});
 
 });
