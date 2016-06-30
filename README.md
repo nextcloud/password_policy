@@ -10,7 +10,7 @@ By default the app enforces a minimum password length of 10 characters and check
 
 Currently the app checks passwords for public link shares and for user passwords if the database backend is used.
 
-You can easily check passwords for your own app by addind following code to your app:
+You can easily check passwords for your own app by adding following code to your app:
 
 ````
 $eventDispatcher = \OC::$server->getEventDispatcher();
