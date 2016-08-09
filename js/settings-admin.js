@@ -22,15 +22,27 @@ var passwordPolicy = {
 
 	saveMinLength: function(minLength) {
 		OC.msg.startSaving('#password-policy-settings-msg');
-		OC.AppConfig.setValue('password_policy', 'minLength', minLength);
-		OC.msg.finishedSaving('#password-policy-settings-msg',
-			{
-				'status' : 'success',
-				'data' : {
-					'message' : OC.L10N.translate('password_policy', 'Saved')
+
+		if (/^\d+$/.test(minLength)) {
+			OC.AppConfig.setValue('password_policy', 'minLength', minLength);
+			OC.msg.finishedSaving('#password-policy-settings-msg',
+				{
+					'status': 'success',
+					'data': {
+						'message': OC.L10N.translate('password_policy', 'Saved')
+					}
 				}
-			}
-		);
+			);
+		} else {
+			OC.msg.finishedSaving('#password-policy-settings-msg',
+				{
+					'status': 'failure',
+					'data': {
+						'message': OC.L10N.translate('password_policy', 'Minimal length has to be a non negative number')
+					}
+				}
+			);
+		}
 	}
 
 };
