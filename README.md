@@ -1,8 +1,8 @@
-# password_policy
+# Password policy
 
 This app enables the the admin to define certain rules for passwords, for example the minimum length of a password.
 
-Once the app is enabled you find the "Password Policy" settings in the admin section:
+Once the app is enabled you find the "Password policy" settings in the admin section:
 
 ![](https://github.com/nextcloud/screenshots/blob/master/password_policy/password_policy_settings.png)
 
