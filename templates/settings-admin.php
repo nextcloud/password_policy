@@ -32,7 +32,7 @@ style('password_policy', 'settings-admin');
 	<p>
 		<label>
 			<span><?php p($l->t('Minimal length')) ?></span>
-			<input id="password-policy-min-length" type="text" value="<?php p($_['minLength']) ?>" />
+			<input id="password-policy-min-length" type="number" value="<?php p($_['minLength']) ?>" />
 		</label>
 	</p>
 	<p id="enforceNonCommonPassword">
