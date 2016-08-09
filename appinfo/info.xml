@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <info>
 	<id>password_policy</id>
-	<name>Password Policy</name>
+	<name>Password policy</name>
 	<namespace>Password_Policy</namespace>
 	<description>
 		Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length
