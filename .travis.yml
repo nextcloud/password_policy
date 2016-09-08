@@ -1,5 +1,4 @@
 language: php
-
 php:
   - 5.4
   - 5.5
@@ -9,37 +8,54 @@ php:
 env:
   global:
     - CORE_BRANCH=stable10
+    - APP_NAME=password_policy
   matrix:
     - DB=sqlite
-    
+
 branches:
   only:
     - master
     - /^stable\d+(\.\d+)?$/
 
-sudo: true
 before_install:
   - wget https://raw.githubusercontent.com/nextcloud/travis_ci/master/before_install.sh
-  - bash ./before_install.sh password_policy $CORE_BRANCH $DB
+  - bash ./before_install.sh $APP_NAME $CORE_BRANCH $DB
+
+  # Add some output debugging information
+  - cd ../server
+  - ./occ check
+  - ./occ status
+  - ./occ app:list
 
 script:
-  # Test lint
-  - cd ../server
-  - cd apps/password_policy
-  - find . -name \*.php -exec php -l "{}" \;
+  - cd apps/$APP_NAME/
+
+  # Test the app
+  - sh -c "if [ '$CODECHECK' = '1' ]; then find . -name \*.php -exec php -l \"{}\" \;; fi"
+  - cd ../../
+  - sh -c "if [ '$CODECHECK' = '1' ]; then ./occ app:check-code $APP_NAME -c private -c strong-comparison; fi"
+  - sh -c "if [ '$CODECHECK' = '2' ]; then ./occ app:check-code $APP_NAME -c deprecation; fi"
+  - cd apps/$APP_NAME/
 
   # Run phpunit tests
-  - cd tests
-  - phpunit --configuration phpunit.xml
+  - cd tests/
+  - sh -c "if [ '$CODECHECK' != '1' -a '$CODECHECK' != '2' ]; then phpunit --configuration phpunit.xml; fi"
 
   # Create coverage report
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover clover.xml
-  
+  - sh -c "if [ '$CODECHECK' != '1' -a '$CODECHECK' != '2' ]; then wget https://scrutinizer-ci.com/ocular.phar; fi"
+  - sh -c "if [ '$CODECHECK' != '1' -a '$CODECHECK' != '2' ]; then php ocular.phar code-coverage:upload --format=php-clover clover.xml; fi"
+  - cd ../
+
 matrix:
   include:
     - php: 5.4
       env: DB=mysql
     - php: 5.4
       env: DB=pgsql
+    - php: 5.4
+      env: DB=mysql;CODECHECK=1
+    - php: 5.4
+      env: DB=mysql;CODECHECK=2
+  allow_failures:
+    - env: DB=mysql;CODECHECK=2
   fast_finish: true
