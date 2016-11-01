@@ -1,10 +1,10 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password need to be at least %s characters long" : "Пароль должен быть меньше на %s символов",
+    "Password need to be at least %s characters long" : "Длина пароля должна быть как минимум %s символов",
     "Password need to contain at least one lower case character and one upper case character." : "В пароле должны присутствовать и прописные и строчные буквы ",
-    "Password need to contain at least one numeric character." : "Пароль должен содержать хотя бы один числовой символ",
-    "Password need to contain at least one special character." : "Пароль должен содержать хотя бы один спецсимвол",
+    "Password need to contain at least one numeric character." : "Пароль должен содержать хотя бы одну цифру.",
+    "Password need to contain at least one special character." : "Пароль должен содержать хотя бы один спецсимвол.",
     "Password is within the 1,000,000 most common passwords. Please choose another one." : "Пароль находится в списке 1.000.000 наиболее простых паролей. Пожалуйста введите другой пароль.",
     "Password policy" : "Правила создания паролей",
     "Minimal length" : "Минимальная длина",
