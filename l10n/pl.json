@@ -5,6 +5,7 @@
     "Password need to contain at least one special character." : "Hasło musi zawierać co najmniej jeden znak specjalny.",
     "Password policy" : "Polityka haseł",
     "Minimal length" : "Minimalna długość",
+    "Forbid common passwords" : "Zabroń takich samych haseł",
     "Enforce upper and lower case characters" : "Wymuś wielkie i małe litery",
     "Enforce numeric characters" : "Wymuś znaki numeryczne",
     "Enforce special characters" : "Wymuś znaki specjalne"

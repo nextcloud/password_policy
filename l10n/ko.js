@@ -5,6 +5,7 @@ OC.L10N.register(
     "Password need to contain at least one lower case character and one upper case character." : "비밀번호는 적어도 하나의 소문자와 대문자를 포함해야합니다",
     "Password need to contain at least one numeric character." : "암호는 적어도 하나의 숫자를 포함하여야 합니다",
     "Password need to contain at least one special character." : "암호는 적어도 하나의 특수 문자를 포함하여야 합니다",
+    "Password is within the 1,000,000 most common passwords. Please choose another one." : "암호가 가장 흔한 1,000,000개의 암호에 해당됩니다. 다른 암호를 선택하십시오.",
     "Password policy" : "암호 정책",
     "Minimal length" : "최소 길이",
     "Forbid common passwords" : "일반적인 암호 금지",
