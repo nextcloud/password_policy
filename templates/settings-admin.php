@@ -20,7 +20,7 @@
  */
 
 /** @var array $_ */
-/** @var OC_L10N $l */
+/** @var \OCP\IL10N $l */
 script('password_policy', 'settings-admin');
 style('password_policy', 'settings-admin');
 ?>
