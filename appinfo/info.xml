@@ -10,7 +10,7 @@
 	<author>Bjoern Schiessle</author>
 	<version>1.1.0</version>
 	<dependencies>
-		<owncloud min-version="9.1" max-version="9.2" />
+		<nextcloud min-version="10" max-version="11" />
 	</dependencies>
 	<default_enable/>
 </info>
