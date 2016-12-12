@@ -1,6 +1,6 @@
 { "translations": {
     "Password need to be at least %s characters long" : "Le mot de passe doit être au moins de %s caractères",
-    "Password need to contain at least one lower case character and one upper case character." : "Le mot de passe doit contenir au moins un caractère en minuscules et un caractère en majuscules.",
+    "Password need to contain at least one lower case character and one upper case character." : "Le mot de passe doit contenir au moins un caractère en minuscule et un caractère en majuscule.",
     "Password need to contain at least one numeric character." : "Le mot de passe doit contenir au moins un chiffre.",
     "Password need to contain at least one special character." : "Le mot de passe doit contenir au moins un caractère spécial.",
     "Password is within the 1,000,000 most common passwords. Please choose another one." : "Le mot de passe se trouve parmi les 1 000 000 mots de passe les plus courants. Merci d'en choisir un autre.",
