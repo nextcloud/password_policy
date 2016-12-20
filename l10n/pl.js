@@ -5,6 +5,7 @@ OC.L10N.register(
     "Password need to contain at least one lower case character and one upper case character." : "Hasło musi zawierać co najmniej jedną małą oraz wielką literę.",
     "Password need to contain at least one numeric character." : "Hasło musi zawierać co najmniej jeden znak numeryczny.",
     "Password need to contain at least one special character." : "Hasło musi zawierać co najmniej jeden znak specjalny.",
+    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Hasło jest jednym z 1.000.000 najczęstszych haseł. Proszę wybrać inne.",
     "Password policy" : "Polityka haseł",
     "Minimal length" : "Minimalna długość",
     "Forbid common passwords" : "Zabroń takich samych haseł",
