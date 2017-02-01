@@ -8,6 +8,7 @@ OC.L10N.register(
     "Password is within the 1,000,000 most common passwords. Please choose another one." : "Parole ir vien no 1,000,000 izplatītākajām parolēm. Lūdzu, izvēlieties citu.",
     "Password policy" : "Paroles politika",
     "Minimal length" : "Minimālais garums",
+    "Forbid common passwords" : "Aizliegt kopīgas paroles",
     "Enforce upper and lower case characters" : "Uzspiest lielos un mazos burtus",
     "Enforce numeric characters" : "Uzspiest skaitļus",
     "Enforce special characters" : "Uzspiest speciālos simbolus"
