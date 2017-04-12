@@ -29,7 +29,7 @@ use Test\TestCase;
 
 class ConfigTest extends TestCase {
 
-	/** @var  IConfig | \PHPUnit_Framework_MockObject_MockObject */
+	/** @var  IConfig|\PHPUnit_Framework_MockObject_MockObject */
 	private $config;
 
 	/** @var  PasswordPolicyConfig */
@@ -38,7 +38,7 @@ class ConfigTest extends TestCase {
 	public function setUp() {
 		parent::setUp();
 
-		$this->config = $this->getMock('OCP\IConfig');
+		$this->config = $this->createMock(IConfig::class);
 		$this->instance = new PasswordPolicyConfig($this->config);
 	}
 
@@ -48,7 +48,7 @@ class ConfigTest extends TestCase {
 		$expected = 42;
 
 		$this->config->expects($this->once())->method('getAppValue')
-			->with('password_policy', 'minLength', '6')
+			->with('password_policy', 'minLength', '8')
 			->willReturn($appConfigValue);
 
 		$this->assertSame($expected,

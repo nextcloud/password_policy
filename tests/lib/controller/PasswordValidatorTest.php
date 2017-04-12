@@ -31,18 +31,17 @@ use Test\TestCase;
 
 class PasswordValidatorTest extends TestCase {
 
-	/** @var  PasswordPolicyConfig | \PHPUnit_Framework_MockObject_MockObject */
+	/** @var  PasswordPolicyConfig|\PHPUnit_Framework_MockObject_MockObject */
 	private $config;
 
-	/** @var  IL10N | \PHPUnit_Framework_MockObject_MockObject */
+	/** @var  IL10N|\PHPUnit_Framework_MockObject_MockObject */
 	private $l10n;
 
 	public function setUp() {
 		parent::setUp();
 
-		$this->l10n = $this->getMock('OCP\IL10N');
-		$this->config = $this->getMockBuilder('OCA\Password_Policy\PasswordPolicyConfig')
-			->disableOriginalConstructor()->getMock();
+		$this->l10n = $this->createMock(IL10N::class);
+		$this->config = $this->createMock(PasswordPolicyConfig::class);
 	}
 
 	/**
