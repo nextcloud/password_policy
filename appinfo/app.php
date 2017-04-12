@@ -21,8 +21,6 @@
 
 use Symfony\Component\EventDispatcher\GenericEvent;
 
-\OCP\App::registerAdmin('password_policy', 'settings/settings-admin');
-
 $passwordPolicyConfig = new \OCA\Password_Policy\PasswordPolicyConfig(\OC::$server->getConfig());
 $validator = new \OCA\Password_Policy\PasswordValidator(
 	$passwordPolicyConfig,
