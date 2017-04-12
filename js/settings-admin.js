@@ -24,7 +24,7 @@ var passwordPolicy = {
 		OC.msg.startSaving('#password-policy-settings-msg');
 
 		if (/^\d+$/.test(minLength)) {
-			OC.AppConfig.setValue('password_policy', 'minLength', minLength);
+			OCP.AppConfig.setValue('password_policy', 'minLength', minLength);
 			OC.msg.finishedSaving('#password-policy-settings-msg',
 				{
 					'status': 'success',
@@ -53,35 +53,35 @@ $(document).ready(function(){
 		if (this.checked) {
 			value = '1';
 		}
-		OC.AppConfig.setValue('password_policy', 'enforceNonCommonPassword', value);
+		OCP.AppConfig.setValue('password_policy', 'enforceNonCommonPassword', value);
 	});
 	$('#password-policy-enforce-upper-lower-case').click(function() {
 		var value = '0';
 		if (this.checked) {
 			value = '1';
 		}
-		OC.AppConfig.setValue('password_policy', 'enforceUpperLowerCase', value);
+		OCP.AppConfig.setValue('password_policy', 'enforceUpperLowerCase', value);
 	});
 	$('#password-policy-enforce-numeric-characters').click(function() {
 		var value = '0';
 		if (this.checked) {
 			value = '1';
 		}
-		OC.AppConfig.setValue('password_policy', 'enforceNumericCharacters', value);
+		OCP.AppConfig.setValue('password_policy', 'enforceNumericCharacters', value);
 	});
 	$('#password-policy-enforce-special-characters').click(function() {
 		var value = '0';
 		if (this.checked) {
 			value = '1';
 		}
-		OC.AppConfig.setValue('password_policy', 'enforceSpecialCharacters', value);
+		OCP.AppConfig.setValue('password_policy', 'enforceSpecialCharacters', value);
 	});
 
 	$('#password-policy-min-length').keyup(function (e) {
-		if (e.keyCode == 13) {
+		if (e.keyCode === 13) {
 			passwordPolicy.saveMinLength($(this).val());
 		}
-	}).focusout(function (e) {
+	}).focusout(function () {
 		passwordPolicy.saveMinLength($(this).val());
 	});
 
