@@ -23,6 +23,7 @@
 
 namespace OCA\Password_Policy\AppInfo;
 
+use OCA\Password_Policy\Capabilities;
 use OCA\Password_Policy\PasswordValidator;
 use OCP\AppFramework\App;
 use Symfony\Component\EventDispatcher\GenericEvent;
@@ -34,6 +35,10 @@ class Application extends App {
 
 		$server = $container->getServer();
 		$eventDispatcher = $server->getEventDispatcher();
+
+		/** register capabilities */
+		$container->registerCapability(Capabilities::class);
+
 
 		$eventDispatcher->addListener('OCP\PasswordPolicy::validate',
 			function(GenericEvent $event) use ($container) {
