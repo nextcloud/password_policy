@@ -7,7 +7,7 @@
     "Password policy" : "Criterio della password",
     "Minimal length" : "Lunghezza minima",
     "Forbid common passwords" : "Vieta le password comuni",
-    "Enforce upper and lower case characters" : "Forse i caratteri maiuscoli e minuscoli",
+    "Enforce upper and lower case characters" : "Forza i caratteri maiuscoli e minuscoli",
     "Enforce numeric characters" : "Forza i caratteri numerici",
     "Enforce special characters" : "Forza i caratteri speciali"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
