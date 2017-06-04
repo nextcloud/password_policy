@@ -7,8 +7,8 @@
     "Password policy" : "パスワードポリシー",
     "Minimal length" : "最小の長さ",
     "Forbid common passwords" : "一般的なパスワードを禁止",
-    "Enforce upper and lower case characters" : "大文字と小文字を強制",
-    "Enforce numeric characters" : "数字を強制",
-    "Enforce special characters" : "特別な文字を強制"
+    "Enforce upper and lower case characters" : "大文字と小文字を必ず含む",
+    "Enforce numeric characters" : "数字を必ず含む",
+    "Enforce special characters" : "記号を必ず含む"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
