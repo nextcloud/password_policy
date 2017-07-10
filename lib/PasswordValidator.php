@@ -70,7 +70,7 @@ class PasswordValidator {
 		if(strlen($password) < $minLength) {
 			$message = 'Password need to be at least ' . $minLength . ' characters long';
 			$message_t = $this->l->t(
-				'Password need to be at least %s characters long', [$minLength]
+				'Password needs to be at least %s characters long', [$minLength]
 			);
 			throw new HintException($message, $message_t);
 		}
@@ -88,7 +88,7 @@ class PasswordValidator {
 			if (preg_match('/^(?=.*[a-z])(?=.*[A-Z]).+$/', $password) !== 1) {
 				$message = 'Password need to contain at least one lower case character and one upper case character.';
 				$message_t = $this->l->t(
-					'Password need to contain at least one lower case character and one upper case character.'
+					'Password needs to contain at least one lower and one upper case character.'
 				);
 				throw new HintException($message, $message_t);
 			}
@@ -107,7 +107,7 @@ class PasswordValidator {
 			if (preg_match('/^(?=.*\d).+$/', $password) !== 1) {
 				$message = 'Password need to contain at least one numeric character';
 				$message_t = $this->l->t(
-					'Password need to contain at least one numeric character.'
+					'Password needs to contain at least one numeric character.'
 				);
 				throw new HintException($message, $message_t);
 			}
@@ -125,7 +125,7 @@ class PasswordValidator {
 		if($enforceSpecialCharacters && ctype_alnum($password)) {
 			$message = 'Password need to contain at least one special character.';
 			$message_t = $this->l->t(
-				'Password need to contain at least one special character.'
+				'Password needs to contain at least one special character.'
 			);
 			throw new HintException($message, $message_t);
 		}
@@ -147,7 +147,7 @@ class PasswordValidator {
 				if (isset($commonPasswords[strtolower($password)])) {
 					$message = 'Password is within the 1,000,000 most common passwords. Please choose another one.';
 					$message_t = $this->l->t(
-						'Password is within the 1,000,000 most common passwords. Please choose another one.'
+						'Password is within the 1,000,000 most common passwords. Please make it unique.'
 					);
 					throw new HintException($message, $message_t);
 				}
