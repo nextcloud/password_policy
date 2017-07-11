@@ -68,7 +68,7 @@ class PasswordValidator {
 	protected function checkPasswordLength($password) {
 		$minLength = $this->config->getMinLength();
 		if(strlen($password) < $minLength) {
-			$message = 'Password need to be at least ' . $minLength . ' characters long';
+			$message = 'Password needs to be at least ' . $minLength . ' characters long';
 			$message_t = $this->l->t(
 				'Password needs to be at least %s characters long', [$minLength]
 			);
@@ -86,7 +86,7 @@ class PasswordValidator {
 		$enforceUpperLowerCase = $this->config->getEnforceUpperLowerCase();
 		if($enforceUpperLowerCase) {
 			if (preg_match('/^(?=.*[a-z])(?=.*[A-Z]).+$/', $password) !== 1) {
-				$message = 'Password need to contain at least one lower case character and one upper case character.';
+				$message = 'Password needs to contain at least one lower and one upper case character.';
 				$message_t = $this->l->t(
 					'Password needs to contain at least one lower and one upper case character.'
 				);
@@ -105,7 +105,7 @@ class PasswordValidator {
 		$enforceNumericCharacters = $this->config->getEnforceNumericCharacters();
 		if($enforceNumericCharacters) {
 			if (preg_match('/^(?=.*\d).+$/', $password) !== 1) {
-				$message = 'Password need to contain at least one numeric character';
+				$message = 'Password needs to contain at least one numeric character';
 				$message_t = $this->l->t(
 					'Password needs to contain at least one numeric character.'
 				);
@@ -123,7 +123,7 @@ class PasswordValidator {
 	protected function checkSpecialCharacters($password) {
 		$enforceSpecialCharacters = $this->config->getEnforceSpecialCharacters();
 		if($enforceSpecialCharacters && ctype_alnum($password)) {
-			$message = 'Password need to contain at least one special character.';
+			$message = 'Password needs to contain at least one special character.';
 			$message_t = $this->l->t(
 				'Password needs to contain at least one special character.'
 			);
@@ -145,9 +145,9 @@ class PasswordValidator {
 			if(file_exists($passwordFile)) {
 				$commonPasswords = require_once $passwordFile;
 				if (isset($commonPasswords[strtolower($password)])) {
-					$message = 'Password is within the 1,000,000 most common passwords. Please choose another one.';
+					$message = 'Password is among the 1,000,000 most common ones. Please make it unique.';
 					$message_t = $this->l->t(
-						'Password is within the 1,000,000 most common passwords. Please make it unique.'
+						'Password is among the 1,000,000 most common ones. Please make it unique.'
 					);
 					throw new HintException($message, $message_t);
 				}
