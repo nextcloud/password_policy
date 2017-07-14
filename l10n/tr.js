@@ -1,6 +1,11 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password needs to be at least %s characters long" : "Parola en az %s karakter uzunluğunda olmalıdır",
+    "Password needs to contain at least one lower and one upper case character." : "Parolada en az bir küçük ve bir büyük harf bulunmalıdır.",
+    "Password needs to contain at least one numeric character." : "Parolada en az bir rakam bulunmalıdır.",
+    "Password needs to contain at least one special character." : "Parolada en az bir simge karakteri bulunmalıdır.",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "Yazdığınız parola sık kullanılan 1.000.000 parola içinde. Lütfen eşsiz bir parola seçin.",
     "Password policy" : "Parola ilkesi",
     "Minimal length" : "En az uzunluk",
     "Forbid common passwords" : "Sık kullanılan parolalar kullanılamasın",

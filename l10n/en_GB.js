@@ -1,6 +1,11 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password needs to be at least %s characters long" : "Password needs to be at least %s characters long",
+    "Password needs to contain at least one lower and one upper case character." : "Password needs to contain at least one lower and one upper case character.",
+    "Password needs to contain at least one numeric character." : "Password needs to contain at least one numeric character.",
+    "Password needs to contain at least one special character." : "Password needs to contain at least one special character.",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "Password is among the 1,000,000 most common ones. Please make it unique.",
     "Password policy" : "Password policy",
     "Minimal length" : "Minimal length",
     "Forbid common passwords" : "Forbid common passwords",
