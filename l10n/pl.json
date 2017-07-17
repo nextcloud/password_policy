@@ -1,4 +1,9 @@
 { "translations": {
+    "Password needs to be at least %s characters long" : "Hasło musi zawierać co najmniej %s znaków",
+    "Password needs to contain at least one lower and one upper case character." : "Hasło musi zawierać co najmniej jedną małą oraz wielką literę.",
+    "Password needs to contain at least one numeric character." : "Hasło musi zawierać co najmniej jeden znak numeryczny.",
+    "Password needs to contain at least one special character." : "Hasło musi zawierać co najmniej jeden znak specjalny.",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "Hasło jest jednym z 1.000.000 najczęściej używanych haseł. Proszę wybrać inne.",
     "Password policy" : "Polityka haseł",
     "Minimal length" : "Minimalna długość",
     "Forbid common passwords" : "Zabroń takich samych haseł",
