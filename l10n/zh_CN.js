@@ -1,6 +1,11 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password needs to be at least %s characters long" : "密码长度需要至少%s位",
+    "Password needs to contain at least one lower and one upper case character." : "密码至少需要包含一个小写字母和一个大写字母",
+    "Password needs to contain at least one numeric character." : "密码至少需要包含一个数字",
+    "Password needs to contain at least one special character." : "密码需要包含至少一个特殊字符",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "该密码在100万个常见密码中，请选择其他密码",
     "Password policy" : "密码规则",
     "Minimal length" : "最小长度",
     "Forbid common passwords" : "禁止普通密码",
