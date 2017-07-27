@@ -20,3 +20,4 @@
  */
 
 $app = new \OCA\Password_Policy\AppInfo\Application();
+$app->register();

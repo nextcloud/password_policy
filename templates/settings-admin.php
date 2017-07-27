@@ -55,4 +55,27 @@ style('password_policy', 'settings-admin');
 			   value="1" <?php if ($_['enforceSpecialCharacters']) print_unescaped('checked="checked"'); ?> />
 		<label for="password-policy-enforce-special-characters"><?php p($l->t('Enforce special characters'));?></label><br/>
 	</p>
+
+	<p>
+		<label>
+			<span><?php p($l->t('Period of password validity (days, 0 = disable)')) ?></span>
+			<input id="password-policy-expiration-days" type="number" value="<?php p($_['expirationDays']) ?>" />
+		</label>
+	</p>
+	<p>
+		<label>
+			<span><?php p($l->t('Send notification mail before expiration (days, 0 = disable)')) ?></span>
+			<input id="password-policy-expiration-mail-days-before" type="number" value="<?php p($_['expirationMailDaysBefore']) ?>" />
+		</label>
+	</p>
+	<p>
+		<label>
+			<span><?php p($l->t('Nextcloud host')) ?></span>
+			<input id="password-policy-nextcloud-host" type="text" value="<?php p($_['nextcloudHost']) ?>" />
+		</label>
+	</p>
+	<p>
+		<label for="exclude-groups"><?php p($l->t('Exclude groups from password expiration')) ?></label>
+		<input type="hidden" name="exclude-groups" class="exclude-groups" value="<?php p($_['excludeGroups']) ?>" style="width: 320px;" />
+	</p>
 </div>

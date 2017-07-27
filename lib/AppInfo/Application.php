@@ -25,11 +25,14 @@ namespace OCA\Password_Policy\AppInfo;
 
 use OCA\Password_Policy\Capabilities;
 use OCA\Password_Policy\PasswordValidator;
+use OCA\Password_Policy\Hook\UserHooks;
 use OCP\AppFramework\App;
 use Symfony\Component\EventDispatcher\GenericEvent;
+use OCP\Util;
 
 class Application extends App {
-	public function __construct() {
+
+    public function __construct() {
 		parent::__construct('password_policy');
 		$container = $this->getContainer();
 
@@ -39,7 +42,6 @@ class Application extends App {
 		/** register capabilities */
 		$container->registerCapability(Capabilities::class);
 
-
 		$eventDispatcher->addListener('OCP\PasswordPolicy::validate',
 			function(GenericEvent $event) use ($container) {
 				/** @var PasswordValidator $validator */
@@ -48,4 +50,20 @@ class Application extends App {
 			}
 		);
 	}
+
+	public function register() {
+        $this->registerHooks();
+        $this->registerBackgroundJobs();
+    }
+
+    public function registerHooks() {
+        Util::connectHook('OC_User', 'post_setPassword', UserHooks::class, 'afterPasswordSet');
+        Util::connectHook('OC_User', 'post_deleteUser', UserHooks::class, 'afterUserDeleted');
+    }
+
+    public function registerBackgroundJobs() {
+        $jobList = $this->getContainer()->getServer()->getJobList();
+        $jobList->add('OCA\Password_Policy\BackgroundJobs\NotifyUserTask');
+        $jobList->add('OCA\Password_Policy\BackgroundJobs\DisableUserTask');
+    }
 }

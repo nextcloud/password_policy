@@ -17,4 +17,8 @@
 	<settings>
 		<admin>OCA\Password_Policy\Settings</admin>
 	</settings>
+
+	<background-jobs>
+		<job>OCA\Password_Policy\BackgroundJobs\NotifyUserTask</job>
+	</background-jobs>
 </info>

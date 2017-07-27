@@ -16,6 +16,14 @@ OC.L10N.register(
     "Password need to contain at least one lower case character and one upper case character." : "Password need to contain at least one lower case character and one upper case character.",
     "Password need to contain at least one numeric character." : "Password need to contain at least one numeric character.",
     "Password need to contain at least one special character." : "Password need to contain at least one special character.",
-    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Password is within the 1,000,000 most common passwords. Please choose another one."
-},
+    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Password is within the 1,000,000 most common passwords. Please choose another one.",
+    "Period of password validity (days, 0 = disable)" : "Period of password validity (days, 0 = disable)",
+    "Send notification mail before expiration (days, 0 = disable)" : "Send notification mail before expiration (days, 0 = disable)",
+    "Your password is about to expire." : "Your password is about to expire.",
+    "Hello %s," : "Hello %s,",
+	"Your password is about to expire on %s." : "Your password is about to expire on %s.",
+	"Please login to your account and change your password:" : "Please login to your account and change your password:",
+	"Nextcloud host" : "Nextcloud host",
+    "Exclude groups from password expiration" : "Exclude groups from password expiration"
+    },
 "nplurals=2; plural=(n != 1);");

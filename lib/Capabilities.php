@@ -49,6 +49,10 @@ class Capabilities implements ICapability {
 					'enforceNumericCharacters' => $this->config->getEnforceNumericCharacters(),
 					'enforceSpecialCharacters' => $this->config->getEnforceSpecialCharacters(),
 					'enforceUpperLowerCase' => $this->config->getEnforceUpperLowerCase(),
+                    'expirationDays' => $this->config->getExpirationDays(),
+                    'expirationMailDaysBefore' => $this->config->getExpirationMailDaysBefore(),
+                    'nextcloudHost' => $this->config->getNextcloudHost(),
+                    'excludeGroups' => $this->config->getExcludeGroups(),
 				]
 		];
 	}

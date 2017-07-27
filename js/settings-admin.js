@@ -20,11 +20,11 @@
 
 var passwordPolicy = {
 
-	saveMinLength: function(minLength) {
+	saveIntegerValue: function(value, valueName) {
 		OC.msg.startSaving('#password-policy-settings-msg');
 
-		if (/^\d+$/.test(minLength)) {
-			OCP.AppConfig.setValue('password_policy', 'minLength', minLength);
+		if (/^\d+$/.test(value)) {
+			OCP.AppConfig.setValue('password_policy', valueName, value);
 			OC.msg.finishedSaving('#password-policy-settings-msg',
 				{
 					'status': 'success',
@@ -38,11 +38,25 @@ var passwordPolicy = {
 				{
 					'status': 'failure',
 					'data': {
-						'message': OC.L10N.translate('password_policy', 'Minimal length has to be a non negative number')
+						'message': OC.L10N.translate('password_policy', 'Minimal value has to be a non negative number')
 					}
 				}
 			);
 		}
+	},
+
+	saveTextValue: function(value, valueName) {
+		OC.msg.startSaving('#password-policy-settings-msg');
+
+		OCP.AppConfig.setValue('password_policy', valueName, value);
+		OC.msg.finishedSaving('#password-policy-settings-msg',
+			{
+				'status': 'success',
+				'data': {
+					'message': OC.L10N.translate('password_policy', 'Saved')
+				}
+			}
+		);
 	}
 
 };
@@ -79,10 +93,45 @@ $(document).ready(function(){
 
 	$('#password-policy-min-length').keyup(function (e) {
 		if (e.keyCode === 13) {
-			passwordPolicy.saveMinLength($(this).val());
+			passwordPolicy.saveIntegerValue($(this).val(), 'minLength');
 		}
 	}).focusout(function () {
-		passwordPolicy.saveMinLength($(this).val());
+		passwordPolicy.saveIntegerValue($(this).val(), 'minLength');
+	});
+
+	$('#password-policy-expiration-days').keyup(function (e) {
+		if (e.keyCode === 13) {
+			passwordPolicy.saveIntegerValue($(this).val(), 'expirationDays');
+		}
+	}).focusout(function () {
+		passwordPolicy.saveIntegerValue($(this).val(), 'expirationDays');
+	});
+
+	$('#password-policy-expiration-mail-days-before').keyup(function (e) {
+		if (e.keyCode === 13) {
+			passwordPolicy.saveIntegerValue($(this).val(), 'expirationMailDaysBefore');
+		}
+	}).focusout(function () {
+		passwordPolicy.saveIntegerValue($(this).val(), 'expirationMailDaysBefore');
+	});
+
+	$('#password-policy-nextcloud-host').keyup(function (e) {
+		if (e.keyCode === 13) {
+			passwordPolicy.saveTextValue($(this).val(), 'nextcloudHost');
+		}
+	}).focusout(function () {
+		passwordPolicy.saveTextValue($(this).val(), 'nextcloudHost');
+	});
+
+	//excluded groups
+	var $groups = $('#password-policy').find('.exclude-groups');
+
+	OC.Settings.setupGroupsSelect($groups);
+
+	$groups.change(function(event) {
+		var groups = event.val || ['admin'];
+		groups = JSON.stringify(groups);
+		OCP.AppConfig.setValue('password_policy', 'excludeGroups', groups);
 	});
 
 });

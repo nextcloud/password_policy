@@ -16,6 +16,14 @@ OC.L10N.register(
     "Password need to contain at least one lower case character and one upper case character." : "Das Passwort muss mindestens einen Klein- und einen Großbuchstaben beinhalten.",
     "Password need to contain at least one numeric character." : "Das Passwort muss mindestens eine Zahl beinhalten.",
     "Password need to contain at least one special character." : "Das Passwort muss mindestens ein Sonderzeichen enthalten.",
-    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Das Passwort zählt zu den 1.000.000 am häufigsten verwendeten Passwörtern. Bitte wählen Sie ein anderes Passwort."
+    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Das Passwort zählt zu den 1.000.000 am häufigsten verwendeten Passwörtern. Bitte wählen Sie ein anderes Passwort.",
+    "Period of password validity (days, 0 = disable)" : "Gültigkeit des Passworts (Tage, 0 = deaktiviert)",
+    "Send notification mail before expiration (days, 0 = disable)" : "Hinweis-Email vor Ablauf verschicken (Tage, 0 = deaktiviert)",
+    "Your password is about to expire." : "Ihr Passwort läuft ab.",
+    "Hello %s," : "Hallo %s,",
+    "Your password is about to expire on %s." : "Ihr Passwort läuft am %s. ab",
+    "Please login to your account and change your password:" : "Bitte melden Sie sich in Ihrem Account an und ändern Sie ihr Passwort:",
+    "Nextcloud host" : "Nextcloud host",
+	"Exclude groups from password expiration" : "Ablaufende Passwörter deaktivieren für Gruppe"
 },
 "nplurals=2; plural=(n != 1);");

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<database>
+	<name>*dbname*</name>
+	<create>true</create>
+	<overwrite>false</overwrite>
+	<charset>utf8</charset>
+	<table>
+		<name>*dbprefix*password_policy_expiration</name>
+		<declaration>
+			<field>
+				<name>uid</name>
+				<type>text</type>
+				<default></default>
+				<notnull>true</notnull>
+				<length>64</length>
+			</field>
+			<field>
+				<name>last_changed</name>
+				<type>integer</type>
+				<notnull>true</notnull>
+			</field>
+			<field>
+				<name>notification_sent</name>
+				<type>integer</type>
+				<notnull>true</notnull>
+			</field>
+
+			<index>
+				<name>uid_index</name>
+				<primary>true</primary>
+				<unique>true</unique>
+				<field>
+					<name>uid</name>
+					<sorting>ascending</sorting>
+				</field>
+			</index>
+		</declaration>
+	</table>
+</database>

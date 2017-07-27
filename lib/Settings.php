@@ -43,6 +43,10 @@ class Settings implements ISettings {
 			'enforceUpperLowerCase' => $this->config->getEnforceUpperLowerCase(),
 			'enforceNumericCharacters' => $this->config->getEnforceNumericCharacters(),
 			'enforceSpecialCharacters' => $this->config->getEnforceSpecialCharacters(),
+            'expirationDays' => $this->config->getExpirationDays(),
+            'expirationMailDaysBefore' => $this->config->getExpirationMailDaysBefore(),
+            'nextcloudHost' => $this->config->getNextcloudHost(),
+            'excludeGroups' => $this->config->getExcludeGroups(),
 		]);
 
 		return $response;
