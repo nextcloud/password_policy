@@ -1,6 +1,11 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password needs to be at least %s characters long" : "Lykilorðið verður að innihalda að minnsta kosti %s stafi",
+    "Password needs to contain at least one lower and one upper case character." : "Lykilorðið verður að innihalda að minnsta kosti einn lágstaf og einn hástaf.",
+    "Password needs to contain at least one numeric character." : "Lykilorðið verður að innihalda að minnsta kosti einn tölustaf.",
+    "Password needs to contain at least one special character." : "Lykilorðið verður að innihalda að minnsta kosti eitt sértákn.",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "Lykilorðið er á meðal 1.000.000 algengustu lykilorðanna. Endilega veldu eitthvað annað.",
     "Password policy" : "Lykilorðastefna",
     "Minimal length" : "Lágmarkslengd",
     "Forbid common passwords" : "Banna algeng lykilorð",
