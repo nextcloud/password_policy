@@ -1,6 +1,11 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password needs to be at least %s characters long" : "La password deve essere composta di almeno %s caratteri",
+    "Password needs to contain at least one lower and one upper case character." : "La password deve contenere almeno un carattere minuscolo e uno maiuscolo.",
+    "Password needs to contain at least one numeric character." : "La password deve contenere almeno un carattere numerico.",
+    "Password needs to contain at least one special character." : "La password deve contenere almeno un carattere speciale.",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "La password è presente in un elenco di 1.000.000 di password comuni. Rendila unica.",
     "Password policy" : "Criterio della password",
     "Minimal length" : "Lunghezza minima",
     "Forbid common passwords" : "Vieta le password comuni",
