@@ -1,6 +1,11 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password needs to be at least %s characters long" : "パスワードは %s 文字以上である必要があります",
+    "Password needs to contain at least one lower and one upper case character." : "パスワードは1つ以上の大文字と小文字をそれぞれ含む必要があります",
+    "Password needs to contain at least one numeric character." : "パスワードは1つ以上の数字を含む必要があります",
+    "Password needs to contain at least one special character." : "パスワードは1つ以上の特別な文字を含む必要があります",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "パスワードは最も一般的なパスワード1,000,000個の中に入っています。もっと違うものにしてください。",
     "Password policy" : "パスワードポリシー",
     "Minimal length" : "最小の長さ",
     "Forbid common passwords" : "一般的なパスワードを禁止",
