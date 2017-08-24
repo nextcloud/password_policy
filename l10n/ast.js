@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password needs to be at least %s characters long" : "La contrasea precisar ser de polo menos %s caráuteres de llargor",
     "Password policy" : "Política de contraseñes",
     "Minimal length" : "Llargor mínimu",
     "Forbid common passwords" : "Contraseñes prohibíes comunes",
