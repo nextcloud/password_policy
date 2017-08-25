@@ -1,4 +1,7 @@
 { "translations": {
+    "Password needs to contain at least one lower and one upper case character." : "A jelszónak legalább egy kisbetűt és legalább egy nagybetűt kell tartalmaznia.",
+    "Password needs to contain at least one numeric character." : "A jelszónak legalább egy numerikus karaktert kell tartalmaznia.",
+    "Password needs to contain at least one special character." : "A jelszónak legalább egy speciális karaktert kell tartalmaznia.",
     "Password policy" : "Jelszó házirend",
     "Minimal length" : "Minimális hossz",
     "Forbid common passwords" : "Egyszerű jelszavak tiltása",
