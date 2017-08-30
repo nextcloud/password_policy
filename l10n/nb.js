@@ -7,7 +7,7 @@ OC.L10N.register(
     "Password needs to contain at least one special character." : "Passordet må inneholde minst ett spesialtegn.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Passordet er blant de 1 000 000 mest brukte passordene. Gjør det unikt.",
     "Password policy" : "Passordregler",
-    "Minimal length" : "Minste lenge",
+    "Minimal length" : "Minste lengde",
     "Forbid common passwords" : "Forby mest brukte passord",
     "Enforce upper and lower case characters" : "Tving stor og liten bokstav",
     "Enforce numeric characters" : "Tving numerisk tegn",
