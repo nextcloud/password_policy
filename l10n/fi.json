@@ -1,4 +1,9 @@
 { "translations": {
+    "Password needs to be at least %s characters long" : "Salasanan tulee olle vähintään %s merkkiä pitkä",
+    "Password needs to contain at least one lower and one upper case character." : "Salasanan tulee sisältää vähintään yksi pieni ja yksi iso kirjain.",
+    "Password needs to contain at least one numeric character." : "Salasanassa tulee olla vähintään yksi numeerinen merkki.",
+    "Password needs to contain at least one special character." : "Salasanassa tulee olla vähintään yksi erikoismerkki.",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "Salasana on yksi miljoonasta yleisimmästä. Tee salasanasta erikoisempi.",
     "Password policy" : "Salasanakäytäntö",
     "Minimal length" : "Minimipituus",
     "Forbid common passwords" : "Kiellä yleisimmät salasanat",
