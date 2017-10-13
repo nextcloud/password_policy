@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password needs to be at least %s characters long" : "Geslo mora biti najmanj %s dolgih znakov",
     "Password policy" : "Politika gesel",
     "Minimal length" : "Najmanjša dolžina",
     "Forbid common passwords" : "Prepreči pogosta gesla",
