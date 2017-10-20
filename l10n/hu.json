@@ -1,7 +1,9 @@
 { "translations": {
+    "Password needs to be at least %s characters long" : "A jelszó legalább %s karakter hosszú kell legyen",
     "Password needs to contain at least one lower and one upper case character." : "A jelszónak legalább egy kisbetűt és legalább egy nagybetűt kell tartalmaznia.",
     "Password needs to contain at least one numeric character." : "A jelszónak legalább egy numerikus karaktert kell tartalmaznia.",
     "Password needs to contain at least one special character." : "A jelszónak legalább egy speciális karaktert kell tartalmaznia.",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "A jelszó az 1.000.000 leggyakoribb között van. Kérlek tedd egyedivé.",
     "Password policy" : "Jelszó házirend",
     "Minimal length" : "Minimális hossz",
     "Forbid common passwords" : "Egyszerű jelszavak tiltása",
