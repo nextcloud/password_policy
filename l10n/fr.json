@@ -1,5 +1,5 @@
 { "translations": {
-    "Password needs to be at least %s characters long" : "Le mot de passe doit être au moins de %s caractères",
+    "Password needs to be at least %s characters long" : "Le mot de passe doit comporter au moins %s caractères",
     "Password needs to contain at least one lower and one upper case character." : "Le mot de passe doit contenir au moins un caractère en minuscule et un caractère en majuscule.",
     "Password needs to contain at least one numeric character." : "Le mot de passe doit contenir au moins un chiffre.",
     "Password needs to contain at least one special character." : "Le mot de passe doit contenir au moins un caractère spécial.",
@@ -10,7 +10,7 @@
     "Enforce upper and lower case characters" : "Imposer des caractères en majuscules et en minuscules",
     "Enforce numeric characters" : "Imposer des chiffres",
     "Enforce special characters" : "Imposer des caractères spéciaux",
-    "Password need to be at least %s characters long" : "Le mot de passe doit être au moins de %s caractères",
+    "Password need to be at least %s characters long" : "Le mot de passe doit comporter au moins %s caractères",
     "Password need to contain at least one lower case character and one upper case character." : "Le mot de passe doit contenir au moins un caractère en minuscule et un caractère en majuscule.",
     "Password need to contain at least one numeric character." : "Le mot de passe doit contenir au moins un chiffre.",
     "Password need to contain at least one special character." : "Le mot de passe doit contenir au moins un caractère spécial.",
