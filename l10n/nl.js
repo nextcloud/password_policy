@@ -16,6 +16,6 @@ OC.L10N.register(
     "Password need to contain at least one lower case character and one upper case character." : "Het wachtwoord moet minimaal één kleine letter en minimaal één hoofdletter bevatten.",
     "Password need to contain at least one numeric character." : "Het wachtwoord moet minimaal één cijfer bevatten.",
     "Password need to contain at least one special character." : "Het wachtwoord moet minimaal één speciaal teken bevatten.",
-    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Het wachtwoord behoort tot de 1.000.000 meest gebruikte wachtwoorden. Kies een ander,"
+    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Het wachtwoord behoort tot de 1.000.000 meest gebruikte wachtwoorden. Kies een andere."
 },
 "nplurals=2; plural=(n != 1);");
