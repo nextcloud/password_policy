@@ -4,6 +4,6 @@ lang_map = bg_BG: bg, cs_CZ: cs, fi_FI: fi, hu_HU: hu, nb_NO: nb, sk_SK: sk, th_
 
 [nextcloud.password_policy]
 file_filter = <lang>/password_policy.po
-source_file = templates/password_policy.pot
+source_file = translationfiles/templates/password_policy.pot
 source_lang = en
 type = PO
