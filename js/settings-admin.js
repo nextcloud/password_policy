@@ -76,6 +76,13 @@ $(document).ready(function(){
 		}
 		OCP.AppConfig.setValue('password_policy', 'enforceSpecialCharacters', value);
 	});
+	$('#password-policy-enforce-have-i-been-pwned').click(function() {
+		var value = '0';
+		if (this.checked) {
+			value = '1';
+		}
+		OCP.AppConfig.setValue('password_policy', 'enforceHaveIBeenPwned', value);
+	});
 
 	$('#password-policy-min-length').keyup(function (e) {
 		if (e.keyCode === 13) {
