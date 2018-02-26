@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2017 Bjoern Schiessle <bjoern@schiessle.org>
  *
@@ -40,7 +41,7 @@ class Capabilities implements ICapability {
 	 * @return array Array containing the apps capabilities
 	 * @since 12.0.0
 	 */
-	public function getCapabilities() {
+	public function getCapabilities(): array {
 		return [
 			'password_policy' =>
 				[
