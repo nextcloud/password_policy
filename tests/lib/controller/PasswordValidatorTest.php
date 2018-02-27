@@ -26,6 +26,7 @@ namespace OCA\Password_Policy\Tests;
 use OC\HintException;
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCA\Password_Policy\PasswordValidator;
+use OCP\Http\Client\IClientService;
 use OCP\IL10N;
 use Test\TestCase;
 
@@ -37,11 +38,15 @@ class PasswordValidatorTest extends TestCase {
 	/** @var  IL10N|\PHPUnit_Framework_MockObject_MockObject */
 	private $l10n;
 
+	/** @var IClientService|\PHPUnit_Framework_MockObject_MockObject */
+	private $clientService;
+
 	public function setUp() {
 		parent::setUp();
 
 		$this->l10n = $this->createMock(IL10N::class);
 		$this->config = $this->createMock(PasswordPolicyConfig::class);
+		$this->clientService = $this->createMock(IClientService::class);
 	}
 
 	/**
@@ -49,8 +54,8 @@ class PasswordValidatorTest extends TestCase {
 	 * @return PasswordValidator | \PHPUnit_Framework_MockObject_MockObject
 	 */
 	private function getInstance($mockedMethods = []) {
-		$passwordValidator = $this->getMockBuilder('OCA\Password_Policy\PasswordValidator')
-			->setConstructorArgs([$this->config, $this->l10n])
+		$passwordValidator = $this->getMockBuilder(PasswordValidator::class)
+			->setConstructorArgs([$this->config, $this->l10n, $this->clientService])
 			->setMethods($mockedMethods)->getMock();
 
 		return $passwordValidator;

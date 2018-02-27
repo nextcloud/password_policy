@@ -154,4 +154,26 @@ class PasswordPolicyConfig {
 		$this->config->setAppValue('password_policy', 'enforceSpecialCharacters', $value);
 	}
 
+	/**
+	 * Do we check against the HaveIBeenPwned passwords
+	 *
+	 * @return bool
+	 */
+	public function getEnforceHaveIBeenPwned() {
+		return $this->config->getAppValue(
+			'password_policy',
+			'enforceHaveIBeenPwned',
+			'0'
+		) === '1';
+	}
+
+	/**
+	 * Enforce checking against haveibeenpwned.com
+	 *
+	 * @param bool $enforceHaveIBeenPwned
+	 */
+	public function setEnforceHaveIBeenPwned($enforceHaveIBeenPwned) {
+		$this->config->setAppValue('password_policy', 'enforceHaveIBeenPwned', $enforceHaveIBeenPwned ? '1' : '0');
+	}
+
 }

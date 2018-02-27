@@ -43,6 +43,7 @@ class Settings implements ISettings {
 			'enforceUpperLowerCase' => $this->config->getEnforceUpperLowerCase(),
 			'enforceNumericCharacters' => $this->config->getEnforceNumericCharacters(),
 			'enforceSpecialCharacters' => $this->config->getEnforceSpecialCharacters(),
+			'enforceHaveIBeenPwned' => $this->config->getEnforceHaveIBeenPwned(),
 		]);
 
 		return $response;
