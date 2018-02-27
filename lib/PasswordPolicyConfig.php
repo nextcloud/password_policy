@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2016 Bjoern Schiessle <bjoern@schiessle.org>
  *
@@ -51,7 +52,7 @@ class PasswordPolicyConfig {
 	 *
 	 * @return int
 	 */
-	public function getMinLength() {
+	public function getMinLength(): int {
 		$minLength = $this->config->getAppValue('password_policy', 'minLength', '8');
 		return (int)$minLength;
 	}
@@ -61,7 +62,7 @@ class PasswordPolicyConfig {
 	 *
 	 * @return bool
 	 */
-	public function getEnforceNonCommonPassword() {
+	public function getEnforceNonCommonPassword(): bool {
 		$enforceNonCommonPasswords = $this->config->getAppValue(
 			'password_policy',
 			'enforceNonCommonPassword',
@@ -75,7 +76,7 @@ class PasswordPolicyConfig {
 	 *
 	 * @return bool
 	 */
-	public function getEnforceUpperLowerCase() {
+	public function getEnforceUpperLowerCase(): bool {
 		$enforceUpperLowerCase = $this->config->getAppValue(
 			'password_policy',
 			'enforceUpperLowerCase',
@@ -90,7 +91,7 @@ class PasswordPolicyConfig {
 	 *
 	 * @return bool
 	 */
-	public function getEnforceNumericCharacters() {
+	public function getEnforceNumericCharacters(): bool {
 		$enforceNumericCharacters = $this->config->getAppValue(
 			'password_policy',
 			'enforceNumericCharacters',
@@ -105,7 +106,7 @@ class PasswordPolicyConfig {
 	 *
 	 * @return bool
 	 */
-	public function getEnforceSpecialCharacters() {
+	public function getEnforceSpecialCharacters(): bool {
 		$enforceSpecialCharacters = $this->config->getAppValue(
 			'password_policy',
 			'enforceSpecialCharacters',
@@ -120,7 +121,7 @@ class PasswordPolicyConfig {
 	 *
 	 * @param int $minLength
 	 */
-	public function setMinLength($minLength) {
+	public function setMinLength(int $minLength) {
 		$this->config->setAppValue('password_policy', 'minLength', $minLength);
 	}
 
@@ -129,7 +130,7 @@ class PasswordPolicyConfig {
 	 *
 	 * @param bool $enforceUpperLowerCase
 	 */
-	public function setEnforceUpperLowerCase($enforceUpperLowerCase) {
+	public function setEnforceUpperLowerCase(bool $enforceUpperLowerCase) {
 		$value = $enforceUpperLowerCase === true ? '1' : '0';
 		$this->config->setAppValue('password_policy', 'enforceUpperLowerCase', $value);
 	}
@@ -139,7 +140,7 @@ class PasswordPolicyConfig {
 	 *
 	 * @param bool $enforceNumericCharacters
 	 */
-	public function setEnforceNumericCharacters($enforceNumericCharacters) {
+	public function setEnforceNumericCharacters(bool $enforceNumericCharacters) {
 		$value = $enforceNumericCharacters === true ? '1' : '0';
 		$this->config->setAppValue('password_policy', 'enforceNumericCharacters', $value);
 	}
@@ -149,7 +150,7 @@ class PasswordPolicyConfig {
 	 *
 	 * @param bool $enforceSpecialCharacters
 	 */
-	public function setEnforceSpecialCharacters($enforceSpecialCharacters) {
+	public function setEnforceSpecialCharacters(bool $enforceSpecialCharacters) {
 		$value = $enforceSpecialCharacters === true ? '1' : '0';
 		$this->config->setAppValue('password_policy', 'enforceSpecialCharacters', $value);
 	}
@@ -159,7 +160,7 @@ class PasswordPolicyConfig {
 	 *
 	 * @return bool
 	 */
-	public function getEnforceHaveIBeenPwned() {
+	public function getEnforceHaveIBeenPwned(): bool {
 		return $this->config->getAppValue(
 			'password_policy',
 			'enforceHaveIBeenPwned',
@@ -172,7 +173,7 @@ class PasswordPolicyConfig {
 	 *
 	 * @param bool $enforceHaveIBeenPwned
 	 */
-	public function setEnforceHaveIBeenPwned($enforceHaveIBeenPwned) {
+	public function setEnforceHaveIBeenPwned(bool $enforceHaveIBeenPwned) {
 		$this->config->setAppValue('password_policy', 'enforceHaveIBeenPwned', $enforceHaveIBeenPwned ? '1' : '0');
 	}
 

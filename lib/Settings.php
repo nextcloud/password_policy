@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * @copyright 2017, Roeland Jago Douma <roeland@famdouma.nl>
  *
@@ -35,7 +36,7 @@ class Settings implements ISettings {
 		$this->config = $config;
 	}
 
-	public function getForm() {
+	public function getForm(): TemplateResponse {
 		$response = new TemplateResponse('password_policy', 'settings-admin');
 		$response->setParams([
 			'minLength' => $this->config->getMinLength(),
@@ -49,11 +50,11 @@ class Settings implements ISettings {
 		return $response;
 	}
 
-	public function getSection() {
+	public function getSection(): string {
 		return 'security';
 	}
 
-	public function getPriority() {
+	public function getPriority(): int {
 		return 50;
 	}
 }
