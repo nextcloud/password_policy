@@ -6,6 +6,7 @@ OC.L10N.register(
     "Password needs to contain at least one numeric character." : "La contraseña necesita contener al menos un número.",
     "Password needs to contain at least one special character." : "La contraseña necesita contener al menos un caracter especial.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "La contraseña es una entre las 1,000,000 más comunes. Por favor hazla más única. ",
+    "Password is present in compromised password list. Please choose a different password." : "La contraseña está presente en el listado de contraseñas comprometidas. Por favor selecciona una contraseña diferente.",
     "Password policy" : "Política de contraseñas",
     "Minimal length" : "Longitud mínima",
     "Forbid common passwords" : "Restringir contraseñas comunes",
