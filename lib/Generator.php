@@ -91,6 +91,9 @@ class Generator {
 			}
 		}
 
+		// Shuffle string so the order is random
+		$password = str_shuffle($password);
+
 		return $password;
 	}
 }
