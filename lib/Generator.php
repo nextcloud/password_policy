@@ -46,14 +46,18 @@ class Generator {
 		$this->random = $random;
 	}
 
+	/**
+	 * @return string
+	 * @throws HintException
+	 */
 	public function generate(): string {
-
 		$lenght = $this->config->getMinLength();
 
 		$password = '';
 		$chars = '';
 
-		while (true) {
+		$found = false;
+		for ($i = 0; $i < 10; $i++) {
 			if ($this->config->getEnforceUpperLowerCase()) {
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_UPPER);
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_LOWER);
@@ -81,6 +85,7 @@ class Generator {
 
 			try {
 				$this->validator->validate($password);
+				$found = true;
 				break;
 			} catch (HintException $e) {
 				/*
@@ -89,6 +94,10 @@ class Generator {
 				 */
 				$lenght = $this->config->getMinLength();
 			}
+		}
+
+		if ($found === false) {
+			throw new HintException('Could not generate a valid password');
 		}
 
 		// Shuffle string so the order is random
