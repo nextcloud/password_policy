@@ -25,6 +25,7 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\AppInfo;
 
 use OCA\Password_Policy\Capabilities;
+use OCA\Password_Policy\Generator;
 use OCA\Password_Policy\PasswordValidator;
 use OCP\AppFramework\App;
 use Symfony\Component\EventDispatcher\GenericEvent;
@@ -46,6 +47,13 @@ class Application extends App {
 				/** @var PasswordValidator $validator */
 				$validator = $container->query(PasswordValidator::class);
 				$validator->validate($event->getSubject());
+			}
+		);
+		$eventDispatcher->addListener('OCP\PasswordPolicy::generate',
+			function(GenericEvent $event) use ($container) {
+				/** @var Generator */
+				$generator = $container->query(Generator::class);
+				$event->setArgument('password', $generator->generate());
 			}
 		);
 	}
