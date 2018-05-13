@@ -11,11 +11,11 @@
     "Enforce upper and lower case characters" : "Parolada büyük ve küçük harfler bulunsun",
     "Enforce numeric characters" : "Parolada rakam bulunsun",
     "Enforce special characters" : "Parolada simge karakterleri bulunsun",
-    "Check password against the list of breached passwords from haveibeenpwnd.com" : "Parolalar haveibeenpwnd.com üzerindeki bilinen parolalar listesi ile denetlensin",
     "Password need to be at least %s characters long" : "Parola en az %s karakter uzunluğunda olmalıdır",
     "Password need to contain at least one lower case character and one upper case character." : "Parolada en az bir küçük ve bir büyük harf bulunmalıdır.",
     "Password need to contain at least one numeric character." : "Parolada en az bir rakam bulunmalıdır.",
     "Password need to contain at least one special character." : "Parolada en az bir simge karakteri bulunmalıdır.",
-    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Yazdığınız parola sık kullanılan 1.000.000 parola içinde. Lütfen daha karmaşık bir parola seçin."
+    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Yazdığınız parola sık kullanılan 1.000.000 parola içinde. Lütfen daha karmaşık bir parola seçin.",
+    "Check password against the list of breached passwords from haveibeenpwnd.com" : "Parolalar haveibeenpwnd.com üzerindeki bilinen parolalar listesi ile denetlensin"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

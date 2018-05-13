@@ -11,11 +11,11 @@
     "Enforce upper and lower case characters" : "Nagybetűs és kisbetűs karakterek megkövetelése",
     "Enforce numeric characters" : "Numerikus karakterek megkövetelése",
     "Enforce special characters" : "Speciális karakterek megkövetelése",
-    "Check password against the list of breached passwords from haveibeenpwnd.com" : "Ellenőrizze a jelszavak feltörtségét a haveibeenpwnd.com segítségével.",
     "Password need to be at least %s characters long" : "A jelszónak legalább %s karakter hosszúságúnak kell lennie",
     "Password need to contain at least one lower case character and one upper case character." : "A jelszónak legalább egy kisbetűt és legalább egy nagybetűt kell tartalmaznia.",
     "Password need to contain at least one numeric character." : "A jelszónak legalább egy numerikus karaktert kell tartalmaznia.",
     "Password need to contain at least one special character." : "A jelszónak legalább egy speciális karaktert kell tartalmaznia.",
-    "Password is within the 1,000,000 most common passwords. Please choose another one." : "A jelszó benne van az 1.000.000 leggyakoribb jelszó listájában. Kérlek válassz másikat."
+    "Password is within the 1,000,000 most common passwords. Please choose another one." : "A jelszó benne van az 1.000.000 leggyakoribb jelszó listájában. Kérlek válassz másikat.",
+    "Check password against the list of breached passwords from haveibeenpwnd.com" : "Ellenőrizze a jelszavak feltörtségét a haveibeenpwnd.com segítségével."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
