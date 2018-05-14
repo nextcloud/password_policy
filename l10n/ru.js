@@ -13,6 +13,7 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Требовать наличия в пароле и прописных и строчных букв ",
     "Enforce numeric characters" : "Требовать наличия в пароле цифр",
     "Enforce special characters" : "Требовать наличия в пароле спецсимволов",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Проверка пароля относительно списка слабых паролей из базы сайта haveibeenpwnd.com",
     "Password need to be at least %s characters long" : "Длина пароля должна быть как минимум %s символов",
     "Password need to contain at least one lower case character and one upper case character." : "В пароле должны присутствовать и прописные и строчные буквы ",
     "Password need to contain at least one numeric character." : "Пароль должен содержать хотя бы одну цифру.",
