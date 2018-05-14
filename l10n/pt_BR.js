@@ -13,6 +13,7 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Forçar caracteres maiúsculos e minúsculos",
     "Enforce numeric characters" : "Forçar aplicar caracteres numéricos",
     "Enforce special characters" : "Forçar aplicar caracteres especiais",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Verificar a senha com relação à lista de senhas violadas de haveibeenpwned.com",
     "Password need to be at least %s characters long" : "A senha precisa ter pelo menos %s caracteres",
     "Password need to contain at least one lower case character and one upper case character." : "A senha precisa conter pelo menos um caractere minúsculo e um maiúsculo.",
     "Password need to contain at least one numeric character." : "A senha precisa conter pelo menos um caractere numérico.",
