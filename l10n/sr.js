@@ -13,6 +13,7 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Захтевај употребу и малих и великих слова",
     "Enforce numeric characters" : "Захтевај употребу цифри",
     "Enforce special characters" : "Захтевај употребу специјалних карактера",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Провери лозинке на листи најчешће проваљиваних лозинки на сајту haveibeenpwned.com",
     "Password need to be at least %s characters long" : "Лозинка мора да има бар %s карактера",
     "Password need to contain at least one lower case character and one upper case character." : "Лозинка мора да садржи бар једно мало и бар једно велико слово.",
     "Password need to contain at least one numeric character." : "Лозинка мора да садржи бар један специјални карактер.",
