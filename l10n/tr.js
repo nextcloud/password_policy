@@ -13,6 +13,7 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Parolada büyük ve küçük harfler bulunsun",
     "Enforce numeric characters" : "Parolada rakam bulunsun",
     "Enforce special characters" : "Parolada simge karakterleri bulunsun",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Parolalar haveibeenpwned.com üzerindeki bilinen parolalar listesi ile denetlensin",
     "Password need to be at least %s characters long" : "Parola en az %s karakter uzunluğunda olmalıdır",
     "Password need to contain at least one lower case character and one upper case character." : "Parolada en az bir küçük ve bir büyük harf bulunmalıdır.",
     "Password need to contain at least one numeric character." : "Parolada en az bir rakam bulunmalıdır.",
