@@ -11,6 +11,7 @@
     "Enforce upper and lower case characters" : "Imponer caracteres en mayúsculas y minúsculas",
     "Enforce numeric characters" : "Imponer caracteres numéricos",
     "Enforce special characters" : "Imponer caracteres especiales",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Comprobar contraseña contra la lista de contraseñas filtradas de haveibeenpwned.com",
     "Password need to be at least %s characters long" : "La contraseña debe ser por lo menos de %s caracteres de larga",
     "Password need to contain at least one lower case character and one upper case character." : "Contraseña tiene que contener al menos un carácter en minúscula y un carácter en mayúscula.",
     "Password need to contain at least one numeric character." : "Contraseña tiene que tener al menos un carácter numérico.",
