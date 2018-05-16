@@ -61,6 +61,6 @@ style('password_policy', 'settings-admin');
 		<label for="password-policy-enforce-have-i-been-pwned"><?php p($l->t('Check password against the list of breached passwords from haveibeenpwned.com'));?></label><br/>
 	</p>
 	<p class="password-policy-settings-hint">
-		This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set.
+		<?php p($l->t('This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set.'));?>
 	</p>
 </div>
