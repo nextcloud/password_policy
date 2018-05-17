@@ -20,4 +20,4 @@ OC.L10N.register(
     "Password is within the 1,000,000 most common passwords. Please choose another one." : "პაროლი ერთ-ერთია 1000000 ყველაზე ჩვეულებრივებიდან. გთხოვთ გახადოთ ის უნიკალური.",
     "Check password against the list of breached passwords from haveibeenpwnd.com" : "შეამოწმეთ დარღვეულია თუ არა პაროლი haveibeenpwned.com მისამართზე"
 },
-"nplurals=1; plural=0;");
+"nplurals=2; plural=(n==1);");
