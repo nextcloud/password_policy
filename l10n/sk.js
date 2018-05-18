@@ -18,4 +18,4 @@ OC.L10N.register(
     "Password need to contain at least one special character." : "Heslo musí obsahovať aspoň jeden špeciálny znak.",
     "Password is within the 1,000,000 most common passwords. Please choose another one." : "Heslo je v zozname 1 000 000 najpoužívanejších hesiel. Vyberte prosím iné."
 },
-"nplurals=4; plural=(n % 1 == 0 ? 4: n==1 ? 1: n % 1 == 0 && n>=2 && n<=4 ? 3);");
+"nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");

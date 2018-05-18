@@ -12,6 +12,7 @@
     "Enforce numeric characters" : "Захтевај употребу цифри",
     "Enforce special characters" : "Захтевај употребу специјалних карактера",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Провери лозинке на листи најчешће проваљиваних лозинки на сајту haveibeenpwned.com",
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ова провера прави хеш лозинке и шаље првих 5 карактера хеша на haveibeenpwned.com да дохвати све хешеве који почињу исто тако. Онда проверава на Некстклауд инстанци да ли је Ваш хеш у листи враћених хешева.",
     "Password need to be at least %s characters long" : "Лозинка мора да има бар %s карактера",
     "Password need to contain at least one lower case character and one upper case character." : "Лозинка мора да садржи бар једно мало и бар једно велико слово.",
     "Password need to contain at least one numeric character." : "Лозинка мора да садржи бар један специјални карактер.",
