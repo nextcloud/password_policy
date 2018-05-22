@@ -14,6 +14,7 @@ OC.L10N.register(
     "Enforce numeric characters" : "Parolada rakam bulunsun",
     "Enforce special characters" : "Parolada simge karakterleri bulunsun",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Parolalar haveibeenpwned.com üzerindeki bilinen parolalar listesi ile denetlensin",
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Bu denetim paroladan bir sağlama değeri üretir ve ilk 5 karakterini haveibeenpwned.com API uygulamasına göndererek bu 5 karakter ile başlayan karmaların listesini alır. Ardından Nexctcloud kopyasında parola karmasının sonuç kümesinde olup olmadığını denetler.",
     "Password need to be at least %s characters long" : "Parola en az %s karakter uzunluğunda olmalıdır",
     "Password need to contain at least one lower case character and one upper case character." : "Parolada en az bir küçük ve bir büyük harf bulunmalıdır.",
     "Password need to contain at least one numeric character." : "Parolada en az bir rakam bulunmalıdır.",
