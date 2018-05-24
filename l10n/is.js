@@ -13,6 +13,7 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Krefjast há- og lágstafa",
     "Enforce numeric characters" : "Krefjast tölustafa",
     "Enforce special characters" : "Krefjast sértákna",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Athugaðu hvort lykilorðið sé í lista yfir stolin lykilorð frá haveibeenpwnd.com",
     "Password need to be at least %s characters long" : "Lykilorðið verður að innihalda að minnsta kosti %s stafi",
     "Password need to contain at least one lower case character and one upper case character." : "Lykilorðið verður að innihalda að minnsta kosti einn lágstaf og einn hástaf.",
     "Password need to contain at least one numeric character." : "Lykilorðið verður að innihalda að minnsta kosti einn tölustaf.",
