@@ -6,6 +6,7 @@ OC.L10N.register(
     "Password needs to contain at least one numeric character." : "Heslo musí obsahovat alespoň jedno číslo.",
     "Password needs to contain at least one special character." : "Heslo musí obsahovat alespoň jeden speciální znak.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Heslo spadá mezi 1,000,000 nejběžnějších hesel. Vyberte si prosím jiné.",
+    "Password is present in compromised password list. Please choose a different password." : "Heslo se nachází na seznamu kompromitovaných hesel. Zvolte jiné.",
     "Password policy" : "Požadavky pro hesla",
     "Minimal length" : "Minimální délka",
     "Forbid common passwords" : "Zakázat běžná hesla",
