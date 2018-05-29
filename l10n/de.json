@@ -6,6 +6,7 @@
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Das Passwort ist unter den 1.000.000 häufigsten Passwörtern. Bitte wähle ein anderes.",
     "Password is present in compromised password list. Please choose a different password." : "Das Passwort ist in der Liste der kompromittierten Passwörter enthalten. Bitte wähle ein anderes Passwort. ",
     "Password policy" : "Passwort-Regeln",
+    "Allows admins to configure a password policy" : "Ermöglicht Administratoren eine Passwortrichtlinie einzurichten",
     "Minimal length" : "Minimale Länge",
     "Forbid common passwords" : "Häufig verwendete Passwörter verbieten",
     "Enforce upper and lower case characters" : "Groß- und Kleinbuchstaben erzwingen",
