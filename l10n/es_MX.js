@@ -9,6 +9,7 @@ OC.L10N.register(
     "Password is present in compromised password list. Please choose a different password." : "La contraseña está presente en el listado de contraseñas comprometidas. Por favor selecciona una contraseña diferente.",
     "Password policy" : "Política de contraseñas",
     "Allows admins to configure a password policy" : "Permite a los administradores configruar la política de contraseñas",
+    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permite a un administrador definir ciertas pre-condiciones para contraseñas, p.e. obligar a una longitud mínima.",
     "Minimal length" : "Longitud mínima",
     "Forbid common passwords" : "Restringir contraseñas comunes",
     "Enforce upper and lower case characters" : "Imponer caracteres en mayúsculas y minúsculas",
