@@ -6,6 +6,7 @@
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Пароль находится в списке 1.000.000 наиболее простых паролей. Придумайте другой пароль.",
     "Password is present in compromised password list. Please choose a different password." : "Пароль присутствует в списке скомпрометированных паролей. Пожалуйста, выберите другой пароль.",
     "Password policy" : "Правила создания паролей",
+    "Allows admins to configure a password policy" : "Разрешенные администраторы для конфигурирования политики паролей",
     "Minimal length" : "Минимальная длина",
     "Forbid common passwords" : "Запрет простых паролей",
     "Enforce upper and lower case characters" : "Требовать наличия в пароле и прописных и строчных букв ",
