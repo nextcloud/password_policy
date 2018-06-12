@@ -6,6 +6,8 @@
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Password is among the 1,000,000 most common ones. Please make it unique.",
     "Password is present in compromised password list. Please choose a different password." : "Password is present in compromised password list. Please choose a different password.",
     "Password policy" : "Password policy",
+    "Allows admins to configure a password policy" : "Allows admins to configure a password policy",
+    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length",
     "Minimal length" : "Minimal length",
     "Forbid common passwords" : "Forbid common passwords",
     "Enforce upper and lower case characters" : "Enforce upper and lower case characters",
