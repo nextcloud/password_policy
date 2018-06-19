@@ -8,6 +8,8 @@ OC.L10N.register(
     "Password is among the 1,000,000 most common ones. Please make it unique." : "La contraseña está entre el millón más común. Por favor, elige una diferente.",
     "Password is present in compromised password list. Please choose a different password." : "La contraseña se encuentra en una lista de contraseñas filtradas. Por favor, escoge una contraseña diferente.",
     "Password policy" : "Política de contraseñas",
+    "Allows admins to configure a password policy" : "Permite a los administradores configurar una política de contraseñas",
+    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permite a los administradores definir ciertas precondiciones para las contraseñas, p. ej., obligar a una longitud mínima",
     "Minimal length" : "Longitud mínima",
     "Forbid common passwords" : "Prohibir contraseñas comunes",
     "Enforce upper and lower case characters" : "Imponer caracteres en mayúsculas y minúsculas",
