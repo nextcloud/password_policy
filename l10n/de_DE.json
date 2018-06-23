@@ -7,6 +7,7 @@
     "Password is present in compromised password list. Please choose a different password." : "Das Passwort ist in der Liste der kompromittierten Passwörter enthalten. Bitte wählen Sie ein anderes Passwort.",
     "Password policy" : "Passwort-Regeln",
     "Allows admins to configure a password policy" : "Ermöglicht Administratoren eine Passwortrichtlinie einzurichten",
+    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Ermöglicht Administratoren diverse Voreinstellungen für Passwörter vorzunehmen, z.B. die Mindestlänge",
     "Minimal length" : "Minimale Länge",
     "Forbid common passwords" : "Häufig verwendete Passwörter verbieten",
     "Enforce upper and lower case characters" : "Groß- und Kleinbuchstaben erzwingen",
