@@ -8,6 +8,7 @@ OC.L10N.register(
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Salasana on yksi miljoonasta yleisimmästä. Tee salasanasta erikoisempi.",
     "Password is present in compromised password list. Please choose a different password." : "Salasana kuuluu murrettujen salasanojen listalle. Valitse eri salasana.",
     "Password policy" : "Salasanakäytäntö",
+    "Allows admins to configure a password policy" : "Mahdollistaa ylläpitäjien määrittää salasanakäytännön",
     "Minimal length" : "Vähimmäispituus",
     "Forbid common passwords" : "Kiellä yleisimmät salasanat",
     "Enforce upper and lower case characters" : "Pakota käyttämään isoja ja pieniä kirjaimia",
