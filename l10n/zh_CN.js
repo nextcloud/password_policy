@@ -7,6 +7,8 @@ OC.L10N.register(
     "Password needs to contain at least one special character." : "密码需要包含至少一个特殊字符",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "该密码在100万个常见密码中，请选择其他密码",
     "Password policy" : "密码规则",
+    "Allows admins to configure a password policy" : "允许管理员配置密码策略",
+    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "允许管理员定义密码前置条件，比如说强制密码最小长度。",
     "Minimal length" : "最小长度",
     "Forbid common passwords" : "禁止普通密码",
     "Enforce upper and lower case characters" : "强制要求大写和小写字符",
