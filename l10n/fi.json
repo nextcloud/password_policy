@@ -7,6 +7,7 @@
     "Password is present in compromised password list. Please choose a different password." : "Salasana kuuluu murrettujen salasanojen listalle. Valitse eri salasana.",
     "Password policy" : "Salasanakäytäntö",
     "Allows admins to configure a password policy" : "Mahdollistaa ylläpitäjien määrittää salasanakäytännön",
+    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Salli ylläpitäjän määrittää ennalta määritettyjä ehtoja salasanalle, esimerkiksi vähimmäispituuden",
     "Minimal length" : "Vähimmäispituus",
     "Forbid common passwords" : "Kiellä yleisimmät salasanat",
     "Enforce upper and lower case characters" : "Pakota käyttämään isoja ja pieniä kirjaimia",
