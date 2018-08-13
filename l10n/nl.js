@@ -8,6 +8,7 @@ OC.L10N.register(
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Het wachtwoord behoort tot de 1.000.000 meest gebruikte wachtwoorden. Maak het meer uniek.",
     "Password is present in compromised password list. Please choose a different password." : "Het wachtwoord is aanwezig in de lijst met gecompromitteerde wachtwoorden. Kies een ander.",
     "Password policy" : "Wachtwoordenbeleid",
+    "Allows admins to configure a password policy" : "Staat toe dat beheerders een wachtwoordenbeleid configureren",
     "Minimal length" : "Minimale lengte",
     "Forbid common passwords" : "Verboden gewone wachtwoorden",
     "Enforce upper and lower case characters" : "Verplichten hoofd- en kleine letters",
