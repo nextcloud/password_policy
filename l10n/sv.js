@@ -6,16 +6,22 @@ OC.L10N.register(
     "Password needs to contain at least one numeric character." : "Lösenord behöver innehålla åtminstone en siffra.",
     "Password needs to contain at least one special character." : "Lösenord behöver innehålla minst ett specialtecken.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Lösenord är bland de 1 000 000 mest vanliga. Var god ändra till ett unikt.",
+    "Password is present in compromised password list. Please choose a different password." : "Lösenordet finns i läckt lösenordslista. Vänligen välj ett annat lösenord.",
     "Password policy" : "Lösenordsregler",
+    "Allows admins to configure a password policy" : "Tillåter administratörer att konfigurera en lösenordspolicy",
+    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Tillåter administratören att definiera vissa villkor för lösenord, t.ex. att kräva minsta längd",
     "Minimal length" : "Minsta längd",
     "Forbid common passwords" : "Förbjud de vanligaste lösenorden",
     "Enforce upper and lower case characters" : "Kräv stor och liten bokstav i lösenordet",
     "Enforce numeric characters" : "Kräv en siffra i lösenordet",
     "Enforce special characters" : "Kräv specialtecken i lösenordet",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Kontrollera lösenordet mot listan med läckta lösenord från haribeenpwned.com",
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Denna kontroll skapar en hash av lösenordet och skickar de 5 första tecknen i denna hash till haribeenpwned.com för att hämta en lista över alla hash som börjar med dessa. Sedan kontrolleras om lösenords-hashet finns i resultatuppsättningen på Nextcloud.",
     "Password need to be at least %s characters long" : "Lösenordet måste vara minst %s tecken långt",
     "Password need to contain at least one lower case character and one upper case character." : "Lösenordet måste innehålla minst en stor och en liten bokstav.",
     "Password need to contain at least one numeric character." : "Lösenordet måste innehålla minst en siffra.",
     "Password need to contain at least one special character." : "Lösenordet måste innehålla minst ett specialtecken.",
-    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Lösenordet du har valt är ett av de 1 miljon enklaste lösenorden och anses inte som tillräckligt säkert. Vänligen välj ett annat lösenord."
+    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Lösenordet du har valt är ett av de 1 miljon enklaste lösenorden och anses inte som tillräckligt säkert. Vänligen välj ett annat lösenord.",
+    "Check password against the list of breached passwords from haveibeenpwnd.com" : "Kontrollera lösenordet mot listan över läckta lösenord från haribeenpwnd.com"
 },
 "nplurals=2; plural=(n != 1);");
