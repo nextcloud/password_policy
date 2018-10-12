@@ -1,5 +1,5 @@
 { "translations": {
-    "Password needs to be at least %s characters long" : "Длина пароля должна не менее %s символов",
+    "Password needs to be at least %s characters long" : "Длина пароля должна быть не менее %s символов",
     "Password needs to contain at least one lower and one upper case character." : "В пароле должны присутствовать и прописные и строчные буквы.",
     "Password needs to contain at least one numeric character." : "Пароль должен содержать хотя бы одну цифру.",
     "Password needs to contain at least one special character." : "Пароль должен содержать хотя бы один спецсимвол.",
