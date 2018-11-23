@@ -17,11 +17,6 @@ OC.L10N.register(
     "Enforce special characters" : "Imponer caracteres especiales",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Comprobar contraseña contra la lista de contraseñas filtradas de haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Esta comprobación crea un hash de las contraseñas y envía los 5 primeros caracteres de este hash a la API de haveibeenpwned.com para recuperar una lista de todos los hashes que comienzan de esa forma. Después se comprueba en la instancia de Nextcloud si el hash de la contraseña está en el conjunto de resultados.",
-    "Password need to be at least %s characters long" : "La contraseña debe ser por lo menos de %s caracteres de larga",
-    "Password need to contain at least one lower case character and one upper case character." : "Contraseña tiene que contener al menos un carácter en minúscula y un carácter en mayúscula.",
-    "Password need to contain at least one numeric character." : "Contraseña tiene que tener al menos un carácter numérico.",
-    "Password need to contain at least one special character." : "Contraseña tiene que tener al menos un carácter especial.",
-    "Password is within the 1,000,000 most common passwords. Please choose another one." : "La contraseña esta entre las 1.000.000 mas comunes. Por favor escoge otra. ",
     "Check password against the list of breached passwords from haveibeenpwnd.com" : "Comprueba las contraseñas contra la lista de contraseñas quebrantadas de haveibeenpwnd.com"
 },
 "nplurals=2; plural=(n != 1);");

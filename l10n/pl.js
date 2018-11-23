@@ -17,11 +17,6 @@ OC.L10N.register(
     "Enforce special characters" : "Wymuś znaki specjalne",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Sprawdź hasło z listą naruszonych haseł na hasibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ten test tworzy skrót hasła i wysyła 5 pierwszych znaków tego skrótu do API haveibeenpwned.com, aby pobrać listę wszystkich skrótów, które zaczynają się od nich. Następnie sprawdza w instancji NextCloud czy skrót hasła jest w zestawie wyników.",
-    "Password need to be at least %s characters long" : "Hasło musi zawierać co najmniej %s znaków",
-    "Password need to contain at least one lower case character and one upper case character." : "Hasło musi zawierać co najmniej jedną małą oraz wielką literę.",
-    "Password need to contain at least one numeric character." : "Hasło musi zawierać co najmniej jeden znak numeryczny.",
-    "Password need to contain at least one special character." : "Hasło musi zawierać co najmniej jeden znak specjalny.",
-    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Hasło jest jednym z 1.000.000 najczęstszych haseł. Proszę wybrać inne.",
     "Check password against the list of breached passwords from haveibeenpwnd.com" : "Sprawdź hasło z listą naruszonych haseł na hasibeenpwned.com"
 },
 "nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);");
