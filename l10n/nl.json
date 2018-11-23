@@ -15,11 +15,6 @@
     "Enforce special characters" : "Verplichten speciale tekens",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Controleer het wachtwoord tegen de lijst met geschonden wachtwoorden van haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Deze controle maakt een hash van het wachtwoord en verstuurd de eerste 5 tekens van deze hash naar de haveibeenpwned.com API om een lijst op te halen met al de hashes die ook daarmee beginnen. Daarna wordt deze lijst tegen de Nexcloud installatie gehouden om te controleren of de wachtwoord hash als resultaat terugkomt.",
-    "Password need to be at least %s characters long" : "Het wachtwoord moet minimaal %s tekens lang zijn",
-    "Password need to contain at least one lower case character and one upper case character." : "Het wachtwoord moet minimaal één kleine letter en minimaal één hoofdletter bevatten.",
-    "Password need to contain at least one numeric character." : "Het wachtwoord moet minimaal één cijfer bevatten.",
-    "Password need to contain at least one special character." : "Het wachtwoord moet minimaal één speciaal teken bevatten.",
-    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Het wachtwoord behoort tot de 1.000.000 meest gebruikte wachtwoorden. Kies een andere.",
     "Check password against the list of breached passwords from haveibeenpwnd.com" : "Controleren wachtwoord tegen de lijst met gelekte wachtwoorden van haveibeenpwnd.com"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
