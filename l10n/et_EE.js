@@ -11,11 +11,6 @@ OC.L10N.register(
     "Forbid common passwords" : "Keela üldlevinud paroolid",
     "Enforce upper and lower case characters" : "Sunni suured ja väikesed tähed",
     "Enforce numeric characters" : "Sunni numbrilised sümbolid",
-    "Enforce special characters" : "Sunni erimärgid",
-    "Password need to be at least %s characters long" : "Parool peab olema vähemalt %s märki pikk",
-    "Password need to contain at least one lower case character and one upper case character." : "Parool peab sisaldama vähemalt üht väike- ja suurtähte",
-    "Password need to contain at least one numeric character." : "Parool peab sisaldama vähemalt üht numbrit.",
-    "Password need to contain at least one special character." : "Parool peab sisaldama vähemalt üht erimärki.",
-    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Parool kuulub 1000000 kõige tavalisema hulka. Palun vali mõni teine parool."
+    "Enforce special characters" : "Sunni erimärgid"
 },
 "nplurals=2; plural=(n != 1);");

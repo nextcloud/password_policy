@@ -17,11 +17,6 @@ OC.L10N.register(
     "Enforce special characters" : "Захтевај употребу специјалних карактера",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Провери лозинке на листи најчешће проваљиваних лозинки на сајту haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ова провера прави хеш лозинке и шаље првих 5 карактера хеша на haveibeenpwned.com да дохвати све хешеве који почињу исто тако. Онда проверава на Некстклауд инстанци да ли је Ваш хеш у листи враћених хешева.",
-    "Password need to be at least %s characters long" : "Лозинка мора да има бар %s карактера",
-    "Password need to contain at least one lower case character and one upper case character." : "Лозинка мора да садржи бар једно мало и бар једно велико слово.",
-    "Password need to contain at least one numeric character." : "Лозинка мора да садржи бар један специјални карактер.",
-    "Password need to contain at least one special character." : "Лозинка мора да садржи бар један специјални карактер.",
-    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Лозинка је међу 1.000.000 најкоришћенијих лозинки. Одаберите неку другу.",
     "Check password against the list of breached passwords from haveibeenpwnd.com" : "Провери лозинке на листи најчешће проваљиваних лозинки на сајту haveibeenpwnd.com"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);");

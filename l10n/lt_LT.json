@@ -9,11 +9,6 @@
     "Forbid common passwords" : "Uždrausti paplitusius slaptažodžius",
     "Enforce upper and lower case characters" : "Versti naudoti didžiąsias ir mažąsias raides",
     "Enforce numeric characters" : "Versti naudoti skaitmenų simbolius",
-    "Enforce special characters" : "Versti naudoti specialius simbolius",
-    "Password need to be at least %s characters long" : "Slaptažodis turi būti bent %s simbolių ilgio",
-    "Password need to contain at least one lower case character and one upper case character." : "Slaptažodyje turi būti bent vienas didžiųjų ir mažųjų raidžių simbolis.",
-    "Password need to contain at least one numeric character." : "Slaptažodyje turi būti bent vienas skaičius.",
-    "Password need to contain at least one special character." : "Slaptažodyje turi būti bent vienas specialus simbolis.",
-    "Password is within the 1,000,000 most common passwords. Please choose another one." : "Slaptažodis įeina į 1,000,000 populiariausiai naudojamų slaptažodžių sąrašą. Prašome pasirinkti kitą."
+    "Enforce special characters" : "Versti naudoti specialius simbolius"
 },"pluralForm" :"nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);"
 }
