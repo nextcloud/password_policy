@@ -177,4 +177,29 @@ class PasswordPolicyConfig {
 		$this->config->setAppValue('password_policy', 'enforceHaveIBeenPwned', $enforceHaveIBeenPwned ? '1' : '0');
 	}
 
+    /**
+     *Get method for password change
+     *
+     *@return bool
+     */
+
+    public function getPasswordChange(): bool {
+        return $this->config->getAppValue(
+                'password_policy',
+                'passwordChange',
+                '0'
+            ) === '1';
+    }
+
+    /**
+     * Enable/Disable users to change their password
+     *
+     *@param bool $passwordChange
+     */
+
+    public function setPasswordChange(bool $passwordChange) {
+        $this->config->setAppValue('password_policy', 'passwordChange', $passwordChange ? '1' : '0');
+    }
+
+
 }

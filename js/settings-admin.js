@@ -92,4 +92,12 @@ $(document).ready(function(){
 		passwordPolicy.saveMinLength($(this).val());
 	});
 
+    $('#password-change').click(function() {
+        var value = '0';
+        if (this.checked) {
+            value = '1';
+        }
+        OCP.AppConfig.setValue('password_policy', 'passwordChange', value);
+    });
+
 });

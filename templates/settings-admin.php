@@ -63,4 +63,9 @@ style('password_policy', 'settings-admin');
 	<p class="password-policy-settings-hint">
 		<?php p($l->t('This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set.'));?>
 	</p>
+    <p id="passwordChange">
+        <input type="checkbox" name="password-change" id="password-change" class="checkbox"
+               value="1" <?php if ($_['passwordChange']) print_unescaped('checked="checked"');?> />
+        <label for="password-change"><?php p('Enable users to change their passwords');?></label><br/>
+    </p>
 </div>
