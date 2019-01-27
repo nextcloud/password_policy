@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "Паролата е в топ 1 000 000 на най-ползваните. Моля изберете друга.",
     "Password policy" : "Политика за паролите",
     "Minimal length" : "Минимална дължина",
     "Forbid common passwords" : "Забранени са лесните пароли",
