@@ -12,7 +12,7 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Consente all'amministratore di definire determinati pre-requisiti per le password, ad es. forzare una lunghezza minima",
     "Minimal length" : "Lunghezza minima",
     "Forbid common passwords" : "Vieta le password comuni",
-    "Enforce upper and lower case characters" : "Forse i caratteri maiuscoli e minuscoli",
+    "Enforce upper and lower case characters" : "Forza i caratteri maiuscoli e minuscoli",
     "Enforce numeric characters" : "Forza i caratteri numerici",
     "Enforce special characters" : "Forza i caratteri speciali",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Verifica la password con l'elenco di password compromesse di haveibeenpwnd.com",
