@@ -12,7 +12,11 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Ebligas al administranto difini certajn regulojn pri pasvortoj, ekz. difini minimuman longon.",
     "Minimal length" : "Minimuma longo",
     "Forbid common passwords" : "Malpermesi kutimajn pasvortojn",
+    "Enforce upper and lower case characters" : "Devigi uzon de minuskloj kaj majuskloj",
     "Enforce numeric characters" : "Devigi uzon de signoj nombraj",
-    "Enforce special characters" : "Devigi uzon de signoj specialaj"
+    "Enforce special characters" : "Devigi uzon de signoj specialaj",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Kompari la pasvorton kun la listo de diskonigitaj pasvortoj el haveibeenpwned.com",
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Tio kreas haketon el la pasvorto kaj sendas la unuajn 5 signojn de tiu haketo al la API de haveibeenpwned.com por ricevi liston de ĉiuj haketoj, kiuj komenciĝas per tiuj. Poste, ĝi kontrolas en la Nextcloud-servilo, ĉu la pasvorta haketo estas en la listo.",
+    "Check password against the list of breached passwords from haveibeenpwnd.com" : "Kompari la pasvorton kun la listo de diskonigitaj pasvortoj el haveibeenpwned.com"
 },
 "nplurals=2; plural=(n != 1);");
