@@ -8,6 +8,8 @@ OC.L10N.register(
     "Password is among the 1,000,000 most common ones. Please make it unique." : "A jelszó az 1.000.000 leggyakoribb között van. Kérlek tedd egyedivé.",
     "Password is present in compromised password list. Please choose a different password." : "A jelszó benne van a feltörtek listájában. Kérlek válassz másikat.",
     "Password policy" : "Jelszó házirend",
+    "Allows admins to configure a password policy" : "Engedélyezi az rendszergazdáknak, hogy jelszó szabályozást állítsanak be",
+    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Engedélyezi az rendszergazdának, hogy számos feltételt állítsanak be a jelszóhoz, mint például a megkövetelt minimális hossz",
     "Minimal length" : "Minimális hossz",
     "Forbid common passwords" : "Egyszerű jelszavak tiltása",
     "Enforce upper and lower case characters" : "Nagybetűs és kisbetűs karakterek megkövetelése",
