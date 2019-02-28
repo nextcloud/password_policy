@@ -16,7 +16,6 @@ OC.L10N.register(
     "Enforce numeric characters" : "数字を必ず含む",
     "Enforce special characters" : "記号を必ず含む",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "haveibeenpwned.comの侵害されたパスワードのリストと比較してパスワードをチェックする",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "このチェックでは、パスワードのハッシュを生成して先頭5文字をhaveibeenpwned.com APIに送信し、その5文字から始まるすべてのハッシュリストを取得します。 そして、パスワードハッシュが結果セットに含まれているかどうかNextcloudサーバーをチェックします。",
-    "Check password against the list of breached passwords from haveibeenpwnd.com" : "haveibeenpwned.comの侵害されたパスワードのリストと比較してパスワードをチェックする"
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "このチェックでは、パスワードのハッシュを生成して先頭5文字をhaveibeenpwned.com APIに送信し、その5文字から始まるすべてのハッシュリストを取得します。 そして、パスワードハッシュが結果セットに含まれているかどうかNextcloudサーバーをチェックします。"
 },
 "nplurals=1; plural=0;");

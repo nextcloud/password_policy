@@ -16,7 +16,6 @@ OC.L10N.register(
     "Enforce numeric characters" : "Verplichten cijfers",
     "Enforce special characters" : "Verplichten speciale tekens",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Controleer het wachtwoord tegen de lijst met geschonden wachtwoorden van haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Deze controle maakt een hash van het wachtwoord en verstuurd de eerste 5 tekens van deze hash naar de haveibeenpwned.com API om een lijst op te halen met al de hashes die ook daarmee beginnen. Daarna wordt deze lijst tegen de Nexcloud installatie gehouden om te controleren of de wachtwoord hash als resultaat terugkomt.",
-    "Check password against the list of breached passwords from haveibeenpwnd.com" : "Controleren wachtwoord tegen de lijst met gelekte wachtwoorden van haveibeenpwnd.com"
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Deze controle maakt een hash van het wachtwoord en verstuurd de eerste 5 tekens van deze hash naar de haveibeenpwned.com API om een lijst op te halen met al de hashes die ook daarmee beginnen. Daarna wordt deze lijst tegen de Nexcloud installatie gehouden om te controleren of de wachtwoord hash als resultaat terugkomt."
 },
 "nplurals=2; plural=(n != 1);");

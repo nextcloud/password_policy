@@ -15,7 +15,6 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Nagybetűs és kisbetűs karakterek megkövetelése",
     "Enforce numeric characters" : "Numerikus karakterek megkövetelése",
     "Enforce special characters" : "Speciális karakterek megkövetelése",
-    "Check password against the list of breached passwords from haveibeenpwned.com" : "Ellenőrizd a jelszavadat a feltört jelszavak listájával a haveibeenpwned.com-on",
-    "Check password against the list of breached passwords from haveibeenpwnd.com" : "Ellenőrizze a jelszavak feltörtségét a haveibeenpwnd.com segítségével."
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Ellenőrizd a jelszavadat a feltört jelszavak listájával a haveibeenpwned.com-on"
 },
 "nplurals=2; plural=(n != 1);");
