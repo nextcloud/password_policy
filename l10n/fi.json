@@ -13,7 +13,6 @@
     "Enforce upper and lower case characters" : "Pakota käyttämään isoja ja pieniä kirjaimia",
     "Enforce numeric characters" : "Pakota käyttämään numeroita",
     "Enforce special characters" : "Pakota käyttämään erikoismerkkejä",
-    "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin",
-    "Check password against the list of breached passwords from haveibeenpwnd.com" : "Vertaa salasanaa haveibeenpwnd.com-palvelun tuottamaa murrettujen salasanojen listaa vasten"
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

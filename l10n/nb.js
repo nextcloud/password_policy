@@ -12,7 +12,6 @@ OC.L10N.register(
     "Forbid common passwords" : "Forby mest brukte passord",
     "Enforce upper and lower case characters" : "Krev stor og liten bokstav",
     "Enforce numeric characters" : "Krev numerisk tegn",
-    "Enforce special characters" : "Krev spesialtegn",
-    "Check password against the list of breached passwords from haveibeenpwnd.com" : "Sjekk passordet mot listen over lekkede passord på haveibeenpwnd.com"
+    "Enforce special characters" : "Krev spesialtegn"
 },
 "nplurals=2; plural=(n != 1);");

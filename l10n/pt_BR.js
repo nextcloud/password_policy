@@ -16,7 +16,6 @@ OC.L10N.register(
     "Enforce numeric characters" : "Forçar aplicar caracteres numéricos",
     "Enforce special characters" : "Forçar aplicar caracteres especiais",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Verificar a senha com relação à lista de senhas violadas de haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Essa verificação cria um hash da senha e envia os primeiros 5 caracteres desse hash para a API haveibeenpwned.com para recuperar uma lista de todos os hashes que começam com eles. Em seguida, ele verifica com o servidor Nextcloud se o hash da senha está no conjunto de resultados.",
-    "Check password against the list of breached passwords from haveibeenpwnd.com" : "Verifique a senha na lista de senhas violadas de haveibeenpwnd.com"
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Essa verificação cria um hash da senha e envia os primeiros 5 caracteres desse hash para a API haveibeenpwned.com para recuperar uma lista de todos os hashes que começam com eles. Em seguida, ele verifica com o servidor Nextcloud se o hash da senha está no conjunto de resultados."
 },
 "nplurals=2; plural=(n > 1);");
