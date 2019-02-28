@@ -11,7 +11,6 @@ OC.L10N.register(
     "Forbid common passwords" : "Prohibeix les contrasenyes comunes",
     "Enforce upper and lower case characters" : "Força els caràcters de majúscules i minúscules",
     "Enforce numeric characters" : "Força els caràcters numèrics",
-    "Enforce special characters" : "Força els caràcters especials",
-    "Check password against the list of breached passwords from haveibeenpwnd.com" : "Comprova si la contrasenya està dins de les contrasenyes filtrades a internet gràcies a haveibeenpwnd.com"
+    "Enforce special characters" : "Força els caràcters especials"
 },
 "nplurals=2; plural=(n != 1);");

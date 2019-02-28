@@ -12,7 +12,6 @@ OC.L10N.register(
     "Forbid common passwords" : "აკრძალეთ ერთნაირი პაროლები",
     "Enforce upper and lower case characters" : "შემოიღეთ დიდი და პატარა ასოები",
     "Enforce numeric characters" : "შემოიღეთ ნუმერიკული ნიშნები",
-    "Enforce special characters" : "შემოიღეთ სპეციალური ნიშნები",
-    "Check password against the list of breached passwords from haveibeenpwnd.com" : "შეამოწმეთ დარღვეულია თუ არა პაროლი haveibeenpwned.com მისამართზე"
+    "Enforce special characters" : "შემოიღეთ სპეციალური ნიშნები"
 },
 "nplurals=2; plural=(n!=1);");
