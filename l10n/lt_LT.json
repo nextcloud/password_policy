@@ -5,6 +5,7 @@
     "Password needs to contain at least one special character." : "Slaptažodyje turi būti bent vienas specialus simbolis.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Slaptažodis įeina į 1,000,000 populiariausiai naudojamų slaptažodžių sąrašą. Prašome pasirinkti kitą.",
     "Password policy" : "Slaptažodžio politika",
+    "Allows admins to configure a password policy" : "Leidžia administratoriams konfigūruoti slaptažodžių politiką",
     "Minimal length" : "Minimalus ilgis",
     "Forbid common passwords" : "Uždrausti paplitusius slaptažodžius",
     "Enforce upper and lower case characters" : "Versti naudoti didžiąsias ir mažąsias raides",
