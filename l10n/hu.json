@@ -13,6 +13,7 @@
     "Enforce upper and lower case characters" : "Nagybetűs és kisbetűs karakterek megkövetelése",
     "Enforce numeric characters" : "Numerikus karakterek megkövetelése",
     "Enforce special characters" : "Speciális karakterek megkövetelése",
-    "Check password against the list of breached passwords from haveibeenpwned.com" : "Ellenőrizd a jelszavadat a feltört jelszavak listájával a haveibeenpwned.com-on"
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Ellenőrizd a jelszavadat a feltört jelszavak listájával a haveibeenpwned.com-on",
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ez az ellenörzés létrehoz egy hash-t a jelszóból aminek az első 5 karakterét hash formában elküldi a haveibeenpwned.com API-jának, hogy attól kapjon egy listát azokkal a hashe-ekkel aminek a kezdete megegyezik a megadott jelszó hash-ének az első 5 karakterével. Ezután leelenőrzi a Nextcloud egyeden, hogy a megadott jelszó benne van a kapott listában."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
