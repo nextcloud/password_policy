@@ -5,6 +5,7 @@
     "Password needs to contain at least one special character." : "Pasahitzek karaktere berezi bat izan behar dute gutxienez.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Pasahitza 1000000 pasahitz tipikoen taldean dago. Unikoa bihur ezazu",
     "Password policy" : "Pasahitz politika",
+    "Allows admins to configure a password policy" : "Baimendu administratzaileei pasahitzen politika bat konfiguratzea",
     "Minimal length" : "Luzera minimoa",
     "Forbid common passwords" : "Pasahitz ohikoenak debekatu",
     "Enforce upper and lower case characters" : "Enforce upper and lower case characters",
