@@ -23,16 +23,19 @@ declare(strict_types=1);
 
 namespace OCA\Password_Policy;
 
-
 use OCP\Capabilities\ICapability;
+use OCP\IURLGenerator;
 
 class Capabilities implements ICapability {
 
 	/** @var PasswordPolicyConfig */
 	private $config;
+	/** @var IURLGenerator */
+	private $urlGenerator;
 
-	public function __construct(PasswordPolicyConfig $config) {
+	public function __construct(PasswordPolicyConfig $config, IURLGenerator $urlGenerator) {
 		$this->config = $config;
+		$this->urlGenerator = $urlGenerator;
 	}
 
 	/**
@@ -50,6 +53,10 @@ class Capabilities implements ICapability {
 					'enforceNumericCharacters' => $this->config->getEnforceNumericCharacters(),
 					'enforceSpecialCharacters' => $this->config->getEnforceSpecialCharacters(),
 					'enforceUpperLowerCase' => $this->config->getEnforceUpperLowerCase(),
+					'api' => [
+						'generate' => $this->urlGenerator->linkToOCSRouteAbsolute('password_policy.API.generate'),
+						'validate' => $this->urlGenerator->linkToOCSRouteAbsolute('password_policy.API.validate'),
+					]
 				]
 		];
 	}
