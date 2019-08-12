@@ -25,33 +25,23 @@ namespace OCA\Password_Policy;
 
 
 use OC\HintException;
-use OCP\Http\Client\IClientService;
-use OCP\IL10N;
+use OCA\Password_Policy\Validator\CommonPasswordsValidator;
+use OCA\Password_Policy\Validator\HIBPValidator;
+use OCA\Password_Policy\Validator\IValidator;
+use OCA\Password_Policy\Validator\LengthValidator;
+use OCA\Password_Policy\Validator\NumericCharacterValidator;
+use OCA\Password_Policy\Validator\SpecialCharactersValidator;
+use OCA\Password_Policy\Validator\UpperCaseLoweCaseValidator;
+use OCP\AppFramework\IAppContainer;
+use OCP\AppFramework\QueryException;
 
 class PasswordValidator {
 
-	/** @var PasswordPolicyConfig  */
-	private $config;
+	/** @var IAppContainer */
+	private $container;
 
-	/** @var IL10N */
-	private $l;
-
-	/** @var IClientService */
-	private $clientService;
-
-	/**
-	 * PasswordValidator constructor.
-	 *
-	 * @param PasswordPolicyConfig $config
-	 * @param IL10N $l
-	 * @param IClientService $clientService
-	 */
-	public function __construct(PasswordPolicyConfig $config,
-								IL10N $l,
-								IClientService $clientService) {
-		$this->config = $config;
-		$this->l = $l;
-		$this->clientService = $clientService;
+	public function __construct(IAppContainer $container) {
+		$this->container = $container;
 	}
 
 	/**
@@ -60,146 +50,25 @@ class PasswordValidator {
 	 * @param string $password
 	 * @throws HintException
 	 */
-	public function validate($password) {
-		$this->checkCommonPasswords($password);
-		$this->checkPasswordLength($password);
-		$this->checkNumericCharacters($password);
-		$this->checkUpperLowerCase($password);
-		$this->checkSpecialCharacters($password);
-		$this->checkHaveIBeenPwned($password);
-	}
+	public function validate(string $password): void {
+		$validators = [
+			CommonPasswordsValidator::class,
+			LengthValidator::class,
+			NumericCharacterValidator::class,
+			UpperCaseLoweCaseValidator::class,
+			SpecialCharactersValidator::class,
+			HIBPValidator::class,
+		];
 
-	/**
-	 * check if password matches the minimum length defined by the admin
-	 *
-	 * @param string $password
-	 * @throws HintException
-	 */
-	protected function checkPasswordLength($password) {
-		$minLength = $this->config->getMinLength();
-		if(strlen($password) < $minLength) {
-			$message = 'Password needs to be at least ' . $minLength . ' characters long';
-			$message_t = $this->l->t(
-				'Password needs to be at least %s characters long', [$minLength]
-			);
-			throw new HintException($message, $message_t);
-		}
-	}
-
-	/**
-	 * check if password contain at least one upper and one lower case character
-	 *
-	 * @param string $password
-	 * @throws HintException
-	 */
-	protected function checkUpperLowerCase($password) {
-		$enforceUpperLowerCase = $this->config->getEnforceUpperLowerCase();
-		if($enforceUpperLowerCase) {
-			if (preg_match('/^(?=.*[a-z])(?=.*[A-Z]).+$/', $password) !== 1) {
-				$message = 'Password needs to contain at least one lower and one upper case character.';
-				$message_t = $this->l->t(
-					'Password needs to contain at least one lower and one upper case character.'
-				);
-				throw new HintException($message, $message_t);
-			}
-		}
-	}
-
-	/**
-	 * check if password contain at least one numeric character
-	 *
-	 * @param string $password
-	 * @throws HintException
-	 */
-	protected function checkNumericCharacters($password) {
-		$enforceNumericCharacters = $this->config->getEnforceNumericCharacters();
-		if($enforceNumericCharacters) {
-			if (preg_match('/^(?=.*\d).+$/', $password) !== 1) {
-				$message = 'Password needs to contain at least one numeric character';
-				$message_t = $this->l->t(
-					'Password needs to contain at least one numeric character.'
-				);
-				throw new HintException($message, $message_t);
-			}
-		}
-	}
-
-	/**
-	 * check if password contain at least one special character
-	 *
-	 * @param string $password
-	 * @throws HintException
-	 */
-	protected function checkSpecialCharacters($password) {
-		$enforceSpecialCharacters = $this->config->getEnforceSpecialCharacters();
-		if($enforceSpecialCharacters && ctype_alnum($password)) {
-			$message = 'Password needs to contain at least one special character.';
-			$message_t = $this->l->t(
-				'Password needs to contain at least one special character.'
-			);
-			throw new HintException($message, $message_t);
-		}
-	}
-
-
-	/**
-	 * Checks if password is within the 100,000 most used passwords.
-	 *
-	 * @param string $password
-	 * @throws HintException
-	 */
-	protected function checkCommonPasswords($password) {
-		$enforceNonCommonPassword = $this->config->getEnforceNonCommonPassword();
-		if($enforceNonCommonPassword) {
-			$passwordFile = __DIR__ . '/../lists/list-'.strlen($password).'.php';
-			if(file_exists($passwordFile)) {
-				$commonPasswords = require_once $passwordFile;
-				if (isset($commonPasswords[strtolower($password)])) {
-					$message = 'Password is among the 1,000,000 most common ones. Please make it unique.';
-					$message_t = $this->l->t(
-						'Password is among the 1,000,000 most common ones. Please make it unique.'
-					);
-					throw new HintException($message, $message_t);
-				}
-			}
-		}
-	}
-
-	/**
-	 * Check if a password is in the list of breached passwords from
-	 * haveibeenpwned.com
-	 *
-	 * @param string $password
-	 * @throws HintException
-	 */
-	protected function checkHaveIBeenPwned($password) {
-		if ($this->config->getEnforceHaveIBeenPwned()) {
-			$hash = sha1($password);
-			$range = substr($hash, 0, 5);
-			$needle = strtoupper(substr($hash, 5));
-
-			$client = $this->clientService->newClient();
-
+		foreach ($validators as $validator) {
 			try {
-				$response = $client->get(
-					'https://api.pwnedpasswords.com/range/' . $range,
-					[
-						'timeout' => 5
-					]
-				);
-			} catch (\Exception $e) {
-				return;
+				/** @var IValidator $instance */
+				$instance = $this->container->query($validator);
+			} catch (QueryException $e) {
+				//ignore and continue
 			}
 
-			$result = $response->getBody();
-
-			if (strpos($result, $needle) !== false) {
-				$message = 'Password is present in compromised password list. Please choose a different password.';
-				$message_t = $this->l->t(
-					'Password is present in compromised password list. Please choose a different password.'
-				);
-				throw new HintException($message, $message_t);
-			}
+			$instance->validate($password);
 		}
 	}
 
