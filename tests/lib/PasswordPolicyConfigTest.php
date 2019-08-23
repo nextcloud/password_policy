@@ -19,15 +19,13 @@
  *
  */
 
-
 namespace OCA\Password_Policy\Tests;
-
 
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\IConfig;
 use Test\TestCase;
 
-class ConfigTest extends TestCase {
+class PasswordPolicyConfigTest extends TestCase {
 
 	/** @var  IConfig|\PHPUnit_Framework_MockObject_MockObject */
 	private $config;

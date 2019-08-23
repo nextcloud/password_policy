@@ -1,5 +1,4 @@
 <?php
-declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2016 Bjoern Schiessle <bjoern@schiessle.org>
  *
@@ -20,11 +19,11 @@ declare(strict_types=1);
  *
  */
 
-
-namespace OCA\Password_Policy;
-
+namespace OCA\Password_Policy\Tests;
 
 use OC\HintException;
+use OCA\Password_Policy\PasswordPolicyConfig;
+use OCA\Password_Policy\PasswordValidator;
 use OCA\Password_Policy\Validator\CommonPasswordsValidator;
 use OCA\Password_Policy\Validator\HIBPValidator;
 use OCA\Password_Policy\Validator\IValidator;
@@ -34,23 +33,29 @@ use OCA\Password_Policy\Validator\SpecialCharactersValidator;
 use OCA\Password_Policy\Validator\UpperCaseLoweCaseValidator;
 use OCP\AppFramework\IAppContainer;
 use OCP\AppFramework\QueryException;
+use OCP\Http\Client\IClientService;
+use OCP\IL10N;
+use PHPUnit\Framework\MockObject\MockObject;
+use Test\TestCase;
 
-class PasswordValidator {
+class PasswordValidatorTest extends TestCase {
 
-	/** @var IAppContainer */
+	/** @var IAppContainer|MockObject */
 	private $container;
 
-	public function __construct(IAppContainer $container) {
-		$this->container = $container;
+	/** @var PasswordValidator */
+	private $validator;
+
+
+	public function setUp() {
+		parent::setUp();
+
+		$this->container = $this->createMock(IAppContainer::class);
+
+		$this->validator = new PasswordValidator($this->container);
 	}
 
-	/**
-	 * check if the given password matches the conditions defined by the admin
-	 *
-	 * @param string $password
-	 * @throws HintException
-	 */
-	public function validate(string $password): void {
+	public function testValidate() {
 		$validators = [
 			CommonPasswordsValidator::class,
 			LengthValidator::class,
@@ -60,17 +65,25 @@ class PasswordValidator {
 			HIBPValidator::class,
 		];
 
-		foreach ($validators as $validator) {
-			try {
-				/** @var IValidator $instance */
-				$instance = $this->container->query($validator);
-			} catch (QueryException $e) {
-				//ignore and continue
-				continue;
-			}
+		$this->container->method('query')
+			->willReturnCallback(function($class) use (&$validators) {
+				if (($key = array_search($class, $validators)) !== false) {
+					$validator = $this->createMock(IValidator::class);
+					$validator->expects($this->once())
+						->method('validate')
+						->with('password');
 
-			$instance->validate($password);
-		}
+					unset($validators[$key]);
+
+					return $validator;
+				}
+
+				throw new QueryException();
+			});
+
+		$this->validator->validate('password');
+		$this->assertEmpty($validators);
 	}
+
 
 }
