@@ -34,14 +34,18 @@ use OCA\Password_Policy\Validator\SpecialCharactersValidator;
 use OCA\Password_Policy\Validator\UpperCaseLoweCaseValidator;
 use OCP\AppFramework\IAppContainer;
 use OCP\AppFramework\QueryException;
+use OCP\ILogger;
 
 class PasswordValidator {
 
 	/** @var IAppContainer */
 	private $container;
+	/** @var ILogger */
+	private $logger;
 
-	public function __construct(IAppContainer $container) {
+	public function __construct(IAppContainer $container, ILogger $logger) {
 		$this->container = $container;
+		$this->logger = $logger;
 	}
 
 	/**
@@ -66,6 +70,7 @@ class PasswordValidator {
 				$instance = $this->container->query($validator);
 			} catch (QueryException $e) {
 				//ignore and continue
+				$this->logger->logException($e, ['level' => ILogger::INFO]);
 				continue;
 			}
 

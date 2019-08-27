@@ -35,6 +35,7 @@ use OCP\AppFramework\IAppContainer;
 use OCP\AppFramework\QueryException;
 use OCP\Http\Client\IClientService;
 use OCP\IL10N;
+use OCP\ILogger;
 use PHPUnit\Framework\MockObject\MockObject;
 use Test\TestCase;
 
@@ -42,6 +43,9 @@ class PasswordValidatorTest extends TestCase {
 
 	/** @var IAppContainer|MockObject */
 	private $container;
+
+	/** @var ILogger|MockObject */
+	private $logger;
 
 	/** @var PasswordValidator */
 	private $validator;
@@ -51,8 +55,9 @@ class PasswordValidatorTest extends TestCase {
 		parent::setUp();
 
 		$this->container = $this->createMock(IAppContainer::class);
+		$this->logger = $this->createMock(ILogger::class);
 
-		$this->validator = new PasswordValidator($this->container);
+		$this->validator = new PasswordValidator($this->container, $this->logger);
 	}
 
 	public function testValidate() {
@@ -80,6 +85,8 @@ class PasswordValidatorTest extends TestCase {
 
 				throw new QueryException();
 			});
+
+		$this->logger->expects($this->never())->method($this->anything());
 
 		$this->validator->validate('password');
 		$this->assertEmpty($validators);

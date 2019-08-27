@@ -28,6 +28,7 @@ use OC\HintException;
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\Http\Client\IClientService;
 use OCP\IL10N;
+use OCP\ILogger;
 
 class HIBPValidator implements IValidator {
 
@@ -37,13 +38,17 @@ class HIBPValidator implements IValidator {
 	private $l;
 	/** @var IClientService */
 	private $clientService;
+	/** @var ILogger */
+	private $logger;
 
 	public function __construct(PasswordPolicyConfig $config,
 								IL10N $l,
-								IClientService $clientService) {
+								IClientService $clientService,
+								ILogger $logger) {
 		$this->config = $config;
 		$this->l = $l;
 		$this->clientService = $clientService;
+		$this->logger = $logger;
 	}
 
 	public function validate(string $password): void {
@@ -62,6 +67,7 @@ class HIBPValidator implements IValidator {
 					]
 				);
 			} catch (\Exception $e) {
+				$this->logger->logException($e, ['level' => ILogger::INFO]);
 				return true;
 			}
 
