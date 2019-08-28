@@ -1,12 +1,12 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password needs to be at least %s characters long" : "Parolei ir jābūt vismaz %s simbolu garai",
-    "Password needs to contain at least one lower and one upper case character." : "Parolē ir jābūt vismaz vienam mazajam un vienam lielajam burtam.",
-    "Password needs to contain at least one numeric character." : "Parolē ir jābūt vismaz vienam skaitlim.",
-    "Password needs to contain at least one special character." : "Parolei jāsatur vismaz vienu speciālo rakstzīmi.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Parole ir vien no 1,000,000 izplatītākajām parolēm. Lūdzu, padari to unikālu.",
     "Password is present in compromised password list. Please choose a different password." : "Parole atrodas uzlausto paroļu sarakstā. Lūdzu izvēlies citu paroli.",
+    "Password needs to be at least %s characters long" : "Parolei ir jābūt vismaz %s simbolu garai",
+    "Password needs to contain at least one numeric character." : "Parolē ir jābūt vismaz vienam skaitlim.",
+    "Password needs to contain at least one special character." : "Parolei jāsatur vismaz vienu speciālo rakstzīmi.",
+    "Password needs to contain at least one lower and one upper case character." : "Parolē ir jābūt vismaz vienam mazajam un vienam lielajam burtam.",
     "Password policy" : "Paroles politika",
     "Allows admins to configure a password policy" : "Ļauj administrātoriem uzstādīt paroļu politiku",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Atļaut administrātoram uzstādīt noteiktus paroles uzstādījumus, piem. minimālo paroles garumu",

@@ -1,11 +1,11 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "Heslo je v zozname 1 000 000 najpoužívanejších hesiel. Vyberte prosím iné.",
     "Password needs to be at least %s characters long" : "Heslo musí mať aspoň %s znakov",
-    "Password needs to contain at least one lower and one upper case character." : "Heslo musí obsahovať aspoň jedno malé a jedno veľké písmeno.",
     "Password needs to contain at least one numeric character." : "Heslo musí obsahovať aspoň jeden numerický znak.",
     "Password needs to contain at least one special character." : "Heslo musí obsahovať aspoň jeden špeciálny znak.",
-    "Password is among the 1,000,000 most common ones. Please make it unique." : "Heslo je v zozname 1 000 000 najpoužívanejších hesiel. Vyberte prosím iné.",
+    "Password needs to contain at least one lower and one upper case character." : "Heslo musí obsahovať aspoň jedno malé a jedno veľké písmeno.",
     "Password policy" : "Politika hesla",
     "Minimal length" : "Minimálna dĺžka",
     "Forbid common passwords" : "Zakázať najpoužívanejšie heslá",
