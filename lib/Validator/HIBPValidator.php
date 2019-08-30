@@ -68,7 +68,7 @@ class HIBPValidator implements IValidator {
 				);
 			} catch (\Exception $e) {
 				$this->logger->logException($e, ['level' => ILogger::INFO]);
-				return true;
+				return;
 			}
 
 			$result = $response->getBody();
