@@ -1,12 +1,12 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password needs to be at least %s characters long" : "Hasło musi zawierać co najmniej %s znaków",
-    "Password needs to contain at least one lower and one upper case character." : "Hasło musi zawierać co najmniej jedną małą oraz wielką literę.",
-    "Password needs to contain at least one numeric character." : "Hasło musi zawierać co najmniej jeden znak numeryczny.",
-    "Password needs to contain at least one special character." : "Hasło musi zawierać co najmniej jeden znak specjalny.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Hasło jest jednym z 1.000.000 najczęściej używanych haseł. Proszę wybrać inne.",
     "Password is present in compromised password list. Please choose a different password." : "Hasło jest obecne na liście haseł skompromitowanych. Wybierz inne hasło.",
+    "Password needs to be at least %s characters long" : "Hasło musi zawierać co najmniej %s znaków",
+    "Password needs to contain at least one numeric character." : "Hasło musi zawierać co najmniej jeden znak numeryczny.",
+    "Password needs to contain at least one special character." : "Hasło musi zawierać co najmniej jeden znak specjalny.",
+    "Password needs to contain at least one lower and one upper case character." : "Hasło musi zawierać co najmniej jedną małą oraz wielką literę.",
     "Password policy" : "Polityka haseł",
     "Allows admins to configure a password policy" : "Zezwala administratorom na konfigurowanie zasad haseł.",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Zezwala administratorowi na definiowanie określonych warunków wstępnych dla hasła, np. wymuszenie minimalnej długości",

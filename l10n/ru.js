@@ -1,12 +1,12 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password needs to be at least %s characters long" : "Длина пароля должна быть не менее %s символов",
-    "Password needs to contain at least one lower and one upper case character." : "В пароле должны присутствовать и прописные и строчные буквы.",
-    "Password needs to contain at least one numeric character." : "Пароль должен содержать хотя бы одну цифру.",
-    "Password needs to contain at least one special character." : "Пароль должен содержать хотя бы один специальный символ.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Пароль находится в списке 1 000 000 наиболее распространённых паролей. Придумайте что-нибудь более оригинальное.",
     "Password is present in compromised password list. Please choose a different password." : "Пароль присутствует в списке скомпрометированных паролей. Пожалуйста, выберите другой пароль.",
+    "Password needs to be at least %s characters long" : "Длина пароля должна быть не менее %s символов",
+    "Password needs to contain at least one numeric character." : "Пароль должен содержать хотя бы одну цифру.",
+    "Password needs to contain at least one special character." : "Пароль должен содержать хотя бы один специальный символ.",
+    "Password needs to contain at least one lower and one upper case character." : "В пароле должны присутствовать и прописные и строчные буквы.",
     "Password policy" : "Правила создания паролей",
     "Allows admins to configure a password policy" : "Разрешенные администраторы для конфигурирования политики паролей",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Разрешить администратору определять определенные предварительные условия для пароля, например. обеспечить минимальную длину пароля",
