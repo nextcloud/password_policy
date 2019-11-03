@@ -1,7 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password is among the 1,000,000 most common ones. Please make it unique." : "Lösenord är bland de 1 000 000 mest vanliga. Var god ändra till ett unikt.",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "Lösenord är bland de 1 000 000 mest vanliga. Vänligen ändra till ett unikt.",
     "Password is present in compromised password list. Please choose a different password." : "Lösenordet finns i läckt lösenordslista. Vänligen välj ett annat lösenord.",
     "Password needs to be at least %s characters long" : "Lösenord behöver vara minst %s tecken lång",
     "Password needs to contain at least one numeric character." : "Lösenord behöver innehålla åtminstone en siffra.",
