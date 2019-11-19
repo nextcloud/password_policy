@@ -28,6 +28,10 @@ use OCA\Password_Policy\Capabilities;
 use OCA\Password_Policy\Generator;
 use OCA\Password_Policy\PasswordValidator;
 use OCP\AppFramework\App;
+use OCP\EventDispatcher\Event;
+use OCP\EventDispatcher\IEventDispatcher;
+use OCP\Security\Events\GenerateSecurePasswordEvent;
+use OCP\Security\Events\ValidatePasswordPolicyEvent;
 use Symfony\Component\EventDispatcher\GenericEvent;
 
 class Application extends App {
@@ -36,24 +40,34 @@ class Application extends App {
 		$container = $this->getContainer();
 
 		$server = $container->getServer();
-		$eventDispatcher = $server->getEventDispatcher();
+		/** @var IEventDispatcher $eventDispatcher */
+		$eventDispatcher = $server->query(IEventDispatcher::class);
 
 		/** register capabilities */
 		$container->registerCapability(Capabilities::class);
 
+		$eventDispatcher->addListener(
+			ValidatePasswordPolicyEvent::class,
+			function (Event $event) use ($container) {
+				if (!($event instanceof ValidatePasswordPolicyEvent)) {
+					return;
+				}
 
-		$eventDispatcher->addListener('OCP\PasswordPolicy::validate',
-			function(GenericEvent $event) use ($container) {
 				/** @var PasswordValidator $validator */
 				$validator = $container->query(PasswordValidator::class);
-				$validator->validate($event->getSubject());
+				$validator->validate($event->getPassword());
 			}
 		);
-		$eventDispatcher->addListener('OCP\PasswordPolicy::generate',
-			function(GenericEvent $event) use ($container) {
+		$eventDispatcher->addListener(
+			GenerateSecurePasswordEvent::class,
+			function (Event $event) use ($container) {
+				if (!($event instanceof GenerateSecurePasswordEvent)) {
+					return;
+				}
+
 				/** @var Generator */
 				$generator = $container->query(Generator::class);
-				$event->setArgument('password', $generator->generate());
+				$event->setPassword($generator->generate());
 			}
 		);
 	}

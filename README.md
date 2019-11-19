@@ -13,7 +13,8 @@ Currently the app checks passwords for public link shares and for user passwords
 You can easily check passwords for your own app by adding following code to your app:
 
 ````
-$eventDispatcher = \OC::$server->getEventDispatcher();
-$event = new Symfony\Component\EventDispatcher\GenericEvent($password);
-$eventDispatcher->dispatch('OCP\PasswordPolicy::validate', $event);
+$eventDispatcher = \OC::$server->query(IEventDispatcher::class);
+$event = new \OCP\Security\Events\GenerateSecurePasswordEvent();
+$eventDispatcher->dispatchTyped($event);
+$password = $event->getPassword() ?? 'fallback when this app is not enabled';
 ````
