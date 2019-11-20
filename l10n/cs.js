@@ -7,7 +7,7 @@ OC.L10N.register(
     "Password needs to contain at least one numeric character." : "Je třeba, aby heslo obsahovalo alespoň jednu číslici.",
     "Password needs to contain at least one special character." : "Je třeba, aby heslo obsahovalo alespoň jeden speciální znak.",
     "Password needs to contain at least one lower and one upper case character." : "Je třeba, aby heslo obsahovalo alespoň jedno malé a jedno velké písmeno.",
-    "Password policy" : "Požadavky pro hesla",
+    "Password policy" : "Požadavky na hesla",
     "Allows admins to configure a password policy" : "Umožňuje správcům nastavovat pravidla pro hesla",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Umožnit administrátorovi definovat určité předpoklady pro heslo, např. vynutit minimální délku",
     "Minimal length" : "Minimální délka",
