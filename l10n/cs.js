@@ -9,7 +9,7 @@ OC.L10N.register(
     "Password needs to contain at least one lower and one upper case character." : "Je třeba, aby heslo obsahovalo alespoň jedno malé a jedno velké písmeno.",
     "Password policy" : "Požadavky na hesla",
     "Allows admins to configure a password policy" : "Umožňuje správcům nastavovat pravidla pro hesla",
-    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Umožnit administrátorovi definovat určité předpoklady pro heslo, např. vynutit minimální délku",
+    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Umožnit správci definovat určité požadavky na heslo – např. vynutit minimální délku",
     "Minimal length" : "Minimální délka",
     "Forbid common passwords" : "Zakázat běžná hesla",
     "Enforce upper and lower case characters" : "Vyžadovat VELKÁ a malá písmena",
