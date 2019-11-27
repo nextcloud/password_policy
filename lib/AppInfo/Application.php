@@ -28,6 +28,11 @@ use OCA\Password_Policy\Capabilities;
 use OCA\Password_Policy\Generator;
 use OCA\Password_Policy\PasswordValidator;
 use OCP\AppFramework\App;
+use OCP\EventDispatcher\Event;
+use OCP\EventDispatcher\IEventDispatcher;
+use OCP\ILogger;
+use OCP\Security\Events\GenerateSecurePasswordEvent;
+use OCP\Security\Events\ValidatePasswordPolicyEvent;
 use Symfony\Component\EventDispatcher\GenericEvent;
 
 class Application extends App {
@@ -36,21 +41,58 @@ class Application extends App {
 		$container = $this->getContainer();
 
 		$server = $container->getServer();
-		$eventDispatcher = $server->getEventDispatcher();
+		/** @var IEventDispatcher $eventDispatcher */
+		$eventDispatcher = $server->query(IEventDispatcher::class);
 
 		/** register capabilities */
 		$container->registerCapability(Capabilities::class);
 
+		$eventDispatcher->addListener(
+			ValidatePasswordPolicyEvent::class,
+			function (Event $event) use ($container) {
+				if (!($event instanceof ValidatePasswordPolicyEvent)) {
+					return;
+				}
 
-		$eventDispatcher->addListener('OCP\PasswordPolicy::validate',
-			function(GenericEvent $event) use ($container) {
+				/** @var PasswordValidator $validator */
+				$validator = $container->query(PasswordValidator::class);
+				$validator->validate($event->getPassword());
+			}
+		);
+		$eventDispatcher->addListener(
+			GenerateSecurePasswordEvent::class,
+			function (Event $event) use ($container) {
+				if (!($event instanceof GenerateSecurePasswordEvent)) {
+					return;
+				}
+
+				/** @var Generator */
+				$generator = $container->query(Generator::class);
+				$event->setPassword($generator->generate());
+			}
+		);
+
+		// TODO: remove these two legacy event listeners
+		$symfonyDispatcher = $server->getEventDispatcher();
+		$symfonyDispatcher->addListener(
+			'OCP\PasswordPolicy::validate',
+			function (GenericEvent $event) use ($container) {
+				/** @var ILogger $logger */
+				$logger = $container->query(ILogger::class);
+				$logger->debug('OCP\PasswordPolicy::validate is deprecated. Listen to ' . ValidatePasswordPolicyEvent::class . ' instead');
+
 				/** @var PasswordValidator $validator */
 				$validator = $container->query(PasswordValidator::class);
 				$validator->validate($event->getSubject());
 			}
 		);
-		$eventDispatcher->addListener('OCP\PasswordPolicy::generate',
-			function(GenericEvent $event) use ($container) {
+		$symfonyDispatcher->addListener(
+			'OCP\PasswordPolicy::generate',
+			function (GenericEvent $event) use ($container) {
+				/** @var ILogger $logger */
+				$logger = $container->query(ILogger::class);
+				$logger->debug('OCP\PasswordPolicy::generate is deprecated. Listen to ' . GenerateSecurePasswordEvent::class . ' instead');
+
 				/** @var Generator */
 				$generator = $container->query(Generator::class);
 				$event->setArgument('password', $generator->generate());
