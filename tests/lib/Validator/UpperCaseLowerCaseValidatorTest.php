@@ -43,7 +43,7 @@ class UpperCaseLowerCaseValidatorTest extends TestCase {
 	/** @var IValidator */
 	private $validator;
 
-	public function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->confg = $this->createMock(PasswordPolicyConfig::class);
