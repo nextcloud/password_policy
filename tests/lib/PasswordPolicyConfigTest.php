@@ -33,7 +33,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/** @var  PasswordPolicyConfig */
 	private $instance;
 
-	public function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->config = $this->createMock(IConfig::class);

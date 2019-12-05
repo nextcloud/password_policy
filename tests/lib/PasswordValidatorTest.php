@@ -51,7 +51,7 @@ class PasswordValidatorTest extends TestCase {
 	private $validator;
 
 
-	public function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->container = $this->createMock(IAppContainer::class);
