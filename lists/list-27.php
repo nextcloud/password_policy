@@ -16,4 +16,6 @@ return array (
   'whiekamariaholthe_subway_on' => true,
   'whateverprettycdaniinpurple' => true,
   'welcomee96c4be46d2be184a9d8' => true,
+  'vetalbstobvv001100123456789' => true,
+  'vetal19940207vetall19940207' => true,
 );
