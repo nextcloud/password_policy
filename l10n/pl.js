@@ -16,6 +16,6 @@ OC.L10N.register(
     "Enforce numeric characters" : "Wymuś znaki numeryczne",
     "Enforce special characters" : "Wymuś znaki specjalne",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Sprawdź hasło na liście naruszonych haseł na haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ten test tworzy skrót hasła i wysyła 5 pierwszych znaków tego skrótu do API haveibeenpwned.com, aby pobrać listę wszystkich skrótów, które zaczynają się od nich. Następnie sprawdza w instancji Nextcloud czy skrót hasła jest w zestawie wyników."
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ta kontrola tworzy skrót hasła i wysyła 5 pierwszych znaków tego skrótu do interfejsu API haveibeenpwned.com w celu pobrania listy wszystkich skrótów, które zaczynają się od nich. Następnie sprawdza instancję Nextcloud, czy skrót hasła znajduje się w zestawie wyników."
 },
 "nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);");
