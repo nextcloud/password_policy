@@ -5,8 +5,9 @@
     "Allows admins to configure a password policy" : "Omogoča skrbnikom nastavljanje pravil uporabe gesel",
     "Minimal length" : "Najmanjša dolžina",
     "Forbid common passwords" : "Prepreči splošna gesla",
-    "Enforce upper and lower case characters" : "Zahtevaj velike in male znake",
+    "Enforce upper and lower case characters" : "Zahtevaj velike in male črkovne znake",
     "Enforce numeric characters" : "Zahtevaj številske znake",
-    "Enforce special characters" : "Zahtevaj posebne znake"
+    "Enforce special characters" : "Zahtevaj posebne znake",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Preveri kakovost gesla s seznamom neustreznih gesel na haveibeenpwned.com"
 },"pluralForm" :"nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);"
 }
