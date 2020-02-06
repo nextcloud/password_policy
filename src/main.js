@@ -26,9 +26,12 @@ import { loadState } from '@nextcloud/initial-state'
 
 Vue.prototype.t = t
 
+const settings = loadState('password_policy', 'settings')
+
 const View = Vue.extend(App)
 const app = new View({
 	propsData: {
+		settings
 	},
 })
 app.$mount('#password-policy')

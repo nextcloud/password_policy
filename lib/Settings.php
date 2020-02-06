@@ -25,6 +25,7 @@ declare(strict_types=1);
 namespace OCA\Password_Policy;
 
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\IInitialStateService;
 use OCP\Settings\ISettings;
 
 class Settings implements ISettings {
@@ -32,8 +33,12 @@ class Settings implements ISettings {
 	/** @var PasswordPolicyConfig */
 	private $config;
 
-	public function __construct(PasswordPolicyConfig $config) {
+	/** @var IInitialStateService */
+	private $initialStateService;
+
+	public function __construct(PasswordPolicyConfig $config, IInitialStateService $initialStateService) {
 		$this->config = $config;
+		$this->initialStateService = $initialStateService;
 	}
 
 	public function getForm(): TemplateResponse {
@@ -48,6 +53,15 @@ class Settings implements ISettings {
 			'historySize' => $this->config->getHistorySize(),
 			'expiration' => $this->config->getExpiryInDays(),
 			'maximumLoginAttempts' => $this->config->getMaximumLoginAttempts(),
+		]);
+
+		$this->initialStateService->provideInitialState('password_policy', 'settings', [
+			'minLength' => $this->config->getMinLength(),
+			'enforceNonCommonPassword' => $this->config->getEnforceNonCommonPassword(),
+			'enforceUpperLowerCase' => $this->config->getEnforceUpperLowerCase(),
+			'enforceNumericCharacters' => $this->config->getEnforceNumericCharacters(),
+			'enforceSpecialCharacters' => $this->config->getEnforceSpecialCharacters(),
+			'enforceHaveIBeenPwned' => $this->config->getEnforceHaveIBeenPwned(),
 		]);
 
 		return $response;
