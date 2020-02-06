@@ -23,6 +23,7 @@
 /** @var \OCP\IL10N $l */
 script('password_policy', 'settings-admin');
 style('password_policy', 'settings-admin');
+script('password_policy', 'settings');
 ?>
 
 <div id="password-policy" class="section">
