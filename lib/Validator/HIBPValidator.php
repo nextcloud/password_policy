@@ -63,7 +63,10 @@ class HIBPValidator implements IValidator {
 				$response = $client->get(
 					'https://api.pwnedpasswords.com/range/' . $range,
 					[
-						'timeout' => 5
+						'timeout' => 5,
+						'headers' => [
+							'Add-Padding' => 'true'
+						]
 					]
 				);
 			} catch (\Exception $e) {
@@ -72,6 +75,7 @@ class HIBPValidator implements IValidator {
 			}
 
 			$result = $response->getBody();
+			$result = preg_replace('/^([0-9A-Z]+:0)$/m', '', $result);
 
 			if (strpos($result, $needle) !== false) {
 				$message = 'Password is present in compromised password list. Please choose a different password.';
