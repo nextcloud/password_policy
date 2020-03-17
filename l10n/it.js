@@ -8,7 +8,7 @@ OC.L10N.register(
     "Password needs to contain at least one special character." : "La password deve contenere almeno un carattere speciale.",
     "Password needs to contain at least one lower and one upper case character." : "La password deve contenere almeno un carattere minuscolo e uno maiuscolo.",
     "Password policy" : "Criterio della password",
-    "Allows admins to configure a password policy" : "Consente adli amministratori di configurare un criterio per le password",
+    "Allows admins to configure a password policy" : "Consente agli amministratori di configurare un criterio per le password",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Consente all'amministratore di definire determinati pre-requisiti per le password, ad es. forzare una lunghezza minima",
     "Minimal length" : "Lunghezza minima",
     "Forbid common passwords" : "Vieta le password comuni",
