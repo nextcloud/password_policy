@@ -26,6 +26,7 @@ namespace OCA\Password_Policy\AppInfo;
 
 use OCA\Password_Policy\Capabilities;
 use OCA\Password_Policy\Generator;
+use OCA\Password_Policy\HistoryCompliance;
 use OCA\Password_Policy\PasswordValidator;
 use OCP\AppFramework\App;
 use OCP\EventDispatcher\Event;
@@ -33,6 +34,8 @@ use OCP\EventDispatcher\IEventDispatcher;
 use OCP\ILogger;
 use OCP\Security\Events\GenerateSecurePasswordEvent;
 use OCP\Security\Events\ValidatePasswordPolicyEvent;
+use OCP\User\Events\BeforePasswordUpdatedEvent;
+use OCP\User\Events\PasswordUpdatedEvent;
 use Symfony\Component\EventDispatcher\GenericEvent;
 
 class Application extends App {
@@ -69,6 +72,28 @@ class Application extends App {
 				/** @var Generator */
 				$generator = $container->query(Generator::class);
 				$event->setPassword($generator->generate());
+			}
+		);
+		$eventDispatcher->addListener(
+			BeforePasswordUpdatedEvent::class,
+			function (Event $event) use ($container) {
+				if(!($event instanceof BeforePasswordUpdatedEvent)) {
+					return;
+				}
+				/** @var HistoryCompliance $historyCompliance */
+				$historyCompliance = $container->query(HistoryCompliance::class);
+				$historyCompliance->audit($event->getUser(), $event->getPassword());
+			}
+		);
+		$eventDispatcher->addListener(
+			PasswordUpdatedEvent::class,
+			function (Event $event) use ($container) {
+				if(!($event instanceof PasswordUpdatedEvent)) {
+					return;
+				}
+				/** @var HistoryCompliance $historyCompliance */
+				$historyCompliance = $container->query(HistoryCompliance::class);
+				$historyCompliance->update($event->getUser(), $event->getPassword());
 			}
 		);
 
