@@ -25,8 +25,8 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\AppInfo;
 
 use OCA\Password_Policy\Capabilities;
+use OCA\Password_Policy\ComplianceService;
 use OCA\Password_Policy\Generator;
-use OCA\Password_Policy\HistoryCompliance;
 use OCA\Password_Policy\PasswordValidator;
 use OCP\AppFramework\App;
 use OCP\EventDispatcher\Event;
@@ -36,6 +36,7 @@ use OCP\Security\Events\GenerateSecurePasswordEvent;
 use OCP\Security\Events\ValidatePasswordPolicyEvent;
 use OCP\User\Events\BeforePasswordUpdatedEvent;
 use OCP\User\Events\PasswordUpdatedEvent;
+use OCP\User\Events\PostLoginEvent;
 use Symfony\Component\EventDispatcher\GenericEvent;
 
 class Application extends App {
@@ -80,9 +81,9 @@ class Application extends App {
 				if(!($event instanceof BeforePasswordUpdatedEvent)) {
 					return;
 				}
-				/** @var HistoryCompliance $historyCompliance */
-				$historyCompliance = $container->query(HistoryCompliance::class);
-				$historyCompliance->audit($event->getUser(), $event->getPassword());
+				/** @var ComplianceService $complianceUpdater */
+				$complianceUpdater = $container->query(ComplianceService::class);
+				$complianceUpdater->audit($event->getUser(), $event->getPassword());
 			}
 		);
 		$eventDispatcher->addListener(
@@ -91,9 +92,20 @@ class Application extends App {
 				if(!($event instanceof PasswordUpdatedEvent)) {
 					return;
 				}
-				/** @var HistoryCompliance $historyCompliance */
-				$historyCompliance = $container->query(HistoryCompliance::class);
-				$historyCompliance->update($event->getUser(), $event->getPassword());
+				/** @var ComplianceService $complianceUpdater */
+				$complianceUpdater = $container->query(ComplianceService::class);
+				$complianceUpdater->update($event->getUser(), $event->getPassword());
+			}
+		);
+		$eventDispatcher->addListener(
+			PostLoginEvent::class,
+			function (Event $event) use ($container) {
+				if(!$event instanceof PostLoginEvent) {
+					return;
+				}
+				/** @var ComplianceService $complianceUpdater */
+				$complianceUpdater = $container->query(ComplianceService::class);
+				$complianceUpdater->entryControl($event->getUser(), $event->getPassword(), $event->isTokenLogin());
 			}
 		);
 

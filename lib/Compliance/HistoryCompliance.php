@@ -22,9 +22,10 @@ declare(strict_types=1);
  *
  */
 
-namespace OCA\Password_Policy;
+namespace OCA\Password_Policy\Compliance;
 
 use OC\HintException;
+use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\IConfig;
 use OCP\IL10N;
 use OCP\ILogger;
@@ -33,7 +34,7 @@ use OCP\IUserSession;
 use OCP\PreConditionNotMetException;
 use OCP\Security\IHasher;
 
-class HistoryCompliance {
+class HistoryCompliance implements IAuditor, IUpdatable {
 	/** @var string */
 	protected $uid;
 

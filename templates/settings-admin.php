@@ -41,6 +41,12 @@ style('password_policy', 'settings-admin');
 			<span><?php p($l->t('User password history')) ?></span>
 		</label>
 	</p>
+	<p>
+		<label class="password-policy-number-option">
+			<input id="password-policy-expiration" type="number" value="<?php p($_['expiration']) ?>" />
+			<span><?php p($l->t('days until user password expires')) ?></span>
+		</label>
+	</p>
 	<p id="enforceNonCommonPassword">
 		<input type="checkbox" name="password-policy-enforce-non-common-password" id="password-policy-enforce-non-common-password" class="checkbox"
 			   value="1" <?php if ($_['enforceNonCommonPassword']) print_unescaped('checked="checked"'); ?> />
