@@ -29,9 +29,6 @@ use OC\HintException;
 interface IValidator {
 
 	/**
-	 * @param string $password
-	 * @return bool
-	 *
 	 * @throws HintException
 	 */
 	public function validate(string $password): void;

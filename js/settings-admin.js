@@ -20,11 +20,11 @@
 
 var passwordPolicy = {
 
-	saveMinLength: function(minLength) {
+	saveNumberValue: function(name, value) {
 		OC.msg.startSaving('#password-policy-settings-msg');
 
-		if (/^\d+$/.test(minLength)) {
-			OCP.AppConfig.setValue('password_policy', 'minLength', minLength);
+		if (/^\d+$/.test(value)) {
+			OCP.AppConfig.setValue('password_policy', name, value);
 			OC.msg.finishedSaving('#password-policy-settings-msg',
 				{
 					'status': 'success',
@@ -34,11 +34,20 @@ var passwordPolicy = {
 				}
 			);
 		} else {
+			var message = OC.L10N.translate('password_policy', 'Unknown error');
+			switch (name) {
+				case "minLength":
+					message = OC.L10N.translate('password_policy', 'Minimal length has to be a non negative number');
+					break;
+				case "historySize":
+					message = OC.L10N.translate('password_policy', 'History size has to be a non negative number');
+					break;
+			}
 			OC.msg.finishedSaving('#password-policy-settings-msg',
 				{
 					'status': 'failure',
 					'data': {
-						'message': OC.L10N.translate('password_policy', 'Minimal length has to be a non negative number')
+						'message': message
 					}
 				}
 			);
@@ -86,10 +95,18 @@ $(document).ready(function(){
 
 	$('#password-policy-min-length').keyup(function (e) {
 		if (e.keyCode === 13) {
-			passwordPolicy.saveMinLength($(this).val());
+			passwordPolicy.saveNumberValue('minLength', $(this).val());
 		}
 	}).focusout(function () {
-		passwordPolicy.saveMinLength($(this).val());
+		passwordPolicy.saveNumberValue('minLength', $(this).val());
+	});
+
+	$('#password-policy-history-size').keyup(function (e) {
+		if (e.keyCode === 13) {
+			passwordPolicy.saveNumberValue('historySize', $(this).val());
+		}
+	}).focusout(function () {
+		passwordPolicy.saveNumberValue('historySize', $(this).val());
 	});
 
 });

@@ -51,7 +51,6 @@ class PasswordValidator {
 	/**
 	 * check if the given password matches the conditions defined by the admin
 	 *
-	 * @param string $password
 	 * @throws HintException
 	 */
 	public function validate(string $password): void {

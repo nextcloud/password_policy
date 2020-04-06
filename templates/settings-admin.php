@@ -30,9 +30,15 @@ style('password_policy', 'settings-admin');
 	<div id="password-policy-settings-msg" class="msg success inlineblock" style="display: none;">Saved</div>
 
 	<p>
-		<label>
-			<span><?php p($l->t('Minimal length')) ?></span>
+		<label class="password-policy-number-option">
 			<input id="password-policy-min-length" type="number" value="<?php p($_['minLength']) ?>" />
+			<span><?php p($l->t('Minimal length')) ?></span>
+		</label>
+	</p>
+	<p>
+		<label class="password-policy-number-option">
+			<input id="password-policy-history-size" type="number" value="<?php p($_['historySize']) ?>" />
+			<span><?php p($l->t('User password history')) ?></span>
 		</label>
 	</p>
 	<p id="enforceNonCommonPassword">

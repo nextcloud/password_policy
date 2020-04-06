@@ -177,4 +177,12 @@ class PasswordPolicyConfig {
 		$this->config->setAppValue('password_policy', 'enforceHaveIBeenPwned', $enforceHaveIBeenPwned ? '1' : '0');
 	}
 
+	public function getHistorySize(): int {
+		return (int)$this->config->getAppValue(
+			'password_policy',
+			'historySize',
+			0
+		);
+	}
+
 }
