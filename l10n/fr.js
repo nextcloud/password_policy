@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password must not have been used recently before." : "Le mot de passe ne doit pas avoir été utilisé récemment.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Le mot de passe se trouve parmi les 1 000 000 mots de passe les plus courants. Merci de le rendre unique.",
     "Password is present in compromised password list. Please choose a different password." : "Le mot de passe est présent dans la liste des mots de passe compromis. Merci d'en choisir un autre.",
     "Password needs to be at least %s characters long" : "Le mot de passe doit comporter au moins %s caractères",
@@ -11,6 +12,7 @@ OC.L10N.register(
     "Allows admins to configure a password policy" : "Permet aux administrateurs de configurer une politique de mot de passe.",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permettre à l'administrateur de définir certaines conditions préalables pour le mot de passe, par exemple, imposer une longueur minimale.",
     "Minimal length" : "Taille minimale",
+    "User password history" : "Historique des mots de passe de l'utilisateur",
     "Forbid common passwords" : "Interdire les mots de passe courants",
     "Enforce upper and lower case characters" : "Imposer des caractères en majuscules et en minuscules",
     "Enforce numeric characters" : "Imposer des chiffres",
