@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password must not have been used recently before." : "O contrasinal non debe ter sido empregado recentemente.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "O contrasinal está entre o 1.000.000 máis común. Escolla un diferente.",
     "Password is present in compromised password list. Please choose a different password." : "O contrasinal atopase nunha lista de contrasinais comprometidos. Escolla un contrasinal diferente.",
     "Password needs to be at least %s characters long" : "O contrasinal precisa ser polo menos de %s caracteres de lonxitude",
@@ -11,6 +12,7 @@ OC.L10N.register(
     "Allows admins to configure a password policy" : "Permítelle aos administradores  configurar unha política de contrasinais",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permítelle aos administradores definir certas precondicións para os contrasinais, p. ex., obrigar a unha lonxitude mínima",
     "Minimal length" : "Lonxitude mínima",
+    "User password history" : "Historial de contrasinais do usuario",
     "Forbid common passwords" : "Prohibir contrasinais comúns",
     "Enforce upper and lower case characters" : "Forzar caracteres en maiúsculas e minúsculas",
     "Enforce numeric characters" : "Forzar caracteres numéricos",

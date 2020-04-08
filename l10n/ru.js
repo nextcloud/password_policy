@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password must not have been used recently before." : "Пароль не должен был использоваться недавно.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Пароль находится в списке 1 000 000 наиболее распространённых паролей. Придумайте что-нибудь более оригинальное.",
     "Password is present in compromised password list. Please choose a different password." : "Пароль присутствует в списке скомпрометированных паролей. Пожалуйста, выберите другой пароль.",
     "Password needs to be at least %s characters long" : "Длина пароля должна быть не менее %s символов",
@@ -11,6 +12,7 @@ OC.L10N.register(
     "Allows admins to configure a password policy" : "Разрешенные администраторы для конфигурирования политики паролей",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Разрешить администратору определять определенные предварительные условия для пароля, например. обеспечить минимальную длину пароля",
     "Minimal length" : "Минимальная длина",
+    "User password history" : "История паролей пользователей",
     "Forbid common passwords" : "Запрет простых паролей",
     "Enforce upper and lower case characters" : "Требовать наличия в пароле и прописных и строчных букв ",
     "Enforce numeric characters" : "Требовать наличия в пароле цифр",
