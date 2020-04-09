@@ -64,6 +64,9 @@ class Expiration implements IUpdatable, IEntryControl {
 	 * @throws PreConditionNotMetException
 	 */
 	public function update(IUser $user, string $password): void {
+		if(!$this->isLocalUser($user)) {
+			return;
+		}
 		if($this->policyConfig->getExpiryInDays() === 0) {
 			$this->config->deleteUserValue(
 				$user->getUID(),
@@ -82,6 +85,7 @@ class Expiration implements IUpdatable, IEntryControl {
 
 	public function entryControl(IUser $user, string $password): void {
 		if($this->policyConfig->getExpiryInDays() !== 0
+			&& $this->isLocalUser($user)
 			&& $this->isPasswordExpired($user)
 		) {
 			$message = 'Password is expired, please use forgot password method to reset';
@@ -107,6 +111,11 @@ class Expiration implements IUpdatable, IEntryControl {
 		$expiresIn = $updatedAt + $expiryInDays * 24 * 60 * 60;
 
 		return $expiresIn <= time();
+	}
+
+	protected function isLocalUser(IUser $user) {
+		$localBackends = ['Database', 'Guests'];
+		return in_array($user->getBackendClassName(), $localBackends);
 	}
 
 }
