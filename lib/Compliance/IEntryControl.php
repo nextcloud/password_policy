@@ -32,5 +32,5 @@ interface IEntryControl {
 	/**
 	 * @throws HintException
 	 */
-	public function entryControl(IUser $user, string $password, bool $isTokenLogin): void;
+	public function entryControl(IUser $user, string $password): void;
 }

@@ -35,8 +35,8 @@ use OCP\ILogger;
 use OCP\Security\Events\GenerateSecurePasswordEvent;
 use OCP\Security\Events\ValidatePasswordPolicyEvent;
 use OCP\User\Events\BeforePasswordUpdatedEvent;
+use OCP\User\Events\BeforeUserLoggedInEvent;
 use OCP\User\Events\PasswordUpdatedEvent;
-use OCP\User\Events\PostLoginEvent;
 use Symfony\Component\EventDispatcher\GenericEvent;
 
 class Application extends App {
@@ -98,14 +98,14 @@ class Application extends App {
 			}
 		);
 		$eventDispatcher->addListener(
-			PostLoginEvent::class,
+			BeforeUserLoggedInEvent::class,
 			function (Event $event) use ($container) {
-				if(!$event instanceof PostLoginEvent) {
+				if(!$event instanceof BeforeUserLoggedInEvent) {
 					return;
 				}
 				/** @var ComplianceService $complianceUpdater */
 				$complianceUpdater = $container->query(ComplianceService::class);
-				$complianceUpdater->entryControl($event->getUser(), $event->getPassword(), $event->isTokenLogin());
+				$complianceUpdater->entryControl($event->getUsername(), $event->getPassword());
 			}
 		);
 

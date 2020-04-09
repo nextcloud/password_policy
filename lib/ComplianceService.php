@@ -85,14 +85,15 @@ class ComplianceService {
 	/**
 	 * @throws LoginException
 	 */
-	public function entryControl(IUser $user, string $password, bool $isTokenLogin) {
+	//public function entryControl(IUser $user, string $password, bool $isTokenLogin) {
+	public function entryControl(string $loginName, string $password) {
+		$uid = $loginName;
+		\OCP\Util::emitHook( '\OCA\Files_Sharing\API\Server2Server', 'preLoginNameUsedAsUserName', ['uid' => &$uid]);
 		foreach ($this->getInstance(IEntryControl::class) as $instance) {
 			try {
-				$instance->entryControl($user, $password, $isTokenLogin);
+				$user = \OC::$server->getUserManager()->get($uid);
+				$instance->entryControl($user, $password);
 			} catch (HintException $e) {
-				if($this->userSession->isLoggedIn()) {
-					$this->userSession->logout();
-				}
 				throw new LoginException($e->getHint());
 			}
 		}

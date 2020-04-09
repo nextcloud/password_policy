@@ -80,9 +80,8 @@ class Expiration implements IUpdatable, IEntryControl {
 		);
 	}
 
-	public function entryControl(IUser $user, string $password, bool $isTokenLogin): void {
+	public function entryControl(IUser $user, string $password): void {
 		if($this->policyConfig->getExpiryInDays() !== 0
-			&& !$isTokenLogin
 			&& $this->isPasswordExpired($user)
 		) {
 			$message = 'Password is expired, please use forgot password method to reset';
