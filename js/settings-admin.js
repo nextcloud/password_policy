@@ -42,6 +42,9 @@ var passwordPolicy = {
 				case "historySize":
 					message = OC.L10N.translate('password_policy', 'History size has to be a non negative number');
 					break;
+				case "expiration":
+					message = OC.L10N.translate('password_policy', 'Expiration days have to be a non negative number');
+					break;
 			}
 			OC.msg.finishedSaving('#password-policy-settings-msg',
 				{
@@ -93,20 +96,29 @@ $(document).ready(function(){
 		OCP.AppConfig.setValue('password_policy', 'enforceHaveIBeenPwned', value);
 	});
 
-	$('#password-policy-min-length').keyup(function (e) {
-		if (e.keyCode === 13) {
-			passwordPolicy.saveNumberValue('minLength', $(this).val());
-		}
-	}).focusout(function () {
-		passwordPolicy.saveNumberValue('minLength', $(this).val());
-	});
-
-	$('#password-policy-history-size').keyup(function (e) {
-		if (e.keyCode === 13) {
-			passwordPolicy.saveNumberValue('historySize', $(this).val());
-		}
-	}).focusout(function () {
-		passwordPolicy.saveNumberValue('historySize', $(this).val());
-	});
+	// register save handler for number input fields
+	[
+		{
+			elem: '#password-policy-min-length',
+			conf: 'minLength',
+		},
+		{
+			elem: '#password-policy-history-size',
+			conf: 'historySize',
+		},
+		{
+			elem: '#password-policy-expiration',
+			conf: 'expiration',
+		},
+	].forEach(function (configField) {
+		console.log(configField);
+		$(configField.elem).keyup(function (e) {
+			if (e.keyCode === 13) {
+				passwordPolicy.saveNumberValue(configField.conf, $(this).val());
+			}
+		}).focusout(function () {
+			passwordPolicy.saveNumberValue(configField.conf, $(this).val());
+		});
+	})
 
 });

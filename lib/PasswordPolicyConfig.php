@@ -185,4 +185,12 @@ class PasswordPolicyConfig {
 		);
 	}
 
+	public function getExpiryInDays(): int {
+		return (int)$this->config->getAppValue(
+			'password_policy',
+			'expiration',
+			0
+		);
+	}
+
 }
