@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "Caducou o contrasinal, use o método de contrasinal esquecido para restabelecelo",
     "Password must not have been used recently before." : "O contrasinal non debe ter sido empregado recentemente.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "O contrasinal está entre o 1.000.000 máis común. Escolla un diferente.",
     "Password is present in compromised password list. Please choose a different password." : "O contrasinal atopase nunha lista de contrasinais comprometidos. Escolla un contrasinal diferente.",
@@ -13,6 +14,7 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permítelle aos administradores definir certas precondicións para os contrasinais, p. ex., obrigar a unha lonxitude mínima",
     "Minimal length" : "Lonxitude mínima",
     "User password history" : "Historial de contrasinais do usuario",
+    "days until user password expires" : "días ata que caduque o contrasinal do usuario",
     "Forbid common passwords" : "Prohibir contrasinais comúns",
     "Enforce upper and lower case characters" : "Forzar caracteres en maiúsculas e minúsculas",
     "Enforce numeric characters" : "Forzar caracteres numéricos",
