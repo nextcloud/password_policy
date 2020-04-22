@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "Ο κωδικός πρόσβασης έχει λήξει. Χρησιμοποιήστε το ξέχασα τον κωδικό μου για επαναφορά",
     "Password must not have been used recently before." : "Ο κωδικός δεν πρέπει να έχει χρησιμοποιηθεί πρόσφατα.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Ο κωδικός πρόσβασης είναι μεταξύ των 1.000.000 συνηθέστερων. Κάντε το μοναδικό.",
     "Password is present in compromised password list. Please choose a different password." : "Ο κωδικός έχει ξαναχρησιμοποιηθεί στο παρελθόν. Παρακαλώ επιλέξτε διαφορετικό.",
@@ -13,6 +14,7 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Επιτρέψτε στο διαχειριστή να ορίσει ορισμένες προϋποθέσεις για τον κωδικό πρόσβασης, π.χ. επιβολή ελάχιστου μήκους",
     "Minimal length" : "Ελάχιστο μέγεθος",
     "User password history" : "Ιστορικό κωδικών χρήστη",
+    "days until user password expires" : "ημέρες έως τη λήξη του κωδικού πρόσβασης",
     "Forbid common passwords" : "Απαγόρευση κοινών συνθηματικών",
     "Enforce upper and lower case characters" : "Υποχρεωτική χρήση κεφαλαίων και πεζών χαρακτήρων",
     "Enforce numeric characters" : "Υποχρεωτική χρήση αριθμητικών χαρακτήρων",

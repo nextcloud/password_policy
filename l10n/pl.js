@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "Hasło wygasło, użyj metody przypomnienia hasła, aby zresetować",
     "Password must not have been used recently before." : "Hasło nie było ostatnio używane.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Hasło jest jednym z 1.000.000 najczęściej używanych haseł. Proszę wybrać inne.",
     "Password is present in compromised password list. Please choose a different password." : "Hasło jest obecne na liście haseł skompromitowanych. Wybierz inne hasło.",
@@ -13,6 +14,7 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Zezwala administratorowi na definiowanie określonych warunków wstępnych dla hasła, np. wymuszenie minimalnej długości",
     "Minimal length" : "Minimalna długość",
     "User password history" : "Historia hasła użytkownika",
+    "days until user password expires" : "dni do wygaśnięcia hasła użytkownika",
     "Forbid common passwords" : "Zabroń takich samych haseł",
     "Enforce upper and lower case characters" : "Wymuś wielkie i małe litery",
     "Enforce numeric characters" : "Wymuś znaki numeryczne",
