@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password must not have been used recently before." : "Лозинка не сме да је скорије коришћена.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Лозинка је међу 1.000.000 најкоришћенијих лозинки. Одаберите неку мало јединственију.",
     "Password is present in compromised password list. Please choose a different password." : "Лозинка је међу најчешће проваљеним лозинкама. Одаберите неку другу.",
     "Password needs to be at least %s characters long" : "Лозинка мора да има бар %s карактера",
@@ -8,9 +9,10 @@ OC.L10N.register(
     "Password needs to contain at least one special character." : "Лозинка мора да садржи бар један специјални карактер.",
     "Password needs to contain at least one lower and one upper case character." : "Лозинка мора да има бар једно мало и бар једно велико слово.",
     "Password policy" : "Правила за лозинке",
-    "Allows admins to configure a password policy" : "Дозвољава администраторима да подесе правила за лозинке",
-    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Дозвољава администраторима да дефинишу одређене предуслове за лозинке, нпр. да захтевају минималну дужину",
+    "Allows admins to configure a password policy" : "Омогућава администраторима да подесе смернице за лозинке",
+    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Омогућава администратору да одреди предуслове за лозинке, нпр. да захтева минималну дужину",
     "Minimal length" : "Минимална дужина",
+    "User password history" : "Користи историјат лозинки",
     "Forbid common passwords" : "Забрани честе лозинке",
     "Enforce upper and lower case characters" : "Захтевај употребу и малих и великих слова",
     "Enforce numeric characters" : "Захтевај употребу цифри",

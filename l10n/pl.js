@@ -1,6 +1,8 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "Hasło wygasło, użyj metody przypomnienia hasła, aby zresetować",
+    "Password must not have been used recently before." : "Hasło nie było ostatnio używane.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Hasło jest jednym z 1.000.000 najczęściej używanych haseł. Proszę wybrać inne.",
     "Password is present in compromised password list. Please choose a different password." : "Hasło jest obecne na liście haseł skompromitowanych. Wybierz inne hasło.",
     "Password needs to be at least %s characters long" : "Hasło musi zawierać co najmniej %s znaków",
@@ -11,11 +13,13 @@ OC.L10N.register(
     "Allows admins to configure a password policy" : "Zezwala administratorom na konfigurowanie zasad haseł.",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Zezwala administratorowi na definiowanie określonych warunków wstępnych dla hasła, np. wymuszenie minimalnej długości",
     "Minimal length" : "Minimalna długość",
+    "User password history" : "Historia hasła użytkownika",
+    "days until user password expires" : "dni do wygaśnięcia hasła użytkownika",
     "Forbid common passwords" : "Zabroń takich samych haseł",
     "Enforce upper and lower case characters" : "Wymuś wielkie i małe litery",
     "Enforce numeric characters" : "Wymuś znaki numeryczne",
     "Enforce special characters" : "Wymuś znaki specjalne",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Sprawdź hasło na liście naruszonych haseł na haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ten test tworzy skrót hasła i wysyła 5 pierwszych znaków tego skrótu do API haveibeenpwned.com, aby pobrać listę wszystkich skrótów, które zaczynają się od nich. Następnie sprawdza w instancji Nextcloud czy skrót hasła jest w zestawie wyników."
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ta kontrola tworzy skrót hasła i wysyła 5 pierwszych znaków tego skrótu do interfejsu API haveibeenpwned.com w celu pobrania listy wszystkich skrótów, które zaczynają się od nich. Następnie sprawdza instancję Nextcloud, czy skrót hasła znajduje się w zestawie wyników."
 },
 "nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);");
