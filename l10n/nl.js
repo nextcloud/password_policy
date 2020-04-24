@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "Wachtwoord verlopen, gebruik 'wachtwoord vergeten' om te herstellen",
     "Password must not have been used recently before." : "Wachtwoord mag niet al eerder gebruikt zijn",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Het wachtwoord behoort tot de 1.000.000 meest gebruikte wachtwoorden. Maak het meer uniek.",
     "Password is present in compromised password list. Please choose a different password." : "Het wachtwoord is aanwezig in de lijst met gecompromitteerde wachtwoorden. Kies een ander.",
@@ -13,6 +14,7 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Sta beheerder toe om bepaalde randvoorwaarden te definiëren voor het wachtwoord. B.v. minimum wachtwoordlengte",
     "Minimal length" : "Minimale lengte",
     "User password history" : "Wachtwoordhistorie gebruiker",
+    "days until user password expires" : "dagen tot wachtwoord verloopt",
     "Forbid common passwords" : "Verboden gewone wachtwoorden",
     "Enforce upper and lower case characters" : "Verplichten hoofd- en kleine letters",
     "Enforce numeric characters" : "Verplichten cijfers",
