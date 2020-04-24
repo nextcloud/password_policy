@@ -27,8 +27,11 @@ namespace OCA\Password_Policy\AppInfo;
 use OCA\Password_Policy\Capabilities;
 use OCA\Password_Policy\ComplianceService;
 use OCA\Password_Policy\Generator;
+use OCA\Password_Policy\Listener\FailedLoginListener;
+use OCA\Password_Policy\Listener\SuccesfullLoginListener;
 use OCA\Password_Policy\PasswordValidator;
 use OCP\AppFramework\App;
+use OCP\Authentication\Events\LoginFailedEvent;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventDispatcher;
 use OCP\ILogger;
@@ -37,6 +40,7 @@ use OCP\Security\Events\ValidatePasswordPolicyEvent;
 use OCP\User\Events\BeforePasswordUpdatedEvent;
 use OCP\User\Events\BeforeUserLoggedInEvent;
 use OCP\User\Events\PasswordUpdatedEvent;
+use OCP\User\Events\UserLoggedInEvent;
 use Symfony\Component\EventDispatcher\GenericEvent;
 
 class Application extends App {
@@ -108,6 +112,9 @@ class Application extends App {
 				$complianceUpdater->entryControl($event->getUsername(), $event->getPassword());
 			}
 		);
+
+		$eventDispatcher->addServiceListener(LoginFailedEvent::class, FailedLoginListener::class);
+		$eventDispatcher->addServiceListener(UserLoggedInEvent::class, SuccesfullLoginListener::class);
 
 		// TODO: remove these two legacy event listeners
 		$symfonyDispatcher = $server->getEventDispatcher();

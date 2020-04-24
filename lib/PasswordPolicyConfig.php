@@ -193,4 +193,14 @@ class PasswordPolicyConfig {
 		);
 	}
 
+	/**
+	 * @return int if 0 then there is no limit
+	 */
+	public function getMaximumLoginAttempts(): int {
+		return (int)$this->config->getAppValue(
+			'password_policy',
+			'maximumLoginAttempts',
+			0
+		);
+	}
 }

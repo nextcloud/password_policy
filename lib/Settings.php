@@ -47,6 +47,7 @@ class Settings implements ISettings {
 			'enforceHaveIBeenPwned' => $this->config->getEnforceHaveIBeenPwned(),
 			'historySize' => $this->config->getHistorySize(),
 			'expiration' => $this->config->getExpiryInDays(),
+			'maximumLoginAttempts' => $this->config->getMaximumLoginAttempts(),
 		]);
 
 		return $response;

@@ -110,6 +110,10 @@ $(document).ready(function(){
 			elem: '#password-policy-expiration',
 			conf: 'expiration',
 		},
+		{
+			elem: '#password-policy-failed-login',
+			conf: 'maximumLoginAttempts'
+		},
 	].forEach(function (configField) {
 		console.log(configField);
 		$(configField.elem).keyup(function (e) {
