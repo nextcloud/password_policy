@@ -1,6 +1,8 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "Platnosť hesla skončila - nastavte si prosím nové heslo pomocou metódy pre zabudnuté heslo",
+    "Password must not have been used recently before." : "Heslo nesmie byť z tých, ktoré boli nastavené nedávno.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Heslo je v zozname 1 000 000 najpoužívanejších hesiel. Vyberte prosím iné.",
     "Password is present in compromised password list. Please choose a different password." : "Heslo sa našlo v zozname uniknutých hesiel. Prosím, zvolte si iné heslo.",
     "Password needs to be at least %s characters long" : "Heslo musí mať aspoň %s znakov",
@@ -11,6 +13,8 @@ OC.L10N.register(
     "Allows admins to configure a password policy" : "Povoliť adminom nastaviť politiku hesiel",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Povoliť adminom definovať pravidlá pre tvorbu hesiel. Napríklad minimálny počet znakov.",
     "Minimal length" : "Minimálna dĺžka",
+    "User password history" : "História hesiel používateľa",
+    "days until user password expires" : "dní do skončenia platnosti hesla používateľa",
     "Forbid common passwords" : "Zakázať najpoužívanejšie heslá",
     "Enforce upper and lower case characters" : "Vynútiť veľké a malé znaky",
     "Enforce numeric characters" : "Vynútiť numerické znaky",
