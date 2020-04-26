@@ -15,6 +15,7 @@ OC.L10N.register(
     "Minimal length" : "Minimale lengte",
     "User password history" : "Wachtwoordhistorie gebruiker",
     "days until user password expires" : "dagen tot wachtwoord verloopt",
+    "login attempts before the user account is blocked. (0 for no limit)" : "inlogpogingen voordat het gebruikersaccount wordt geblokkeerd (0 voor onbeperkt)",
     "Forbid common passwords" : "Verboden gewone wachtwoorden",
     "Enforce upper and lower case characters" : "Verplichten hoofd- en kleine letters",
     "Enforce numeric characters" : "Verplichten cijfers",

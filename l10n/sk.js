@@ -15,6 +15,7 @@ OC.L10N.register(
     "Minimal length" : "Minimálna dĺžka",
     "User password history" : "História hesiel používateľa",
     "days until user password expires" : "dní do skončenia platnosti hesla používateľa",
+    "login attempts before the user account is blocked. (0 for no limit)" : "pokusy o prihlásenie pred zablokovaním používateľského účtu. (0 bez obmedzenia)",
     "Forbid common passwords" : "Zakázať najpoužívanejšie heslá",
     "Enforce upper and lower case characters" : "Vynútiť veľké a malé znaky",
     "Enforce numeric characters" : "Vynútiť numerické znaky",

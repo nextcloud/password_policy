@@ -15,6 +15,7 @@ OC.L10N.register(
     "Minimal length" : "Ελάχιστο μέγεθος",
     "User password history" : "Ιστορικό κωδικών χρήστη",
     "days until user password expires" : "ημέρες έως τη λήξη του κωδικού πρόσβασης",
+    "login attempts before the user account is blocked. (0 for no limit)" : "προσπάθειες σύνδεσης πριν τον αποκλεισμό του χρήστη. (0 χωρίς όριο)",
     "Forbid common passwords" : "Απαγόρευση κοινών συνθηματικών",
     "Enforce upper and lower case characters" : "Υποχρεωτική χρήση κεφαλαίων και πεζών χαρακτήρων",
     "Enforce numeric characters" : "Υποχρεωτική χρήση αριθμητικών χαρακτήρων",
