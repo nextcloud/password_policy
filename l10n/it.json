@@ -13,6 +13,7 @@
     "Minimal length" : "Lunghezza minima",
     "User password history" : "Cronologia della password degli utenti",
     "days until user password expires" : "giorni prima che la password scada",
+    "login attempts before the user account is blocked. (0 for no limit)" : "tentativi di accesso prima che l'account utente sia bloccato. (0 per nessun limite)",
     "Forbid common passwords" : "Vieta le password comuni",
     "Enforce upper and lower case characters" : "Forza i caratteri maiuscoli e minuscoli",
     "Enforce numeric characters" : "Forza i caratteri numerici",
