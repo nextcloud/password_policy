@@ -13,6 +13,7 @@
     "Minimal length" : "Minimální délka",
     "User password history" : "Historie hesel uživatele",
     "days until user password expires" : "dnů do skončení platnosti hesla uživatele",
+    "login attempts before the user account is blocked. (0 for no limit)" : "po kolika neúspěšných pokusech v řadě zablokovat uživatelský účet (0 pro bez omezení)",
     "Forbid common passwords" : "Zakázat běžná hesla",
     "Enforce upper and lower case characters" : "Vyžadovat VELKÁ a malá písmena",
     "Enforce numeric characters" : "Vyžadovat čísla",

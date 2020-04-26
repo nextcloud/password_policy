@@ -13,6 +13,7 @@
     "Minimal length" : "Minimalna długość",
     "User password history" : "Historia hasła użytkownika",
     "days until user password expires" : "dni do wygaśnięcia hasła użytkownika",
+    "login attempts before the user account is blocked. (0 for no limit)" : "próby logowania przed zablokowaniem konta użytkownika. (0 dla braku limitu)",
     "Forbid common passwords" : "Zabroń takich samych haseł",
     "Enforce upper and lower case characters" : "Wymuś wielkie i małe litery",
     "Enforce numeric characters" : "Wymuś znaki numeryczne",
