@@ -83,6 +83,6 @@ class FailedLoginCompliance {
 	}
 
 	private function setAttempts(string $uid, int $attempts): void {
-		return $this->config->setUserValue($uid, 'password_policy', 'failedLoginAttempts', $attempts);
+		$this->config->setUserValue($uid, 'password_policy', 'failedLoginAttempts', $attempts);
 	}
 }
