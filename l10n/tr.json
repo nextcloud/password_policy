@@ -13,6 +13,7 @@
     "Minimal length" : "En az uzunluk",
     "User password history" : "Kullanıcının parola geçmişi",
     "days until user password expires" : "kullanıcı parolasının süresi dolana kadarki günlerin sayısı",
+    "login attempts before the user account is blocked. (0 for no limit)" : "kullanıcı hesabı bloke koymadan önceki hatalı giriş denemesi. (limitsiz için 0)",
     "Forbid common passwords" : "Sık kullanılan parolalar kullanılamasın",
     "Enforce upper and lower case characters" : "Parolada büyük ve küçük harfler bulunsun",
     "Enforce numeric characters" : "Parolada rakam bulunsun",
