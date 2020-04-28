@@ -92,6 +92,11 @@ class ComplianceService {
 		foreach ($this->getInstance(IEntryControl::class) as $instance) {
 			try {
 				$user = \OC::$server->getUserManager()->get($uid);
+
+				if (!($user instanceof IUser)) {
+					break;
+				}
+
 				$instance->entryControl($user, $password);
 			} catch (HintException $e) {
 				throw new LoginException($e->getHint());
