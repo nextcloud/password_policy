@@ -1,4 +1,6 @@
 { "translations": {
+    "Password is expired, please use forgot password method to reset" : "Zaporka je istekla, ponovno je postavite s pomoću značajke za povrat zaboravljene zaporke",
+    "Password must not have been used recently before." : "Zaporka nije nedavno korištena.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Zaporka je među 1.000.000 najčešćih zaporki. Odaberite jedinstvenu zaporku.",
     "Password is present in compromised password list. Please choose a different password." : "Zaporka je prisutna na popisu kompromitiranih zaporki. Odaberite drugu zaporku.",
     "Password needs to be at least %s characters long" : "Zaporka mora biti dugačka najmanje %s",
@@ -9,6 +11,8 @@
     "Allows admins to configure a password policy" : "Omogućuju administratorima da konfiguriraju pravila za zaporke",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Omogućuju administratoru da definira određene preduvjete za zaporku, npr. minimalna dužina",
     "Minimal length" : "Minimalna dužina",
+    "User password history" : "Povijest zaporki korisnika",
+    "days until user password expires" : "dana do isteka zaporke",
     "Forbid common passwords" : "Zabrani česte zaporke",
     "Enforce upper and lower case characters" : "Obavezna uporaba velikih i malih slova",
     "Enforce numeric characters" : "Obavezna uporaba numeričkih znakova",
