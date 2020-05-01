@@ -1,6 +1,8 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "密码已过期，请使用忘记密码的方式重设",
+    "Password must not have been used recently before." : "密码最近不能使用过。",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "该密码在 100 万个最常见密码中，请选择其他密码。",
     "Password is present in compromised password list. Please choose a different password." : "该密码在禁用的密码列表中，请选择其他密码。",
     "Password needs to be at least %s characters long" : "密码长度需要至少%s位",
@@ -11,6 +13,9 @@ OC.L10N.register(
     "Allows admins to configure a password policy" : "允许管理员配置密码策略",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "允许管理员定义密码前置条件，比如说强制密码最小长度。",
     "Minimal length" : "最小长度",
+    "User password history" : "用户密码记录",
+    "days until user password expires" : "天后用户密码过期",
+    "login attempts before the user account is blocked. (0 for no limit)" : "在阻止用户帐户之前尝试登录次数。 （0 为无限制）",
     "Forbid common passwords" : "禁止普通密码",
     "Enforce upper and lower case characters" : "强制要求大写和小写字符",
     "Enforce numeric characters" : "强制要求数字字符",
