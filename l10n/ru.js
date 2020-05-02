@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "Истёк срок действия пароля. Для сброса пароля используйте функцию восстановления забытого пароля.",
     "Password must not have been used recently before." : "Пароль не должен был использоваться недавно.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Пароль находится в списке 1 000 000 наиболее распространённых паролей. Придумайте что-нибудь более оригинальное.",
     "Password is present in compromised password list. Please choose a different password." : "Пароль присутствует в списке скомпрометированных паролей. Пожалуйста, выберите другой пароль.",
@@ -13,6 +14,8 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Разрешить администратору определять определенные предварительные условия для пароля, например. обеспечить минимальную длину пароля",
     "Minimal length" : "Минимальная длина",
     "User password history" : "История паролей пользователей",
+    "days until user password expires" : "дней до даты истечения действия пароля",
+    "login attempts before the user account is blocked. (0 for no limit)" : "попыток входа до блокировки учётной записи (0 — без ограничений).",
     "Forbid common passwords" : "Запрет простых паролей",
     "Enforce upper and lower case characters" : "Требовать наличия в пароле и прописных и строчных букв ",
     "Enforce numeric characters" : "Требовать наличия в пароле цифр",
