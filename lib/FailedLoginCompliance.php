@@ -62,6 +62,11 @@ class FailedLoginCompliance {
 
 		$allowedAttempts = $this->passwordPolicyConfig->getMaximumLoginAttempts();
 
+		if ($allowedAttempts === 0) {
+			// 0 is the max
+			return;
+		}
+
 		$attempts = $this->getAttempts($uid);
 		$attempts++;
 
