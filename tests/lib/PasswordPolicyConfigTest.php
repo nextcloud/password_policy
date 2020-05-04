@@ -23,9 +23,12 @@ namespace OCA\Password_Policy\Tests;
 
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\IConfig;
+use OCP\ILogger;
 use Test\TestCase;
 
 class PasswordPolicyConfigTest extends TestCase {
+	/** @var ILogger|\PHPUnit\Framework\MockObject\MockObject */
+	protected $logger;
 
 	/** @var  IConfig|\PHPUnit_Framework_MockObject_MockObject */
 	private $config;
@@ -37,11 +40,11 @@ class PasswordPolicyConfigTest extends TestCase {
 		parent::setUp();
 
 		$this->config = $this->createMock(IConfig::class);
-		$this->instance = new PasswordPolicyConfig($this->config);
+		$this->logger = $this->createMock(ILogger::class);
+		$this->instance = new PasswordPolicyConfig($this->config, $this->logger);
 	}
 
 	public function testGetMinLength() {
-
 		$appConfigValue = "42";
 		$expected = 42;
 
@@ -53,6 +56,35 @@ class PasswordPolicyConfigTest extends TestCase {
 			$this->instance->getMinLength()
 			);
 	}
+
+	/**
+	 * @dataProvider maxLengthProvider
+	 */
+	public function testGetMaxLength(string $appConfigValue, int $expected, bool $warn) {
+		$this->config->expects($this->exactly(2))->method('getAppValue')
+			->withConsecutive(
+				['password_policy', 'maxLength', '128'],
+				['password_policy', 'minLength', '8']
+			)
+			->will($this->onConsecutiveCalls($appConfigValue, 8));
+
+		if($warn) {
+			$this->logger->expects($this->once())
+				->method('warning');
+		}
+
+		$this->assertSame($expected,
+			$this->instance->getMaxLength()
+		);
+	}
+
+	public function maxLengthProvider() {
+		return [
+			[ '42', 42, false],
+			[ '6', 16, true]	// smaller then min length
+		];
+	}
+
 	/**
 	 * @dataProvider configTestData
 	 */

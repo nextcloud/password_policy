@@ -58,9 +58,11 @@ class LengthValidatorTest extends TestCase {
 	/**
 	 * @dataProvider dataValidate
 	 */
-	public function testValidate(string $password, int $length, bool $valid) {
+	public function testValidate(string $password, int $minLength, int $maxLength, bool $valid) {
 		$this->confg->method('getMinLength')
-			->willReturn($length);
+			->willReturn($minLength);
+		$this->confg->method('getMaxLength')
+			->willReturn($maxLength);
 
 		if (!$valid) {
 			$this->expectException(HintException::class);
@@ -72,9 +74,10 @@ class LengthValidatorTest extends TestCase {
 
 	public function dataValidate() {
 		return [
-			['password', 10, false],
-			['password',  8,  true],
-			['password',  6,  true],
+			['password', 10, 128, false],
+			['password',  8, 128, true],
+			['password',  6, 128, true],
+			['passwordpassword', 6, 12, false],
 		];
 	}
 }

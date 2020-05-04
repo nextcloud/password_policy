@@ -25,6 +25,7 @@ namespace OCA\Password_Policy;
 
 
 use OCP\IConfig;
+use OCP\ILogger;
 
 /**
  * Class Config
@@ -37,14 +38,17 @@ class PasswordPolicyConfig {
 
 	/** @var IConfig */
 	private $config;
+	/** @var ILogger */
+	private $logger;
 
 	/**
 	 * Config constructor.
 	 *
 	 * @param IConfig $config
 	 */
-	public function __construct(IConfig $config) {
+	public function __construct(IConfig $config, ILogger $logger) {
 		$this->config = $config;
+		$this->logger = $logger;
 	}
 
 	/**
@@ -55,6 +59,24 @@ class PasswordPolicyConfig {
 	public function getMinLength(): int {
 		$minLength = $this->config->getAppValue('password_policy', 'minLength', '8');
 		return (int)$minLength;
+	}
+
+	/**
+	 * get the enforced maximum length of passwords
+	 *
+	 * The default of 128 follows OWASP's consideration of common upper length
+	 * as of May 2020: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+	 *
+	 * @return int
+	 */
+	public function getMaxLength(): int {
+		$maxLength = $this->config->getAppValue('password_policy', 'maxLength', '128');
+		$minLength = $this->getMinLength();
+		if($maxLength <= $minLength) {
+			$maxLength = $minLength * 2;
+			$this->logger->warning('Configured max password length is below minimum. Resorting to twice the minimum.', ['app' => 'password_policy']);
+		}
+		return (int)$maxLength;
 	}
 
 	/**

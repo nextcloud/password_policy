@@ -49,6 +49,15 @@ class LengthValidator implements IValidator {
 			);
 			throw new HintException($message, $message_t);
 		}
+
+		$maxLength = $this->config->getMaxLength();
+		if(strlen($password) > $maxLength) {
+			$message = 'Password needs to be at most ' . $maxLength . ' characters long';
+			$message_t = $this->l->t(
+				'Password needs to be at most %s characters long', [$maxLength]
+			);
+			throw new HintException($message, $message_t);
+		}
 	}
 
 }
