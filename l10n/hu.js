@@ -1,6 +1,8 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "A jelszó lejárt, használja az elfelejtett jelszó módszert a helyreállításhoz",
+    "Password must not have been used recently before." : "A jelszó nem lehet mostanában használt.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "A jelszó az 1.000.000 leggyakoribb között van. Tegye egyedivé.",
     "Password is present in compromised password list. Please choose a different password." : "A jelszó benne van a feltörtek listájában. Válasszon másik jelszót.",
     "Password needs to be at least %s characters long" : "A jelszónak legalább %s karakter hosszúnak kell lennie",
@@ -11,6 +13,9 @@ OC.L10N.register(
     "Allows admins to configure a password policy" : "Lehetővé teszi a rendszergazdáknak, hogy jelszóházirendet állítsanak be",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Lehetővé teszi a rendszergazdának, hogy bizonyos előfeltételeket szabjanak a jelszavakhoz, például megkövetelhetnek egy minimális hosszt",
     "Minimal length" : "Minimális hossz",
+    "User password history" : "Felhasználói jelszó előzményei",
+    "days until user password expires" : "nap múlva a jelszó lejár",
+    "login attempts before the user account is blocked. (0 for no limit)" : "bejelentkezési kísérlet van hátra a fiók blokkolásáig (0, ha nincs korlát)",
     "Forbid common passwords" : "Gyakori jelszavak tiltása",
     "Enforce upper and lower case characters" : "Nagy- és kisbetűs karakterek megkövetelése",
     "Enforce numeric characters" : "Numerikus karakterek megkövetelése",
