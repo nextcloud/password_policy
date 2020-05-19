@@ -15,6 +15,7 @@ OC.L10N.register(
     "Minimal length" : "Minimalna dužina",
     "User password history" : "Povijest zaporki korisnika",
     "days until user password expires" : "dana do isteka zaporke",
+    "login attempts before the user account is blocked. (0 for no limit)" : "pokušaja prijave prije blokiranja računa korisnika. (0 za neograničeno)",
     "Forbid common passwords" : "Zabrani česte zaporke",
     "Enforce upper and lower case characters" : "Obavezna uporaba velikih i malih slova",
     "Enforce numeric characters" : "Obavezna uporaba numeričkih znakova",
