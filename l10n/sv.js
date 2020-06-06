@@ -1,6 +1,8 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "Lösenordet har gått ut, använd glömt lösenordet för att återställa",
+    "Password must not have been used recently before." : "Lösenordet får inte nyligen ha används.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Lösenord är bland de 1 000 000 mest vanliga. Vänligen ändra till ett unikt.",
     "Password is present in compromised password list. Please choose a different password." : "Lösenordet finns i läckt lösenordslista. Vänligen välj ett annat lösenord.",
     "Password needs to be at least %s characters long" : "Lösenord behöver vara minst %s tecken lång",
@@ -11,6 +13,9 @@ OC.L10N.register(
     "Allows admins to configure a password policy" : "Tillåter administratörer att konfigurera en lösenordspolicy",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Tillåter administratören att definiera vissa villkor för lösenord, t.ex. att kräva minsta längd",
     "Minimal length" : "Minsta längd",
+    "User password history" : "Lösenordshistorik",
+    "days until user password expires" : "dagar till lösenordet går ut",
+    "login attempts before the user account is blocked. (0 for no limit)" : "inloggningsförsök innan användarkontot blockeras. (0 för obegränsat)",
     "Forbid common passwords" : "Förbjud de vanligaste lösenorden",
     "Enforce upper and lower case characters" : "Kräv stor och liten bokstav i lösenordet",
     "Enforce numeric characters" : "Kräv en siffra i lösenordet",
