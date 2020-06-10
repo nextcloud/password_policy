@@ -9,6 +9,7 @@ OC.L10N.register(
     "Password policy" : "Določila gesel",
     "Allows admins to configure a password policy" : "Omogoča skrbnikom nastavljanje pravil uporabe gesel",
     "Minimal length" : "Najmanjša dolžina",
+    "User password history" : "Uporabniška zgodovina gesel",
     "Forbid common passwords" : "Prepreči splošna gesla",
     "Enforce upper and lower case characters" : "Zahtevaj velike in male črkovne znake",
     "Enforce numeric characters" : "Zahtevaj številske znake",
