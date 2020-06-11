@@ -20,4 +20,4 @@ declare(strict_types=1);
  *
  */
 
-$app = new \OCA\Password_Policy\AppInfo\Application();
+\OC::$server->query(\OCA\Password_Policy\AppInfo\Application::class);
