@@ -1,6 +1,8 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "Lykilorðið er útrunnið, notaðu ferlið fyrir gleymt lykilorð til að endurstilla það",
+    "Password must not have been used recently before." : "Lykilorð má ekki hafa verið notað nýlega.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Lykilorðið er á meðal 1.000.000 algengustu lykilorðanna. Endilega veldu eitthvað annað.",
     "Password is present in compromised password list. Please choose a different password." : "Lykilorðið er í vantreystum lykilorðalista. Endilega veldu eitthvað annað.",
     "Password needs to be at least %s characters long" : "Lykilorðið verður að innihalda að minnsta kosti %s stafi",
@@ -11,6 +13,9 @@ OC.L10N.register(
     "Allows admins to configure a password policy" : "Gerir stjórnendum kleift að móta stefnu varðandi lykilorð",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Gerir stjórnendum kleift að skilgreina formótaðar kvaðir varðandi lykilorð, t.d. að hafa ákveðna lágmarkslengd á þeim",
     "Minimal length" : "Lágmarkslengd",
+    "User password history" : "Ferill lykilorða notanda",
+    "days until user password expires" : "dagar þar til lykilorð notanda rennur út",
+    "login attempts before the user account is blocked. (0 for no limit)" : "tilraunir til innskráningar áður en lokað er á notandaaðgang (0 fyrir engin takmörk)",
     "Forbid common passwords" : "Banna algeng lykilorð",
     "Enforce upper and lower case characters" : "Krefjast há- og lágstafa",
     "Enforce numeric characters" : "Krefjast tölustafa",
