@@ -25,122 +25,42 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\AppInfo;
 
 use OCA\Password_Policy\Capabilities;
-use OCA\Password_Policy\ComplianceService;
-use OCA\Password_Policy\Generator;
+use OCA\Password_Policy\Listener\BeforePasswordUpdatedEventListener;
+use OCA\Password_Policy\Listener\BeforeUserLoggedInEventListener;
 use OCA\Password_Policy\Listener\FailedLoginListener;
+use OCA\Password_Policy\Listener\GenerateSecurePasswordEventListener;
+use OCA\Password_Policy\Listener\PasswordUpdatedEventListener;
 use OCA\Password_Policy\Listener\SuccesfullLoginListener;
-use OCA\Password_Policy\PasswordValidator;
+use OCA\Password_Policy\Listener\ValidatePasswordPolicyEventListener;
 use OCP\AppFramework\App;
+use OCP\AppFramework\Bootstrap\IBootContext;
+use OCP\AppFramework\Bootstrap\IBootstrap;
+use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\Authentication\Events\LoginFailedEvent;
-use OCP\EventDispatcher\Event;
-use OCP\EventDispatcher\IEventDispatcher;
-use OCP\ILogger;
 use OCP\Security\Events\GenerateSecurePasswordEvent;
 use OCP\Security\Events\ValidatePasswordPolicyEvent;
 use OCP\User\Events\BeforePasswordUpdatedEvent;
 use OCP\User\Events\BeforeUserLoggedInEvent;
 use OCP\User\Events\PasswordUpdatedEvent;
 use OCP\User\Events\UserLoggedInEvent;
-use Symfony\Component\EventDispatcher\GenericEvent;
 
-class Application extends App {
+class Application extends App implements IBootstrap {
 	public function __construct() {
 		parent::__construct('password_policy');
-		$container = $this->getContainer();
+	}
 
-		$server = $container->getServer();
-		/** @var IEventDispatcher $eventDispatcher */
-		$eventDispatcher = $server->query(IEventDispatcher::class);
+	public function register(IRegistrationContext $context): void {
+		$context->registerCapability(Capabilities::class);
 
-		/** register capabilities */
-		$container->registerCapability(Capabilities::class);
+		$context->registerEventListener(ValidatePasswordPolicyEvent::class, ValidatePasswordPolicyEventListener::class);
+		$context->registerEventListener(GenerateSecurePasswordEvent::class, GenerateSecurePasswordEventListener::class);
+		$context->registerEventListener(BeforePasswordUpdatedEvent::class, BeforePasswordUpdatedEventListener::class);
+		$context->registerEventListener(PasswordUpdatedEvent::class, PasswordUpdatedEventListener::class);
+		$context->registerEventListener(BeforeUserLoggedInEvent::class, BeforeUserLoggedInEventListener::class);
+		$context->registerEventListener(LoginFailedEvent::class, FailedLoginListener::class);
+		$context->registerEventListener(UserLoggedInEvent::class, SuccesfullLoginListener::class);
+	}
 
-		$eventDispatcher->addListener(
-			ValidatePasswordPolicyEvent::class,
-			function (Event $event) use ($container) {
-				if (!($event instanceof ValidatePasswordPolicyEvent)) {
-					return;
-				}
-
-				/** @var PasswordValidator $validator */
-				$validator = $container->query(PasswordValidator::class);
-				$validator->validate($event->getPassword());
-			}
-		);
-		$eventDispatcher->addListener(
-			GenerateSecurePasswordEvent::class,
-			function (Event $event) use ($container) {
-				if (!($event instanceof GenerateSecurePasswordEvent)) {
-					return;
-				}
-
-				/** @var Generator */
-				$generator = $container->query(Generator::class);
-				$event->setPassword($generator->generate());
-			}
-		);
-		$eventDispatcher->addListener(
-			BeforePasswordUpdatedEvent::class,
-			function (Event $event) use ($container) {
-				if(!($event instanceof BeforePasswordUpdatedEvent)) {
-					return;
-				}
-				/** @var ComplianceService $complianceUpdater */
-				$complianceUpdater = $container->query(ComplianceService::class);
-				$complianceUpdater->audit($event->getUser(), $event->getPassword());
-			}
-		);
-		$eventDispatcher->addListener(
-			PasswordUpdatedEvent::class,
-			function (Event $event) use ($container) {
-				if(!($event instanceof PasswordUpdatedEvent)) {
-					return;
-				}
-				/** @var ComplianceService $complianceUpdater */
-				$complianceUpdater = $container->query(ComplianceService::class);
-				$complianceUpdater->update($event->getUser(), $event->getPassword());
-			}
-		);
-		$eventDispatcher->addListener(
-			BeforeUserLoggedInEvent::class,
-			function (Event $event) use ($container) {
-				if(!$event instanceof BeforeUserLoggedInEvent) {
-					return;
-				}
-				/** @var ComplianceService $complianceUpdater */
-				$complianceUpdater = $container->query(ComplianceService::class);
-				$complianceUpdater->entryControl($event->getUsername(), $event->getPassword());
-			}
-		);
-
-		$eventDispatcher->addServiceListener(LoginFailedEvent::class, FailedLoginListener::class);
-		$eventDispatcher->addServiceListener(UserLoggedInEvent::class, SuccesfullLoginListener::class);
-
-		// TODO: remove these two legacy event listeners
-		$symfonyDispatcher = $server->getEventDispatcher();
-		$symfonyDispatcher->addListener(
-			'OCP\PasswordPolicy::validate',
-			function (GenericEvent $event) use ($container) {
-				/** @var ILogger $logger */
-				$logger = $container->query(ILogger::class);
-				$logger->debug('OCP\PasswordPolicy::validate is deprecated. Listen to ' . ValidatePasswordPolicyEvent::class . ' instead');
-
-				/** @var PasswordValidator $validator */
-				$validator = $container->query(PasswordValidator::class);
-				$validator->validate($event->getSubject());
-			}
-		);
-		$symfonyDispatcher->addListener(
-			'OCP\PasswordPolicy::generate',
-			function (GenericEvent $event) use ($container) {
-				/** @var ILogger $logger */
-				$logger = $container->query(ILogger::class);
-				$logger->debug('OCP\PasswordPolicy::generate is deprecated. Listen to ' . GenerateSecurePasswordEvent::class . ' instead');
-
-				/** @var Generator */
-				$generator = $container->query(Generator::class);
-				$event->setArgument('password', $generator->generate());
-			}
-		);
+	public function boot(IBootContext $context): void {
 	}
 }

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 /**
- * @copyright Copyright (c) 2020, Roeland Jago Douma <roeland@famdouma.nl>
+ * @copyright Copyright (c) 2020 Morris Jobke <hey@morrisjobke.de>
  *
- * @author Roeland Jago Douma <roeland@famdouma.nl>
+ * @author Morris Jobke <hey@morrisjobke.de>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -18,30 +18,30 @@ declare(strict_types=1);
  * GNU Affero General Public License for more details.
  *
  * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
 namespace OCA\Password_Policy\Listener;
 
-use OCA\Password_Policy\FailedLoginCompliance;
-use OCP\Authentication\Events\LoginFailedEvent;
+use OCA\Password_Policy\Generator;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
+use OCP\Security\Events\GenerateSecurePasswordEvent;
 
-class FailedLoginListener implements IEventListener {
-	/** @var FailedLoginCompliance */
-	private $compliance;
+class GenerateSecurePasswordEventListener implements IEventListener {
+	/** @var Generator */
+	private $generator;
 
-	public function __construct(FailedLoginCompliance $compliance) {
-		$this->compliance = $compliance;
+	public function __construct(Generator $generator) {
+		$this->generator = $generator;
 	}
 
 	public function handle(Event $event): void {
-		if (!($event instanceof LoginFailedEvent)) {
+		if (!($event instanceof GenerateSecurePasswordEvent)) {
 			return;
 		}
 
-		$this->compliance->onFailedLogin($event->getUid());
+		$event->setPassword($this->generator->generate());
 	}
 }
