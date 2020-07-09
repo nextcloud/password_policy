@@ -44,5 +44,4 @@ class SuccesfullLoginListener implements IEventListener {
 
 		$this->compliance->onSucessfullLogin($event->getUser());
 	}
-
 }

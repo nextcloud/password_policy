@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 /**
- * @copyright Copyright (c) 2020, Roeland Jago Douma <roeland@famdouma.nl>
+ * @copyright Copyright (c) 2020 Morris Jobke <hey@morrisjobke.de>
  *
- * @author Roeland Jago Douma <roeland@famdouma.nl>
+ * @author Morris Jobke <hey@morrisjobke.de>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -18,30 +18,30 @@ declare(strict_types=1);
  * GNU Affero General Public License for more details.
  *
  * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
 namespace OCA\Password_Policy\Listener;
 
-use OCA\Password_Policy\FailedLoginCompliance;
-use OCP\Authentication\Events\LoginFailedEvent;
+use OCA\Password_Policy\PasswordValidator;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
+use OCP\Security\Events\ValidatePasswordPolicyEvent;
 
-class FailedLoginListener implements IEventListener {
-	/** @var FailedLoginCompliance */
-	private $compliance;
+class ValidatePasswordPolicyEventListener implements IEventListener {
+	/** @var PasswordValidator */
+	private $passwordValidator;
 
-	public function __construct(FailedLoginCompliance $compliance) {
-		$this->compliance = $compliance;
+	public function __construct(PasswordValidator $passwordValidator) {
+		$this->passwordValidator = $passwordValidator;
 	}
 
 	public function handle(Event $event): void {
-		if (!($event instanceof LoginFailedEvent)) {
+		if (!($event instanceof ValidatePasswordPolicyEvent)) {
 			return;
 		}
 
-		$this->compliance->onFailedLogin($event->getUid());
+		$this->passwordValidator->validate($event->getPassword());
 	}
 }
