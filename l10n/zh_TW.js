@@ -1,7 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password is among the 1,000,000 most common ones. Please make it unique." : "密碼不能超過1000000個字元。且必須保持唯一。",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "密碼出現在 1,000,000 個常用密碼列表內，請設定獨特的密碼。",
     "Password needs to be at least %s characters long" : "密碼需多於 %s 個字符",
     "Password needs to contain at least one numeric character." : "密碼需要包含至少一個數字。",
     "Password needs to contain at least one special character." : "密碼應包含一個特殊符號。",
