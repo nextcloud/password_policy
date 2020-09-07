@@ -1,6 +1,8 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "La contrasenya ha caducat, utilitzeu el mètode de contrasenya oblidada per restablir",
+    "Password must not have been used recently before." : "La contrasenya no s'ha d'haver utilitzat recentment abans.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "La contrasenya es troba entre les 1.000.000 més comunes. Feu que sigui única.",
     "Password is present in compromised password list. Please choose a different password." : "La contrasenya és dins de la llista de contrasenyes compromeses. Trieu una contrasenya diferent.",
     "Password needs to be at least %s characters long" : "La contrasenya ha de tenir almenys %s caràcters",
@@ -11,6 +13,9 @@ OC.L10N.register(
     "Allows admins to configure a password policy" : "Permet als administradors configurar una política de contrasenyes",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permetre a l'administrador definir determinades condicions prèvies per a la contrasenya, p. ex. forçar una longitud mínima",
     "Minimal length" : "Longitud mínima",
+    "User password history" : "Historial de contrasenyes d'usuari",
+    "days until user password expires" : "dies fins que caduqui la contrasenya d'usuari",
+    "login attempts before the user account is blocked. (0 for no limit)" : "intents d'inici de sessió abans que es bloquegi el compte d'usuari. (0 sense límit)",
     "Forbid common passwords" : "Prohibeix les contrasenyes comunes",
     "Enforce upper and lower case characters" : "Força els caràcters de majúscules i minúscules",
     "Enforce numeric characters" : "Força els caràcters numèrics",
