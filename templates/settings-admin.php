@@ -32,25 +32,25 @@ style('password_policy', 'settings-admin');
 	<p>
 		<label class="password-policy-number-option">
 			<input id="password-policy-min-length" type="number" value="<?php p($_['minLength']) ?>" />
-			<span><?php p($l->t('Minimal length')) ?></span>
+			<span><?php p($l->t('Minimum password length')) ?></span>
 		</label>
 	</p>
 	<p>
 		<label class="password-policy-number-option">
 			<input id="password-policy-history-size" type="number" value="<?php p($_['historySize']) ?>" />
-			<span><?php p($l->t('User password history')) ?></span>
+			<span><?php p($l->t('User passwords history')) ?></span>
 		</label>
 	</p>
 	<p>
 		<label class="password-policy-number-option">
 			<input id="password-policy-expiration" type="number" value="<?php p($_['expiration']) ?>" />
-			<span><?php p($l->t('days until user password expires')) ?></span>
+			<span><?php p($l->t('Number of days until user password expires')) ?></span>
 		</label>
 	</p>
 	<p>
 		<label class="password-policy-number-option">
 			<input id="password-policy-failed-login" type="number" value="<?php p($_['maximumLoginAttempts']) ?>" />
-			<span><?php p($l->t('login attempts before the user account is blocked. (0 for no limit)')) ?></span>
+			<span><?php p($l->t('Number of login attempts before the user account is blocked (0 for no limit)')) ?></span>
 		</label>
 	</p>
 	<p id="enforceNonCommonPassword">
