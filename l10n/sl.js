@@ -14,6 +14,7 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Zahtevaj velike in male črkovne znake",
     "Enforce numeric characters" : "Zahtevaj številske znake",
     "Enforce special characters" : "Zahtevaj posebne znake",
-    "Check password against the list of breached passwords from haveibeenpwned.com" : "Preveri kakovost gesla s seznamom neustreznih gesel na haveibeenpwned.com"
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Preveri kakovost gesla s seznamom neustreznih gesel na haveibeenpwned.com",
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ta možnost ustvari nadzorno kodo uporabljenega gesla in pošlje prvih 5 znakov na naslov haveibeenpwned.com, v povratnici pa pridobi seznam vseh podobnih kod. Preveri tudi, ali je nadzorna vsota gesla skladna z geslom, uporabljenim za Nextcloud."
 },
 "nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);");
