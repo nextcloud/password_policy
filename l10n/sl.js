@@ -1,6 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "Geslo je preteklo. Uporabite način za obnovitev pozabljenega gesla.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Izbrano geslo je med 1 000 000 najpogostejših gesel. Potrudite se, da bo enkratno.",
     "Password needs to be at least %s characters long" : "Geslo mora biti najmanj %s dolgih znakov",
     "Password needs to contain at least one numeric character." : "Geslo mora vsebovati vsaj en številski znak.",
@@ -10,6 +11,7 @@ OC.L10N.register(
     "Allows admins to configure a password policy" : "Omogoča skrbnikom nastavljanje pravil uporabe gesel",
     "Minimal length" : "Najmanjša dolžina",
     "User password history" : "Uporabniška zgodovina gesel",
+    "days until user password expires" : "dni do preteka gesla",
     "Forbid common passwords" : "Prepreči splošna gesla",
     "Enforce upper and lower case characters" : "Zahtevaj velike in male črkovne znake",
     "Enforce numeric characters" : "Zahtevaj številske znake",
