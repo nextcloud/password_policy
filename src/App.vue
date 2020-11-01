@@ -22,64 +22,88 @@
 <template>
 	<div id="password-policy" class="section">
 		<h2>{{ t('password_policy', 'Password policy') }}</h2>
+		<div id="password-policy-settings-msg" class="msg success inlineblock" style="display: none;">Saved</div>
 
 		<p>
 			<label>
-				<span>{{ t('password_policy', 'Minimal length') }}</span>
 				<input id="password-policy-min-length"
+					   v-model="minLength"
 					   type="number" />
+				<span>{{ t('password_policy', 'Minimal length') }}</span>
 			</label>
 		</p>
+
+		<p>
+			<label>
+				<input id="password-policy-history-size"
+					   v-model="historySize"
+					   type="number" />
+				<span>{{ t('password_policy', 'User password history') }}</span>
+			</label>
+		</p>
+
+		<p>
+			<label>
+				<input id="password-policy-expiration"
+					   v-model="expiration"
+					   type="number" />
+				<span>{{ t('password_policy', 'days until user password expires') }}</span>
+			</label>
+		</p>
+
+		<p>
+			<label>
+				<input id="password-policy-failed-login"
+					   v-model="maximumLoginAttempts"
+					   type="number" />
+				<span>{{ t('password_policy', 'login attempts before the user account is blocked. (0 for no limit)') }}</span>
+			</label>
+		</p>
+
 		<p id="enforceNonCommonPassword">
 			<input type="checkbox"
 				   name="password-policy-enforce-non-common-password"
 				   id="password-policy-enforce-non-common-password"
 				   class="checkbox"
-				   value="1" />
-			<label for="password-policy-enforce-non-common-password">
-				{{ t('password_policy', 'Forbid common passwords') }}
-			</label><br/>
+				   v-model="enforceNonCommonPassword" />
+			<label for="password-policy-enforce-non-common-password">{{ t('password_policy', 'Forbid common passwords') }}</label><br/>
 		</p>
+
 		<p id="enforceLowerUpperCase">
 			<input type="checkbox"
 				   name="password-policy-enforce-upper-lower-case"
 				   id="password-policy-enforce-upper-lower-case"
 				   class="checkbox"
-				   value="1" />
-			<label for="password-policy-enforce-upper-lower-case">
-				{{ t('password_policy', 'Enforce upper and lower case characters') }}
-			</label><br/>
+				   v-model="enforceUpperLowerCase" />
+			<label for="password-policy-enforce-upper-lower-case">{{ t('password_policy', 'Enforce upper and lower case characters') }}</label><br/>
 		</p>
+
 		<p id="enforceNumericCharacters">
 			<input type="checkbox"
 				   name="password-policy-enforce-numeric-characters"
 				   id="password-policy-enforce-numeric-characters"
 				   class="checkbox"
-				   value="1" />
-			<label for="password-policy-enforce-numeric-characters">
-				{{ t('password_policy', 'Enforce numeric characters') }}
-			</label><br/>
+				   v-model="enforceNumericCharacters" />
+			<label for="password-policy-enforce-numeric-characters">{{ t('password_policy', 'Enforce numeric characters') }}</label><br/>
 		</p>
+
 		<p id="enforceSpecialCharacters">
-			<input type="checkbox"
-				   name="password-policy-enforce-special-characters"
+			<input type="checkbox" name="password-policy-enforce-special-characters"
 				   id="password-policy-enforce-special-characters"
 				   class="checkbox"
-				   value="1" />
-			<label for="password-policy-enforce-special-characters">
-				{{ t('password_policy', 'Enforce special characters') }}
-			</label><br/>
+				   v-model="enforceSpecialCharacters" />
+			<label for="password-policy-enforce-special-characters">{{ t('password_policy', 'Enforce special characters') }}</label><br/>
 		</p>
+
 		<p id="enforceHaveIBeenPwned">
 			<input type="checkbox"
 				   name="password-policy-enforce-have-i-been-pwned"
 				   id="password-policy-enforce-have-i-been-pwned"
 				   class="checkbox"
-				   value="1" />
-			<label for="password-policy-enforce-have-i-been-pwned">
-				{{ t('password_policy', 'Check password against the list of breached passwords from haveibeenpwned.com') }}
-			</label><br/>
+				   v-model="enforceHaveIBeenPwned" />
+			<label for="password-policy-enforce-have-i-been-pwned">{{ t('password_policy', 'Check password against the list of breached passwords from haveibeenpwned.com') }}</label><br/>
 		</p>
+
 		<p class="password-policy-settings-hint">
 			{{ t('password_policy', 'This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set.') }}
 		</p>
@@ -96,6 +120,38 @@ export default {
 		'minLength': {
 			type: Number,
 			required: true,
+		},
+		'historySize': {
+			type: Number,
+			required: true
+		},
+		'expiration': {
+			type: Number,
+			required: true
+		},
+		'maximumLoginAttempts': {
+			type: Number,
+			required: true
+		},
+		'enforceNonCommonPassword': {
+			type: Boolean,
+			required: true
+		},
+		'enforceUpperLowerCase': {
+			type: Boolean,
+			required: true
+		},
+		'enforceNumericCharacters': {
+			type: Boolean,
+			required: true
+		},
+		'enforceSpecialCharacters': {
+			type: Boolean,
+			required: true,
+		},
+		'enforceHaveIBeenPwned': {
+			type: Boolean,
+			required: true
 		}
 	}
 }

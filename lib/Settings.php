@@ -57,6 +57,9 @@ class Settings implements ISettings {
 
 		$this->initialStateService->provideInitialState('password_policy', 'settings', [
 			'minLength' => $this->config->getMinLength(),
+			'historySize' => $this->config->getHistorySize(),
+			'expiration' => $this->config->getExpiryInDays(),
+			'maximumLoginAttempts' => $this->config->getMaximumLoginAttempts(),
 			'enforceNonCommonPassword' => $this->config->getEnforceNonCommonPassword(),
 			'enforceUpperLowerCase' => $this->config->getEnforceUpperLowerCase(),
 			'enforceNumericCharacters' => $this->config->getEnforceNumericCharacters(),

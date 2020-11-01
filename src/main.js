@@ -30,8 +30,6 @@ const settings = loadState('password_policy', 'settings')
 
 const View = Vue.extend(App)
 const app = new View({
-	propsData: {
-		settings
-	},
+	propsData: settings
 })
-app.$mount('#password-policy')
+app.$mount('#password-policy-new')

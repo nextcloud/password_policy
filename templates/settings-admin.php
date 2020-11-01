@@ -26,6 +26,11 @@ style('password_policy', 'settings-admin');
 script('password_policy', 'settings');
 ?>
 
+
+<div id="password-policy-new" class="section">
+
+</div>
+
 <div id="password-policy" class="section">
 	<h2 class="inlineblock"><?php p($l->t('Password policy')); ?></h2>
 	<div id="password-policy-settings-msg" class="msg success inlineblock" style="display: none;">Saved</div>
