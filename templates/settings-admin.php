@@ -38,7 +38,7 @@ style('password_policy', 'settings-admin');
 	<p>
 		<label class="password-policy-number-option">
 			<input id="password-policy-history-size" type="number" value="<?php p($_['historySize']) ?>" />
-			<span><?php p($l->t('User passwords history')) ?></span>
+			<span><?php p($l->t('User password history')) ?></span>
 		</label>
 	</p>
 	<p>
