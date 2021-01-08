@@ -12,15 +12,15 @@ OC.L10N.register(
     "Password policy" : "Polityka haseł",
     "Allows admins to configure a password policy" : "Zezwala administratorom na konfigurowanie zasad haseł.",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Zezwala administratorowi na definiowanie określonych warunków wstępnych dla hasła, np. wymuszenie minimalnej długości",
-    "Minimal length" : "Minimalna długość",
     "User password history" : "Historia haseł użytkownika",
-    "days until user password expires" : "dni do wygaśnięcia hasła użytkownika",
-    "login attempts before the user account is blocked. (0 for no limit)" : "próby logowania przed zablokowaniem konta użytkownika (0 dla braku limitu)",
     "Forbid common passwords" : "Zabroń takich samych haseł",
     "Enforce upper and lower case characters" : "Wymuś wielkie i małe litery",
     "Enforce numeric characters" : "Wymuś znaki numeryczne",
     "Enforce special characters" : "Wymuś znaki specjalne",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Sprawdź hasło na liście naruszonych haseł na haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Kontrola ta tworzy skrót hasła i wysyła 5 pierwszych znaków tego skrótu do interfejsu API haveibeenpwned.com w celu pobrania listy wszystkich skrótów, które zaczynają się od nich. Następnie sprawdza instancję Nextcloud, czy skrót hasła znajduje się w zestawie wyników."
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Kontrola ta tworzy skrót hasła i wysyła 5 pierwszych znaków tego skrótu do interfejsu API haveibeenpwned.com w celu pobrania listy wszystkich skrótów, które zaczynają się od nich. Następnie sprawdza instancję Nextcloud, czy skrót hasła znajduje się w zestawie wyników.",
+    "Minimal length" : "Minimalna długość",
+    "days until user password expires" : "dni do wygaśnięcia hasła użytkownika",
+    "login attempts before the user account is blocked. (0 for no limit)" : "próby logowania przed zablokowaniem konta użytkownika (0 dla braku limitu)"
 },
 "nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);");

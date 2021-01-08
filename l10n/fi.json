@@ -10,14 +10,14 @@
     "Password policy" : "Salasanakäytäntö",
     "Allows admins to configure a password policy" : "Mahdollistaa ylläpitäjien määrittää salasanakäytännön",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Salli ylläpitäjän määrittää ennalta määritettyjä ehtoja salasanalle, esimerkiksi vähimmäispituuden",
-    "Minimal length" : "Vähimmäispituus",
     "User password history" : "Käyttäjän salasanahistoria",
-    "days until user password expires" : "päivää kunnes salasana vanhenee",
-    "login attempts before the user account is blocked. (0 for no limit)" : "kirjautumisyritystä kunnes käyttäjätili suljetaan. (0 tarkoittaa ei rajoitusta)",
     "Forbid common passwords" : "Kiellä yleisimmät salasanat",
     "Enforce upper and lower case characters" : "Pakota käyttämään isoja ja pieniä kirjaimia",
     "Enforce numeric characters" : "Pakota käyttämään numeroita",
     "Enforce special characters" : "Pakota käyttämään erikoismerkkejä",
-    "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin"
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin",
+    "Minimal length" : "Vähimmäispituus",
+    "days until user password expires" : "päivää kunnes salasana vanhenee",
+    "login attempts before the user account is blocked. (0 for no limit)" : "kirjautumisyritystä kunnes käyttäjätili suljetaan. (0 tarkoittaa ei rajoitusta)"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

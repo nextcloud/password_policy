@@ -10,12 +10,12 @@ OC.L10N.register(
     "Password policy" : "Paroles politika",
     "Allows admins to configure a password policy" : "Ļauj administrātoriem uzstādīt paroļu politiku",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Atļaut administrātoram uzstādīt noteiktus paroles uzstādījumus, piem. minimālo paroles garumu",
-    "Minimal length" : "Minimālais garums",
     "Forbid common passwords" : "Aizliegt kopīgas paroles",
     "Enforce upper and lower case characters" : "Uzspiest lielos un mazos burtus",
     "Enforce numeric characters" : "Uzspiest skaitļus",
     "Enforce special characters" : "Uzspiest speciālos simbolus",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Pārbaudīt paroli pret uzlaustajām parolēm no haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Šis izveido hašu no paroles pirmajām 5 rakstzīmēm un pārbauda to pret haveibeenpwned.com, lai saņemtu paroļu sarakstu kas sākas ar tām rakstzīmēm. Tad tas pārbauda pilnos paroles hešus pret dabūto sarakstu."
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Šis izveido hašu no paroles pirmajām 5 rakstzīmēm un pārbauda to pret haveibeenpwned.com, lai saņemtu paroļu sarakstu kas sākas ar tām rakstzīmēm. Tad tas pārbauda pilnos paroles hešus pret dabūto sarakstu.",
+    "Minimal length" : "Minimālais garums"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

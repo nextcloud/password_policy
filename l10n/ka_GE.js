@@ -8,10 +8,10 @@ OC.L10N.register(
     "Password needs to contain at least one special character." : "პაროლი უნდა მოიცავდეს ერთ სპეციალურ ნიშანს მაინც.",
     "Password needs to contain at least one lower and one upper case character." : "პაროლი საჭიროებს ერთ დიდ და ერთ პატარა ასოს მაინც.",
     "Password policy" : "პაროლის პოლიტიკა",
-    "Minimal length" : "მინ. სიგრძე",
     "Forbid common passwords" : "აკრძალეთ ერთნაირი პაროლები",
     "Enforce upper and lower case characters" : "შემოიღეთ დიდი და პატარა ასოები",
     "Enforce numeric characters" : "შემოიღეთ ნუმერიკული ნიშნები",
-    "Enforce special characters" : "შემოიღეთ სპეციალური ნიშნები"
+    "Enforce special characters" : "შემოიღეთ სპეციალური ნიშნები",
+    "Minimal length" : "მინ. სიგრძე"
 },
 "nplurals=2; plural=(n!=1);");
