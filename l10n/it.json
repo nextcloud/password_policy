@@ -10,15 +10,15 @@
     "Password policy" : "Criterio della password",
     "Allows admins to configure a password policy" : "Consente agli amministratori di configurare un criterio per le password",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Consente all'amministratore di definire determinati pre-requisiti per le password, ad es. forzare una lunghezza minima",
-    "Minimal length" : "Lunghezza minima",
     "User password history" : "Cronologia della password degli utenti",
-    "days until user password expires" : "giorni prima che la password scada",
-    "login attempts before the user account is blocked. (0 for no limit)" : "tentativi di accesso prima che l'account utente sia bloccato. (0 per nessun limite)",
     "Forbid common passwords" : "Vieta le password comuni",
     "Enforce upper and lower case characters" : "Forza i caratteri maiuscoli e minuscoli",
     "Enforce numeric characters" : "Forza i caratteri numerici",
     "Enforce special characters" : "Forza i caratteri speciali",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Verifica la password con l'elenco di password compromesse di haveibeenpwnd.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Questo controllo crea un hash della password e invia i primi 5 caratteri di questo hash alle API di haveibeenpwned.com per recuperare un elenco di tutti gli hash che iniziano con questi caratteri. Poi controlla se la password dell'istanza Nextcloud è presente nei risultati."
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Questo controllo crea un hash della password e invia i primi 5 caratteri di questo hash alle API di haveibeenpwned.com per recuperare un elenco di tutti gli hash che iniziano con questi caratteri. Poi controlla se la password dell'istanza Nextcloud è presente nei risultati.",
+    "Minimal length" : "Lunghezza minima",
+    "days until user password expires" : "giorni prima che la password scada",
+    "login attempts before the user account is blocked. (0 for no limit)" : "tentativi di accesso prima che l'account utente sia bloccato. (0 per nessun limite)"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
