@@ -10,15 +10,15 @@
     "Password policy" : "Parola ilkesi",
     "Allows admins to configure a password policy" : "Yöneticilerin bir parola ilkesi yapılandırmasını sağlar",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Yöneticilerin parolalar için en kısa uzunluk gibi çeşitli ön koşullar belirleyebilmesini sağlar.",
-    "Minimal length" : "En az uzunluk",
     "User password history" : "Kullanıcının parola geçmişi",
-    "days until user password expires" : "kullanıcı parolasının süresinin dolmasına kalan gün",
-    "login attempts before the user account is blocked. (0 for no limit)" : "kullanıcının hesabı kilitlenmeden önce yapabileceği oturum açma girişimi sayısı (sınırlama olmaması için 0 yazın)",
     "Forbid common passwords" : "Sık kullanılan parolalar kullanılamasın",
     "Enforce upper and lower case characters" : "Parolada büyük ve küçük harfler bulunsun",
     "Enforce numeric characters" : "Parolada rakam bulunsun",
     "Enforce special characters" : "Parolada simge karakterleri bulunsun",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Parolalar haveibeenpwned.com üzerindeki bilinen parolalar listesi ile denetlensin",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Bu denetim paroladan bir sağlama değeri üretir ve ilk 5 karakterini haveibeenpwned.com API uygulamasına göndererek bu 5 karakter ile başlayan karmaların listesini alır. Ardından Nexctcloud kopyasında parola karmasının sonuç kümesinde olup olmadığını denetler."
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Bu denetim paroladan bir sağlama değeri üretir ve ilk 5 karakterini haveibeenpwned.com API uygulamasına göndererek bu 5 karakter ile başlayan karmaların listesini alır. Ardından Nexctcloud kopyasında parola karmasının sonuç kümesinde olup olmadığını denetler.",
+    "Minimal length" : "En az uzunluk",
+    "days until user password expires" : "kullanıcı parolasının süresinin dolmasına kalan gün",
+    "login attempts before the user account is blocked. (0 for no limit)" : "kullanıcının hesabı kilitlenmeden önce yapabileceği oturum açma girişimi sayısı (sınırlama olmaması için 0 yazın)"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

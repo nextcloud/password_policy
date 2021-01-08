@@ -8,10 +8,10 @@ OC.L10N.register(
     "Password needs to contain at least one special character." : "Passordet må inneholde minst ett spesialtegn.",
     "Password needs to contain at least one lower and one upper case character." : "Passordet må inneholde minst en liten og en stor bokstav.",
     "Password policy" : "Passordregler",
-    "Minimal length" : "Minste lengde",
     "Forbid common passwords" : "Forby mest brukte passord",
     "Enforce upper and lower case characters" : "Krev stor og liten bokstav",
     "Enforce numeric characters" : "Krev numerisk tegn",
-    "Enforce special characters" : "Krev spesialtegn"
+    "Enforce special characters" : "Krev spesialtegn",
+    "Minimal length" : "Minste lengde"
 },
 "nplurals=2; plural=(n != 1);");

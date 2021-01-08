@@ -12,15 +12,15 @@ OC.L10N.register(
     "Password policy" : "Pasahitz politika",
     "Allows admins to configure a password policy" : "Baimendu administratzaileei pasahitzen politika bat konfiguratzea",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Baimendu kudeatzaileari pasahitzen inguruko baldintzak ezartze, adb: luzera minimo bat izatera derrigortu.",
-    "Minimal length" : "Luzera minimoa",
     "User password history" : "Erabiltzailearen pasahitz historia",
-    "days until user password expires" : "erabiltzailearen pasahitza iraungi arteko egunak",
-    "login attempts before the user account is blocked. (0 for no limit)" : "saio-haste saiakera kopurua erabiltzaile kontua blokeatu aurretik. (0 mugarik ez ezartzeko)",
     "Forbid common passwords" : "Pasahitz ohikoenak debekatu",
     "Enforce upper and lower case characters" : "Enforce upper and lower case characters",
     "Enforce numeric characters" : "Karaktere numerikoak destakatu",
     "Enforce special characters" : "Karaktere bereziak destakatu",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Pasahitzak haveibeenpwned.com zerbitzuan egiaztatu",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Egiaztapenak pasahitzaren hash bat sortzen du eta lehenengo bost karaktereak haveibeenpwned.com zerbitzuaren APIra bidaltzen ditu berdin hasten diren hashak lortzeko. Ondoen Nextcloud instantzia barruan egiaztatzen du idatzitako pasahitzaren hasha zerrenda horretan dagoen ala.ez"
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Egiaztapenak pasahitzaren hash bat sortzen du eta lehenengo bost karaktereak haveibeenpwned.com zerbitzuaren APIra bidaltzen ditu berdin hasten diren hashak lortzeko. Ondoen Nextcloud instantzia barruan egiaztatzen du idatzitako pasahitzaren hasha zerrenda horretan dagoen ala.ez",
+    "Minimal length" : "Luzera minimoa",
+    "days until user password expires" : "erabiltzailearen pasahitza iraungi arteko egunak",
+    "login attempts before the user account is blocked. (0 for no limit)" : "saio-haste saiakera kopurua erabiltzaile kontua blokeatu aurretik. (0 mugarik ez ezartzeko)"
 },
 "nplurals=2; plural=(n != 1);");

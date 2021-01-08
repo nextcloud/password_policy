@@ -12,15 +12,15 @@ OC.L10N.register(
     "Password policy" : "מדיניות ססמה",
     "Allows admins to configure a password policy" : "מאפשר למנהלים להגדיר מדיניות ססמה",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "לאפשר להנהלה להגדיר תנאי קדם מסוימים לססמה, למשל: לאסוף אורך מזערי",
-    "Minimal length" : "אורך מזערי",
     "User password history" : "היסטוריית הססמאות של המשתמש",
-    "days until user password expires" : "ימים עד לפקיעת תוקף ססמת המשתמש",
-    "login attempts before the user account is blocked. (0 for no limit)" : "ניסיונות כניסה לפני חסימת חשבון המשתמש. (0 ללא הגבלה)",
     "Forbid common passwords" : "איסור על מילים נפוצות",
     "Enforce upper and lower case characters" : "אכיפת אותיות קטנות וגדולות",
     "Enforce numeric characters" : "אכיפת ספרות",
     "Enforce special characters" : "אכיפת תווים מיוחדים",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "לבדוק את הססמה מול רשימת ססמאות שדלפו אצל haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "בדיקה זו מייצרת גיבוב של הססמה ושולחת את 5 התווים הראשונים של הגיבוב הזה ל־API של haveibeenpwned.com כדי לקבל רשימה של כל הגיבובים שמתחילים בתווים האלה. לאחר מכן היא בודקת בעותק ה־Nextcloud אם גיבוב הססמה הוא במערך התוצאות."
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "בדיקה זו מייצרת גיבוב של הססמה ושולחת את 5 התווים הראשונים של הגיבוב הזה ל־API של haveibeenpwned.com כדי לקבל רשימה של כל הגיבובים שמתחילים בתווים האלה. לאחר מכן היא בודקת בעותק ה־Nextcloud אם גיבוב הססמה הוא במערך התוצאות.",
+    "Minimal length" : "אורך מזערי",
+    "days until user password expires" : "ימים עד לפקיעת תוקף ססמת המשתמש",
+    "login attempts before the user account is blocked. (0 for no limit)" : "ניסיונות כניסה לפני חסימת חשבון המשתמש. (0 ללא הגבלה)"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;");
