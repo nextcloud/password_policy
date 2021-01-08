@@ -10,15 +10,15 @@
     "Password policy" : "Požadavky na hesla",
     "Allows admins to configure a password policy" : "Umožňuje správcům nastavovat pravidla pro hesla",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Umožnit správci definovat určité požadavky na heslo – např. vynutit minimální délku",
-    "Minimal length" : "Minimální délka",
     "User password history" : "Historie hesel uživatele",
-    "days until user password expires" : "dnů do skončení platnosti hesla uživatele",
-    "login attempts before the user account is blocked. (0 for no limit)" : "po kolika neúspěšných pokusech v řadě zablokovat uživatelský účet (0 pro bez omezení)",
     "Forbid common passwords" : "Zakázat běžná hesla",
     "Enforce upper and lower case characters" : "Vyžadovat VELKÁ a malá písmena",
     "Enforce numeric characters" : "Vyžadovat čísla",
     "Enforce special characters" : "Vyžadovat speciální znaky",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Zkontrolovat heslo vůči seznamu prolomených hesel na haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Tato kontrola vytvoří otisk (hash) hesla a pošle prvních 5 znaků tohoto otisku na aplikační program. rozhraní (API) služby haveibeenpwned.com pro získání seznamu všech otisků, které začínají na tento. Pak zkontroluje na instanci Nextcloud, zda se ve výsledné sadě vyskytuje otisk daného hesla."
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Tato kontrola vytvoří otisk (hash) hesla a pošle prvních 5 znaků tohoto otisku na aplikační program. rozhraní (API) služby haveibeenpwned.com pro získání seznamu všech otisků, které začínají na tento. Pak zkontroluje na instanci Nextcloud, zda se ve výsledné sadě vyskytuje otisk daného hesla.",
+    "Minimal length" : "Minimální délka",
+    "days until user password expires" : "dnů do skončení platnosti hesla uživatele",
+    "login attempts before the user account is blocked. (0 for no limit)" : "po kolika neúspěšných pokusech v řadě zablokovat uživatelský účet (0 pro bez omezení)"
 },"pluralForm" :"nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;"
 }

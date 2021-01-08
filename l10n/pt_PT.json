@@ -5,10 +5,10 @@
     "Password needs to contain at least one special character." : "A palavra-passe precisa de conter pelo menos um caracter especial.",
     "Password needs to contain at least one lower and one upper case character." : "A palavra-passe precisa de conter pelo menos uma letra minúscula e uma maiúscula.",
     "Password policy" : "Política de palavras-passe",
-    "Minimal length" : "Comprimento mínimo",
     "Forbid common passwords" : "palavras-passe comuns proibidas",
     "Enforce upper and lower case characters" : "Forçar letras maiúsculas e minúsculas",
     "Enforce numeric characters" : "Forçar caracteres numéricos",
-    "Enforce special characters" : "Forçar caracteres especiais"
+    "Enforce special characters" : "Forçar caracteres especiais",
+    "Minimal length" : "Comprimento mínimo"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

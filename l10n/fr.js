@@ -12,15 +12,15 @@ OC.L10N.register(
     "Password policy" : "Politique de mots de passe",
     "Allows admins to configure a password policy" : "Permet aux administrateurs de configurer une politique de mot de passe.",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permettre à l'administrateur de définir certaines conditions préalables pour le mot de passe, par exemple, imposer une longueur minimale.",
-    "Minimal length" : "Taille minimale",
     "User password history" : "Historique des mots de passe de l'utilisateur",
-    "days until user password expires" : "jours restants avant expiration du mot de passe",
-    "login attempts before the user account is blocked. (0 for no limit)" : "Nombre de tentatives de connexion avant de verrouiller le compte utilisateur (0 pour indiquer aucune limite)",
     "Forbid common passwords" : "Interdire les mots de passe courants",
     "Enforce upper and lower case characters" : "Imposer des caractères en majuscules et en minuscules",
     "Enforce numeric characters" : "Imposer des chiffres",
     "Enforce special characters" : "Imposer des caractères spéciaux",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Vérifier le mot de passe par rapport à la liste des mots de passe violés sur haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Cette vérification crée un hachage du mot de passe et envoie les 5 premiers caractères de ce hachage à l'API haveibeenpwned.com pour récupérer une liste de tous les hachages qui commencent par ceux-là. Ensuite, il vérifie sur l'instance Nextcloud si le mot de passe est dans le jeu de résultats."
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Cette vérification crée un hachage du mot de passe et envoie les 5 premiers caractères de ce hachage à l'API haveibeenpwned.com pour récupérer une liste de tous les hachages qui commencent par ceux-là. Ensuite, il vérifie sur l'instance Nextcloud si le mot de passe est dans le jeu de résultats.",
+    "Minimal length" : "Taille minimale",
+    "days until user password expires" : "jours restants avant expiration du mot de passe",
+    "login attempts before the user account is blocked. (0 for no limit)" : "Nombre de tentatives de connexion avant de verrouiller le compte utilisateur (0 pour indiquer aucune limite)"
 },
 "nplurals=2; plural=(n > 1);");

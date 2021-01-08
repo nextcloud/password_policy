@@ -12,15 +12,15 @@ OC.L10N.register(
     "Password policy" : "パスワードポリシー",
     "Allows admins to configure a password policy" : "管理者がパスワードポリシーを設定することを許可します",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "管理者が事前に一定の制約をパスワードに課すことを許可します。（例：最小の長さを強制）",
-    "Minimal length" : "最小の長さ",
     "User password history" : "ユーザのパスワード履歴",
-    "days until user password expires" : "ユーザのパスワードの有効期限が切れるまでの日数",
-    "login attempts before the user account is blocked. (0 for no limit)" : "ユーザアカウントをブロックするログイン試行回数。（制限なしの場合は0）",
     "Forbid common passwords" : "一般的なパスワードを禁止する",
     "Enforce upper and lower case characters" : "大文字と小文字を必ず含む",
     "Enforce numeric characters" : "数字を必ず含む",
     "Enforce special characters" : "記号を必ず含む",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "haveibeenpwned.comの侵害されたパスワードのリストと比較してパスワードをチェックする",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "このチェックでは、パスワードのハッシュを生成して先頭5文字をhaveibeenpwned.com APIに送信し、その5文字から始まるすべてのハッシュリストを取得します。 そして、パスワードハッシュが結果セットに含まれているかどうかNextcloudサーバーをチェックします。"
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "このチェックでは、パスワードのハッシュを生成して先頭5文字をhaveibeenpwned.com APIに送信し、その5文字から始まるすべてのハッシュリストを取得します。 そして、パスワードハッシュが結果セットに含まれているかどうかNextcloudサーバーをチェックします。",
+    "Minimal length" : "最小の長さ",
+    "days until user password expires" : "ユーザのパスワードの有効期限が切れるまでの日数",
+    "login attempts before the user account is blocked. (0 for no limit)" : "ユーザアカウントをブロックするログイン試行回数。（制限なしの場合は0）"
 },
 "nplurals=1; plural=0;");
