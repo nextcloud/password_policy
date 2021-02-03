@@ -12,7 +12,7 @@ addons:
 
 env:
   global:
-    - CORE_BRANCH=master
+    - CORE_BRANCH=stable21
     - APP_NAME=password_policy
   matrix:
     - DB=sqlite
