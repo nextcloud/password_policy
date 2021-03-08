@@ -44,7 +44,7 @@ class NumericCharacterValidator implements IValidator {
 		$enforceNumericCharacters = $this->config->getEnforceNumericCharacters();
 		if($enforceNumericCharacters) {
 			if (preg_match('/^(?=.*\d).+$/', $password) !== 1) {
-				$message = 'Password needs to contain at least one numeric character';
+				$message = 'Password needs to contain at least one numeric character.';
 				$message_t = $this->l->t(
 					'Password needs to contain at least one numeric character.'
 				);

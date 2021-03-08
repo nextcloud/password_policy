@@ -63,6 +63,8 @@ class PasswordValidator {
 			HIBPValidator::class,
 		];
 
+		$errors = [];
+		$hints = [];
 		foreach ($validators as $validator) {
 			try {
 				/** @var IValidator $instance */
@@ -73,8 +75,19 @@ class PasswordValidator {
 				continue;
 			}
 
-			$instance->validate($password);
+			try {
+				$instance->validate($password);
+			} catch (HintException $e) {
+				$errors[] = $e->getMessage();
+				$hints[] = $e->getHint();
+			}
+		}
+
+		if (!empty($errors)) {
+			throw new HintException(
+				implode(' ', $errors),
+				implode(' ', $hints),
+			);
 		}
 	}
-
 }
