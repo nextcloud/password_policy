@@ -10,7 +10,7 @@ OC.L10N.register(
     "Password needs to contain at least one special character." : "密碼應包含一個特殊符號。",
     "Password needs to contain at least one lower and one upper case character." : "密碼應包含最少一個大寫與一個小寫。",
     "Password policy" : "密碼規範",
-    "Allows admins to configure a password policy" : "允許管理者設定密碼策略",
+    "Allows admins to configure a password policy" : "允許管理員設定密碼策略",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "允許管理員定義密碼的某些條件，例如強制最小長度",
     "Minimum password length" : "密碼最小長度",
     "User password history" : "密碼重複使用（禁止用戶使用前幾次使用過的密碼）",
