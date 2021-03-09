@@ -3,7 +3,6 @@
     "Password must not have been used recently before." : "Pasahitzak azkenaldian erabili gabea izan behar du.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Pasahitza 1000000 pasahitz tipikoen taldean dago. Unikoa bihur ezazu",
     "Password is present in compromised password list. Please choose a different password." : "Pasahitz hau ezaguna den pasahitzen fitxategi baten dago. Aukeratu beste bat.",
-    "Password needs to be at least %s characters long" : "Pasahitzak %s karaktere izan behar du gutxienez",
     "Password needs to contain at least one numeric character." : "Pasahitzek zenbaki bat izan behar dute gutxienez.",
     "Password needs to contain at least one special character." : "Pasahitzek karaktere berezi bat izan behar dute gutxienez.",
     "Password needs to contain at least one lower and one upper case character." : "Pasahitzek hizki xehe eta hizki larri bat izan behar du gutxienez.",
@@ -17,6 +16,7 @@
     "Enforce special characters" : "Karaktere bereziak destakatu",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Pasahitzak haveibeenpwned.com zerbitzuan egiaztatu",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Egiaztapenak pasahitzaren hash bat sortzen du eta lehenengo bost karaktereak haveibeenpwned.com zerbitzuaren APIra bidaltzen ditu berdin hasten diren hashak lortzeko. Ondoen Nextcloud instantzia barruan egiaztatzen du idatzitako pasahitzaren hasha zerrenda horretan dagoen ala.ez",
+    "Password needs to be at least %s characters long" : "Pasahitzak %s karaktere izan behar du gutxienez",
     "Minimal length" : "Luzera minimoa",
     "days until user password expires" : "erabiltzailearen pasahitza iraungi arteko egunak",
     "login attempts before the user account is blocked. (0 for no limit)" : "saio-haste saiakera kopurua erabiltzaile kontua blokeatu aurretik. (0 mugarik ez ezartzeko)"

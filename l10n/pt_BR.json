@@ -3,7 +3,6 @@
     "Password must not have been used recently before." : "A senha não pode ter sido usada recentemente.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "A senha está entre as 1.000.000 mais comuns. Por favor, torne-a única.",
     "Password is present in compromised password list. Please choose a different password." : "A senha está presente na lista de senhas comprometidas. Escolha uma senha diferente.",
-    "Password needs to be at least %s characters long" : "A senha precisa ter no mínimo %s caracteres",
     "Password needs to contain at least one numeric character." : "A senha precisa conter pelo menos um caractere numérico.",
     "Password needs to contain at least one special character." : "A senha precisa conter pelo menos um caractere especial.",
     "Password needs to contain at least one lower and one upper case character." : "A senha precisa conter pelo menos um caractere minúsculo e um maiúsculo.",
@@ -20,6 +19,7 @@
     "Enforce special characters" : "Forçar aplicar caracteres especiais",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Verificar a senha com relação à lista de senhas violadas de haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Essa verificação cria um hash da senha e envia os primeiros 5 caracteres desse hash para a API haveibeenpwned.com para recuperar uma lista de todos os hashes que começam com eles. Em seguida, ele verifica com o servidor Nextcloud se o hash da senha está no conjunto de resultados.",
+    "Password needs to be at least %s characters long" : "A senha precisa ter no mínimo %s caracteres",
     "Minimal length" : "Tamanho mínimo",
     "days until user password expires" : "dias até a senha expirar",
     "login attempts before the user account is blocked. (0 for no limit)" : "tentativas de login antes da conta ser bloqueada. (0 para sem limite)"

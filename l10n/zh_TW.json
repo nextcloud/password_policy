@@ -3,7 +3,6 @@
     "Password must not have been used recently before." : "密碼不可以是近期使用過的。",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "密碼出現在 1,000,000 個常用密碼列表內。請設定獨一無二的密碼。",
     "Password is present in compromised password list. Please choose a different password." : "密碼出現在洩露的密碼清單中。請選擇其它密碼。",
-    "Password needs to be at least %s characters long" : "密碼需長於 %s 個字母",
     "Password needs to contain at least one numeric character." : "密碼需要包含至少一個數字。",
     "Password needs to contain at least one special character." : "密碼應包含一個特殊符號。",
     "Password needs to contain at least one lower and one upper case character." : "密碼應包含最少一個大寫與一個小寫字母。",
@@ -20,6 +19,7 @@
     "Enforce special characters" : "強制使用特殊字元",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "將密碼與來自 haveibeenpwned.com 的外洩密碼列表進行核對",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "此項檢查會建立密碼的雜湊值，並傳送此雜湊值的前五個字元到 haveibeenpwned.com 的 API 來擷取以這些字元開頭的所有雜湊值列表。然後如果密碼雜湊值包含在結果集中，其將在 Nextcloud 站台上檢查。",
+    "Password needs to be at least %s characters long" : "密碼需長於 %s 個字母",
     "Minimal length" : "最小長度",
     "days until user password expires" : "天密碼到期",
     "login attempts before the user account is blocked. (0 for no limit)" : "封鎖使用者帳號前的登入嘗試（0 為不限制）"
