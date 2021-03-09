@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Tiu pasvorto troveblas inter la miliono da pli kutimaj pasvortoj.",
     "Password is present in compromised password list. Please choose a different password." : "Tiu pasvorto ĉeestas en la listo de malsekretigitaj pasvortoj. Bv. elekti alian pasvorton.",
-    "Password needs to be at least %s characters long" : "Pasvorto necesas esti almenaŭ longa je %s signoj",
     "Password needs to contain at least one numeric character." : "Pasvorto necesas enhavi almenaŭ unu nombran signon.",
     "Password needs to contain at least one special character." : "Pasvorto necesas enhavi almenaŭ unu specialan signon.",
     "Password needs to contain at least one lower and one upper case character." : "Pasvorto necesas enhavi almenaŭ unu minusklan kaj unu majusklan signon.",
@@ -16,6 +15,7 @@ OC.L10N.register(
     "Enforce special characters" : "Devigi uzon de signoj specialaj",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Kompari la pasvorton kun la listo de diskonigitaj pasvortoj el haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Tio kreas haketon el la pasvorto kaj sendas la unuajn 5 signojn de tiu haketo al la API de haveibeenpwned.com por ricevi liston de ĉiuj haketoj, kiuj komenciĝas per tiuj. Poste, ĝi kontrolas en la Nextcloud-servilo, ĉu la pasvorta haketo estas en la listo.",
+    "Password needs to be at least %s characters long" : "Pasvorto necesas esti almenaŭ longa je %s signoj",
     "Minimal length" : "Minimuma longo"
 },
 "nplurals=2; plural=(n != 1);");

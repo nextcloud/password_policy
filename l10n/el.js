@@ -5,7 +5,6 @@ OC.L10N.register(
     "Password must not have been used recently before." : "Ο κωδικός δεν πρέπει να έχει χρησιμοποιηθεί πρόσφατα.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Ο κωδικός πρόσβασης είναι μεταξύ των 1.000.000 συνηθέστερων. Κάντε το μοναδικό.",
     "Password is present in compromised password list. Please choose a different password." : "Ο κωδικός έχει ξαναχρησιμοποιηθεί στο παρελθόν. Παρακαλώ επιλέξτε διαφορετικό.",
-    "Password needs to be at least %s characters long" : "Ο κωδικός πρόσβασης πρέπει να είναι τουλάχιστον%sσε μήκος χαρακτήρων",
     "Password needs to contain at least one numeric character." : "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον ένα αριθμητικό χαρακτήρα.",
     "Password needs to contain at least one special character." : "Το συνθηματικό πρέπει να περιέχει τουλάχιστον ένα ειδικό χαρακτήρα",
     "Password needs to contain at least one lower and one upper case character." : "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον έναν μικρό και έναν κεφαλαίο χαρακτήρα.",
@@ -22,6 +21,7 @@ OC.L10N.register(
     "Enforce special characters" : "Υποχρεωτική χρήση ειδικών χαρακτήρων",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Ελέγξτε τον κωδικό πρόσβασης κατά της λίστας παραβιασμένων κωδικών πρόσβασης από το haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Αυτός ο έλεγχος δημιουργεί ένα αναγνωριστικό του κωδικού πρόσβασης και στέλνει τους πρώτους 5 χαρακτήρες στο API του hasibeenpwned.com για να ανακτήσει μια λίστα όλων των κωδικ'ων που αρχίζουν με αυτούς. Έπειτα, ελέγχει την αρμόδια υπηρεσία του Nextcloud εάν ο κωδικός πρόσβασης βρίσκεται στα αποτελεσμάτα.",
+    "Password needs to be at least %s characters long" : "Ο κωδικός πρόσβασης πρέπει να είναι τουλάχιστον%sσε μήκος χαρακτήρων",
     "Minimal length" : "Ελάχιστο μέγεθος",
     "days until user password expires" : "ημέρες έως τη λήξη του κωδικού πρόσβασης",
     "login attempts before the user account is blocked. (0 for no limit)" : "προσπάθειες σύνδεσης πριν τον αποκλεισμό του χρήστη. (0 χωρίς όριο)"
