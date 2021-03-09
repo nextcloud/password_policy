@@ -3,7 +3,6 @@
     "Password must not have been used recently before." : "Parola son kullandığınız parolalardan farklı olmalıdır.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Yazdığınız parola sık kullanılan 1.000.000 parola içinde. Lütfen eşsiz bir parola seçin.",
     "Password is present in compromised password list. Please choose a different password." : "Yazdığınız parola bilinen parolalar listesinde. Lütfen başka bir parola seçin.",
-    "Password needs to be at least %s characters long" : "Parola en az %s karakter uzunluğunda olmalıdır",
     "Password needs to contain at least one numeric character." : "Parolada en az bir rakam bulunmalıdır.",
     "Password needs to contain at least one special character." : "Parolada en az bir simge karakteri bulunmalıdır.",
     "Password needs to contain at least one lower and one upper case character." : "Parolada en az bir küçük ve bir büyük harf bulunmalıdır.",
@@ -20,6 +19,7 @@
     "Enforce special characters" : "Parolada simge karakterleri bulunsun",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Parolalar haveibeenpwned.com üzerindeki bilinen parolalar listesi ile denetlensin",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Bu denetim paroladan bir sağlama değeri üretir ve ilk 5 karakterini haveibeenpwned.com API uygulamasına göndererek bu 5 karakter ile başlayan karmaların listesini alır. Ardından Nexctcloud kopyasında parola karmasının sonuç kümesinde olup olmadığını denetler.",
+    "Password needs to be at least %s characters long" : "Parola en az %s karakter uzunluğunda olmalıdır",
     "Minimal length" : "En az uzunluk",
     "days until user password expires" : "kullanıcı parolasının süresinin dolmasına kalan gün",
     "login attempts before the user account is blocked. (0 for no limit)" : "kullanıcının hesabı kilitlenmeden önce yapabileceği oturum açma girişimi sayısı (sınırlama olmaması için 0 yazın)"
