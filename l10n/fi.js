@@ -5,7 +5,6 @@ OC.L10N.register(
     "Password must not have been used recently before." : "Salasanaa ei saa olla käytetty aiemmin.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Salasana on yksi miljoonasta yleisimmästä. Tee salasanasta erikoisempi.",
     "Password is present in compromised password list. Please choose a different password." : "Salasana kuuluu murrettujen salasanojen listalle. Valitse eri salasana.",
-    "Password needs to be at least %s characters long" : "Salasanan tulee olle vähintään %s merkkiä pitkä",
     "Password needs to contain at least one numeric character." : "Salasanassa tulee olla vähintään yksi numeerinen merkki.",
     "Password needs to contain at least one special character." : "Salasanassa tulee olla vähintään yksi erikoismerkki.",
     "Password needs to contain at least one lower and one upper case character." : "Salasanan tulee sisältää vähintään yksi pieni ja yksi iso kirjain.",
@@ -18,6 +17,7 @@ OC.L10N.register(
     "Enforce numeric characters" : "Pakota käyttämään numeroita",
     "Enforce special characters" : "Pakota käyttämään erikoismerkkejä",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin",
+    "Password needs to be at least %s characters long" : "Salasanan tulee olle vähintään %s merkkiä pitkä",
     "Minimal length" : "Vähimmäispituus",
     "days until user password expires" : "päivää kunnes salasana vanhenee",
     "login attempts before the user account is blocked. (0 for no limit)" : "kirjautumisyritystä kunnes käyttäjätili suljetaan. (0 tarkoittaa ei rajoitusta)"
