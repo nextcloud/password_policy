@@ -5,6 +5,7 @@ OC.L10N.register(
     "Password must not have been used recently before." : "Das Passwort darf noch nicht verwendet worden sein.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Das Passwort ist unter den 1.000.000 häufigsten Passwörtern. Bitte wähle ein anderes.",
     "Password is present in compromised password list. Please choose a different password." : "Das Passwort ist in der Liste der kompromittierten Passwörter enthalten. Bitte wähle ein anderes Passwort. ",
+    "Password needs to be at least %s characters long." : "Das Passwort muss mindestens %s Zeichen lang sein.",
     "Password needs to contain at least one numeric character." : "Das Passwort muss mindestens eine Zahl beinhalten. ",
     "Password needs to contain at least one special character." : "Das Passwort muss mindestens ein Sonderzeichen beinhalten. ",
     "Password needs to contain at least one lower and one upper case character." : "Das Passwort muss mindestens einen Klein- und einen Großbuchstaben beinhalten. ",
