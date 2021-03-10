@@ -5,6 +5,7 @@ OC.L10N.register(
     "Password must not have been used recently before." : "O contrasinal non debe ter sido empregado recentemente.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "O contrasinal está entre o 1.000.000 máis común. Escolla un diferente.",
     "Password is present in compromised password list. Please choose a different password." : "O contrasinal atopase nunha lista de contrasinais comprometidos. Escolla un contrasinal diferente.",
+    "Password needs to be at least %s characters long." : "O contrasinal precisa ser polo menos de %s caracteres de lonxitude.",
     "Password needs to contain at least one numeric character." : "O contrasinal precisa conter polo menos un caracter numérico.",
     "Password needs to contain at least one special character." : "O contrasinal precisa conter polo menos un caracter especial.",
     "Password needs to contain at least one lower and one upper case character." : "O contrasinal precisa conter polo menos un caracter en minúsculas e un en maiúsculas.",

@@ -3,6 +3,7 @@
     "Password must not have been used recently before." : "密碼不可以是近期使用過的。",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "密碼出現在 1,000,000 個常用密碼列表內。請設定獨一無二的密碼。",
     "Password is present in compromised password list. Please choose a different password." : "密碼出現在洩露的密碼清單中。請選擇其它密碼。",
+    "Password needs to be at least %s characters long." : "密碼需長於 %s 個字母。",
     "Password needs to contain at least one numeric character." : "密碼需要包含至少一個數字。",
     "Password needs to contain at least one special character." : "密碼應包含一個特殊符號。",
     "Password needs to contain at least one lower and one upper case character." : "密碼應包含最少一個大寫與一個小寫字母。",
