@@ -5,6 +5,7 @@ OC.L10N.register(
     "Password must not have been used recently before." : "密码最近不能使用过。",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "该密码在 100 万个最常见密码中，请选择其他密码。",
     "Password is present in compromised password list. Please choose a different password." : "该密码在禁用的密码列表中，请选择其他密码。",
+    "Password needs to be at least %s characters long." : "密码最小长度需为 %s 字节",
     "Password needs to contain at least one numeric character." : "密码至少需要包含一个数字。",
     "Password needs to contain at least one special character." : "密码需要包含至少一个特殊字符。",
     "Password needs to contain at least one lower and one upper case character." : "密码至少需要包含一个小写字母和一个大写字母。",
