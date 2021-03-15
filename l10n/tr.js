@@ -5,7 +5,7 @@ OC.L10N.register(
     "Password must not have been used recently before." : "Parola son kullandığınız parolalardan farklı olmalıdır.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Yazdığınız parola sık kullanılan 1.000.000 parola içinde. Lütfen eşsiz bir parola seçin.",
     "Password is present in compromised password list. Please choose a different password." : "Yazdığınız parola bilinen parolalar listesinde. Lütfen başka bir parola seçin.",
-    "Password needs to be at least %s characters long." : "Şifre en az %s karakter uzunluğunda olmalıdır.",
+    "Password needs to be at least %s characters long." : "Parola en az %s karakter uzunluğunda olmalıdır.",
     "Password needs to contain at least one numeric character." : "Parolada en az bir rakam bulunmalıdır.",
     "Password needs to contain at least one special character." : "Parolada en az bir simge karakteri bulunmalıdır.",
     "Password needs to contain at least one lower and one upper case character." : "Parolada en az bir küçük ve bir büyük harf bulunmalıdır.",
