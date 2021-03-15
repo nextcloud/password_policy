@@ -2,6 +2,9 @@
 /**
  * @copyright Copyright (c) 2016 Bjoern Schiessle <bjoern@schiessle.org>
  *
+ * @author Bjoern Schiessle <bjoern@schiessle.org>
+ * @author Jonas Rittershofer <jotoeri@users.noreply.github.com>
+ *
  * @license GNU AGPL version 3 or any later version
  *
  * This program is free software: you can redistribute it and/or modify
@@ -91,7 +94,6 @@ class PasswordPolicyConfigTest extends TestCase {
 		);
 	}
 
-
 	/**
 	 * @dataProvider configTestData
 	 */
@@ -102,6 +104,70 @@ class PasswordPolicyConfigTest extends TestCase {
 
 		$this->assertSame($expected,
 			$this->instance->getEnforceSpecialCharacters()
+		);
+	}
+
+	public function testGetSharingMinLength() {
+		$appConfigValue = "42";
+		$expected = 42;
+
+		$this->config->expects($this->once())->method('getAppValue')
+			->with('password_policy', 'sharingMinLength', '8')
+			->willReturn($appConfigValue);
+
+		$this->assertSame($expected,
+			$this->instance->getSharingMinLength()
+			);
+	}
+	/**
+	 * @dataProvider configTestData
+	 */
+	public function testGetSharingEnforceNonCommonPassword($appConfigValue, $expected) {
+		$this->config->expects($this->once())->method('getAppValue')
+			->with('password_policy', 'sharingEnforceNonCommonPassword', '1')
+			->willReturn($appConfigValue);
+
+		$this->assertSame($expected,
+			$this->instance->getSharingEnforceNonCommonPassword()
+		);
+	}
+
+	/**
+	 * @dataProvider configTestData
+	 */
+	public function testGetSharingEnforceUpperLowerCase($appConfigValue, $expected) {
+		$this->config->expects($this->once())->method('getAppValue')
+			->with('password_policy', 'sharingEnforceUpperLowerCase', '0')
+			->willReturn($appConfigValue);
+
+		$this->assertSame($expected,
+			$this->instance->getSharingEnforceUpperLowerCase()
+		);
+	}
+
+	/**
+	 * @dataProvider configTestData
+	 */
+	public function testGetSharingEnforceNumericCharacters($appConfigValue, $expected) {
+		$this->config->expects($this->once())->method('getAppValue')
+			->with('password_policy', 'sharingEnforceNumericCharacters', '0')
+			->willReturn($appConfigValue);
+
+		$this->assertSame($expected,
+			$this->instance->getSharingEnforceNumericCharacters()
+		);
+	}
+
+	/**
+	 * @dataProvider configTestData
+	 */
+	public function testGetSharingEnforceSpecialCharacters($appConfigValue, $expected) {
+		$this->config->expects($this->once())->method('getAppValue')
+			->with('password_policy', 'sharingEnforceSpecialCharacters', '0')
+			->willReturn($appConfigValue);
+
+		$this->assertSame($expected,
+			$this->instance->getSharingEnforceSpecialCharacters()
 		);
 	}
 
@@ -127,13 +193,22 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
+	public function testSetEnforceNonCommonPassword($expected, $setValue) {
+		$this->config->expects($this->once())->method('setAppValue')
+			->with('password_policy', 'enforceNonCommonPassword', $expected);
+
+		$this->instance->setEnforceNonCommonPassword($setValue);
+	}
+
+	/**
+	 * @dataProvider configTestData
+	 */
 	public function testSetEnforceNumericCharacters($expected, $setValue) {
 		$this->config->expects($this->once())->method('setAppValue')
 			->with('password_policy', 'enforceNumericCharacters', $expected);
 
 		$this->instance->setEnforceNumericCharacters($setValue);
 	}
-
 
 	/**
 	 * @dataProvider configTestData
@@ -143,6 +218,55 @@ class PasswordPolicyConfigTest extends TestCase {
 			->with('password_policy', 'enforceSpecialCharacters', $expected);
 
 		$this->instance->setEnforceSpecialCharacters($setValue);
+	}
+
+	public function testSetSharingMinLength() {
+		$expected = 42;
+
+		$this->config->expects($this->once())->method('setAppValue')
+			->with('password_policy', 'sharingMinLength', $expected);
+
+		$this->instance->setSharingMinLength($expected);
+	}
+
+	/**
+	 * @dataProvider configTestData
+	 */
+	public function testSetSharingEnforceUpperLowerCase($expected, $setValue) {
+		$this->config->expects($this->once())->method('setAppValue')
+			->with('password_policy', 'sharingEnforceUpperLowerCase', $expected);
+
+		$this->instance->setSharingEnforceUpperLowerCase($setValue);
+	}
+
+	/**
+	 * @dataProvider configTestData
+	 */
+	public function testSetSharingEnforceNonCommonPassword($expected, $setValue) {
+		$this->config->expects($this->once())->method('setAppValue')
+			->with('password_policy', 'sharingEnforceNonCommonPassword', $expected);
+
+		$this->instance->setSharingEnforceNonCommonPassword($setValue);
+	}
+
+	/**
+	 * @dataProvider configTestData
+	 */
+	public function testSetSharingEnforceNumericCharacters($expected, $setValue) {
+		$this->config->expects($this->once())->method('setAppValue')
+			->with('password_policy', 'sharingEnforceNumericCharacters', $expected);
+
+		$this->instance->setSharingEnforceNumericCharacters($setValue);
+	}
+
+	/**
+	 * @dataProvider configTestData
+	 */
+	public function testSetSharingEnforceSpecialCharacters($expected, $setValue) {
+		$this->config->expects($this->once())->method('setAppValue')
+			->with('password_policy', 'sharingEnforceSpecialCharacters', $expected);
+
+		$this->instance->setSharingEnforceSpecialCharacters($setValue);
 	}
 
 	public function configTestData() {

@@ -26,7 +26,6 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\Tests\Validator;
 
 use OC\HintException;
-use OCA\Password_Policy\PasswordPolicyConfig;
 use OCA\Password_Policy\Validator\IValidator;
 use OCA\Password_Policy\Validator\NumericCharacterValidator;
 use OCP\IL10N;
@@ -34,9 +33,6 @@ use PHPUnit\Framework\MockObject\MockObject;
 use Test\TestCase;
 
 class NumericCharacterValidatorTest extends TestCase {
-
-	/** @var PasswordPolicyConfig|MockObject */
-	private $confg;
 
 	/** @var IL10N|MockObject */
 	private $l;
@@ -47,11 +43,9 @@ class NumericCharacterValidatorTest extends TestCase {
 	protected function setUp(): void {
 		parent::setUp();
 
-		$this->confg = $this->createMock(PasswordPolicyConfig::class);
 		$this->l = $this->createMock(IL10N::class);
 
 		$this->validator = new NumericCharacterValidator(
-			$this->confg,
 			$this->l
 		);
 	}
@@ -60,15 +54,12 @@ class NumericCharacterValidatorTest extends TestCase {
 	 * @dataProvider dataValidate
 	 */
 	public function testValidate(string $password, bool $enforced, bool $valid) {
-		$this->confg->method('getEnforceNumericCharacters')
-			->willReturn($enforced);
-
 		if (!$valid) {
 			$this->expectException(HintException::class);
 		}
 
 		$this->assertTrue(true);
-		$this->validator->validate($password);
+		$this->validator->validate($password, $enforced);
 	}
 
 	public function dataValidate() {

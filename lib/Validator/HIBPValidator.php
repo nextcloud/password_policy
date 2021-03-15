@@ -26,15 +26,12 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\Validator;
 
 use OC\HintException;
-use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\Http\Client\IClientService;
 use OCP\IL10N;
 use OCP\ILogger;
 
 class HIBPValidator implements IValidator {
 
-	/** @var PasswordPolicyConfig */
-	private $config;
 	/** @var IL10N */
 	private $l;
 	/** @var IClientService */
@@ -42,18 +39,16 @@ class HIBPValidator implements IValidator {
 	/** @var ILogger */
 	private $logger;
 
-	public function __construct(PasswordPolicyConfig $config,
-								IL10N $l,
+	public function __construct(IL10N $l,
 								IClientService $clientService,
 								ILogger $logger) {
-		$this->config = $config;
 		$this->l = $l;
 		$this->clientService = $clientService;
 		$this->logger = $logger;
 	}
 
-	public function validate(string $password): void {
-		if ($this->config->getEnforceHaveIBeenPwned()) {
+	public function validate(string $password, $enforceHaveIBeenPwned): void {
+		if ($enforceHaveIBeenPwned) {
 			$hash = sha1($password);
 			$range = substr($hash, 0, 5);
 			$needle = strtoupper(substr($hash, 5));

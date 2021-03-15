@@ -2,6 +2,9 @@
 /**
  * @copyright Copyright (c) 2016 Bjoern Schiessle <bjoern@schiessle.org>
  *
+ * @author Bjoern Schiessle <bjoern@schiessle.org>
+ * @author Jonas Rittershofer <jotoeri@users.noreply.github.com>
+ *
  * @license GNU AGPL version 3 or any later version
  *
  * This program is free software: you can redistribute it and/or modify
@@ -21,6 +24,7 @@
 
 namespace OCA\Password_Policy\Tests;
 
+use OCA\Password_Policy\PasswordPolicyConfig;
 use OCA\Password_Policy\PasswordValidator;
 use OCA\Password_Policy\Validator\CommonPasswordsValidator;
 use OCA\Password_Policy\Validator\HIBPValidator;
@@ -40,6 +44,9 @@ class PasswordValidatorTest extends TestCase {
 	/** @var IAppContainer|MockObject */
 	private $container;
 
+	/** @var PasswordPolicyConfig|MockObject */
+	private $config;
+
 	/** @var ILogger|MockObject */
 	private $logger;
 
@@ -51,12 +58,20 @@ class PasswordValidatorTest extends TestCase {
 		parent::setUp();
 
 		$this->container = $this->createMock(IAppContainer::class);
+		$this->config = $this->createMock(PasswordPolicyConfig::class);
 		$this->logger = $this->createMock(ILogger::class);
 
-		$this->validator = new PasswordValidator($this->container, $this->logger);
+		$this->validator = new PasswordValidator($this->container, $this->config, $this->logger);
 	}
 
-	public function testValidate() {
+	public function testValidateUser() {
+		$this->config->expects($this->once())->method('getMinLength')->willReturn(10);
+		$this->config->expects($this->once())->method('getEnforceNonCommonPassword')->willReturn(true);
+		$this->config->expects($this->once())->method('getEnforceNumericCharacters')->willReturn(true);
+		$this->config->expects($this->once())->method('getEnforceUpperLowerCase')->willReturn(true);
+		$this->config->expects($this->once())->method('getEnforceSpecialCharacters')->willReturn(true);
+		$this->config->expects($this->once())->method('getEnforceHaveIBeenPwned')->willReturn(true);
+
 		$validators = [
 			CommonPasswordsValidator::class,
 			LengthValidator::class,
@@ -70,9 +85,16 @@ class PasswordValidatorTest extends TestCase {
 			->willReturnCallback(function ($class) use (&$validators) {
 				if (($key = array_search($class, $validators)) !== false) {
 					$validator = $this->createMock(IValidator::class);
-					$validator->expects($this->once())
-						->method('validate')
-						->with('password');
+
+					if ($class === LengthValidator::class) {
+						$validator->expects($this->once())
+							->method('validate')
+							->with('password', 10);
+					} else {
+						$validator->expects($this->once())
+							->method('validate')
+							->with('password', true);
+					}
 
 					unset($validators[$key]);
 

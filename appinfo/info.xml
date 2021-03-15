@@ -22,5 +22,6 @@
 
 	<settings>
 		<admin>OCA\Password_Policy\Settings</admin>
+		<admin>OCA\Password_Policy\SharingSettings</admin>
 	</settings>
 </info>

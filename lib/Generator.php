@@ -5,6 +5,7 @@ declare(strict_types=1);
  * @copyright Copyright (c) 2018, Roeland Jago Douma <roeland@famdouma.nl>
  *
  * @author Roeland Jago Douma <roeland@famdouma.nl>
+ * @author Jonas Rittershofer <jotoeri@users.noreply.github.com>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -51,30 +52,48 @@ class Generator {
 	 * @return string
 	 * @throws HintException
 	 */
-	public function generate(): string {
-		$lenght = $this->config->getMinLength();
+	public function generate(string $type = PasswordValidator::POLICY_USER): string {
+		$config = [];
 
+		if ($type === PasswordValidator::POLICY_SHARE) {
+			$config = [
+				'minLength' => $this->config->getSharingMinLength(),
+				'enforceUpperLowerCase' => $this->config->getSharingEnforceUpperLowerCase(),
+				'enforceNumericCharacters' => $this->config->getSharingEnforceNumericCharacters(),
+				'enforceSpecialCharacters' => $this->config->getSharingEnforceSpecialCharacters(),
+			];
+		} else {
+			// Default is User-Policy
+			$config = [
+				'minLength' => $this->config->getMinLength(),
+				'enforceUpperLowerCase' => $this->config->getEnforceUpperLowerCase(),
+				'enforceNumericCharacters' => $this->config->getEnforceNumericCharacters(),
+				'enforceSpecialCharacters' => $this->config->getEnforceSpecialCharacters(),
+			];
+		}
+
+		$length = $config['minLength'];
 		$password = '';
 		$chars = '';
 
 		$found = false;
 		for ($i = 0; $i < 10; $i++) {
-			if ($this->config->getEnforceUpperLowerCase()) {
+			if ($config['enforceUpperLowerCase']) {
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_UPPER);
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_LOWER);
-				$lenght -= 2;
+				$length -= 2;
 				$chars .= ISecureRandom::CHAR_UPPER . ISecureRandom::CHAR_LOWER;
 			}
 
-			if ($this->config->getEnforceNumericCharacters()) {
+			if ($config['enforceNumericCharacters']) {
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_DIGITS);
-				$lenght -= 1;
+				$length -= 1;
 				$chars .= ISecureRandom::CHAR_DIGITS;
 			}
 
-			if ($this->config->getEnforceSpecialCharacters()) {
+			if ($config['enforceSpecialCharacters']) {
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_SYMBOLS);
-				$lenght -= 1;
+				$length -= 1;
 				$chars .= ISecureRandom::CHAR_SYMBOLS;
 			}
 
@@ -82,10 +101,14 @@ class Generator {
 				$chars = ISecureRandom::CHAR_HUMAN_READABLE;
 			}
 
-			$password .= $chars = $this->random->generate($lenght, $chars);
+			// Append random chars to achieve length
+			$password .= $this->random->generate($length, $chars);
+
+			// Shuffle string so the order is random
+			$password = str_shuffle($password);
 
 			try {
-				$this->validator->validate($password);
+				$this->validator->validate($password, $type);
 				$found = true;
 				break;
 			} catch (HintException $e) {
@@ -93,16 +116,13 @@ class Generator {
 				 * Invalid so lets go for another round
 				 * Reset the length so we don't run below zero
 				 */
-				$lenght = $this->config->getMinLength();
+				$length = $config['minLength'];
 			}
 		}
 
 		if ($found === false) {
 			throw new HintException('Could not generate a valid password');
 		}
-
-		// Shuffle string so the order is random
-		$password = str_shuffle($password);
 
 		return $password;
 	}

@@ -26,23 +26,18 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\Validator;
 
 use OC\HintException;
-use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\IL10N;
 
 class CommonPasswordsValidator implements IValidator {
 
-	/** @var PasswordPolicyConfig */
-	private $config;
 	/** @var IL10N */
 	private $l;
 
-	public function __construct(PasswordPolicyConfig $config, IL10N $l) {
-		$this->config = $config;
+	public function __construct(IL10N $l) {
 		$this->l = $l;
 	}
 
-	public function validate(string $password): void {
-		$enforceNonCommonPassword = $this->config->getEnforceNonCommonPassword();
+	public function validate(string $password, $enforceNonCommonPassword): void {
 		$passwordFile = __DIR__ . '/../../lists/list-'.strlen($password).'.php';
 		if ($enforceNonCommonPassword && file_exists($passwordFile)) {
 			$commonPasswords = require_once $passwordFile;

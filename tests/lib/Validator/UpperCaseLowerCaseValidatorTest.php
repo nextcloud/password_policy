@@ -26,7 +26,6 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\Tests\Validator;
 
 use OC\HintException;
-use OCA\Password_Policy\PasswordPolicyConfig;
 use OCA\Password_Policy\Validator\IValidator;
 use OCA\Password_Policy\Validator\UpperCaseLoweCaseValidator;
 use OCP\IL10N;
@@ -34,9 +33,6 @@ use PHPUnit\Framework\MockObject\MockObject;
 use Test\TestCase;
 
 class UpperCaseLowerCaseValidatorTest extends TestCase {
-
-	/** @var PasswordPolicyConfig|MockObject */
-	private $confg;
 
 	/** @var IL10N|MockObject */
 	private $l;
@@ -47,11 +43,9 @@ class UpperCaseLowerCaseValidatorTest extends TestCase {
 	protected function setUp(): void {
 		parent::setUp();
 
-		$this->confg = $this->createMock(PasswordPolicyConfig::class);
 		$this->l = $this->createMock(IL10N::class);
 
 		$this->validator = new UpperCaseLoweCaseValidator(
-			$this->confg,
 			$this->l
 		);
 	}
@@ -60,15 +54,12 @@ class UpperCaseLowerCaseValidatorTest extends TestCase {
 	 * @dataProvider dataValidate
 	 */
 	public function testValidate(string $password, bool $enforced, bool $valid) {
-		$this->confg->method('getEnforceUpperLowerCase')
-			->willReturn($enforced);
-
 		if (!$valid) {
 			$this->expectException(HintException::class);
 		}
 
 		$this->assertTrue(true);
-		$this->validator->validate($password);
+		$this->validator->validate($password, $enforced);
 	}
 
 	public function dataValidate() {

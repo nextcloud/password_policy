@@ -83,4 +83,42 @@ class APIController extends OCSController {
 			'password' => $password,
 		]);
 	}
+
+	/**
+	 * @NoAdminRequired
+	 *
+	 * @param string $password
+	 * @return DataResponse
+	 */
+	public function validateShare(string $password): DataResponse {
+		try {
+			$this->validator->validate($password, PasswordValidator::POLICY_SHARE);
+		} catch (HintException $e) {
+			return new DataResponse([
+				'passed' => false,
+				'reason' => $e->getHint(),
+			]);
+		}
+
+		return new DataResponse([
+			'passed' => true,
+		]);
+	}
+
+	/**
+	 * @NoAdminRequired
+	 *
+	 * @return DataResponse
+	 */
+	public function generateShare(): DataResponse {
+		try {
+			$password = $this->generator->generate(PasswordValidator::POLICY_SHARE);
+		} catch (HintException $e) {
+			return new DataResponse([], Http::STATUS_CONFLICT);
+		}
+
+		return new DataResponse([
+			'password' => $password,
+		]);
+	}
 }

@@ -27,12 +27,28 @@ return [
 	'ocs' => [
 		[
 			'name' => 'API#generate',
-			'url' => '/api/v1/generate',
+			'url' => '/api/{apiVersion}/generate',
 			'verb' => 'GET',
+			'requirements' => [
+				'apiVersion' => 'v(1|2)',
+			],
 		],
 		[
 			'name' => 'API#validate',
-			'url' => '/api/v1/validate',
+			'url' => '/api/{apiVersion}/validate',
+			'verb' => 'POST',
+			'requirements' => [
+				'apiVersion' => 'v(1|2)',
+			],
+		],
+		[
+			'name' => 'API#generateShare',
+			'url' => '/api/v2/share/generate',
+			'verb' => 'GET',
+		],
+		[
+			'name' => 'API#validateShare',
+			'url' => '/api/v2/share/validate',
 			'verb' => 'POST',
 		]
 	]

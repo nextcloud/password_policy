@@ -30,7 +30,9 @@ use OC\HintException;
 interface IValidator {
 
 	/**
+	 * @param string $password
+	 * @param int|bool $validationParam config-parameter for validation.
 	 * @throws HintException
 	 */
-	public function validate(string $password): void;
+	public function validate(string $password, $validationParam): void;
 }

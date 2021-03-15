@@ -4,6 +4,9 @@ declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2017 Bjoern Schiessle <bjoern@schiessle.org>
  *
+ * @author Bjoern Schiessle <bjoern@schiessle.org>
+ * @author Jonas Rittershofer <jotoeri@users.noreply.github.com>
+ *
  * @license GNU AGPL version 3 or any later version
  *
  * This program is free software: you can redistribute it and/or modify
@@ -49,14 +52,25 @@ class Capabilities implements ICapability {
 		return [
 			'password_policy' =>
 				[
+					// User Policy
 					'minLength' => $this->config->getMinLength(),
 					'enforceNonCommonPassword' => $this->config->getEnforceNonCommonPassword(),
 					'enforceNumericCharacters' => $this->config->getEnforceNumericCharacters(),
 					'enforceSpecialCharacters' => $this->config->getEnforceSpecialCharacters(),
 					'enforceUpperLowerCase' => $this->config->getEnforceUpperLowerCase(),
+
+					// Sharing Policy
+					'sharingMinLength' => $this->config->getSharingMinLength(),
+					'sharingEnforceNonCommonPassword' => $this->config->getSharingEnforceNonCommonPassword(),
+					'sharingEnforceNumericCharacters' => $this->config->getSharingEnforceNumericCharacters(),
+					'sharingEnforceSpecialCharacters' => $this->config->getSharingEnforceSpecialCharacters(),
+					'sharingEnforceUpperLowerCase' => $this->config->getSharingEnforceUpperLowerCase(),
+
 					'api' => [
-						'generate' => $this->urlGenerator->linkToOCSRouteAbsolute('password_policy.API.generate'),
-						'validate' => $this->urlGenerator->linkToOCSRouteAbsolute('password_policy.API.validate'),
+						'generate' => $this->urlGenerator->linkToOCSRouteAbsolute('password_policy.API.generate', ['apiVersion' => 'v2']),
+						'validate' => $this->urlGenerator->linkToOCSRouteAbsolute('password_policy.API.validate', ['apiVersion' => 'v2']),
+						'generateShare' => $this->urlGenerator->linkToOCSRouteAbsolute('password_policy.API.generateShare'),
+						'validateShare' => $this->urlGenerator->linkToOCSRouteAbsolute('password_policy.API.validateShare'),
 					]
 				]
 		];
