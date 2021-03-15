@@ -27,19 +27,30 @@ namespace OCA\Password_Policy;
 
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\Settings\ISettings;
+use OCP\IInitialStateService;
+use OCP\Util;
 
 class Settings implements ISettings {
+	private $appName;
 
 	/** @var PasswordPolicyConfig */
 	private $config;
 
-	public function __construct(PasswordPolicyConfig $config) {
+	/** @var IInitialStateService */
+	private $initialStateService;
+
+	public function __construct(string $appName,
+								PasswordPolicyConfig $config,
+								IInitialStateService $initialStateService) {
+		$this->appName = $appName;
 		$this->config = $config;
+		$this->initialStateService = $initialStateService;
 	}
 
 	public function getForm(): TemplateResponse {
-		$response = new TemplateResponse('password_policy', 'settings-admin');
-		$response->setParams([
+		Util::addScript($this->appName, 'password_policy-settings');
+
+		$this->initialStateService->provideInitialState($this->appName, 'config', [
 			'minLength' => $this->config->getMinLength(),
 			'enforceNonCommonPassword' => $this->config->getEnforceNonCommonPassword(),
 			'enforceUpperLowerCase' => $this->config->getEnforceUpperLowerCase(),
@@ -51,7 +62,7 @@ class Settings implements ISettings {
 			'maximumLoginAttempts' => $this->config->getMaximumLoginAttempts(),
 		]);
 
-		return $response;
+		return new TemplateResponse($this->appName, 'settings');
 	}
 
 	public function getSection(): string {
