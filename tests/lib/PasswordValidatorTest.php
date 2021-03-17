@@ -21,8 +21,6 @@
 
 namespace OCA\Password_Policy\Tests;
 
-use OC\HintException;
-use OCA\Password_Policy\PasswordPolicyConfig;
 use OCA\Password_Policy\PasswordValidator;
 use OCA\Password_Policy\Validator\CommonPasswordsValidator;
 use OCA\Password_Policy\Validator\HIBPValidator;
@@ -33,8 +31,6 @@ use OCA\Password_Policy\Validator\SpecialCharactersValidator;
 use OCA\Password_Policy\Validator\UpperCaseLoweCaseValidator;
 use OCP\AppFramework\IAppContainer;
 use OCP\AppFramework\QueryException;
-use OCP\Http\Client\IClientService;
-use OCP\IL10N;
 use OCP\ILogger;
 use PHPUnit\Framework\MockObject\MockObject;
 use Test\TestCase;
@@ -71,7 +67,7 @@ class PasswordValidatorTest extends TestCase {
 		];
 
 		$this->container->method('query')
-			->willReturnCallback(function($class) use (&$validators) {
+			->willReturnCallback(function ($class) use (&$validators) {
 				if (($key = array_search($class, $validators)) !== false) {
 					$validator = $this->createMock(IValidator::class);
 					$validator->expects($this->once())
@@ -91,6 +87,4 @@ class PasswordValidatorTest extends TestCase {
 		$this->validator->validate('password');
 		$this->assertEmpty($validators);
 	}
-
-
 }

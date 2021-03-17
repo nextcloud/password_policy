@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2019, Roeland Jago Douma <roeland@famdouma.nl>
@@ -43,7 +44,7 @@ class CommonPasswordsValidator implements IValidator {
 	public function validate(string $password): void {
 		$enforceNonCommonPassword = $this->config->getEnforceNonCommonPassword();
 		$passwordFile = __DIR__ . '/../../lists/list-'.strlen($password).'.php';
-		if($enforceNonCommonPassword && file_exists($passwordFile)) {
+		if ($enforceNonCommonPassword && file_exists($passwordFile)) {
 			$commonPasswords = require_once $passwordFile;
 			if (isset($commonPasswords[strtolower($password)])) {
 				$message = 'Password is among the 1,000,000 most common ones. Please make it unique.';
@@ -54,5 +55,4 @@ class CommonPasswordsValidator implements IValidator {
 			}
 		}
 	}
-
 }

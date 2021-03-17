@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2020 Arthur Schiwon <blizzz@arthur-schiwon.de>
@@ -88,7 +89,7 @@ class ComplianceService {
 	//public function entryControl(IUser $user, string $password, bool $isTokenLogin) {
 	public function entryControl(string $loginName, string $password) {
 		$uid = $loginName;
-		\OCP\Util::emitHook( '\OCA\Files_Sharing\API\Server2Server', 'preLoginNameUsedAsUserName', ['uid' => &$uid]);
+		\OCP\Util::emitHook('\OCA\Files_Sharing\API\Server2Server', 'preLoginNameUsedAsUserName', ['uid' => &$uid]);
 		foreach ($this->getInstance(IEntryControl::class) as $instance) {
 			try {
 				$user = \OC::$server->getUserManager()->get($uid);
@@ -111,7 +112,7 @@ class ComplianceService {
 		foreach (self::COMPLIANCERS as $compliance) {
 			try {
 				$instance = $this->container->query($compliance);
-				if(!$instance instanceof $interface) {
+				if (!$instance instanceof $interface) {
 					continue;
 				}
 			} catch (QueryException $e) {

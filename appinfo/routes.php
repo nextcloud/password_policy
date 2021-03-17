@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2019, Roeland Jago Douma <roeland@famdouma.nl>
@@ -26,12 +27,12 @@ return [
 	'ocs' => [
 		[
 			'name' => 'API#generate',
-			'url'  =>'/api/v1/generate',
+			'url' => '/api/v1/generate',
 			'verb' => 'GET',
 		],
 		[
 			'name' => 'API#validate',
-			'url'  =>'/api/v1/validate',
+			'url' => '/api/v1/validate',
 			'verb' => 'POST',
 		]
 	]

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2019, Roeland Jago Douma <roeland@famdouma.nl>
@@ -42,7 +43,7 @@ class NumericCharacterValidator implements IValidator {
 
 	public function validate(string $password): void {
 		$enforceNumericCharacters = $this->config->getEnforceNumericCharacters();
-		if($enforceNumericCharacters) {
+		if ($enforceNumericCharacters) {
 			if (preg_match('/^(?=.*\d).+$/', $password) !== 1) {
 				$message = 'Password needs to contain at least one numeric character.';
 				$message_t = $this->l->t(
@@ -52,5 +53,4 @@ class NumericCharacterValidator implements IValidator {
 			}
 		}
 	}
-
 }
