@@ -41,7 +41,6 @@ class PasswordPolicyConfigTest extends TestCase {
 	}
 
 	public function testGetMinLength() {
-
 		$appConfigValue = "42";
 		$expected = 42;
 
@@ -57,7 +56,6 @@ class PasswordPolicyConfigTest extends TestCase {
 	 * @dataProvider configTestData
 	 */
 	public function testGetEnforceNonCommonPassword($appConfigValue, $expected) {
-
 		$this->config->expects($this->once())->method('getAppValue')
 			->with('password_policy', 'enforceNonCommonPassword', '1')
 			->willReturn($appConfigValue);
@@ -71,7 +69,6 @@ class PasswordPolicyConfigTest extends TestCase {
 	 * @dataProvider configTestData
 	 */
 	public function testGetEnforceUpperLowerCase($appConfigValue, $expected) {
-
 		$this->config->expects($this->once())->method('getAppValue')
 			->with('password_policy', 'enforceUpperLowerCase', '0')
 			->willReturn($appConfigValue);
@@ -85,7 +82,6 @@ class PasswordPolicyConfigTest extends TestCase {
 	 * @dataProvider configTestData
 	 */
 	public function testGetEnforceNumericCharacters($appConfigValue, $expected) {
-
 		$this->config->expects($this->once())->method('getAppValue')
 			->with('password_policy', 'enforceNumericCharacters', '0')
 			->willReturn($appConfigValue);
@@ -100,7 +96,6 @@ class PasswordPolicyConfigTest extends TestCase {
 	 * @dataProvider configTestData
 	 */
 	public function testGetEnforceSpecialCharacters($appConfigValue, $expected) {
-
 		$this->config->expects($this->once())->method('getAppValue')
 			->with('password_policy', 'enforceSpecialCharacters', '0')
 			->willReturn($appConfigValue);
@@ -111,7 +106,6 @@ class PasswordPolicyConfigTest extends TestCase {
 	}
 
 	public function testSetMinLength() {
-
 		$expected = 42;
 
 		$this->config->expects($this->once())->method('setAppValue')
@@ -124,7 +118,6 @@ class PasswordPolicyConfigTest extends TestCase {
 	 * @dataProvider configTestData
 	 */
 	public function testSetEnforceUpperLowerCase($expected, $setValue) {
-
 		$this->config->expects($this->once())->method('setAppValue')
 			->with('password_policy', 'enforceUpperLowerCase', $expected);
 
@@ -135,7 +128,6 @@ class PasswordPolicyConfigTest extends TestCase {
 	 * @dataProvider configTestData
 	 */
 	public function testSetEnforceNumericCharacters($expected, $setValue) {
-
 		$this->config->expects($this->once())->method('setAppValue')
 			->with('password_policy', 'enforceNumericCharacters', $expected);
 
@@ -147,7 +139,6 @@ class PasswordPolicyConfigTest extends TestCase {
 	 * @dataProvider configTestData
 	 */
 	public function testSetEnforceSpecialCharacters($expected, $setValue) {
-
 		$this->config->expects($this->once())->method('setAppValue')
 			->with('password_policy', 'enforceSpecialCharacters', $expected);
 
@@ -160,5 +151,4 @@ class PasswordPolicyConfigTest extends TestCase {
 			['0', false]
 		];
 	}
-
 }

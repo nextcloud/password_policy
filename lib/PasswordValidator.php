@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2016 Bjoern Schiessle <bjoern@schiessle.org>
@@ -22,7 +23,6 @@ declare(strict_types=1);
 
 
 namespace OCA\Password_Policy;
-
 
 use OC\HintException;
 use OCA\Password_Policy\Validator\CommonPasswordsValidator;

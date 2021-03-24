@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2019, Roeland Jago Douma <roeland@famdouma.nl>
@@ -42,7 +43,7 @@ class LengthValidator implements IValidator {
 
 	public function validate(string $password): void {
 		$minLength = $this->config->getMinLength();
-		if(strlen($password) < $minLength) {
+		if (strlen($password) < $minLength) {
 			$message = 'Password needs to be at least ' . $minLength . ' characters long.';
 			$message_t = $this->l->t(
 				'Password needs to be at least %s characters long.', [$minLength]
@@ -50,5 +51,4 @@ class LengthValidator implements IValidator {
 			throw new HintException($message, $message_t);
 		}
 	}
-
 }

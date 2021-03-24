@@ -55,27 +55,37 @@ style('password_policy', 'settings-admin');
 	</p>
 	<p id="enforceNonCommonPassword">
 		<input type="checkbox" name="password-policy-enforce-non-common-password" id="password-policy-enforce-non-common-password" class="checkbox"
-			   value="1" <?php if ($_['enforceNonCommonPassword']) print_unescaped('checked="checked"'); ?> />
+			   value="1" <?php if ($_['enforceNonCommonPassword']) {
+	print_unescaped('checked="checked"');
+} ?> />
 		<label for="password-policy-enforce-non-common-password"><?php p($l->t('Forbid common passwords'));?></label><br/>
 	</p>
 	<p id="enforceLowerUpperCase">
 		<input type="checkbox" name="password-policy-enforce-upper-lower-case" id="password-policy-enforce-upper-lower-case" class="checkbox"
-			   value="1" <?php if ($_['enforceUpperLowerCase']) print_unescaped('checked="checked"'); ?> />
+			   value="1" <?php if ($_['enforceUpperLowerCase']) {
+	print_unescaped('checked="checked"');
+} ?> />
 		<label for="password-policy-enforce-upper-lower-case"><?php p($l->t('Enforce upper and lower case characters'));?></label><br/>
 	</p>
 	<p id="enforceNumericCharacters">
 		<input type="checkbox" name="password-policy-enforce-numeric-characters" id="password-policy-enforce-numeric-characters" class="checkbox"
-			   value="1" <?php if ($_['enforceNumericCharacters']) print_unescaped('checked="checked"'); ?> />
+			   value="1" <?php if ($_['enforceNumericCharacters']) {
+	print_unescaped('checked="checked"');
+} ?> />
 		<label for="password-policy-enforce-numeric-characters"><?php p($l->t('Enforce numeric characters'));?></label><br/>
 	</p>
 	<p id="enforceSpecialCharacters">
 		<input type="checkbox" name="password-policy-enforce-special-characters" id="password-policy-enforce-special-characters" class="checkbox"
-			   value="1" <?php if ($_['enforceSpecialCharacters']) print_unescaped('checked="checked"'); ?> />
+			   value="1" <?php if ($_['enforceSpecialCharacters']) {
+	print_unescaped('checked="checked"');
+} ?> />
 		<label for="password-policy-enforce-special-characters"><?php p($l->t('Enforce special characters'));?></label><br/>
 	</p>
 	<p id="enforceHaveIBeenPwned">
 		<input type="checkbox" name="password-policy-enforce-have-i-been-pwned" id="password-policy-enforce-have-i-been-pwned" class="checkbox"
-			   value="1" <?php if ($_['enforceHaveIBeenPwned']) print_unescaped('checked="checked"'); ?> />
+			   value="1" <?php if ($_['enforceHaveIBeenPwned']) {
+	print_unescaped('checked="checked"');
+} ?> />
 		<label for="password-policy-enforce-have-i-been-pwned"><?php p($l->t('Check password against the list of breached passwords from haveibeenpwned.com'));?></label><br/>
 	</p>
 	<p class="password-policy-settings-hint">

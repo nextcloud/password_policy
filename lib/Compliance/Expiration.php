@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2020 Arthur Schiwon <blizzz@arthur-schiwon.de>
@@ -64,10 +65,10 @@ class Expiration implements IUpdatable, IEntryControl {
 	 * @throws PreConditionNotMetException
 	 */
 	public function update(IUser $user, string $password): void {
-		if(!$this->isLocalUser($user)) {
+		if (!$this->isLocalUser($user)) {
 			return;
 		}
-		if($this->policyConfig->getExpiryInDays() === 0) {
+		if ($this->policyConfig->getExpiryInDays() === 0) {
 			$this->config->deleteUserValue(
 				$user->getUID(),
 				'password_policy',
@@ -84,7 +85,7 @@ class Expiration implements IUpdatable, IEntryControl {
 	}
 
 	public function entryControl(IUser $user, string $password): void {
-		if($this->policyConfig->getExpiryInDays() !== 0
+		if ($this->policyConfig->getExpiryInDays() !== 0
 			&& $this->isLocalUser($user)
 			&& $this->isPasswordExpired($user)
 		) {
@@ -102,7 +103,7 @@ class Expiration implements IUpdatable, IEntryControl {
 			0
 		);
 
-		if($updatedAt === 0) {
+		if ($updatedAt === 0) {
 			$this->update($user, '');
 			return false;
 		}
@@ -117,5 +118,4 @@ class Expiration implements IUpdatable, IEntryControl {
 		$localBackends = ['Database', 'Guests'];
 		return in_array($user->getBackendClassName(), $localBackends);
 	}
-
 }

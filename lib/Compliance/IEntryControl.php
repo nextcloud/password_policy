@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2020 Arthur Schiwon <blizzz@arthur-schiwon.de>
@@ -23,7 +24,6 @@ declare(strict_types=1);
  */
 
 namespace OCA\Password_Policy\Compliance;
-
 
 use OC\HintException;
 use OCP\IUser;

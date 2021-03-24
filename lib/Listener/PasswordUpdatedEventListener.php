@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2020 Morris Jobke <hey@morrisjobke.de>
@@ -38,7 +39,7 @@ class PasswordUpdatedEventListener implements IEventListener {
 	}
 
 	public function handle(Event $event): void {
-		if(!($event instanceof PasswordUpdatedEvent)) {
+		if (!($event instanceof PasswordUpdatedEvent)) {
 			return;
 		}
 		$this->complianceUpdater->update($event->getUser(), $event->getPassword());

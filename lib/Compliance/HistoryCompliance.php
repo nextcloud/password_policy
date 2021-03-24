@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2020 Arthur Schiwon <blizzz@arthur-schiwon.de>
@@ -93,7 +94,7 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 	 */
 	public function update(IUser $user, string $password): void {
 		$historySize = $this->policyConfig->getHistorySize();
-		if($historySize === 0) {
+		if ($historySize === 0) {
 			$this->config->deleteUserValue($user->getUID(), 'password_policy', 'passwordHistory');
 			return;
 		}
@@ -129,5 +130,4 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 
 		return $history;
 	}
-
 }

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2019, Roeland Jago Douma <roeland@famdouma.nl>
@@ -42,7 +43,7 @@ class UpperCaseLoweCaseValidator implements IValidator {
 
 	public function validate(string $password): void {
 		$enforceUpperLowerCase = $this->config->getEnforceUpperLowerCase();
-		if($enforceUpperLowerCase) {
+		if ($enforceUpperLowerCase) {
 			if (preg_match('/^(?=.*[a-z])(?=.*[A-Z]).+$/', $password) !== 1) {
 				$message = 'Password needs to contain at least one lower and one upper case character.';
 				$message_t = $this->l->t(
@@ -52,5 +53,4 @@ class UpperCaseLoweCaseValidator implements IValidator {
 			}
 		}
 	}
-
 }

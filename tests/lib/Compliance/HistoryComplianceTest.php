@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2020 Arthur Schiwon <blizzz@arthur-schiwon.de>
@@ -72,7 +73,7 @@ class HistoryComplianceTest extends TestCase {
 	 * @dataProvider auditCaseProvider
 	 */
 	public function testAudit(int $historySize, array $history, string $newPasswordHash, bool $expectException) {
-		list($uid, $user) = $this->getUserMock();
+		[$uid, $user] = $this->getUserMock();
 
 		$this->policyConfig->expects($this->any())
 			->method('getHistorySize')
@@ -102,7 +103,7 @@ class HistoryComplianceTest extends TestCase {
 	 * @dataProvider updateCaseProvider
 	 */
 	public function testUpdate(int $historySize, array $history, string $newPasswordHash) {
-		list($uid, $user) = $this->getUserMock();
+		[$uid, $user] = $this->getUserMock();
 
 		$this->policyConfig->expects($this->any())
 			->method('getHistorySize')
@@ -170,5 +171,4 @@ class HistoryComplianceTest extends TestCase {
 
 		return [$uid, $user];
 	}
-
 }

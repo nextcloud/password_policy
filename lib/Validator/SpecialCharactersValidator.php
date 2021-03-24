@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2019, Roeland Jago Douma <roeland@famdouma.nl>
@@ -42,7 +43,7 @@ class SpecialCharactersValidator implements IValidator {
 
 	public function validate(string $password): void {
 		$enforceSpecialCharacters = $this->config->getEnforceSpecialCharacters();
-		if($enforceSpecialCharacters && ctype_alnum($password)) {
+		if ($enforceSpecialCharacters && ctype_alnum($password)) {
 			$message = 'Password needs to contain at least one special character.';
 			$message_t = $this->l->t(
 				'Password needs to contain at least one special character.'
@@ -50,5 +51,4 @@ class SpecialCharactersValidator implements IValidator {
 			throw new HintException($message, $message_t);
 		}
 	}
-
 }
