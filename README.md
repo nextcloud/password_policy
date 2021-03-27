@@ -6,7 +6,7 @@ Once the app is enabled you find the "Password policy" settings in the admin sec
 
 ![](https://github.com/nextcloud/screenshots/blob/master/password_policy/password_policy_settings.png)
 
-By default the app enforces a minimum password length of 10 characters and checks every password against the 1.000.000 most common passwords.
+By default the app enforces a minimum password length of 8 characters and checks every password against the 1.000.000 most common passwords.
 
 Currently the app checks passwords for public link shares and for user passwords if the database backend is used.
 
