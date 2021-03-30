@@ -2,6 +2,3 @@
 .php_cs.cache
 
 node_modules/
-
-# build dir
-js/
