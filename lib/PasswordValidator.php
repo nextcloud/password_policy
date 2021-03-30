@@ -86,7 +86,7 @@ class PasswordValidator {
 		if (!empty($errors)) {
 			throw new HintException(
 				implode(' ', $errors),
-				implode(' ', $hints),
+				implode(' ', $hints)
 			);
 		}
 	}
