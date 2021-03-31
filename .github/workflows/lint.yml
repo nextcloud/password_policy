@@ -8,12 +8,12 @@ on:
       - stable*
 
 jobs:
-  php:
+  php-lint:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        php-versions: ['7.2', '7.3', '7.4']
+        php-versions: ['7.3', '7.4', '8']
   
     name: php${{ matrix.php-versions }}
     steps:
@@ -33,9 +33,9 @@ jobs:
 
     strategy:
       matrix:
-        php-versions: ['7.4']
+        php-versions: ['8']
 
-    name: cs php${{ matrix.php-versions }}
+    name: CS-Check php${{ matrix.php-versions }}
     steps:
     - name: Checkout
       uses: actions/checkout@v2

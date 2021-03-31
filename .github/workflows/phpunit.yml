@@ -11,7 +11,7 @@ env:
   APP_NAME: password_policy
 
 jobs:
-  php:
+  sqlite:
     runs-on: ubuntu-latest
 
     strategy:
@@ -47,7 +47,6 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
-          tools: phpunit
           extensions: mbstring, iconv, fileinfo, intl, sqlite, pdo_sqlite, zip, gd
           coverage: xdebug
 
@@ -83,7 +82,7 @@ jobs:
       # do not stop on another job's failure
       fail-fast: false
       matrix:
-        php-versions: ['7.3', '7.4']
+        php-versions: ['7.3', '7.4', '8']
         databases: ['mysql']
         server-versions: ['master']
   
@@ -121,7 +120,6 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
-          tools: phpunit
           extensions: mbstring, iconv, fileinfo, intl, mysql, pdo_mysql, zip, gd
           coverage: none
 
@@ -189,7 +187,6 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
-          tools: phpunit
           extensions: mbstring, iconv, fileinfo, intl, pgsql, pdo_pgsql, zip, gd
           coverage: none
 
@@ -252,7 +249,6 @@ jobs:
         uses: "shivammathur/setup-php@v2"
         with:
           php-version: ${{ matrix.php-versions }}
-          tools: phpunit
           extensions: mbstring, iconv, fileinfo, intl, oci8, zip, gd
           coverage: none
 
