@@ -1,7 +1,14 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Saved" : "Gespeichert",
+    "Unknown error" : "Unbekannter Fehler",
+    "Minimal length has to be a non negative number" : "Minimale Länge muss eine nicht negative Zahl sein",
+    "History size has to be a non negative number" : "Historiengröße muss eine nicht negative Zahl sein",
+    "Expiration days have to be a non negative number" : "Verfallstage müssen eine nicht negative Zahl sein",
+    "Maximum login attempts have to be a non negative number" : "Maximale Anmeldeversuche muss eine nicht negative Zahl sein",
     "Password policy" : "Passwort-Regeln",
+    "_msg success inlineblock_::_none_" : ["msg success inlineblock","none"],
     "Minimum password length" : "Minimale Passwortlänge",
     "User password history" : "Benutzerpasswort-Verlauf",
     "Number of days until user password expires" : "Anzahl der Tage bis zum Ablauf des Benutzerpassworts",
