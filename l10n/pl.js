@@ -1,6 +1,12 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Saved" : "Zapisano",
+    "Unknown error" : "Nieznany błąd",
+    "Minimal length has to be a non negative number" : "Minimalna długość musi być liczbą nieujemną",
+    "History size has to be a non negative number" : "Wielkość historii musi być liczbą nieujemną",
+    "Expiration days have to be a non negative number" : "Dni do wygaśnięcia muszą być liczbą nieujemną",
+    "Maximum login attempts have to be a non negative number" : "Maksymalna liczba prób logowania musi być liczbą nieujemną",
     "Password policy" : "Polityka haseł",
     "Minimum password length" : "Minimalna długość hasła",
     "User password history" : "Historia haseł użytkownika",

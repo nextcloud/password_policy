@@ -1,4 +1,10 @@
 { "translations": {
+    "Saved" : "Uloženo",
+    "Unknown error" : "Neznámá chyba",
+    "Minimal length has to be a non negative number" : "Je třeba, aby nejkratší přípustná délka nebylo záporné číslo",
+    "History size has to be a non negative number" : "Je třeba, aby velikost historie nebylo záporné číslo",
+    "Expiration days have to be a non negative number" : "Je třeba, aby počet dnů do skončení platnosti nebylo záporné číslo",
+    "Maximum login attempts have to be a non negative number" : "Je třeba, aby nejvyšší umožněný počet pokusů o přihlášení nebylo záporné číslo",
     "Password policy" : "Požadavky na hesla",
     "Minimum password length" : "Minimální délka hesla",
     "User password history" : "Historie hesel uživatele",

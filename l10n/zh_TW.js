@@ -1,7 +1,14 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Saved" : "已儲存",
+    "Unknown error" : "未知錯誤",
+    "Minimal length has to be a non negative number" : "最小長度必須為非負數",
+    "History size has to be a non negative number" : "歷史紀錄大小必須為非負數",
+    "Expiration days have to be a non negative number" : "到期天數必須為非負數",
+    "Maximum login attempts have to be a non negative number" : "最大登入嘗試次數必須為非負數",
     "Password policy" : "密碼策略",
+    "_msg success inlineblock_::_none_" : ["無"],
     "Minimum password length" : "密碼最小長度",
     "User password history" : "使用者密碼歷史紀錄",
     "Number of days until user password expires" : "密碼到期天數",
