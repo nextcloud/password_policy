@@ -1,6 +1,8 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Saved" : "Gordeta",
+    "Unknown error" : "Errore ezezaguna",
     "Password policy" : "Pasahitz politika",
     "User password history" : "Erabiltzailearen pasahitz historia",
     "Forbid common passwords" : "Pasahitz ohikoenak debekatu",

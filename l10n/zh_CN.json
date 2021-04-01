@@ -1,5 +1,12 @@
 { "translations": {
+    "Saved" : "已保存",
+    "Unknown error" : "未知错误",
+    "Minimal length has to be a non negative number" : "最小长度必须是一个非负数",
+    "History size has to be a non negative number" : "历史记录大小必须是非负数 ",
+    "Expiration days have to be a non negative number" : "过期天数必须是非负数 ",
+    "Maximum login attempts have to be a non negative number" : "最大登录尝试次数必须是非负数",
     "Password policy" : "密码规则",
+    "_msg success inlineblock_::_none_" : ["无"],
     "Minimum password length" : "最小密码长度",
     "User password history" : "用户密码记录",
     "Number of days until user password expires" : "用户密码过期前的天数",
