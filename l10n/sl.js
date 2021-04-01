@@ -1,6 +1,12 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Saved" : "Shranjeno",
+    "Unknown error" : "Neznana napaka",
+    "Minimal length has to be a non negative number" : "Najmanjša dolžina mora biti ne-negativna vrednost.",
+    "History size has to be a non negative number" : "Velikost zgodovine mora biti ne-negativna vrednost.",
+    "Expiration days have to be a non negative number" : "Število dni do pretaka mora biti ne-negativna vrednost.",
+    "Maximum login attempts have to be a non negative number" : "Največje število poskusov prijave mora biti ne-negativna vrednost.",
     "Password policy" : "Določila gesel",
     "Minimum password length" : "Najmanjša dolžina gesla",
     "User password history" : "Uporabniška zgodovina gesel",
@@ -16,6 +22,7 @@ OC.L10N.register(
     "Password must not have been used recently before." : "Geslo ne sme biti uporabljeno pred kratkim.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Izbrano geslo je med 1 000 000 najpogostejših gesel. Potrudite se, da bo enkratno.",
     "Password is present in compromised password list. Please choose a different password." : "Geslo je zavedeno na seznamu ogroženih gesel. Izberite drugo geslo.",
+    "Password needs to be at least %s characters long." : "Geslo mora vsebovati najmanj %s znakov.",
     "Password needs to contain at least one numeric character." : "Geslo mora vsebovati vsaj en številski znak.",
     "Password needs to contain at least one special character." : "Geslo mora vsebovati vsaj en poseben znak.",
     "Password needs to contain at least one lower and one upper case character." : "Geslo mora vsebovati vsaj eno malo in eno veliko tiskano črko.",
