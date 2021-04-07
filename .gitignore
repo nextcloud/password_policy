@@ -2,3 +2,7 @@
 .php_cs.cache
 
 node_modules/
+
+# phpunit
+.phpunit.result.cache
+clover.unit.xml
