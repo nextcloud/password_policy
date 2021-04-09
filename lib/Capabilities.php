@@ -54,6 +54,9 @@ class Capabilities implements ICapability {
 				[
 					// User Policy
 					'minLength' => $this->config->getMinLength(),
+					'historySize' => $this->config->getHistorySize(),
+					'expiration' => $this->config->getExpiryInDays(),
+					'maximumLoginAttempts' => $this->config->getMaximumLoginAttempts(),
 					'enforceNonCommonPassword' => $this->config->getEnforceNonCommonPassword(),
 					'enforceNumericCharacters' => $this->config->getEnforceNumericCharacters(),
 					'enforceSpecialCharacters' => $this->config->getEnforceSpecialCharacters(),
