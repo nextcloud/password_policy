@@ -47,5 +47,5 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
-Qa.prototype.t=e.translate;new Qa({el:"#password_policy-settings",name:"AdminSettings",render:function(e){return e(Wa)}})})()})();
-//# sourceMappingURL=password_policy-settings.js.map?v=204beabb13a47f09dfd2
+Qa.prototype.t=e.translate;new Qa({el:"#password_policy-settings",name:"AdminSettings",render:function(e){return e(Wa,{props:{renderSharing:!0}})}})})()})();
+//# sourceMappingURL=password_policy-sharingSettings.js.map?v=b9e70b612435e221587a
