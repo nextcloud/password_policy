@@ -4,7 +4,8 @@ const webpackConfig = require('@nextcloud/webpack-vue-config')
 
 const config = {
 	entry: {
-		settings: path.resolve(path.join('src', 'settings.js'))
+		settings: path.resolve(path.join('src', 'settings.js')),
+		sharingSettings: path.resolve(path.join('src', 'sharingSettings.js'))
 	},
 }
 

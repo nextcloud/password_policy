@@ -30,26 +30,26 @@
 		<ul class="password-policy__settings-list">
 			<li>
 				<input id="password-policy__settings__min-length"
-					v-model="config.minLength"
+					v-model="config[minLengthProp]"
 					type="number"
-					@change="updateNumberSetting('minLength')">
+					@change="updateNumberSetting(minLengthProp)">
 				<span>{{ t('password_policy', 'Minimum password length') }}</span>
 			</li>
-			<li>
+			<li v-if="!renderSharing">
 				<input id="password-policy-history-size"
 					v-model="config.historySize"
 					type="number"
 					@change="updateNumberSetting('historySize')">
 				<span>{{ t('password_policy', 'User password history') }}</span>
 			</li>
-			<li>
+			<li v-if="!renderSharing">
 				<input id="password-policy-expiration"
 					v-model="config.expiration"
 					type="number"
 					@change="updateNumberSetting('expiration')">
 				<span>{{ t('password_policy', 'Number of days until user password expires') }}</span>
 			</li>
-			<li>
+			<li v-if="!renderSharing">
 				<input id="password-policy_failed-login"
 					v-model="config.maximumLoginAttempts"
 					type="number"
@@ -61,45 +61,45 @@
 			<li />
 			<li>
 				<input id="password-policy__settings__enforce-non-common"
-					v-model="config.enforceNonCommonPassword"
+					v-model="config[nonCommonProp]"
 					type="checkbox"
 					class="checkbox"
-					@change="updateBoolSetting('enforceNonCommonPassword')">
+					@change="updateBoolSetting(nonCommonProp)">
 				<label for="password-policy__settings__enforce-non-common">
 					{{ t('password_policy', 'Forbid common passwords') }}
 				</label>
 			</li>
 			<li>
 				<input id="password-policy__settings__enforce-upper-lower-case"
-					v-model="config.enforceUpperLowerCase"
+					v-model="config[upperLowerProp]"
 					type="checkbox"
 					class="checkbox"
-					@change="updateBoolSetting('enforceUpperLowerCase')">
+					@change="updateBoolSetting(upperLowerProp)">
 				<label for="password-policy__settings__enforce-upper-lower-case">
 					{{ t('password_policy', 'Enforce upper and lower case characters') }}
 				</label>
 			</li>
 			<li>
 				<input id="password-policy__settings__enforce-numeric-char"
-					v-model="config.enforceNumericCharacters"
+					v-model="config[numericProp]"
 					type="checkbox"
 					class="checkbox"
-					@change="updateBoolSetting('enforceNumericCharacters')">
+					@change="updateBoolSetting(numericProp)">
 				<label for="password-policy__settings__enforce-numeric-char">
 					{{ t('password_policy', 'Enforce numeric characters') }}
 				</label>
 			</li>
 			<li>
 				<input id="password-policy__settings__enforce-special-char"
-					v-model="config.enforceSpecialCharacters"
+					v-model="config[specialCharProp]"
 					type="checkbox"
 					class="checkbox"
-					@change="updateBoolSetting('enforceSpecialCharacters')">
+					@change="updateBoolSetting(specialCharProp)">
 				<label for="password-policy__settings__enforce-special-char">
 					{{ t('password_policy', 'Enforce special characters') }}
 				</label>
 			</li>
-			<li>
+			<li v-if="!renderSharing">
 				<input id="password-policy__settings__enforce-haveibeenpwned"
 					v-model="config.enforceHaveIBeenPwned"
 					type="checkbox"
@@ -126,10 +126,26 @@ export default {
 		SettingsSection,
 	},
 
+	props: {
+		renderSharing: {
+			type: Boolean,
+			default: false,
+		},
+	},
+
 	data() {
 		return {
 			config: loadState('password_policy', 'config'),
 		}
+	},
+
+	computed: {
+		// Return the properties key within config-object for sharing or user settings. Only for settings, that exist for both.
+		minLengthProp() { return this.renderSharing ? 'sharingMinLength' : 'minLength' },
+		nonCommonProp() { return this.renderSharing ? 'sharingEnforceNonCommonPassword' : 'enforceNonCommonPassword' },
+		upperLowerProp() { return this.renderSharing ? 'sharingEnforceUpperLowerCase' : 'enforceUpperLowerCase' },
+		numericProp() { return this.renderSharing ? 'sharingEnforceNumericCharacters' : 'enforceNumericCharacters' },
+		specialCharProp() { return this.renderSharing ? 'sharingEnforceSpecialCharacters' : 'enforceSpecialCharacters' },
 	},
 
 	methods: {
@@ -144,6 +160,7 @@ export default {
 				let message = t('password_policy', 'Unknown error')
 				switch (setting) {
 				case 'minLength':
+				case 'sharingMinLength':
 					message = t('password_policy', 'Minimal length has to be a non negative number')
 					break
 				case 'historySize':
