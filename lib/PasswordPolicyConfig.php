@@ -164,7 +164,7 @@ class PasswordPolicyConfig {
 		return $this->config->getAppValue(
 			'password_policy',
 			'enforceHaveIBeenPwned',
-			'0'
+			'1'
 		) === '1';
 	}
 
