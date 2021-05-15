@@ -35,7 +35,7 @@
     "@babel/preset-env": "^7.14.2",
     "@nextcloud/eslint-config": "^5.1.0",
     "@nextcloud/eslint-plugin": "^2.0.0",
-    "@nextcloud/webpack-vue-config": "^4.0.2",
+    "@nextcloud/webpack-vue-config": "^4.0.3",
     "babel-loader": "^8.2.2",
     "css-loader": "^4.3.0",
     "eslint": "^7.26.0",
