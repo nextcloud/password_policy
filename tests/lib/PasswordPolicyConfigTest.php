@@ -45,7 +45,7 @@ class PasswordPolicyConfigTest extends TestCase {
 		$expected = 42;
 
 		$this->config->expects($this->once())->method('getAppValue')
-			->with('password_policy', 'minLength', '8')
+			->with('password_policy', 'minLength', '10')
 			->willReturn($appConfigValue);
 
 		$this->assertSame($expected,
