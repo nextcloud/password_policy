@@ -14,7 +14,7 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "管理者が事前に一定の制約をパスワードに課すことを許可します。（例：最小の長さを強制）",
     "Saved" : "保存しました",
     "Minimum password length" : "最低限のパスワードの長さ",
-    "User password history" : "ユーザのパスワード履歴",
+    "User password history" : "ユーザーのパスワード履歴",
     "Number of days until user password expires" : "ユーザーのパスワードが失効するまでの日数",
     "Number of login attempts before the user account is blocked (0 for no limit)" : "ユーザーアカウントがブロックされるまでのログイン試行回数 (制限なしの場合は0)",
     "Forbid common passwords" : "一般的なパスワードを禁止する",
@@ -30,7 +30,7 @@ OC.L10N.register(
     "Maximum login attempts have to be a non negative number" : "最大ログイン試行回数にマイナスの数は設定できません",
     "Password needs to be at least %s characters long" : "パスワードは %s 文字以上である必要があります",
     "Minimal length" : "最小の長さ",
-    "days until user password expires" : "ユーザのパスワードの有効期限が切れるまでの日数",
-    "login attempts before the user account is blocked. (0 for no limit)" : "ユーザアカウントをブロックするログイン試行回数。（制限なしの場合は0）"
+    "days until user password expires" : "ユーザーのパスワードの有効期限が切れるまでの日数",
+    "login attempts before the user account is blocked. (0 for no limit)" : "ユーザーアカウントをブロックするログイン試行回数。（制限なしの場合は0）"
 },
 "nplurals=1; plural=0;");
