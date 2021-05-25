@@ -161,6 +161,11 @@ class PasswordPolicyConfig {
 	 * @return bool
 	 */
 	public function getEnforceHaveIBeenPwned(): bool {
+		$hasInternetConnection = $this->config->getSystemValue('has_internet_connection', true);
+		if(!$hasInternetConnection) {
+			return false;
+		}
+
 		return $this->config->getAppValue(
 			'password_policy',
 			'enforceHaveIBeenPwned',
