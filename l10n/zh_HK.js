@@ -12,7 +12,7 @@ OC.L10N.register(
     "Password policy" : "密碼規範",
     "Allows admins to configure a password policy" : "允許管理員設定密碼策略",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "允許管理員定義密碼的某些條件，例如強制最小長度",
-    "Saved" : "已儲存",
+    "Saved" : "已保存",
     "Minimum password length" : "密碼最小長度",
     "User password history" : "密碼重複使用（禁止用戶使用前幾次使用過的密碼）",
     "Number of days until user password expires" : "密碼到期天數",
