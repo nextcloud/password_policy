@@ -26,7 +26,7 @@
     "@nextcloud/initial-state": "^1.2.0",
     "@nextcloud/l10n": "^1.4.1",
     "@nextcloud/vue": "^3.9.0",
-    "vue": "^2.6.12"
+    "vue": "^2.6.14"
   },
   "engines": {
     "node": ">=14.0.0",
@@ -60,7 +60,7 @@
     "stylelint-webpack-plugin": "^2.2.2",
     "url-loader": "^4.1.1",
     "vue-loader": "^15.9.7",
-    "vue-template-compiler": "^2.6.12",
+    "vue-template-compiler": "^2.6.14",
     "webpack": "^5.40.0",
     "webpack-cli": "^4.7.2",
     "webpack-merge": "^5.8.0"
