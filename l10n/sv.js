@@ -1,10 +1,10 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password is expired, please use forgot password method to reset" : "Lösenordet har gått ut, använd glömt lösenordet för att återställa",
+    "Password is expired, please use forgot password method to reset" : "Lösenordet har gått ut, använd knapp glömt lösenordet för att återställa",
     "Password must not have been used recently before." : "Lösenordet får inte nyligen ha används.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Lösenord är bland de 1 000 000 mest vanliga. Vänligen ändra till ett unikt.",
-    "Password is present in compromised password list. Please choose a different password." : "Lösenordet finns i läckt lösenordslista. Vänligen välj ett annat lösenord.",
+    "Password is present in compromised password list. Please choose a different password." : "Lösenordet finns i en läckt lösenordslista. Vänligen välj ett annat lösenord.",
     "Password needs to be at least %s characters long." : "Lösenordet måste vara minst %s tecken långt.",
     "Password needs to contain at least one numeric character." : "Lösenord behöver innehålla åtminstone en siffra.",
     "Password needs to contain at least one special character." : "Lösenord behöver innehålla minst ett specialtecken.",
