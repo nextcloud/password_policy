@@ -28,9 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Az előzmények méretének nem negatív számnak kell lennie",
     "Expiration days have to be a non negative number" : "A lejárat napjainak számának nem negatív számnak kell lennie",
     "Maximum login attempts have to be a non negative number" : "A maximális bejelentkezési kísérletnek nem negatív számnak kell lennie",
-    "Password needs to be at least %s characters long" : "A jelszónak legalább %s karakter hosszúnak kell lennie",
-    "Minimal length" : "Minimális hossz",
-    "days until user password expires" : "nap múlva a jelszó lejár",
-    "login attempts before the user account is blocked. (0 for no limit)" : "bejelentkezési kísérlet van hátra a fiók blokkolásáig (0, ha nincs korlát)"
+    "Password needs to be at least %s characters long" : "A jelszónak legalább %s karakter hosszúnak kell lennie"
 },
 "nplurals=2; plural=(n != 1);");

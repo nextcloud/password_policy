@@ -10,7 +10,6 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Forçar letras maiúsculas e minúsculas",
     "Enforce numeric characters" : "Forçar caracteres numéricos",
     "Enforce special characters" : "Forçar caracteres especiais",
-    "Password needs to be at least %s characters long" : "A palavra-passe precisa de conter no mínimo %s caracteres",
-    "Minimal length" : "Comprimento mínimo"
+    "Password needs to be at least %s characters long" : "A palavra-passe precisa de conter no mínimo %s caracteres"
 },
 "nplurals=2; plural=(n != 1);");

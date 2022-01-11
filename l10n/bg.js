@@ -28,9 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Размерът на историята трябва да не е отрицателно число",
     "Expiration days have to be a non negative number" : "Срокът на  валидност не трябва да е отрицателно число",
     "Maximum login attempts have to be a non negative number" : "Максималният брой опити за влизане не трябва да е отрицателно число",
-    "Password needs to be at least %s characters long" : "Паролата трябва да съдържа поне %s символа",
-    "Minimal length" : "Минимална дължина",
-    "days until user password expires" : " дни до изтичане на паролата на потребителя",
-    "login attempts before the user account is blocked. (0 for no limit)" : "Брой опити за влизане преди потребителският профил да се блокира (0 без ограничение)"
+    "Password needs to be at least %s characters long" : "Паролата трябва да съдържа поне %s символа"
 },
 "nplurals=2; plural=(n != 1);");

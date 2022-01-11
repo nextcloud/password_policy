@@ -5,7 +5,6 @@ OC.L10N.register(
     "Forbid common passwords" : "Restringir contraseñas comunes",
     "Enforce upper and lower case characters" : "Imponer caracteres en mayúsculas y minúsculas",
     "Enforce numeric characters" : "Imponer caracteres numéricos",
-    "Enforce special characters" : "Imponer caracteres especiales",
-    "Minimal length" : "Longitud mínima"
+    "Enforce special characters" : "Imponer caracteres especiales"
 },
 "nplurals=2; plural=(n != 1);");

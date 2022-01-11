@@ -11,7 +11,6 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "შემოიღეთ დიდი და პატარა ასოები",
     "Enforce numeric characters" : "შემოიღეთ ნუმერიკული ნიშნები",
     "Enforce special characters" : "შემოიღეთ სპეციალური ნიშნები",
-    "Password needs to be at least %s characters long" : "პაროლი %s ნიშნის მქონე მაინც უნდა იყოს",
-    "Minimal length" : "მინ. სიგრძე"
+    "Password needs to be at least %s characters long" : "პაროლი %s ნიშნის მქონე მაინც უნდა იყოს"
 },
 "nplurals=2; plural=(n!=1);");

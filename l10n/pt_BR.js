@@ -28,9 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "O tamanho do histórico não pode ser um número negativo",
     "Expiration days have to be a non negative number" : "Dias para expiração não pode ser um número negativo",
     "Maximum login attempts have to be a non negative number" : "O máximo de tentativas de login não pode ser um número negativo",
-    "Password needs to be at least %s characters long" : "A senha precisa ter no mínimo %s caracteres",
-    "Minimal length" : "Tamanho mínimo",
-    "days until user password expires" : "dias até a senha expirar",
-    "login attempts before the user account is blocked. (0 for no limit)" : "tentativas de login antes da conta ser bloqueada. (0 para sem limite)"
+    "Password needs to be at least %s characters long" : "A senha precisa ter no mínimo %s caracteres"
 },
 "nplurals=2; plural=(n > 1);");

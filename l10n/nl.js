@@ -28,9 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Geschiedenisaantal moet een niet-negatief getal zijn",
     "Expiration days have to be a non negative number" : "Vervaldagen moet een niet-negatief getal zijn",
     "Maximum login attempts have to be a non negative number" : "Maximum aantal inlogpogingen moet een niet-negatief getal zijn",
-    "Password needs to be at least %s characters long" : "Het wachtwoord moet minimaal %s tekens lang zijn",
-    "Minimal length" : "Minimale lengte",
-    "days until user password expires" : "dagen tot wachtwoord verloopt",
-    "login attempts before the user account is blocked. (0 for no limit)" : "inlogpogingen voordat het gebruikersaccount wordt geblokkeerd (0 voor onbeperkt)"
+    "Password needs to be at least %s characters long" : "Het wachtwoord moet minimaal %s tekens lang zijn"
 },
 "nplurals=2; plural=(n != 1);");

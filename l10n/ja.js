@@ -28,9 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "履歴サイズにマイナスの数は設定できません",
     "Expiration days have to be a non negative number" : "有効期限にマイナスの数は設定できません",
     "Maximum login attempts have to be a non negative number" : "最大ログイン試行回数にマイナスの数は設定できません",
-    "Password needs to be at least %s characters long" : "パスワードは %s 文字以上である必要があります",
-    "Minimal length" : "最小のパスワード長",
-    "days until user password expires" : "ユーザーのパスワードの有効期限が切れるまでの日数",
-    "login attempts before the user account is blocked. (0 for no limit)" : "ユーザーアカウントをブロックするログイン試行回数。（制限なしの場合は0）"
+    "Password needs to be at least %s characters long" : "パスワードは %s 文字以上である必要があります"
 },
 "nplurals=1; plural=0;");
