@@ -10,7 +10,6 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Sunni suured ja väikesed tähed",
     "Enforce numeric characters" : "Sunni numbrilised sümbolid",
     "Enforce special characters" : "Sunni erimärgid",
-    "Password needs to be at least %s characters long" : "Parool peab olema vähemalt %s märki pikk",
-    "Minimal length" : "Minimaalne pikkus"
+    "Password needs to be at least %s characters long" : "Parool peab olema vähemalt %s märki pikk"
 },
 "nplurals=2; plural=(n != 1);");

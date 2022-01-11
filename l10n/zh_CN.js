@@ -28,9 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "历史记录大小必须是非负数 ",
     "Expiration days have to be a non negative number" : "过期天数必须是非负数 ",
     "Maximum login attempts have to be a non negative number" : "最大登录尝试次数必须是非负数",
-    "Password needs to be at least %s characters long" : "密码长度需要至少%s位",
-    "Minimal length" : "最小长度",
-    "days until user password expires" : "天后用户密码过期",
-    "login attempts before the user account is blocked. (0 for no limit)" : "在阻止用户帐户之前尝试登录次数。 （0 为无限制）"
+    "Password needs to be at least %s characters long" : "密码长度需要至少%s位"
 },
 "nplurals=1; plural=0;");

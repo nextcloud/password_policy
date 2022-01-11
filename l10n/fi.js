@@ -21,9 +21,6 @@ OC.L10N.register(
     "Enforce special characters" : "Pakota käyttämään erikoismerkkejä",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin",
     "Unknown error" : "Tuntematon virhe",
-    "Password needs to be at least %s characters long" : "Salasanan tulee olle vähintään %s merkkiä pitkä",
-    "Minimal length" : "Vähimmäispituus",
-    "days until user password expires" : "päivää kunnes salasana vanhenee",
-    "login attempts before the user account is blocked. (0 for no limit)" : "kirjautumisyritystä kunnes käyttäjätili suljetaan. (0 tarkoittaa ei rajoitusta)"
+    "Password needs to be at least %s characters long" : "Salasanan tulee olle vähintään %s merkkiä pitkä"
 },
 "nplurals=2; plural=(n != 1);");

@@ -14,10 +14,10 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "允許管理員定義密碼的某些條件，例如強制最小長度",
     "Saved" : "已保存",
     "Minimum password length" : "密碼最小長度",
-    "User password history" : "密碼重複使用（禁止用戶使用前幾次使用過的密碼）",
-    "Number of days until user password expires" : "密碼到期天數",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "次嘗試後用戶的賬戶將被鎖定（設為零則永不鎖定）",
-    "Forbid common passwords" : "禁止常用的密碼",
+    "User password history" : "用戶密碼歷史記錄",
+    "Number of days until user password expires" : "距離密碼到期天數",
+    "Number of login attempts before the user account is blocked (0 for no limit)" : "封鎖用戶賬戶前的登入嘗試次數（0 為沒有限制）",
+    "Forbid common passwords" : "禁止常用密碼",
     "Enforce upper and lower case characters" : "一定要各用一個大寫與小寫",
     "Enforce numeric characters" : "一定要用數字",
     "Enforce special characters" : "一定要用特殊符號",
@@ -28,9 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "歷史記錄大小必須為正數",
     "Expiration days have to be a non negative number" : "到期天數必須為正數",
     "Maximum login attempts have to be a non negative number" : "最大登錄嘗試次數必須為正數",
-    "Password needs to be at least %s characters long" : "密碼需長於 %s 個字母",
-    "Minimal length" : "最小長度",
-    "days until user password expires" : "天後密碼將過期",
-    "login attempts before the user account is blocked. (0 for no limit)" : "次的失敗登錄後，該用戶的帳戶將被上鎖。（0 = 無限制）"
+    "Password needs to be at least %s characters long" : "密碼需長於 %s 個字母"
 },
 "nplurals=1; plural=0;");

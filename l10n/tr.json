@@ -26,9 +26,6 @@
     "History size has to be a non negative number" : "Geçmiş boyutu negatif bir sayı olamaz",
     "Expiration days have to be a non negative number" : "Geçerlilik süresi negatif bir sayı olamaz",
     "Maximum login attempts have to be a non negative number" : "En fazla oturum açma girişimi sayısı negatif bir sayı olamaz",
-    "Password needs to be at least %s characters long" : "Parola en az %s karakter uzunluğunda olmalıdır",
-    "Minimal length" : "En az uzunluk",
-    "days until user password expires" : "kullanıcı parolasının süresinin dolmasına kalan gün",
-    "login attempts before the user account is blocked. (0 for no limit)" : "kullanıcının hesabı kilitlenmeden önce yapabileceği oturum açma girişimi sayısı (sınırlama olmaması için 0 yazın)"
+    "Password needs to be at least %s characters long" : "Parola en az %s karakter uzunluğunda olmalıdır"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
