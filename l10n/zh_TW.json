@@ -26,9 +26,6 @@
     "History size has to be a non negative number" : "歷史紀錄大小必須為非負數",
     "Expiration days have to be a non negative number" : "到期天數必須為非負數",
     "Maximum login attempts have to be a non negative number" : "最大登入嘗試次數必須為非負數",
-    "Password needs to be at least %s characters long" : "密碼需長於 %s 個字母",
-    "Minimal length" : "最小長度",
-    "days until user password expires" : "天密碼到期",
-    "login attempts before the user account is blocked. (0 for no limit)" : "封鎖使用者帳號前的登入嘗試（0 為不限制）"
+    "Password needs to be at least %s characters long" : "密碼需長於 %s 個字母"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

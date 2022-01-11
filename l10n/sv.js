@@ -28,9 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Historikstorlek måste vara ett icke-negativt tal",
     "Expiration days have to be a non negative number" : "Dagar till utgång måste vara ett icke-negativt tal",
     "Maximum login attempts have to be a non negative number" : "Maximala inloggningsförsök måste vara ett icke-negativt tal",
-    "Password needs to be at least %s characters long" : "Lösenord behöver vara minst %s tecken lång",
-    "Minimal length" : "Minsta längd",
-    "days until user password expires" : "dagar till lösenordet går ut",
-    "login attempts before the user account is blocked. (0 for no limit)" : "inloggningsförsök innan användarkontot blockeras. (0 för obegränsat)"
+    "Password needs to be at least %s characters long" : "Lösenord behöver vara minst %s tecken lång"
 },
 "nplurals=2; plural=(n != 1);");

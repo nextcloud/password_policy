@@ -28,9 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Sa mannària de sa cronologia deper èssere unu nùmeru positivu",
     "Expiration days have to be a non negative number" : "Is dies de iscadèntzia depent èssere unu nùmeru positivu",
     "Maximum login attempts have to be a non negative number" : "Is tentativos de intrada màssimos depent èssere unu nùmeru positivu",
-    "Password needs to be at least %s characters long" : "Sa crae depet èssere longa a su mancu %scaràteres ",
-    "Minimal length" : "Longària mìnima",
-    "days until user password expires" : "dies in antis de s'iscadèntzia de sa crae",
-    "login attempts before the user account is blocked. (0 for no limit)" : "tentativos de intrada in antis de su blocu de su contu. (0 pro perunu lìmite)"
+    "Password needs to be at least %s characters long" : "Sa crae depet èssere longa a su mancu %scaràteres "
 },
 "nplurals=2; plural=(n != 1);");
