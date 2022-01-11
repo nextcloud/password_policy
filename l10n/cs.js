@@ -28,9 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Je třeba, aby velikost historie nebylo záporné číslo",
     "Expiration days have to be a non negative number" : "Je třeba, aby počet dnů do skončení platnosti nebylo záporné číslo",
     "Maximum login attempts have to be a non negative number" : "Je třeba, aby nejvyšší umožněný počet pokusů o přihlášení nebylo záporné číslo",
-    "Password needs to be at least %s characters long" : "Je třeba, aby heslo bylo alespoň %s znaků dlouhé",
-    "Minimal length" : "Minimální délka",
-    "days until user password expires" : "dnů do skončení platnosti hesla uživatele",
-    "login attempts before the user account is blocked. (0 for no limit)" : "po kolika neúspěšných pokusech v řadě zablokovat uživatelský účet (0 pro bez omezení)"
+    "Password needs to be at least %s characters long" : "Je třeba, aby heslo bylo alespoň %s znaků dlouhé"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

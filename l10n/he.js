@@ -28,9 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "גודל ההיסטוריה חייב להיות מספר לא שלילי",
     "Expiration days have to be a non negative number" : "ימי תפוגת התוקף חייבים להיות מספר לא שלילי",
     "Maximum login attempts have to be a non negative number" : "כמות ניסיונות הכניסה המרבית חייבת להיות מספר לא שלילי",
-    "Password needs to be at least %s characters long" : "על הססמה להיות באורך של %s תווים לפחות",
-    "Minimal length" : "אורך מזערי",
-    "days until user password expires" : "ימים עד לפקיעת תוקף ססמת המשתמש",
-    "login attempts before the user account is blocked. (0 for no limit)" : "ניסיונות כניסה לפני חסימת חשבון המשתמש. (0 ללא הגבלה)"
+    "Password needs to be at least %s characters long" : "על הססמה להיות באורך של %s תווים לפחות"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;");

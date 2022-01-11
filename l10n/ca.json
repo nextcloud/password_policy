@@ -16,9 +16,6 @@
     "Enforce special characters" : "Força els caràcters especials",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Comprova la contrasenya amb la llista de contrasenyes compromeses de haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Aquesta comprovació crea un hash de la contrasenya i envia els 5 primers caràcters d'aquest hash a l'API haveibeenpwned.com per recuperar una llista de tots els hashes que comencen per aquests. A continuació, comprova a la instància de Nextcloud si el hash de la contrasenya és dins del conjunt de resultats.",
-    "Password needs to be at least %s characters long" : "La contrasenya ha de tenir almenys %s caràcters",
-    "Minimal length" : "Longitud mínima",
-    "days until user password expires" : "dies fins que caduqui la contrasenya d'usuari",
-    "login attempts before the user account is blocked. (0 for no limit)" : "intents d'inici de sessió abans que es bloquegi el compte d'usuari. (0 sense límit)"
+    "Password needs to be at least %s characters long" : "La contrasenya ha de tenir almenys %s caràcters"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

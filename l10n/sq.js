@@ -10,7 +10,6 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Detyro karakteret me shkronjë të madhe dhe të vogël",
     "Enforce numeric characters" : "Detyro karakteret numerike ",
     "Enforce special characters" : "Detyro karakteret e veçanta",
-    "Password needs to be at least %s characters long" : "Fjalëkalimi duhet të jetë të paktën %s karaktere i gjatë",
-    "Minimal length" : "Gjatësi minimale"
+    "Password needs to be at least %s characters long" : "Fjalëkalimi duhet të jetë të paktën %s karaktere i gjatë"
 },
 "nplurals=2; plural=(n != 1);");

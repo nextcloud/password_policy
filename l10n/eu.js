@@ -28,9 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Historiaren tamainak zenbaki ez negatiboa izan behar du",
     "Expiration days have to be a non negative number" : "Iraungitze egunek zenbaki ez negatiboa izan behar dute",
     "Maximum login attempts have to be a non negative number" : "Saioa hasteko gehieneko saiakerak zenbaki ez negatiboa izan behar du",
-    "Password needs to be at least %s characters long" : "Pasahitzak %s karaktere izan behar du gutxienez",
-    "Minimal length" : "Luzera minimoa",
-    "days until user password expires" : "erabiltzailearen pasahitza iraungi arteko egunak",
-    "login attempts before the user account is blocked. (0 for no limit)" : "saio-haste saiakera kopurua erabiltzaile kontua blokeatu aurretik. (0 mugarik ez ezartzeko)"
+    "Password needs to be at least %s characters long" : "Pasahitzak %s karaktere izan behar du gutxienez"
 },
 "nplurals=2; plural=(n != 1);");

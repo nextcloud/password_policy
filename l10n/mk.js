@@ -25,9 +25,6 @@ OC.L10N.register(
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Оваа проверка создава хаш на лозинката и ги испраќа првите 5 карактери на овој хаш на hasibeenpwned.com преку API за да се добие список на сите хашови кои започнуваат со тие карактери. Потоа, Nextcloud серверот ја проверува листата на хашови со хашот на лозинката.",
     "Unknown error" : "Непозната грешка",
     "Minimal length has to be a non negative number" : "Минималната должина неможе да биде негативен број",
-    "Password needs to be at least %s characters long" : "Лозинката мора да биде најмалку со %s карактери",
-    "Minimal length" : "Минимална должина",
-    "days until user password expires" : "денови до истекување на лозинка на корисник",
-    "login attempts before the user account is blocked. (0 for no limit)" : "обиди за најава пред да се блокира корисничката сметка. (0 без ограничување)"
+    "Password needs to be at least %s characters long" : "Лозинката мора да биде најмалку со %s карактери"
 },
 "nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;");
