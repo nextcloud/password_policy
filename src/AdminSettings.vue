@@ -144,16 +144,16 @@ export default {
 				let message = t('password_policy', 'Unknown error')
 				switch (setting) {
 				case 'minLength':
-					message = t('password_policy', 'Minimal length has to be a non negative number')
+					message = t('password_policy', 'Minimal length has to be a positive number')
 					break
 				case 'historySize':
-					message = t('password_policy', 'History size has to be a non negative number')
+					message = t('password_policy', 'History size has to be a positive number')
 					break
 				case 'expiration':
-					message = t('password_policy', 'Expiration days have to be a non negative number')
+					message = t('password_policy', 'Expiration days have to be a positive number')
 					break
 				case 'maximumLoginAttempts':
-					message = t('password_policy', 'Maximum login attempts have to be a non negative number')
+					message = t('password_policy', 'Maximum login attempts have to be a positive number')
 					break
 				}
 				OC.msg.finishedSaving('#password-policy__saving-msg',
