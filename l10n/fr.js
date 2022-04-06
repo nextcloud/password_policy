@@ -30,4 +30,4 @@ OC.L10N.register(
     "Maximum login attempts have to be a non negative number" : "Le nombre de tentatives de connexion doit être un nombre positif",
     "Password needs to be at least %s characters long" : "Le mot de passe doit comporter au moins %s caractères"
 },
-"nplurals=3; plural=(n==0 || n==1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
+"nplurals=2; plural=(n > 1);");
