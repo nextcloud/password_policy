@@ -35,7 +35,7 @@ use OCP\IUser;
 use OCP\IUserSession;
 use OCP\Security\IHasher;
 use PHPUnit\Framework\MockObject\MockObject;
-use Test\TestCase;
+use ChristophWurst\Nextcloud\Testing\TestCase;
 
 class HistoryComplianceTest extends TestCase {
 

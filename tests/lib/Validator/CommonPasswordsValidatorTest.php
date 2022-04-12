@@ -31,7 +31,7 @@ use OCA\Password_Policy\Validator\CommonPasswordsValidator;
 use OCA\Password_Policy\Validator\IValidator;
 use OCP\IL10N;
 use PHPUnit\Framework\MockObject\MockObject;
-use Test\TestCase;
+use ChristophWurst\Nextcloud\Testing\TestCase;
 
 class CommonPasswordsValidatorTest extends TestCase {
 
