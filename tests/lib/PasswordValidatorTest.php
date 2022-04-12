@@ -33,7 +33,7 @@ use OCP\AppFramework\IAppContainer;
 use OCP\AppFramework\QueryException;
 use OCP\ILogger;
 use PHPUnit\Framework\MockObject\MockObject;
-use Test\TestCase;
+use ChristophWurst\Nextcloud\Testing\TestCase;
 
 class PasswordValidatorTest extends TestCase {
 
