@@ -23,44 +23,48 @@
 
 <template>
 	<SettingsSection :title="t('password_policy', 'Password policy')">
-		<div id="password-policy__saving-msg" class="msg success inlineblock" style="display: none;">
+		<div id="password-policy__saving-msg" class="msg success inlineblock" style="display:none">
 			{{ t('password_policy', 'Saved') }}
 		</div>
 
 		<ul class="password-policy__settings-list">
 			<li>
-				<label>
-					<input id="password-policy__settings__min-length"
-						v-model="config.minLength"
-						type="number"
-						@change="updateNumberSetting('minLength')">
+				<input id="password-policy__settings__min-length"
+					v-model="config.minLength"
+					min="0"
+					type="number"
+					@change="updateNumberSetting('minLength')">
+				<label for="password-policy__settings__min-length">
 					{{ t('password_policy', 'Minimum password length') }}
 				</label>
 			</li>
 			<li>
-				<label>
-					<input id="password-policy-history-size"
-						v-model="config.historySize"
-						type="number"
-						@change="updateNumberSetting('historySize')">
+				<input id="password-policy-history-size"
+					v-model="config.historySize"
+					min="0"
+					type="number"
+					@change="updateNumberSetting('historySize')">
+				<label for="password-policy-history-size">
 					{{ t('password_policy', 'User password history') }}
 				</label>
 			</li>
 			<li>
-				<label>
-					<input id="password-policy-expiration"
-						v-model="config.expiration"
-						type="number"
-						@change="updateNumberSetting('expiration')">
+				<input id="password-policy-expiration"
+					v-model="config.expiration"
+					min="0"
+					type="number"
+					@change="updateNumberSetting('expiration')">
+				<label for="password-policy-expiration">
 					{{ t('password_policy', 'Number of days until user password expires') }}
 				</label>
 			</li>
 			<li>
-				<label>
-					<input id="password-policy_failed-login"
-						v-model="config.maximumLoginAttempts"
-						type="number"
-						@change="updateNumberSetting('maximumLoginAttempts')">
+				<input id="password-policy_failed-login"
+					v-model="config.maximumLoginAttempts"
+					min="0"
+					type="number"
+					@change="updateNumberSetting('maximumLoginAttempts')">
+				<label for="password-policy_failed-login">
 					{{ t('password_policy', 'Number of login attempts before the user account is blocked (0 for no limit)') }}
 				</label>
 			</li>
@@ -69,30 +73,35 @@
 		<ul class="password-policy__settings-list">
 			<li>
 				<CheckboxRadioSwitch :checked.sync="config.enforceNonCommonPassword"
+					type="switch"
 					@update:checked="updateBoolSetting('enforceNonCommonPassword')">
 					{{ t('password_policy', 'Forbid common passwords') }}
 				</CheckboxRadioSwitch>
 			</li>
 			<li>
 				<CheckboxRadioSwitch :checked.sync="config.enforceUpperLowerCase"
+					type="switch"
 					@update:checked="updateBoolSetting('enforceUpperLowerCase')">
 					{{ t('password_policy', 'Enforce upper and lower case characters') }}
 				</CheckboxRadioSwitch>
 			</li>
 			<li>
 				<CheckboxRadioSwitch :checked.sync="config.enforceNumericCharacters"
+					type="switch"
 					@update:checked="updateBoolSetting('enforceNumericCharacters')">
 					{{ t('password_policy', 'Enforce numeric characters') }}
 				</CheckboxRadioSwitch>
 			</li>
 			<li>
 				<CheckboxRadioSwitch :checked.sync="config.enforceSpecialCharacters"
+					type="switch"
 					@update:checked="updateBoolSetting('enforceSpecialCharacters')">
 					{{ t('password_policy', 'Enforce special characters') }}
 				</CheckboxRadioSwitch>
 			</li>
 			<li>
 				<CheckboxRadioSwitch :checked.sync="config.enforceHaveIBeenPwned"
+					type="switch"
 					@update:checked="updateBoolSetting('enforceHaveIBeenPwned')">
 					{{ t('password_policy', 'Check password against the list of breached passwords from haveibeenpwned.com') }}
 				</CheckboxRadioSwitch>
@@ -123,12 +132,10 @@ export default {
 	},
 
 	methods: {
-		updateBoolSetting(setting) {
-			OCP.AppConfig.setValue('password_policy', setting, this.config[setting] ? '1' : '0')
+		async updateBoolSetting(setting) {
+			await this.setValue(setting, this.config[setting] ? '1' : '0')
 		},
-		updateNumberSetting(setting) {
-			OC.msg.startSaving('#password-policy__saving-msg')
-
+		async updateNumberSetting(setting) {
 			// If value not only (positive) numbers
 			if (!/^\d+$/.test(this.config[setting])) {
 				let message = t('password_policy', 'Unknown error')
@@ -146,27 +153,42 @@ export default {
 					message = t('password_policy', 'Maximum login attempts have to be a non negative number')
 					break
 				}
-				OC.msg.finishedSaving('#password-policy__saving-msg',
-					{
-						status: 'failure',
-						data: {
-							message,
-						},
-					}
-				)
+				OC.msg.finishedSaving('#password-policy__saving-msg', {
+					status: 'failure',
+					data: {
+						message,
+					},
+				})
 				return
 			}
 
 			// Otherwise store Value
-			OCP.AppConfig.setValue('password_policy', setting, this.config[setting])
-			OC.msg.finishedSaving('#password-policy__saving-msg',
-				{
+			await this.setValue(setting, this.config[setting])
+		},
+
+		/**
+		 * Save the provided setting and value
+		 *
+		 * @param {string} setting the app config key
+		 * @param {string} value the app config value
+		 */
+		async setValue(setting, value) {
+			OC.msg.startSaving('#password-policy__saving-msg')
+
+			OCP.AppConfig.setValue('password_policy', setting, value, {
+				success: () => OC.msg.finishedSaving('#password-policy__saving-msg', {
 					status: 'success',
 					data: {
 						message: t('password_policy', 'Saved'),
 					},
-				}
-			)
+				}),
+				error: () => OC.msg.finishedSaving('#password-policy__saving-msg', {
+					status: 'failure',
+					data: {
+						message: t('password_policy', 'Error while saving'),
+					},
+				}),
+			})
 		},
 	},
 }
