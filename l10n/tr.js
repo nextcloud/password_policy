@@ -28,6 +28,7 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Geçmiş boyutu negatif bir sayı olamaz",
     "Expiration days have to be a non negative number" : "Geçerlilik süresi negatif bir sayı olamaz",
     "Maximum login attempts have to be a non negative number" : "En fazla oturum açma girişimi sayısı negatif bir sayı olamaz",
+    "Error while saving" : "Kaydedilirken sorun çıktı",
     "Password needs to be at least %s characters long" : "Parola en az %s karakter uzunluğunda olmalıdır"
 },
 "nplurals=2; plural=(n > 1);");
