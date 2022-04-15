@@ -28,6 +28,7 @@ OC.L10N.register(
     "History size has to be a non negative number" : "歷史紀錄大小必須為非負數",
     "Expiration days have to be a non negative number" : "到期天數必須為非負數",
     "Maximum login attempts have to be a non negative number" : "最大登入嘗試次數必須為非負數",
+    "Error while saving" : "儲存時發生錯誤",
     "Password needs to be at least %s characters long" : "密碼需長於 %s 個字母"
 },
 "nplurals=1; plural=0;");
