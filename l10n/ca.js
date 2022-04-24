@@ -11,6 +11,7 @@ OC.L10N.register(
     "Password policy" : "Política de contrasenyes",
     "Allows admins to configure a password policy" : "Permet als administradors configurar una política de contrasenyes",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permetre a l'administrador definir determinades condicions prèvies per a la contrasenya, p. ex. forçar una longitud mínima",
+    "Saved" : "Guardat",
     "User password history" : "Historial de contrasenyes d'usuari",
     "Forbid common passwords" : "Prohibeix les contrasenyes comunes",
     "Enforce upper and lower case characters" : "Força els caràcters de majúscules i minúscules",
@@ -18,6 +19,7 @@ OC.L10N.register(
     "Enforce special characters" : "Força els caràcters especials",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Comprova la contrasenya amb la llista de contrasenyes compromeses de haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Aquesta comprovació crea un hash de la contrasenya i envia els 5 primers caràcters d'aquest hash a l'API haveibeenpwned.com per recuperar una llista de tots els hashes que comencen per aquests. A continuació, comprova a la instància de Nextcloud si el hash de la contrasenya és dins del conjunt de resultats.",
+    "Unknown error" : "Error desconegut",
     "Password needs to be at least %s characters long" : "La contrasenya ha de tenir almenys %s caràcters"
 },
 "nplurals=2; plural=(n != 1);");
