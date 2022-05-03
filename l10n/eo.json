@@ -14,7 +14,6 @@
     "Enforce special characters" : "Devigi uzon de signoj specialaj",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Kompari la pasvorton kun la listo de diskonigitaj pasvortoj el haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Tio kreas haketon el la pasvorto kaj sendas la unuajn 5 signojn de tiu haketo al la API de haveibeenpwned.com por ricevi liston de ĉiuj haketoj, kiuj komenciĝas per tiuj. Poste, ĝi kontrolas en la Nextcloud-servilo, ĉu la pasvorta haketo estas en la listo.",
-    "Unknown error" : "Nekonata eraro",
-    "Password needs to be at least %s characters long" : "Pasvorto necesas esti almenaŭ longa je %s signoj"
+    "Unknown error" : "Nekonata eraro"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

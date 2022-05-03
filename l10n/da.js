@@ -19,7 +19,6 @@ OC.L10N.register(
     "Enforce special characters" : "Tving special tegn",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Kontroller adgangskoden op imod listen over kompromitterede adgangskoder i haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Dette check danner et krypteret kendetegn af adgangskoden og sender de første 4 tegn af dette kendetegn til haveibeenpwned.com's API for at modtage en liste med alle kendetegn, der starter med disse tegn. Derefter checker det, om adgsngskodekendetegnet findes i Nextclud-installationen.",
-    "Unknown error" : "Ukendt fejl",
-    "Password needs to be at least %s characters long" : "Kodeord skal mindst være %s tegn lang"
+    "Unknown error" : "Ukendt fejl"
 },
 "nplurals=2; plural=(n != 1);");

@@ -27,7 +27,6 @@ OC.L10N.register(
     "Minimal length has to be a non negative number" : "Minimalna dužina mora biti pozitivan broj ili nula",
     "History size has to be a non negative number" : "Veličina povijesti mora biti pozitivan broj ili nula",
     "Expiration days have to be a non negative number" : "Broj dana do isteka mora biti pozitivan broj ili nula",
-    "Maximum login attempts have to be a non negative number" : "Maksimalan broj prijava mora biti pozitivan broj ili nula",
-    "Password needs to be at least %s characters long" : "Zaporka mora biti dugačka najmanje %s"
+    "Maximum login attempts have to be a non negative number" : "Maksimalan broj prijava mora biti pozitivan broj ili nula"
 },
 "nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;");

@@ -12,7 +12,6 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Krev stor og liten bokstav",
     "Enforce numeric characters" : "Krev numerisk tegn",
     "Enforce special characters" : "Krev spesialtegn",
-    "Unknown error" : "Ukjent feil",
-    "Password needs to be at least %s characters long" : "Passordet må være på minst %s tegn"
+    "Unknown error" : "Ukjent feil"
 },
 "nplurals=2; plural=(n != 1);");

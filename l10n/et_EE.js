@@ -11,7 +11,6 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Sunni suured ja väikesed tähed",
     "Enforce numeric characters" : "Sunni numbrilised sümbolid",
     "Enforce special characters" : "Sunni erimärgid",
-    "Unknown error" : "Tundmatu viga",
-    "Password needs to be at least %s characters long" : "Parool peab olema vähemalt %s märki pikk"
+    "Unknown error" : "Tundmatu viga"
 },
 "nplurals=2; plural=(n != 1);");
