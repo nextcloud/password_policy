@@ -27,7 +27,6 @@ OC.L10N.register(
     "Minimal length has to be a non negative number" : "La longueur minimale doit être un nombre positif",
     "History size has to be a non negative number" : "La taille de l'historique doit être un nombre positif",
     "Expiration days have to be a non negative number" : "La date d'expiration doit être un nombre positif",
-    "Maximum login attempts have to be a non negative number" : "Le nombre de tentatives de connexion doit être un nombre positif",
-    "Password needs to be at least %s characters long" : "Le mot de passe doit comporter au moins %s caractères"
+    "Maximum login attempts have to be a non negative number" : "Le nombre de tentatives de connexion doit être un nombre positif"
 },
 "nplurals=2; plural=(n > 1);");

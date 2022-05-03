@@ -16,7 +16,6 @@ OC.L10N.register(
     "Enforce special characters" : "Enforce special characters",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Check password against the list of breached passwords from haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set.",
-    "Unknown error" : "Unknown error",
-    "Password needs to be at least %s characters long" : "Password needs to be at least %s characters long"
+    "Unknown error" : "Unknown error"
 },
 "nplurals=2; plural=(n != 1);");

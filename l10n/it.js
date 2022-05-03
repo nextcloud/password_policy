@@ -28,7 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "La dimensione della cronologia deve essere un numero positivo",
     "Expiration days have to be a non negative number" : "I giorni di scadenza devono essere un numero positivo",
     "Maximum login attempts have to be a non negative number" : "I massimi tentativi di accesso devono essere un numero positivo",
-    "Error while saving" : "Errore durante il salvataggio",
-    "Password needs to be at least %s characters long" : "La password deve essere composta di almeno %s caratteri"
+    "Error while saving" : "Errore durante il salvataggio"
 },
 "nplurals=2; plural=(n != 1);");
