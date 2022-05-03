@@ -27,7 +27,6 @@ OC.L10N.register(
     "Minimal length has to be a non negative number" : "Το ελάχιστο μήκος πρέπει να είναι μη αρνητικός αριθμός",
     "History size has to be a non negative number" : "Το μέγεθος ιστορικού πρέπει να είναι μη αρνητικός αριθμός",
     "Expiration days have to be a non negative number" : "Οι ημέρες λήξης πρέπει να είναι μη αρνητικοί αριθμοί",
-    "Maximum login attempts have to be a non negative number" : "Οι μέγιστες προσπάθειες σύνδεσης πρέπει να είναι μη αρνητικός αριθμός",
-    "Password needs to be at least %s characters long" : "Το συνθηματικό πρέπει να είναι τουλάχιστον %s σε μήκος χαρακτήρων"
+    "Maximum login attempts have to be a non negative number" : "Οι μέγιστες προσπάθειες σύνδεσης πρέπει να είναι μη αρνητικός αριθμός"
 },
 "nplurals=2; plural=(n != 1);");

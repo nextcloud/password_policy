@@ -25,7 +25,6 @@
     "Minimal length has to be a non negative number" : "最小の長さにマイナスの数は設定できません",
     "History size has to be a non negative number" : "履歴サイズにマイナスの数は設定できません",
     "Expiration days have to be a non negative number" : "有効期限にマイナスの数は設定できません",
-    "Maximum login attempts have to be a non negative number" : "最大ログイン試行回数にマイナスの数は設定できません",
-    "Password needs to be at least %s characters long" : "パスワードは %s 文字以上である必要があります"
+    "Maximum login attempts have to be a non negative number" : "最大ログイン試行回数にマイナスの数は設定できません"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

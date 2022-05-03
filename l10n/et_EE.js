@@ -6,10 +6,11 @@ OC.L10N.register(
     "Password needs to contain at least one special character." : "Parool peab sisaldama vähemalt üht erimärki.",
     "Password needs to contain at least one lower and one upper case character." : "Parool peab sisaldama vähemalt üht väike- ja suurtähte",
     "Password policy" : "Paroolipoliitika",
+    "Saved" : "Salvestatud",
     "Forbid common passwords" : "Keela üldlevinud paroolid",
     "Enforce upper and lower case characters" : "Sunni suured ja väikesed tähed",
     "Enforce numeric characters" : "Sunni numbrilised sümbolid",
     "Enforce special characters" : "Sunni erimärgid",
-    "Password needs to be at least %s characters long" : "Parool peab olema vähemalt %s märki pikk"
+    "Unknown error" : "Tundmatu viga"
 },
 "nplurals=2; plural=(n != 1);");

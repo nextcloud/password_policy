@@ -6,10 +6,11 @@ OC.L10N.register(
     "Password needs to contain at least one special character." : "Fjalëkalimi duhet të përmbajë të paktën një karakter special.",
     "Password needs to contain at least one lower and one upper case character." : "Fjalëkalimi duhet të përmbajë të paktën një karakter me shkronja të vogla dhe një karakter me shkronja të mëdhaja.",
     "Password policy" : "Politika e fjalëkalimit ",
+    "Saved" : "Ruajtur",
     "Forbid common passwords" : "Ndalo fjalëkalimet e zakonshme",
     "Enforce upper and lower case characters" : "Detyro karakteret me shkronjë të madhe dhe të vogël",
     "Enforce numeric characters" : "Detyro karakteret numerike ",
     "Enforce special characters" : "Detyro karakteret e veçanta",
-    "Password needs to be at least %s characters long" : "Fjalëkalimi duhet të jetë të paktën %s karaktere i gjatë"
+    "Unknown error" : "Gabim i panjohur"
 },
 "nplurals=2; plural=(n != 1);");

@@ -28,6 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Az előzmények méretének nem negatív számnak kell lennie",
     "Expiration days have to be a non negative number" : "A lejárat napjainak számának nem negatív számnak kell lennie",
     "Maximum login attempts have to be a non negative number" : "A maximális bejelentkezési kísérletnek nem negatív számnak kell lennie",
-    "Password needs to be at least %s characters long" : "A jelszónak legalább %s karakter hosszúnak kell lennie"
+    "Error while saving" : "Hiba a mentés során"
 },
 "nplurals=2; plural=(n != 1);");

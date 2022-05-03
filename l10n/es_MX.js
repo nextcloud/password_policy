@@ -9,12 +9,13 @@ OC.L10N.register(
     "Password policy" : "Política de contraseñas",
     "Allows admins to configure a password policy" : "Permite a los administradores configruar la política de contraseñas",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permite a un administrador definir ciertas pre-condiciones para contraseñas, p.e. obligar a una longitud mínima.",
+    "Saved" : "Guardado",
     "Forbid common passwords" : "Restringir contraseñas comunes",
     "Enforce upper and lower case characters" : "Imponer caracteres en mayúsculas y minúsculas",
     "Enforce numeric characters" : "Imponer caracteres numéricos",
     "Enforce special characters" : "Imponer caracteres especiales",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Verifica la contraseña contra la lista de contraseñas comprometidas de haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Esta verificación crea un resumen de la contraseña y envia los primeros 5 caracteres de este resumen al API haveibeenpwned.com para obtener una lista de todos los resumenes que empezan con ellos. Después verfica en la instancia de Nextcloud si la contraseña está en el juego de resultados.",
-    "Password needs to be at least %s characters long" : "La contraseña necesita tener al menos %s caracteres"
+    "Unknown error" : "Se presentó un error desconocido"
 },
 "nplurals=2; plural=(n != 1);");

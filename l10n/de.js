@@ -28,6 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Der Umfang der Chronik darf keine negative Zahl sein",
     "Expiration days have to be a non negative number" : "Die Ablauffrist darf keine negative Zahl sein",
     "Maximum login attempts have to be a non negative number" : "Maximum der Anmeldeversuche darf keine negative Zahl sein",
-    "Password needs to be at least %s characters long" : "Das Passwort muss mindestens %s Zeichen lang sein"
+    "Error while saving" : "Fehler beim Speichern"
 },
 "nplurals=2; plural=(n != 1);");

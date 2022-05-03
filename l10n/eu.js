@@ -28,6 +28,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Historiaren tamainak zenbaki ez negatiboa izan behar du",
     "Expiration days have to be a non negative number" : "Iraungitze egunek zenbaki ez negatiboa izan behar dute",
     "Maximum login attempts have to be a non negative number" : "Saioa hasteko gehieneko saiakerak zenbaki ez negatiboa izan behar du",
-    "Password needs to be at least %s characters long" : "Pasahitzak %s karaktere izan behar du gutxienez"
+    "Error while saving" : "Errore bat gertatu da gordetzean"
 },
 "nplurals=2; plural=(n != 1);");

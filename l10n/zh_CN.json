@@ -25,7 +25,6 @@
     "Minimal length has to be a non negative number" : "最小长度必须是一个非负数",
     "History size has to be a non negative number" : "历史记录大小必须是非负数 ",
     "Expiration days have to be a non negative number" : "过期天数必须是非负数 ",
-    "Maximum login attempts have to be a non negative number" : "最大登录尝试次数必须是非负数",
-    "Password needs to be at least %s characters long" : "密码长度需要至少%s位"
+    "Maximum login attempts have to be a non negative number" : "最大登录尝试次数必须是非负数"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
