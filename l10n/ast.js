@@ -9,7 +9,6 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Obligar mayúscules y minúscules",
     "Enforce numeric characters" : "Obligar caráuteres numbéricos",
     "Enforce special characters" : "Obligar caráuteres especiales",
-    "Unknown error" : "Fallu desconocíu",
-    "Password needs to be at least %s characters long" : "La contrasea precisar ser de polo menos %s caráuteres de llargor"
+    "Unknown error" : "Fallu desconocíu"
 },
 "nplurals=2; plural=(n != 1);");

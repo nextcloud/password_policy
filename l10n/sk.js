@@ -27,7 +27,6 @@ OC.L10N.register(
     "Minimal length has to be a non negative number" : "Minimálna dĺžka musí byť kladné číslo",
     "History size has to be a non negative number" : "Veľkosť histórie musí byť kladné číslo",
     "Expiration days have to be a non negative number" : "Dní do expirácie musí byť kladné číslo",
-    "Maximum login attempts have to be a non negative number" : "Maximálny počet pokusov o prihlásenie musí byť kladné číslo",
-    "Password needs to be at least %s characters long" : "Heslo musí mať aspoň %s znakov"
+    "Maximum login attempts have to be a non negative number" : "Maximálny počet pokusov o prihlásenie musí byť kladné číslo"
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");

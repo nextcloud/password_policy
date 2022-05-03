@@ -9,7 +9,6 @@
     "Enforce upper and lower case characters" : "Forçar letras maiúsculas e minúsculas",
     "Enforce numeric characters" : "Forçar caracteres numéricos",
     "Enforce special characters" : "Forçar caracteres especiais",
-    "Unknown error" : "Erro desconhecido",
-    "Password needs to be at least %s characters long" : "A palavra-passe precisa de conter no mínimo %s caracteres"
+    "Unknown error" : "Erro desconhecido"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -11,7 +11,6 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Detyro karakteret me shkronjë të madhe dhe të vogël",
     "Enforce numeric characters" : "Detyro karakteret numerike ",
     "Enforce special characters" : "Detyro karakteret e veçanta",
-    "Unknown error" : "Gabim i panjohur",
-    "Password needs to be at least %s characters long" : "Fjalëkalimi duhet të jetë të paktën %s karaktere i gjatë"
+    "Unknown error" : "Gabim i panjohur"
 },
 "nplurals=2; plural=(n != 1);");
