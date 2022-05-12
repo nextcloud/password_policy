@@ -52,7 +52,12 @@ class Generator {
 	 * @throws HintException
 	 */
 	public function generate(): string {
-		$lenght = $this->config->getMinLength();
+		$minLength = $this->config->getMinLength();
+		if ($minLength < 8) {
+			// 8 minimum so we don't generate too short passwords
+			$minLength = 8;
+		}
+		$lenght = $minLength;
 
 		$password = '';
 		$chars = '';
@@ -86,6 +91,12 @@ class Generator {
 
 			try {
 				$this->validator->validate($password);
+
+				if ($password === null || $password === '') {
+					// something went wrong
+					break;
+				}
+
 				$found = true;
 				break;
 			} catch (HintException $e) {
@@ -93,7 +104,7 @@ class Generator {
 				 * Invalid so lets go for another round
 				 * Reset the length so we don't run below zero
 				 */
-				$lenght = $this->config->getMinLength();
+				$lenght = $minLength;
 			}
 		}
 
