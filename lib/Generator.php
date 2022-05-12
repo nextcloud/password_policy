@@ -52,11 +52,7 @@ class Generator {
 	 * @throws HintException
 	 */
 	public function generate(): string {
-		$minLength = $this->config->getMinLength();
-		if ($minLength < 8) {
-			// 8 minimum so we don't generate too short passwords
-			$minLength = 8;
-		}
+		$minLength = max($this->config->getMinLength(), 8);
 		$length = $minLength;
 
 		$password = '';
