@@ -57,7 +57,7 @@ class Generator {
 			// 8 minimum so we don't generate too short passwords
 			$minLength = 8;
 		}
-		$lenght = $minLength;
+		$length = $minLength;
 
 		$password = '';
 		$chars = '';
@@ -67,19 +67,19 @@ class Generator {
 			if ($this->config->getEnforceUpperLowerCase()) {
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_UPPER);
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_LOWER);
-				$lenght -= 2;
+				$length -= 2;
 				$chars .= ISecureRandom::CHAR_UPPER . ISecureRandom::CHAR_LOWER;
 			}
 
 			if ($this->config->getEnforceNumericCharacters()) {
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_DIGITS);
-				$lenght -= 1;
+				$length -= 1;
 				$chars .= ISecureRandom::CHAR_DIGITS;
 			}
 
 			if ($this->config->getEnforceSpecialCharacters()) {
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_SYMBOLS);
-				$lenght -= 1;
+				$length -= 1;
 				$chars .= ISecureRandom::CHAR_SYMBOLS;
 			}
 
@@ -87,7 +87,7 @@ class Generator {
 				$chars = ISecureRandom::CHAR_HUMAN_READABLE;
 			}
 
-			$password .= $chars = $this->random->generate($lenght, $chars);
+			$password .= $chars = $this->random->generate($length, $chars);
 
 			try {
 				$this->validator->validate($password);
@@ -104,7 +104,7 @@ class Generator {
 				 * Invalid so lets go for another round
 				 * Reset the length so we don't run below zero
 				 */
-				$lenght = $minLength;
+				$length = $minLength;
 			}
 		}
 
