@@ -30,4 +30,4 @@ OC.L10N.register(
     "Maximum login attempts have to be a non negative number" : "O máximo de tentativas de login não pode ser um número negativo",
     "Error while saving" : "Erro ao salvar"
 },
-"nplurals=2; plural=(n > 1);");
+"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
