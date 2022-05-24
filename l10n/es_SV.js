@@ -16,4 +16,4 @@ OC.L10N.register(
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Esta verificación crea un resumen de la contraseña y envia los primeros 5 caracteres de este resumen al API haveibeenpwned.com para obtener una lista de todos los resumenes que empezan con ellos. Después verfica en la instancia de Nextcloud si la contraseña está en el juego de resultados.",
     "Unknown error" : "Error desconocido"
 },
-"nplurals=2; plural=(n != 1);");
+"nplurals=2; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
