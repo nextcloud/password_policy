@@ -20,6 +20,7 @@ OC.L10N.register(
     "Enforce numeric characters" : "Pakota käyttämään numeroita",
     "Enforce special characters" : "Pakota käyttämään erikoismerkkejä",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin",
-    "Unknown error" : "Tuntematon virhe"
+    "Unknown error" : "Tuntematon virhe",
+    "Error while saving" : "Virhe tallentaessa"
 },
 "nplurals=2; plural=(n != 1);");
