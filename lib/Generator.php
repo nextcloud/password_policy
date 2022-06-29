@@ -85,6 +85,9 @@ class Generator {
 
 			$password .= $chars = $this->random->generate($length, $chars);
 
+			// Shuffle string so the order is random
+			$password = str_shuffle($password);
+
 			try {
 				$this->validator->validate($password);
 
@@ -107,9 +110,6 @@ class Generator {
 		if ($found === false) {
 			throw new HintException('Could not generate a valid password');
 		}
-
-		// Shuffle string so the order is random
-		$password = str_shuffle($password);
 
 		return $password;
 	}
