@@ -20,7 +20,7 @@
     "Enforce numeric characters" : "Karaktere numerikoak destakatu",
     "Enforce special characters" : "Karaktere bereziak destakatu",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Pasahitzak haveibeenpwned.com zerbitzuan egiaztatu",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Egiaztapenak pasahitzaren hash bat sortzen du eta lehenengo bost karaktereak haveibeenpwned.com zerbitzuaren APIra bidaltzen ditu berdin hasten diren hashak lortzeko. Ondoen Nextcloud instantzia barruan egiaztatzen du idatzitako pasahitzaren hasha zerrenda horretan dagoen ala.ez",
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Egiaztapenak pasahitzaren hash bat sortzen du eta lehenengo bost karaktereak haveibeenpwned.com zerbitzuaren APIra bidaltzen ditu berdin hasten diren hashak lortzeko. Ondoen Nextcloud instantzia barruan egiaztatzen du idatzitako pasahitzaren hasha zerrenda horretan dagoen ala ez.",
     "Unknown error" : "Errore ezezaguna",
     "Minimal length has to be a non negative number" : "Gutxieneko luzerak zenbaki ez negatiboa izan behar du",
     "History size has to be a non negative number" : "Historiaren tamainak zenbaki ez negatiboa izan behar du",
