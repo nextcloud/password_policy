@@ -1,41 +1,41 @@
 {
-	"name": "password_policy",
-	"description": "Password Policy for nextcloud",
-	"version": "1.15.0",
-	"author": "Bjoern Schiessle",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/nextcloud/password_policy.git"
-	},
-	"bugs": {
-		"url": "https://github.com/nextcloud/password_policy/issues"
-	},
-	"homepage": "https://github.com/nextcloud/password_policy#readme",
-	"license": "AGPL-3.0",
-	"private": true,
-	"scripts": {
-		"build": "webpack --node-env production --progress",
-		"dev": "webpack --node-env development --progress",
-		"watch": "webpack --node-env development --progress --watch",
-		"lint": "eslint --ext .js,.vue src",
-		"lint:fix": "eslint --ext .js,.vue src --fix",
-		"stylelint": "stylelint css/*.css css/*.scss src/**/*.vue",
-		"stylelint:fix": "stylelint css/*.css css/*.scss src/**/*.vue --fix"
-	},
-	"dependencies": {
-		"@nextcloud/initial-state": "^1.2.1",
-		"@nextcloud/l10n": "^1.4.1",
-		"@nextcloud/vue": "^5.3.1",
-		"vue": "^2.6.14"
-	},
-	"engines": {
-		"node": "^14.0.0",
-		"npm": "^7.0.0"
-	},
-	"devDependencies": {
-		"@nextcloud/babel-config": "^1.0.0",
-		"@nextcloud/eslint-config": "^7.0.2",
-		"@nextcloud/stylelint-config": "^2.1.2",
-		"@nextcloud/webpack-vue-config": "^5.0.0"
-	}
+  "name": "password_policy",
+  "description": "Password Policy for nextcloud",
+  "version": "1.15.0",
+  "author": "Bjoern Schiessle",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextcloud/password_policy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nextcloud/password_policy/issues"
+  },
+  "homepage": "https://github.com/nextcloud/password_policy#readme",
+  "license": "AGPL-3.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack --node-env production --progress",
+    "dev": "webpack --node-env development --progress",
+    "watch": "webpack --node-env development --progress --watch",
+    "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "stylelint": "stylelint css/*.css css/*.scss src/**/*.vue",
+    "stylelint:fix": "stylelint css/*.css css/*.scss src/**/*.vue --fix"
+  },
+  "dependencies": {
+    "@nextcloud/initial-state": "^1.2.1",
+    "@nextcloud/l10n": "^1.4.1",
+    "@nextcloud/vue": "^5.3.1",
+    "vue": "^2.6.14"
+  },
+  "engines": {
+    "node": "^16.0.0",
+    "npm": "^7.0.0 || ^8.0.0"
+  },
+  "devDependencies": {
+    "@nextcloud/babel-config": "^1.0.0",
+    "@nextcloud/eslint-config": "^7.0.2",
+    "@nextcloud/stylelint-config": "^2.1.2",
+    "@nextcloud/webpack-vue-config": "^5.0.0"
+  }
 }
