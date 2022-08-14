@@ -1,7 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password is expired, please use forgot password method to reset" : "Parolanın süresi dolmuş. Lütfen sıfırlamak için parolamı unuttum yöntemini kullanın",
+    "Password is expired, please use forgot password method to reset" : "Parolanın geçerlilik süresi dolmuş. Lütfen sıfırlamak için parolamı unuttum yöntemini kullanın",
     "Password must not have been used recently before." : "Parola son kullandığınız parolalardan farklı olmalıdır.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Yazdığınız parola sık kullanılan 1.000.000 parola içinde. Lütfen eşsiz bir parola seçin.",
     "Password is present in compromised password list. Please choose a different password." : "Yazdığınız parola bilinen parolalar listesinde. Lütfen başka bir parola seçin.",
@@ -15,7 +15,7 @@ OC.L10N.register(
     "Saved" : "Kaydedildi",
     "Minimum password length" : "En kısa parola uzunluğu",
     "User password history" : "Kullanıcının parola geçmişi",
-    "Number of days until user password expires" : "Kullanıcı parolasının süresinin dolmasına kalan gün",
+    "Number of days until user password expires" : "Kullanıcı parolasının geçerlilik süresinin dolmasına kalan gün",
     "Number of login attempts before the user account is blocked (0 for no limit)" : "Kullanıcının hesabı kilitlenmeden önce deneyebileceği oturum açma girişimi sayısı (sınırlama olmaması için 0 yazın)",
     "Forbid common passwords" : "Sık kullanılan parolalar kullanılamasın",
     "Enforce upper and lower case characters" : "Parolada büyük ve küçük harfler bulunsun",
