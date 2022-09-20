@@ -5,6 +5,7 @@ OC.L10N.register(
     "Password must not have been used recently before." : "Lykilorð má ekki hafa verið notað nýlega.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Lykilorðið er á meðal 1.000.000 algengustu lykilorðanna. Endilega veldu eitthvað annað.",
     "Password is present in compromised password list. Please choose a different password." : "Lykilorðið er í vantreystum lykilorðalista. Endilega veldu eitthvað annað.",
+    "Password needs to be at least %s characters long." : "Lykilorðið verður að innihalda að minnsta kosti %s stafi.",
     "Password needs to contain at least one numeric character." : "Lykilorðið verður að innihalda að minnsta kosti einn tölustaf.",
     "Password needs to contain at least one special character." : "Lykilorðið verður að innihalda að minnsta kosti eitt sértákn.",
     "Password needs to contain at least one lower and one upper case character." : "Lykilorðið verður að innihalda að minnsta kosti einn lágstaf og einn hástaf.",
