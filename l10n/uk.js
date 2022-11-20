@@ -22,7 +22,7 @@ OC.L10N.register(
     "Enforce numeric characters" : "Застосування цифрових символів",
     "Enforce special characters" : "Застосування спеціальних символів",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Перевірте пароль зі списком зламаних паролів на сайті haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ця перевірка створює хеш пароля та надсилає перші 5 символів цього хешу до API haveibeenpwned.com для отримання списку всіх хешів, які починаються з них. Потім він перевіряє екземпляр Nextcloud, чи є хеш пароля в наборі результатів.",
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ця перевірка створює хеш пароля та надсилає перші 5 символів цього хешу до API haveibeenpwned.com для отримання списку всіх хешів, які починаються з них. Потім він перевіряє хмару Nextcloud, чи присутній хеш пароля в наборі результатів.",
     "Unknown error" : "Невідома помилка",
     "Minimal length has to be a non negative number" : "Мінімальна довжина має бути невід’ємним числом",
     "History size has to be a non negative number" : "Розмір історії має бути невід’ємним числом",
