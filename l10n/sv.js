@@ -27,6 +27,7 @@ OC.L10N.register(
     "Minimal length has to be a non negative number" : "Minsta längden måste vara ett icke-negativt tal",
     "History size has to be a non negative number" : "Historikstorlek måste vara ett icke-negativt tal",
     "Expiration days have to be a non negative number" : "Dagar till utgång måste vara ett icke-negativt tal",
-    "Maximum login attempts have to be a non negative number" : "Maximala inloggningsförsök måste vara ett icke-negativt tal"
+    "Maximum login attempts have to be a non negative number" : "Maximala inloggningsförsök måste vara ett icke-negativt tal",
+    "Error while saving" : "Kunde inte spara"
 },
 "nplurals=2; plural=(n != 1);");
