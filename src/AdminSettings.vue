@@ -22,11 +22,7 @@
   -->
 
 <template>
-	<SettingsSection :title="t('password_policy', 'Password policy')">
-		<div id="password-policy__saving-msg" class="msg success inlineblock" style="display:none">
-			{{ t('password_policy', 'Saved') }}
-		</div>
-
+	<NcSettingsSection :title="t('password_policy', 'Password policy')">
 		<ul class="password-policy__settings-list">
 			<li>
 				<input id="password-policy__settings__min-length"
@@ -72,57 +68,58 @@
 
 		<ul class="password-policy__settings-list">
 			<li>
-				<CheckboxRadioSwitch :checked.sync="config.enforceNonCommonPassword"
+				<NcCheckboxRadioSwitch :checked.sync="config.enforceNonCommonPassword"
 					type="switch"
 					@update:checked="updateBoolSetting('enforceNonCommonPassword')">
 					{{ t('password_policy', 'Forbid common passwords') }}
-				</CheckboxRadioSwitch>
+				</NcCheckboxRadioSwitch>
 			</li>
 			<li>
-				<CheckboxRadioSwitch :checked.sync="config.enforceUpperLowerCase"
+				<NcCheckboxRadioSwitch :checked.sync="config.enforceUpperLowerCase"
 					type="switch"
 					@update:checked="updateBoolSetting('enforceUpperLowerCase')">
 					{{ t('password_policy', 'Enforce upper and lower case characters') }}
-				</CheckboxRadioSwitch>
+				</NcCheckboxRadioSwitch>
 			</li>
 			<li>
-				<CheckboxRadioSwitch :checked.sync="config.enforceNumericCharacters"
+				<NcCheckboxRadioSwitch :checked.sync="config.enforceNumericCharacters"
 					type="switch"
 					@update:checked="updateBoolSetting('enforceNumericCharacters')">
 					{{ t('password_policy', 'Enforce numeric characters') }}
-				</CheckboxRadioSwitch>
+				</NcCheckboxRadioSwitch>
 			</li>
 			<li>
-				<CheckboxRadioSwitch :checked.sync="config.enforceSpecialCharacters"
+				<NcCheckboxRadioSwitch :checked.sync="config.enforceSpecialCharacters"
 					type="switch"
 					@update:checked="updateBoolSetting('enforceSpecialCharacters')">
 					{{ t('password_policy', 'Enforce special characters') }}
-				</CheckboxRadioSwitch>
+				</NcCheckboxRadioSwitch>
 			</li>
 			<li>
-				<CheckboxRadioSwitch :checked.sync="config.enforceHaveIBeenPwned"
+				<NcCheckboxRadioSwitch :checked.sync="config.enforceHaveIBeenPwned"
 					type="switch"
 					@update:checked="updateBoolSetting('enforceHaveIBeenPwned')">
 					{{ t('password_policy', 'Check password against the list of breached passwords from haveibeenpwned.com') }}
-				</CheckboxRadioSwitch>
+				</NcCheckboxRadioSwitch>
 				<p class="havibeenpwned-hint">
 					{{ t('password_policy', 'This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set.') }}
 				</p>
 			</li>
 		</ul>
-	</SettingsSection>
+	</NcSettingsSection>
 </template>
 
 <script>
 import { loadState } from '@nextcloud/initial-state'
-import CheckboxRadioSwitch from '@nextcloud/vue/dist/Components/CheckboxRadioSwitch'
-import SettingsSection from '@nextcloud/vue/dist/Components/SettingsSection'
+import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
+import NcSettingsSection from '@nextcloud/vue/dist/Components/NcSettingsSection.js'
+import { showError, showSuccess } from '@nextcloud/dialogs'
 
 export default {
 	name: 'AdminSettings',
 	components: {
-		CheckboxRadioSwitch,
-		SettingsSection,
+		NcCheckboxRadioSwitch,
+		NcSettingsSection,
 	},
 
 	data() {
@@ -153,12 +150,7 @@ export default {
 					message = t('password_policy', 'Maximum login attempts have to be a non negative number')
 					break
 				}
-				OC.msg.finishedSaving('#password-policy__saving-msg', {
-					status: 'failure',
-					data: {
-						message,
-					},
-				})
+				showError(message)
 				return
 			}
 
@@ -173,21 +165,9 @@ export default {
 		 * @param {string} value the app config value
 		 */
 		async setValue(setting, value) {
-			OC.msg.startSaving('#password-policy__saving-msg')
-
 			OCP.AppConfig.setValue('password_policy', setting, value, {
-				success: () => OC.msg.finishedSaving('#password-policy__saving-msg', {
-					status: 'success',
-					data: {
-						message: t('password_policy', 'Saved'),
-					},
-				}),
-				error: () => OC.msg.finishedSaving('#password-policy__saving-msg', {
-					status: 'failure',
-					data: {
-						message: t('password_policy', 'Error while saving'),
-					},
-				}),
+				success: () => showSuccess(t('password_policy', 'Settings saved')),
+				error: () => showError(t('password_policy', 'Error while saving settings')),
 			})
 		},
 	},
