@@ -12,6 +12,8 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Krev stor og liten bokstav",
     "Enforce numeric characters" : "Krev numerisk tegn",
     "Enforce special characters" : "Krev spesialtegn",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Check password against the list of breached passwords from haveibeenpwned.com",
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Denne sjekken oppretter en hash av passordet og sender de første 5 tegnene i denne hashen til haveibeenpwned.com API for å hente en liste over alle hashen som starter med disse. Deretter sjekker den Nextcloud-forekomsten om passordhashen er i resultatsettet.",
     "Unknown error" : "Ukjent feil"
 },
 "nplurals=2; plural=(n != 1);");
