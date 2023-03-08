@@ -2,7 +2,8 @@ OC.L10N.register(
     "password_policy",
     {
     "Password policy" : "Politica de senhal",
-    "Saved" : "Enregistrat",
-    "Unknown error" : "Error desconeguda"
+    "Unknown error" : "Error desconeguda",
+    "Settings saved" : "Paramètres salvats",
+    "Saved" : "Enregistrat"
 },
 "nplurals=2; plural=(n > 1);");

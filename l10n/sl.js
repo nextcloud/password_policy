@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Določila gesel",
     "Allows admins to configure a password policy" : "Omogoča skrbnikom nastavljanje pravil uporabe gesel",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Dovoli skrbniku določiti določene predpogoje za gesla, na primer vsiljeno dolžino",
-    "Saved" : "Shranjeno",
     "Minimum password length" : "Najmanjša dolžina gesla",
     "User password history" : "Uporabniška zgodovina gesel",
     "Number of days until user password expires" : "Število dni do preteka uporabniškega gesla",
@@ -27,6 +26,8 @@ OC.L10N.register(
     "Minimal length has to be a non negative number" : "Najmanjša dolžina mora biti ne-negativna vrednost.",
     "History size has to be a non negative number" : "Velikost zgodovine mora biti ne-negativna vrednost.",
     "Expiration days have to be a non negative number" : "Število dni do pretaka mora biti ne-negativna vrednost.",
-    "Maximum login attempts have to be a non negative number" : "Največje število poskusov prijave mora biti ne-negativna vrednost."
+    "Maximum login attempts have to be a non negative number" : "Največje število poskusov prijave mora biti ne-negativna vrednost.",
+    "Settings saved" : "Nastavitve so shranjene",
+    "Saved" : "Shranjeno"
 },
 "nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);");

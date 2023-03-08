@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Политика на лозинки",
     "Allows admins to configure a password policy" : "Дозволи им на администраторите да ја конфигурираат политиката на лозинки",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Дозволи им на адмистраторите да дефинираат услови за избор на лозинки, на пр. минимална должина на лозинка",
-    "Saved" : "Зачувано",
     "Minimum password length" : "Минимална должина на лозинка",
     "User password history" : "Историја на лозинки за корисник",
     "Number of days until user password expires" : "Број на денови до истекување на лозинка на корисник",
@@ -24,6 +23,12 @@ OC.L10N.register(
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Проверка на лозинките дали се на компромирана листа на haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Оваа проверка создава хаш на лозинката и ги испраќа првите 5 карактери на овој хаш на hasibeenpwned.com преку API за да се добие список на сите хашови кои започнуваат со тие карактери. Потоа, Nextcloud серверот ја проверува листата на хашови со хашот на лозинката.",
     "Unknown error" : "Непозната грешка",
-    "Minimal length has to be a non negative number" : "Минималната должина неможе да биде негативен број"
+    "Minimal length has to be a non negative number" : "Минималната должина неможе да биде негативен број",
+    "History size has to be a non negative number" : "Историската должина неможе да биде негативен број",
+    "Expiration days have to be a non negative number" : "Датумот на истекување неможе да биде негативен број",
+    "Maximum login attempts have to be a non negative number" : "Максималниот број на обиди неможе да биде негативен број",
+    "Settings saved" : "Параматрите се зачувани",
+    "Saved" : "Зачувано",
+    "Error while saving" : "Грешка при зачувување"
 },
 "nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;");

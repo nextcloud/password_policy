@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Salasanakäytäntö",
     "Allows admins to configure a password policy" : "Mahdollistaa ylläpitäjien määrittää salasanakäytännön",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Salli ylläpitäjän määrittää ennalta määritettyjä ehtoja salasanalle, esimerkiksi vähimmäispituuden",
-    "Saved" : "Tallennettu",
     "Minimum password length" : "Salasanan vähimmäispituus",
     "User password history" : "Käyttäjän salasanahistoria",
     "Forbid common passwords" : "Kiellä yleisimmät salasanat",
@@ -21,6 +20,8 @@ OC.L10N.register(
     "Enforce special characters" : "Pakota käyttämään erikoismerkkejä",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin",
     "Unknown error" : "Tuntematon virhe",
+    "Settings saved" : "Asetukset tallennettu",
+    "Saved" : "Tallennettu",
     "Error while saving" : "Virhe tallentaessa"
 },
 "nplurals=2; plural=(n != 1);");

@@ -6,11 +6,12 @@ OC.L10N.register(
     "Password needs to contain at least one special character." : "A palavra-passe precisa de conter pelo menos um caracter especial.",
     "Password needs to contain at least one lower and one upper case character." : "A palavra-passe precisa de conter pelo menos uma letra minúscula e uma maiúscula.",
     "Password policy" : "Política de palavras-passe",
-    "Saved" : "Guardado",
     "Forbid common passwords" : "palavras-passe comuns proibidas",
     "Enforce upper and lower case characters" : "Forçar letras maiúsculas e minúsculas",
     "Enforce numeric characters" : "Forçar caracteres numéricos",
     "Enforce special characters" : "Forçar caracteres especiais",
-    "Unknown error" : "Erro desconhecido"
+    "Unknown error" : "Erro desconhecido",
+    "Settings saved" : "Definições guardadas",
+    "Saved" : "Guardado"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

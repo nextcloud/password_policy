@@ -1,7 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Saved" : "បាន​រក្សាទុក",
-    "Unknown error" : "មិន​ស្គាល់​កំហុស"
+    "Unknown error" : "មិន​ស្គាល់​កំហុស",
+    "Saved" : "បាន​រក្សាទុក"
 },
 "nplurals=1; plural=0;");

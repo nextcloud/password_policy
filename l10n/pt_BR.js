@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Política de senhas",
     "Allows admins to configure a password policy" : "Permite aos administradores configurarem uma política de senha",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permitir que o administrador defina determinadas pré-condições para a senha, por exemplo,  um tamanho mínimo",
-    "Saved" : "Salva",
     "Minimum password length" : "Tamanho mínimo para senhas",
     "User password history" : "Histórico de senhas do usuário",
     "Number of days until user password expires" : "Número de dias até a expiração da senha do usuário",
@@ -28,6 +27,8 @@ OC.L10N.register(
     "History size has to be a non negative number" : "O tamanho do histórico não pode ser um número negativo",
     "Expiration days have to be a non negative number" : "Dias para expiração não pode ser um número negativo",
     "Maximum login attempts have to be a non negative number" : "O máximo de tentativas de login não pode ser um número negativo",
+    "Settings saved" : "Configurações salvas",
+    "Saved" : "Salva",
     "Error while saving" : "Erro ao salvar"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

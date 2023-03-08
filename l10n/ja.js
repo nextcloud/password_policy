@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "パスワードポリシー",
     "Allows admins to configure a password policy" : "管理者がパスワードポリシーを設定することを許可します",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "管理者が事前に一定の制約をパスワードに課すことを許可します。（例：最小の長さを強制）",
-    "Saved" : "保存しました",
     "Minimum password length" : "最低限のパスワードの長さ",
     "User password history" : "ユーザーのパスワード履歴",
     "Number of days until user password expires" : "ユーザーのパスワードが失効するまでの日数",
@@ -28,6 +27,8 @@ OC.L10N.register(
     "History size has to be a non negative number" : "履歴サイズにマイナスの数は設定できません",
     "Expiration days have to be a non negative number" : "有効期限にマイナスの数は設定できません",
     "Maximum login attempts have to be a non negative number" : "最大ログイン試行回数にマイナスの数は設定できません",
+    "Settings saved" : "設定が保存されました",
+    "Saved" : "保存しました",
     "Error while saving" : "保存中にエラーが発生しました"
 },
 "nplurals=1; plural=0;");

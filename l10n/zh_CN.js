@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "密码规则",
     "Allows admins to configure a password policy" : "允许管理员配置密码策略",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "允许管理员定义密码前置条件，比如说强制密码最小长度。",
-    "Saved" : "已保存",
     "Minimum password length" : "最小密码长度",
     "User password history" : "用户密码记录",
     "Number of days until user password expires" : "用户密码过期前的天数",
@@ -27,6 +26,8 @@ OC.L10N.register(
     "Minimal length has to be a non negative number" : "最小长度必须是一个非负数",
     "History size has to be a non negative number" : "历史记录大小必须是非负数 ",
     "Expiration days have to be a non negative number" : "过期天数必须是非负数 ",
-    "Maximum login attempts have to be a non negative number" : "最大登录尝试次数必须是非负数"
+    "Maximum login attempts have to be a non negative number" : "最大登录尝试次数必须是非负数",
+    "Settings saved" : "已保存设置",
+    "Saved" : "已保存"
 },
 "nplurals=1; plural=0;");
