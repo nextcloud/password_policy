@@ -10,7 +10,6 @@
     "Password policy" : "Password policy",
     "Allows admins to configure a password policy" : "Allows admins to configure a password policy",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length",
-    "Saved" : "Saved",
     "Minimum password length" : "Minimum password length",
     "User password history" : "User password history",
     "Number of days until user password expires" : "Number of days until user password expires",
@@ -26,6 +25,8 @@
     "History size has to be a non negative number" : "History size has to be a non negative number",
     "Expiration days have to be a non negative number" : "Expiration days have to be a non negative number",
     "Maximum login attempts have to be a non negative number" : "Maximum login attempts have to be a non negative number",
+    "Settings saved" : "Settings saved",
+    "Saved" : "Saved",
     "Error while saving" : "Error while saving"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

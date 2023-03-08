@@ -1,5 +1,6 @@
 { "translations": {
-    "Saved" : "Đã lưu",
-    "Unknown error" : "Lỗi không xác định"
+    "Unknown error" : "Lỗi không xác định",
+    "Settings saved" : "Cấu hình đã được lưu",
+    "Saved" : "Đã lưu"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

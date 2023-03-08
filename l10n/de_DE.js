@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Passwort-Regeln",
     "Allows admins to configure a password policy" : "Ermöglicht Administratoren eine Passwortrichtlinie einzurichten",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Ermöglicht Administratoren diverse Voreinstellungen für Passwörter vorzunehmen, z. B. die Mindestlänge",
-    "Saved" : "Gespeichert",
     "Minimum password length" : "Minimale Passwortlänge",
     "User password history" : "Benutzerpasswort-Verlauf",
     "Number of days until user password expires" : "Anzahl der Tage bis zum Ablauf des Benutzerpassworts",
@@ -28,6 +27,8 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Historiengröße muss eine nicht negative Zahl sein",
     "Expiration days have to be a non negative number" : "Verfallstage müssen eine nicht negative Zahl sein",
     "Maximum login attempts have to be a non negative number" : "Maximale Anmeldeversuche muss eine nicht negative Zahl sein",
+    "Settings saved" : "Einstellungen gespeichert",
+    "Saved" : "Gespeichert",
     "Error while saving" : "Fehler beim Speichern"
 },
 "nplurals=2; plural=(n != 1);");

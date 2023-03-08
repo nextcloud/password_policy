@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Directiva de contrasinais",
     "Allows admins to configure a password policy" : "Permítelle aos administradores  configurar unha directiva de contrasinais",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permítelle aos administradores definir certas precondicións para os contrasinais, p. ex., obrigar a unha lonxitude mínima",
-    "Saved" : "Gardado",
     "Minimum password length" : "Lonxitude mínima do contrasinal",
     "User password history" : "Historial de contrasinais do usuario",
     "Number of days until user password expires" : "Número de días ata que caduque o contrasinal do usuario",
@@ -28,6 +27,8 @@ OC.L10N.register(
     "History size has to be a non negative number" : "O tamaño do historial ten que ser un número non negativo",
     "Expiration days have to be a non negative number" : "Os días de caducidade deben ser un número non negativo",
     "Maximum login attempts have to be a non negative number" : "O máximo de intentos de inicio de sesión debe ser un número non negativo",
+    "Settings saved" : "Axustes gardados",
+    "Saved" : "Gardado",
     "Error while saving" : "Produciuse un erro ao gardar"
 },
 "nplurals=2; plural=(n != 1);");

@@ -10,7 +10,6 @@
     "Password policy" : "Політика паролей",
     "Allows admins to configure a password policy" : "Дозволяє адміністраторам налаштовувати політику паролів",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Дозволити адміністратору визначати певні попередні умови для пароля, напр. дотримуватися мінімальної довжини",
-    "Saved" : "Збережено",
     "Minimum password length" : "Мінімальна довжина пароля",
     "User password history" : "Історія паролів користувача",
     "Number of days until user password expires" : "Кількість днів до закінчення терміну дії пароля користувача",
@@ -26,6 +25,8 @@
     "History size has to be a non negative number" : "Розмір історії має бути невід’ємним числом",
     "Expiration days have to be a non negative number" : "Дні закінчення терміну дії мають бути невід’ємними числами",
     "Maximum login attempts have to be a non negative number" : "Максимальна кількість спроб входу має бути невід’ємним числом",
+    "Settings saved" : "Налаштування збережено",
+    "Saved" : "Збережено",
     "Error while saving" : "Помилка під час збереження"
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);"
 }

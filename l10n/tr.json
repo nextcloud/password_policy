@@ -10,7 +10,6 @@
     "Password policy" : "Parola ilkesi",
     "Allows admins to configure a password policy" : "Yöneticilerin bir parola ilkesi yapılandırmasını sağlar",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Yöneticilerin parolalar için en kısa uzunluk gibi çeşitli ön koşullar belirleyebilmesini sağlar.",
-    "Saved" : "Kaydedildi",
     "Minimum password length" : "En kısa parola uzunluğu",
     "User password history" : "Kullanıcının parola geçmişi",
     "Number of days until user password expires" : "Kullanıcı parolasının geçerlilik süresinin dolmasına kalan gün",
@@ -26,6 +25,8 @@
     "History size has to be a non negative number" : "Geçmiş boyutu negatif bir sayı olamaz",
     "Expiration days have to be a non negative number" : "Geçerlilik süresi negatif bir sayı olamaz",
     "Maximum login attempts have to be a non negative number" : "En fazla oturum açma girişimi sayısı negatif bir sayı olamaz",
+    "Settings saved" : "Ayarlar kaydedildi",
+    "Saved" : "Kaydedildi",
     "Error while saving" : "Kaydedilirken sorun çıktı"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
