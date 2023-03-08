@@ -10,7 +10,6 @@
     "Password policy" : "Política de contraseñas",
     "Allows admins to configure a password policy" : "Permite a los administradores configurar una política de contraseñas",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permite a los administradores definir ciertas precondiciones para las contraseñas, p. ej., obligar a una longitud mínima",
-    "Saved" : "Guardado",
     "Minimum password length" : "Longitud mínima de la contraseña",
     "User password history" : "Histórico de contraseñas del usuario",
     "Number of days until user password expires" : "Número de días hasta que la contraseña caduque",
@@ -26,6 +25,8 @@
     "History size has to be a non negative number" : "El tamaño del histórico no puede ser un número negativo",
     "Expiration days have to be a non negative number" : "Los días de caducidad no pueden ser un número negativo",
     "Maximum login attempts have to be a non negative number" : "El número máximo de intentos de inicio de sesión no puede ser un número negativo",
+    "Settings saved" : "Ajustes guardados",
+    "Saved" : "Guardado",
     "Error while saving" : "Error al guardar"
 },"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

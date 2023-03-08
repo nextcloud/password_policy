@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Pasahitz politika",
     "Allows admins to configure a password policy" : "Baimendu administratzaileei pasahitzen politika bat konfiguratzea",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Baimendu administratzaileari pasahitzen inguruko baldintzak ezartzea, adib: luzera minimo bat izatera derrigortu.",
-    "Saved" : "Gordeta",
     "Minimum password length" : "Pasahitzaren gutxieneko luzera",
     "User password history" : "Erabiltzailearen pasahitz historia",
     "Number of days until user password expires" : "Erabiltzailearen pasahitza iraungi arteko egun kopurua",
@@ -28,6 +27,8 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Historiaren tamainak zenbaki ez negatiboa izan behar du",
     "Expiration days have to be a non negative number" : "Iraungitze egun kopuruak zenbaki ez negatiboa izan behar du",
     "Maximum login attempts have to be a non negative number" : "Saioa hasteko saiakera mugak zenbaki ez negatiboa izan behar du",
+    "Settings saved" : "Ezarpenak gordeta",
+    "Saved" : "Gordeta",
     "Error while saving" : "Errore bat gertatu da gordetzean"
 },
 "nplurals=2; plural=(n != 1);");

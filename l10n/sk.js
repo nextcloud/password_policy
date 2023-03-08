@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Politika hesla",
     "Allows admins to configure a password policy" : "Povoliť adminom nastaviť politiku hesiel",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Povoliť adminom definovať pravidlá pre tvorbu hesiel. Napríklad minimálny počet znakov.",
-    "Saved" : "Uložené",
     "Minimum password length" : "Minimálna dĺžka hesla",
     "User password history" : "História hesiel používateľa",
     "Number of days until user password expires" : "Počet dní do vypršania platnosti hesla používateľa",
@@ -28,6 +27,8 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Veľkosť histórie musí byť kladné číslo",
     "Expiration days have to be a non negative number" : "Dní do expirácie musí byť kladné číslo",
     "Maximum login attempts have to be a non negative number" : "Maximálny počet pokusov o prihlásenie musí byť kladné číslo",
+    "Settings saved" : "Nastavenia uložené",
+    "Saved" : "Uložené",
     "Error while saving" : "Chyba pri ukladaní"
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");

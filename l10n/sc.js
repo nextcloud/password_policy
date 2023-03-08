@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Normativa de is craes",
     "Allows admins to configure a password policy" : "Permitit a s'amministratzione de cunfigurare una normativa de is craes",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permiti a s'amministratzione de definire unas pre-cunditziones pro sa crae, comente pònnere una longària mìnima",
-    "Saved" : "Sarvadu",
     "Minimum password length" : "Longària mìnima de crae",
     "User password history" : "Cronologia de is craes de s'utente",
     "Number of days until user password expires" : "Nùmeru de dies in antis de s'iscadèntzia de sa crae",
@@ -27,6 +26,8 @@ OC.L10N.register(
     "Minimal length has to be a non negative number" : "Sa longària mìnima depet èssere unu nùmeru positivu",
     "History size has to be a non negative number" : "Sa mannària de sa cronologia deper èssere unu nùmeru positivu",
     "Expiration days have to be a non negative number" : "Is dies de iscadèntzia depent èssere unu nùmeru positivu",
-    "Maximum login attempts have to be a non negative number" : "Is tentativos de intrada màssimos depent èssere unu nùmeru positivu"
+    "Maximum login attempts have to be a non negative number" : "Is tentativos de intrada màssimos depent èssere unu nùmeru positivu",
+    "Settings saved" : "Impostatziones sarvadas",
+    "Saved" : "Sarvadu"
 },
 "nplurals=2; plural=(n != 1);");

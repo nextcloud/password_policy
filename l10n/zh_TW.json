@@ -10,7 +10,6 @@
     "Password policy" : "密碼策略",
     "Allows admins to configure a password policy" : "讓管理員可以設定密碼策略",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "允許管理員定義密碼的某些條件，例如強制最小長度",
-    "Saved" : "已儲存",
     "Minimum password length" : "密碼最小長度",
     "User password history" : "使用者密碼歷史紀錄",
     "Number of days until user password expires" : "密碼到期天數",
@@ -26,6 +25,8 @@
     "History size has to be a non negative number" : "歷史紀錄大小必須為非負數",
     "Expiration days have to be a non negative number" : "到期天數必須為非負數",
     "Maximum login attempts have to be a non negative number" : "最大登入嘗試次數必須為非負數",
+    "Settings saved" : "設定已儲存",
+    "Saved" : "已儲存",
     "Error while saving" : "儲存時發生錯誤"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

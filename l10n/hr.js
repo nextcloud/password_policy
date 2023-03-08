@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Pravila za upravljanje zaporkama",
     "Allows admins to configure a password policy" : "Omogućuju administratorima da konfiguriraju pravila za zaporke",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Omogućuju administratoru da definira određene preduvjete za zaporku, npr. minimalna dužina",
-    "Saved" : "Spremljeno",
     "Minimum password length" : "Minimalna dužina zaporke",
     "User password history" : "Povijest zaporki korisnika",
     "Number of days until user password expires" : "Broj dana do isteka zaporke",
@@ -27,6 +26,8 @@ OC.L10N.register(
     "Minimal length has to be a non negative number" : "Minimalna dužina mora biti pozitivan broj ili nula",
     "History size has to be a non negative number" : "Veličina povijesti mora biti pozitivan broj ili nula",
     "Expiration days have to be a non negative number" : "Broj dana do isteka mora biti pozitivan broj ili nula",
-    "Maximum login attempts have to be a non negative number" : "Maksimalan broj prijava mora biti pozitivan broj ili nula"
+    "Maximum login attempts have to be a non negative number" : "Maksimalan broj prijava mora biti pozitivan broj ili nula",
+    "Settings saved" : "Postavke spremljene",
+    "Saved" : "Spremljeno"
 },
 "nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;");

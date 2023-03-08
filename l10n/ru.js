@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Правила создания паролей",
     "Allows admins to configure a password policy" : "Разрешенные администраторы для конфигурирования политики паролей",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Разрешить администратору определять определенные предварительные условия для пароля, например. обеспечить минимальную длину пароля",
-    "Saved" : "Сохранено",
     "Minimum password length" : "Минимальная длина пароля",
     "User password history" : "История паролей пользователей",
     "Number of days until user password expires" : "Количество дней до истечения действия пароля",
@@ -28,6 +27,8 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Размер истории должен быть неотрицательным числом",
     "Expiration days have to be a non negative number" : "Срок действия должен быть неотрицательным числом",
     "Maximum login attempts have to be a non negative number" : "Максимальное количество попыток входа в систему должно быть неотрицательным числом",
+    "Settings saved" : "Настройки сохранены",
+    "Saved" : "Сохранено",
     "Error while saving" : "Не удалось сохранить"
 },
 "nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);");

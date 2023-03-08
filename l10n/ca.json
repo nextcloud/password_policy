@@ -10,7 +10,6 @@
     "Password policy" : "Política de contrasenyes",
     "Allows admins to configure a password policy" : "Permet als administradors configurar una política de contrasenyes",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permet que l'administrador defineixi determinades condicions prèvies per a les contrasenyes; p. ex., una longitud mínima",
-    "Saved" : "S'ha desat",
     "Minimum password length" : "Longitud mínima de la contrasenya",
     "User password history" : "Historial de contrasenyes de l'usuari",
     "Number of days until user password expires" : "Nombre de dies fins que caduca la contrasenya de l'usuari",
@@ -26,6 +25,7 @@
     "History size has to be a non negative number" : "La mida de l'historial ha de ser un nombre no negatiu",
     "Expiration days have to be a non negative number" : "El nombre de dies de caducitat ha de ser un nombre no negatiu",
     "Maximum login attempts have to be a non negative number" : "El nombre màxim d'intents d'inici de sessió ha de ser un nombre no negatiu",
+    "Saved" : "S'ha desat",
     "Error while saving" : "S'ha produït un error en desar"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -11,7 +11,6 @@ OC.L10N.register(
     "Password policy" : "암호 정책",
     "Allows admins to configure a password policy" : "관리자가 암호 정책을 변경할 수 있도록 허용",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "관리자가 최소 암호 길이 등 암호 정책을 설정할 수 있도록 허용",
-    "Saved" : "저장됨",
     "User password history" : "사용자 비밀번호 기록",
     "Number of login attempts before the user account is blocked (0 for no limit)" : "최대 로그인 실패 횟수 (0을 입력할 시 무제한이며 초과시 계정이 차단됩니다)",
     "Forbid common passwords" : "일반적인 암호 금지",
@@ -20,6 +19,8 @@ OC.L10N.register(
     "Enforce special characters" : "특수 문자 사용",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "haveibeenpwned.com에 등록된 유출된 암호 목록과 암호 비교",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "이 검사를 활성화하면 암호 해시를 만들고 해시의 첫 5글자를 haveibeenpwned.com API에 전송하여 유출된 암호 목록 중에 해당 글자로 시작하는 해시를 가져옵니다. 그 다음 Nextcloud 인스턴스에서 사용하고 있는 암호 중 해당 해시와 일치하는 암호를 검사합니다.",
-    "Unknown error" : "알 수 없는 오류"
+    "Unknown error" : "알 수 없는 오류",
+    "Settings saved" : "설정 저장됨",
+    "Saved" : "저장됨"
 },
 "nplurals=1; plural=0;");
