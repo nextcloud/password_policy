@@ -10,7 +10,6 @@
     "Password policy" : "Lösenordsregler",
     "Allows admins to configure a password policy" : "Tillåter administratörer att konfigurera en lösenordspolicy",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Tillåter administratören att definiera vissa villkor för lösenord, t.ex. att kräva minsta längd",
-    "Saved" : "Sparad",
     "Minimum password length" : "Minsta lösenordslängd",
     "User password history" : "Lösenordshistorik",
     "Number of days until user password expires" : "Antal dagar tills lösenordet går ut",
@@ -26,6 +25,8 @@
     "History size has to be a non negative number" : "Historikstorlek måste vara ett icke-negativt tal",
     "Expiration days have to be a non negative number" : "Dagar till utgång måste vara ett icke-negativt tal",
     "Maximum login attempts have to be a non negative number" : "Maximala inloggningsförsök måste vara ett icke-negativt tal",
+    "Settings saved" : "Inställningar sparade",
+    "Saved" : "Sparad",
     "Error while saving" : "Kunde inte spara"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

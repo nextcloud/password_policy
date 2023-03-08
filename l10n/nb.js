@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Passordregler",
     "Allows admins to configure a password policy" : "Lar administratorer konfigurere passordregler",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Tillat admin å definere visse forutsetninger for passord, f.eks. håndheve en minimumslengde",
-    "Saved" : "Lagret",
     "Minimum password length" : "Minimum passordlengde",
     "User password history" : "Brukers passordhistorikk",
     "Number of days until user password expires" : "Antall dager før brukerpassordet utløper",
@@ -28,6 +27,8 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Historiestørrelsen må være et ikke-negativt tall",
     "Expiration days have to be a non negative number" : "Utløpsdager må være et ikke-negativt tall",
     "Maximum login attempts have to be a non negative number" : "Maksimalt antall påloggingsforsøk må være et ikke-negativt tall",
+    "Settings saved" : "Innstillinger lagret",
+    "Saved" : "Lagret",
     "Error while saving" : "Feil under lagring"
 },
 "nplurals=2; plural=(n != 1);");

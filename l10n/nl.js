@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Wachtwoordenbeleid",
     "Allows admins to configure a password policy" : "Staat toe dat beheerders een wachtwoordenbeleid configureren",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Sta beheerder toe om bepaalde randvoorwaarden te definiëren voor het wachtwoord. B.v. minimum wachtwoordlengte",
-    "Saved" : "Opgeslagen",
     "Minimum password length" : "Minimale wachtwoordsterkte",
     "User password history" : "Wachtwoordhistorie gebruiker",
     "Number of days until user password expires" : "Aantal dagen tot het wachtwoord van de gebruiker verloopt",
@@ -27,6 +26,8 @@ OC.L10N.register(
     "Minimal length has to be a non negative number" : "Minimale lengte moet een niet-negatief getal zijn",
     "History size has to be a non negative number" : "Geschiedenisaantal moet een niet-negatief getal zijn",
     "Expiration days have to be a non negative number" : "Vervaldagen moet een niet-negatief getal zijn",
-    "Maximum login attempts have to be a non negative number" : "Maximum aantal inlogpogingen moet een niet-negatief getal zijn"
+    "Maximum login attempts have to be a non negative number" : "Maximum aantal inlogpogingen moet een niet-negatief getal zijn",
+    "Settings saved" : "Instellingen opgeslagen",
+    "Saved" : "Opgeslagen"
 },
 "nplurals=2; plural=(n != 1);");

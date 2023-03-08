@@ -1,5 +1,6 @@
 { "translations": {
-    "Saved" : "บันทึกแล้ว",
-    "Unknown error" : "ข้อผิดพลาดที่ไม่รู้จัก"
+    "Unknown error" : "ข้อผิดพลาดที่ไม่รู้จัก",
+    "Settings saved" : "บันทึกการตั้งค่าแล้ว",
+    "Saved" : "บันทึกแล้ว"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

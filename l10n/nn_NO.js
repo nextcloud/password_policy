@@ -1,7 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Saved" : "Lagra",
-    "Unknown error" : "Ukjend feil"
+    "Unknown error" : "Ukjend feil",
+    "Saved" : "Lagra"
 },
 "nplurals=2; plural=(n != 1);");

@@ -12,7 +12,6 @@ OC.L10N.register(
     "Password policy" : "Kodeord politik",
     "Allows admins to configure a password policy" : "Tillad en administrator at fastsætte en politik for adgsngskoder",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Tillad en administrator af fastsætte krav til adgangskoder, f.eks. at sætte en mindstelængde",
-    "Saved" : "Gemt",
     "Minimum password length" : "Minimumslængde på adgangskode",
     "User password history" : "Kodeords historik",
     "Number of days until user password expires" : "Dage før brugeres kodeord udløber",
@@ -28,6 +27,8 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Historik størrelsen må ikke være negativ",
     "Expiration days have to be a non negative number" : "Udløbstiden må ikke være negativ",
     "Maximum login attempts have to be a non negative number" : "Antal tilladte loginforsøg må ikke være negativ",
+    "Settings saved" : "Indstillinger gemt",
+    "Saved" : "Gemt",
     "Error while saving" : "Kunne ikke gemme de nye værdier"
 },
 "nplurals=2; plural=(n != 1);");

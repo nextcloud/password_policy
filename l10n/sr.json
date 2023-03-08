@@ -10,7 +10,6 @@
     "Password policy" : "Правила за лозинке",
     "Allows admins to configure a password policy" : "Омогућава администраторима да подесе смернице за лозинке",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Омогућава администратору да одреди предуслове за лозинке, нпр. да захтева минималну дужину",
-    "Saved" : "Сачувано",
     "Minimum password length" : "Минимална дужина лозинке",
     "User password history" : "Користи историјат лозинки",
     "Number of days until user password expires" : "Број дана до истека важења коринискове лозинке",
@@ -26,6 +25,8 @@
     "History size has to be a non negative number" : "Величина историје не сме да буде негативан број",
     "Expiration days have to be a non negative number" : "Дани истицања не смеју да буду негативан број",
     "Maximum login attempts have to be a non negative number" : "Максимални број покушаја пријаве не сме да буде негативан број",
+    "Settings saved" : "Поставке сачуване",
+    "Saved" : "Сачувано",
     "Error while saving" : "Грешка приликом чувања"
 },"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);"
 }
