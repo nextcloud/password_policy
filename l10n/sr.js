@@ -28,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Дани истицања не смеју да буду негативан број",
     "Maximum login attempts have to be a non negative number" : "Максимални број покушаја пријаве не сме да буде негативан број",
     "Settings saved" : "Поставке сачуване",
+    "Error while saving settings" : "Грешка приликом чувања подешавања",
     "Saved" : "Сачувано",
     "Error while saving" : "Грешка приликом чувања"
 },

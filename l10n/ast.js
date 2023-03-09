@@ -9,6 +9,7 @@ OC.L10N.register(
     "Enforce numeric characters" : "Obligar caráuteres numbéricos",
     "Enforce special characters" : "Obligar caráuteres especiales",
     "Unknown error" : "Fallu desconocíu",
+    "Settings saved" : "Axustes guardaos",
     "Saved" : "Guardáu"
 },
 "nplurals=2; plural=(n != 1);");

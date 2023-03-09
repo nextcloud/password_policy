@@ -28,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Los días de caducidad no pueden ser un número negativo",
     "Maximum login attempts have to be a non negative number" : "El número máximo de intentos de inicio de sesión no puede ser un número negativo",
     "Settings saved" : "Ajustes guardados",
+    "Error while saving settings" : "Error al guardar las configuraciones",
     "Saved" : "Guardado",
     "Error while saving" : "Error al guardar"
 },

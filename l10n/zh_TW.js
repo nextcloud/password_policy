@@ -28,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "到期天數必須為非負數",
     "Maximum login attempts have to be a non negative number" : "最大登入嘗試次數必須為非負數",
     "Settings saved" : "設定已儲存",
+    "Error while saving settings" : "儲存設定時發生錯誤",
     "Saved" : "已儲存",
     "Error while saving" : "儲存時發生錯誤"
 },

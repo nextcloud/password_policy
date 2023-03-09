@@ -7,6 +7,7 @@ OC.L10N.register(
     "Enforce numeric characters" : "Dwing numeriese karakters af",
     "Enforce special characters" : "Dwing spesiale karakters af",
     "Unknown error" : "Onbekende fout",
+    "Settings saved" : "Instellings gestoor",
     "Saved" : "Bewaar"
 },
 "nplurals=2; plural=(n != 1);");

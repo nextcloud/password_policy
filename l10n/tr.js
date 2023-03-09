@@ -28,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Geçerlilik süresi negatif bir sayı olamaz",
     "Maximum login attempts have to be a non negative number" : "En fazla oturum açma girişimi sayısı negatif bir sayı olamaz",
     "Settings saved" : "Ayarlar kaydedildi",
+    "Error while saving settings" : "Ayarlar kaydedilirken sorun çıktı",
     "Saved" : "Kaydedildi",
     "Error while saving" : "Kaydedilirken sorun çıktı"
 },
