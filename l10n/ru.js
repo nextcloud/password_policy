@@ -28,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Срок действия должен быть неотрицательным числом",
     "Maximum login attempts have to be a non negative number" : "Максимальное количество попыток входа в систему должно быть неотрицательным числом",
     "Settings saved" : "Настройки сохранены",
+    "Error while saving settings" : "Ошибка при сохранении параметров",
     "Saved" : "Сохранено",
     "Error while saving" : "Не удалось сохранить"
 },
