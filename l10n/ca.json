@@ -25,6 +25,7 @@
     "History size has to be a non negative number" : "La mida de l'historial ha de ser un nombre no negatiu",
     "Expiration days have to be a non negative number" : "El nombre de dies de caducitat ha de ser un nombre no negatiu",
     "Maximum login attempts have to be a non negative number" : "El nombre màxim d'intents d'inici de sessió ha de ser un nombre no negatiu",
+    "Settings saved" : "S'han desat els paràmetres",
     "Saved" : "S'ha desat",
     "Error while saving" : "S'ha produït un error en desar"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
