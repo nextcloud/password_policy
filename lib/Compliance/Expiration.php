@@ -84,7 +84,7 @@ class Expiration implements IUpdatable, IEntryControl {
 		);
 	}
 
-	public function entryControl(IUser $user, string $password): void {
+	public function entryControl(IUser $user, ?string $password): void {
 		if ($this->policyConfig->getExpiryInDays() !== 0
 			&& $this->isLocalUser($user)
 			&& $this->isPasswordExpired($user)
