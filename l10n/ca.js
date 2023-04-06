@@ -1,11 +1,11 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password is expired, please use forgot password method to reset" : "La contrasenya ha caducat. Utilitzeu el mètode de recuperació de contrasenya per reinicialitzar-la.",
+    "Password is expired, please use forgot password method to reset" : "La contrasenya ha caducat. Utilitzeu el mètode de recuperació de contrasenya per restablir-la",
     "Password must not have been used recently before." : "La contrasenya no es pot haver utilitzat recentment abans.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "La contrasenya es troba entre les 1.000.000 més freqüents. Indiqueu una contrasenya única.",
     "Password is present in compromised password list. Please choose a different password." : "La contrasenya forma part de la llista de contrasenyes compromeses. Trieu una contrasenya diferent.",
-    "Password needs to be at least %s characters long." : "La contrasenya ha de contenir com a mínim %s caràcters",
+    "Password needs to be at least %s characters long." : "La contrasenya ha de tenir com a mínim %s caràcters.",
     "Password needs to contain at least one numeric character." : "La contrasenya ha de contenir com a mínim un caràcter numèric.",
     "Password needs to contain at least one special character." : "La contrasenya ha de contenir com a mínim un caràcter especial.",
     "Password needs to contain at least one lower and one upper case character." : "La contrasenya ha de contenir com a mínim un caràcter en majúscula i un en minúscula.",
@@ -28,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "El nombre de dies de caducitat ha de ser un nombre no negatiu",
     "Maximum login attempts have to be a non negative number" : "El nombre màxim d'intents d'inici de sessió ha de ser un nombre no negatiu",
     "Settings saved" : "S'han desat els paràmetres",
+    "Error while saving settings" : "S'ha produït un error en desar la configuració",
     "Saved" : "S'ha desat",
     "Error while saving" : "S'ha produït un error en desar"
 },
