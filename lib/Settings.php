@@ -26,8 +26,8 @@ declare(strict_types=1);
 namespace OCA\Password_Policy;
 
 use OCP\AppFramework\Http\TemplateResponse;
-use OCP\Settings\ISettings;
 use OCP\IInitialStateService;
+use OCP\Settings\ISettings;
 use OCP\Util;
 
 class Settings implements ISettings {
@@ -40,8 +40,8 @@ class Settings implements ISettings {
 	private $initialStateService;
 
 	public function __construct(string $appName,
-								PasswordPolicyConfig $config,
-								IInitialStateService $initialStateService) {
+		PasswordPolicyConfig $config,
+		IInitialStateService $initialStateService) {
 		$this->appName = $appName;
 		$this->config = $config;
 		$this->initialStateService = $initialStateService;

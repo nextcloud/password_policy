@@ -25,13 +25,13 @@ declare(strict_types=1);
 
 namespace OCA\Password_Policy\Tests\Validator;
 
+use ChristophWurst\Nextcloud\Testing\TestCase;
 use OC\HintException;
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCA\Password_Policy\Validator\CommonPasswordsValidator;
 use OCA\Password_Policy\Validator\IValidator;
 use OCP\IL10N;
 use PHPUnit\Framework\MockObject\MockObject;
-use ChristophWurst\Nextcloud\Testing\TestCase;
 
 class CommonPasswordsValidatorTest extends TestCase {
 
