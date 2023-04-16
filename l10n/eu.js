@@ -28,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Iraungitze egun kopuruak zenbaki ez negatiboa izan behar du",
     "Maximum login attempts have to be a non negative number" : "Saioa hasteko saiakera mugak zenbaki ez negatiboa izan behar du",
     "Settings saved" : "Ezarpenak gordeta",
+    "Error while saving settings" : "Errorea ezarpenak gordetzean",
     "Saved" : "Gordeta",
     "Error while saving" : "Errore bat gertatu da gordetzean"
 },
