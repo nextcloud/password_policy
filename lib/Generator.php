@@ -40,8 +40,8 @@ class Generator {
 	private $random;
 
 	public function __construct(PasswordPolicyConfig $config,
-								PasswordValidator $validator,
-								ISecureRandom $random) {
+		PasswordValidator $validator,
+		ISecureRandom $random) {
 		$this->config = $config;
 		$this->validator = $validator;
 		$this->random = $random;

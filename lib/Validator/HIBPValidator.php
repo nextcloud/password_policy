@@ -43,9 +43,9 @@ class HIBPValidator implements IValidator {
 	private $logger;
 
 	public function __construct(PasswordPolicyConfig $config,
-								IL10N $l,
-								IClientService $clientService,
-								ILogger $logger) {
+		IL10N $l,
+		IClientService $clientService,
+		ILogger $logger) {
 		$this->config = $config;
 		$this->l = $l;
 		$this->clientService = $clientService;

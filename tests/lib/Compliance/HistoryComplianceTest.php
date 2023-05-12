@@ -25,6 +25,7 @@ declare(strict_types=1);
 
 namespace OCA\Password_Policy\Tests\Compliance;
 
+use ChristophWurst\Nextcloud\Testing\TestCase;
 use OC\HintException;
 use OCA\Password_Policy\Compliance\HistoryCompliance;
 use OCA\Password_Policy\PasswordPolicyConfig;
@@ -35,7 +36,6 @@ use OCP\IUser;
 use OCP\IUserSession;
 use OCP\Security\IHasher;
 use PHPUnit\Framework\MockObject\MockObject;
-use ChristophWurst\Nextcloud\Testing\TestCase;
 
 class HistoryComplianceTest extends TestCase {
 
