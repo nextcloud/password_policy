@@ -21,9 +21,9 @@
 
 namespace OCA\Password_Policy\Tests;
 
-use ChristophWurst\Nextcloud\Testing\TestCase;
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\IConfig;
+use Test\TestCase;
 
 class PasswordPolicyConfigTest extends TestCase {
 

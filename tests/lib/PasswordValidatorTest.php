@@ -21,7 +21,6 @@
 
 namespace OCA\Password_Policy\Tests;
 
-use ChristophWurst\Nextcloud\Testing\TestCase;
 use OCA\Password_Policy\PasswordValidator;
 use OCA\Password_Policy\Validator\CommonPasswordsValidator;
 use OCA\Password_Policy\Validator\HIBPValidator;
@@ -34,6 +33,7 @@ use OCP\AppFramework\IAppContainer;
 use OCP\AppFramework\QueryException;
 use OCP\ILogger;
 use PHPUnit\Framework\MockObject\MockObject;
+use Test\TestCase;
 
 class PasswordValidatorTest extends TestCase {
 

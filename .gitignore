@@ -1,4 +1,5 @@
 /vendor/
+/vendor-bin/*/vendor
 /.php-cs-fixer.cache
 
 node_modules/
