@@ -3,7 +3,7 @@
  *
  * @author Jonas Rittershofer <jotoeri@users.noreply.github.com>
  *
- * @license GNU AGPL version 3 or any later version
+ * @license AGPL-3.0-or-later
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
@@ -22,7 +22,7 @@
 import { translate } from '@nextcloud/l10n'
 import Vue from 'vue'
 
-import AdminSettings from './AdminSettings'
+import AdminSettings from './AdminSettings.vue'
 
 Vue.prototype.t = translate
 
