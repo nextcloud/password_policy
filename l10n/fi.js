@@ -14,6 +14,8 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Salli ylläpitäjän määrittää ennalta määritettyjä ehtoja salasanalle, esimerkiksi vähimmäispituuden",
     "Minimum password length" : "Salasanan vähimmäispituus",
     "User password history" : "Käyttäjän salasanahistoria",
+    "Number of days until user password expires" : "Salasanan vanhenemisen aika päivissä",
+    "Number of login attempts before the user account is blocked (0 for no limit)" : "Sisäänkirjautumisyritysten määrä, ennen kuin käyttäjätili estetään (0 tarkoittaa ei rajoitusta)",
     "Forbid common passwords" : "Kiellä yleisimmät salasanat",
     "Enforce upper and lower case characters" : "Pakota käyttämään isoja ja pieniä kirjaimia",
     "Enforce numeric characters" : "Pakota käyttämään numeroita",
@@ -21,6 +23,7 @@ OC.L10N.register(
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin",
     "Unknown error" : "Tuntematon virhe",
     "Settings saved" : "Asetukset tallennettu",
+    "Error while saving settings" : "Virhe tallennettaessa asetuksia",
     "Saved" : "Tallennettu",
     "Error while saving" : "Virhe tallentaessa"
 },
