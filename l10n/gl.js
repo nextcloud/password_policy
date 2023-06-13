@@ -11,7 +11,7 @@ OC.L10N.register(
     "Password needs to contain at least one lower and one upper case character." : "O contrasinal precisa conter polo menos un caracter en minúsculas e un en maiúsculas.",
     "Password policy" : "Directiva de contrasinais",
     "Allows admins to configure a password policy" : "Permítelle aos administradores  configurar unha directiva de contrasinais",
-    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permítelle aos administradores definir certas precondicións para os contrasinais, p. ex., obrigar a unha lonxitude mínima",
+    "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permítelle aos administradores definir certas precondicións para os contrasinais, p. ex., forzar unha lonxitude mínima",
     "Minimum password length" : "Lonxitude mínima do contrasinal",
     "User password history" : "Historial de contrasinais do usuario",
     "Number of days until user password expires" : "Número de días ata que caduque o contrasinal do usuario",
