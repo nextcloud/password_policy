@@ -1,8 +1,8 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password is expired, please use forgot password method to reset" : "비밀번호가 만료되었습니다, 비밀번호를 잊었어요를 사용해서 비밀번호 재설정",
-    "Password must not have been used recently before." : "비밀번호는 최근에 쓰이지 않은 것이어야 합니다.",
+    "Password is expired, please use forgot password method to reset" : "암호가 만료되었습니다, 암호를 잊었을 때처럼 암호를 재설정 하세요.",
+    "Password must not have been used recently before." : "암호는 최근에 쓰이지 않은 것이어야 합니다.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "암호가 가장 흔한 1,000,000개의 암호에 해당됩니다. 다른 암호를 선택하십시오.",
     "Password is present in compromised password list. Please choose a different password." : "암호가 유출된 암호 목록에 있습니다. 다른 암호를 사용하십시오.",
     "Password needs to contain at least one numeric character." : "암호에 적어도 하나의 숫자를 포함해야 합니다.",
@@ -11,7 +11,7 @@ OC.L10N.register(
     "Password policy" : "암호 정책",
     "Allows admins to configure a password policy" : "관리자가 암호 정책을 변경할 수 있도록 허용",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "관리자가 최소 암호 길이 등 암호 정책을 설정할 수 있도록 허용",
-    "User password history" : "사용자 비밀번호 기록",
+    "User password history" : "사용자 암호 기록",
     "Number of login attempts before the user account is blocked (0 for no limit)" : "최대 로그인 실패 횟수 (0을 입력할 시 무제한이며 초과시 계정이 차단됩니다)",
     "Forbid common passwords" : "일반적인 암호 금지",
     "Enforce upper and lower case characters" : "대문자와 소문자 사용",
