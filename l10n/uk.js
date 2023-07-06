@@ -9,7 +9,7 @@ OC.L10N.register(
     "Password needs to contain at least one numeric character." : "Пароль має містити принаймні одну цифру.",
     "Password needs to contain at least one special character." : "Пароль повинен містити хоча б один спеціальний символ.",
     "Password needs to contain at least one lower and one upper case character." : "Пароль повинен містити принаймні один нижній і один верхній регістри.",
-    "Password policy" : "Політика паролей",
+    "Password policy" : "Політика паролів",
     "Allows admins to configure a password policy" : "Дозволяє адміністраторам налаштовувати політику паролів",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Дозволити адміністратору визначати певні попередні умови для пароля, напр. дотримуватися мінімальної довжини",
     "Minimum password length" : "Мінімальна довжина пароля",
