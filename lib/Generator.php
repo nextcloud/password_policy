@@ -64,18 +64,17 @@ class Generator {
 		$wordCount = max($this->config->getWordCount(), 3);
 
 		$seperator = '-';
-		$wordlistFile = "eff_large_wordlist.php";
-		$eff_large_wordlist = require_once $wordlistFile;
-		$wl_size = count($eff_large_wordlist);
+		$effLargeWordlist = require_once "effLargeWordlist.php";
+		$wlSize = count($effLargeWordlist);
 
 		$words = array();
-		for ($i=0; strlen(join($seperator, $words)) + 1 < $minLength || sizeof($words) < $word_count;$i++){
-			$index = \random_int(0, $wl_size - 1);
-			$words[$i] = ucfirst($eff_large_wordlist[$index]);
+		for ($i=0; strlen(join($seperator, $words)) + 1 < $minLength || sizeof($words) < $wordCount;$i++){
+			$index = \random_int(0, $wlSize - 1);
+			$words[$i] = ucfirst($effLargeWordlist[$index]);
 		}
-		$num_pos = \random_int(0, sizeof($words)-1);
+		$numPos = \random_int(0, sizeof($words)-1);
 		$num = $this->random->generate(1, ISecureRandom::CHAR_DIGITS);
-		$words[$num_pos] .= $num;
+		$words[$numPos] .= $num;
 
 		$password = join($seperator, $words);
 		
