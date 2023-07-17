@@ -3,6 +3,7 @@
 declare(strict_types=1);
 /**
  * @copyright 2017, Roeland Jago Douma <roeland@famdouma.nl>
+ * @copyright Copyright (c) 2023, Sebastian Faul <sebastian@faul.info>
  *
  * @author Roeland Jago Douma <roeland@famdouma.nl>
  *
@@ -52,6 +53,8 @@ class Settings implements ISettings {
 
 		$this->initialStateService->provideInitialState($this->appName, 'config', [
 			'minLength' => $this->config->getMinLength(),
+			'genPhrases' => $this->config->getGeneratePassphrases(),
+			'wordCount' => $this->config->getWordCount(),
 			'enforceNonCommonPassword' => $this->config->getEnforceNonCommonPassword(),
 			'enforceUpperLowerCase' => $this->config->getEnforceUpperLowerCase(),
 			'enforceNumericCharacters' => $this->config->getEnforceNumericCharacters(),

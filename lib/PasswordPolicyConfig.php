@@ -3,6 +3,7 @@
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2016 Bjoern Schiessle <bjoern@schiessle.org>
+ * @copyright Copyright (c) 2023, Sebastian Faul <sebastian@faul.info>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -179,6 +180,57 @@ class PasswordPolicyConfig {
 	 */
 	public function setEnforceHaveIBeenPwned(bool $enforceHaveIBeenPwned) {
 		$this->config->setAppValue('password_policy', 'enforceHaveIBeenPwned', $enforceHaveIBeenPwned ? '1' : '0');
+	}
+
+	/**
+	 * number of words in passphrase
+	 *
+	 * @return int
+	 */
+	public function getWordCount(): int {
+		return $this->config->getAppValue(
+			'password_policy',
+			'wordCount',
+			4
+		);
+	}
+
+	/**
+	 * number of words in passphrase
+	 *
+	 * @param int $numWords
+	 */
+	public function setWordCount(int $numWords) {
+		$this->config->setAppValue(
+			'password_policy',
+			'wordCount',
+			$numWords);
+	}
+
+
+	/**
+	 * generate passphrases
+	 *
+	 * @return bool
+	 */
+	public function getGeneratePassphrases(): bool {
+		return $this->config->getAppValue(
+			'password_policy',
+			'genPhrases',
+			'1'
+		) === '1';
+	}
+
+	/**
+	 * generate passphrases
+	 *
+	 * @param bool $genPhrases
+	 */
+	public function setGeneratePassphrases(bool $genPhrases) {
+		$this->config->setAppValue(
+			'password_policy',
+			'genPhrases',
+			$genPhrases ? '1' : '0');
 	}
 
 	public function getHistorySize(): int {

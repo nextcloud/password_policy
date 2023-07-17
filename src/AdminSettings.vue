@@ -1,5 +1,6 @@
 <!--
   - @copyright Copyright (c) 2021 Jonas Rittershofer <jotoeri@users.noreply.github.com>
+  - @copyright Copyright (c) 2023, Sebastian Faul <sebastian@faul.info>
   -
   - @author Bjoern Schiessle <bjoern@schiessle.org>
   - @author Jonas Rittershofer <jotoeri@users.noreply.github.com>
@@ -106,13 +107,33 @@
 				</p>
 			</li>
 		</ul>
-	</NcSettingsSection>
+		<ul class="password-generator__settings-list">
+			<li>
+				<CheckboxRadioSwitch :checked.sync="config.genPhrases"
+					type="switch"
+					@update:checked="updateBoolSetting('genPhrases')">
+					{{ t('password_policy', 'Generate passpharses') }}
+				</CheckboxRadioSwitch>
+			</li>
+			<li>
+				<div class="external-label">
+					<label for="password-gererator__settings__word-count">{{ t('password_policy', 'Number of words in passphrases') }}</label>
+						<NcTextField :value.sync="config.wordCount"
+							id="password-gererator__settings__word-count"
+							:label-outside="true"
+							type="number"
+							@change="updateNumberSetting('wordCount')"/>
+				</div>
+			</li>
+		</ul>
+	</SettingsSection>
 </template>
 
 <script>
 import { loadState } from '@nextcloud/initial-state'
 import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
 import NcSettingsSection from '@nextcloud/vue/dist/Components/NcSettingsSection.js'
+import NcInputField from '@nextcloud/vue/dist/Components/NcInputField'
 import { showError, showSuccess } from '@nextcloud/dialogs'
 
 export default {
@@ -120,6 +141,7 @@ export default {
 	components: {
 		NcCheckboxRadioSwitch,
 		NcSettingsSection,
+		NcInputField,
 	},
 
 	data() {

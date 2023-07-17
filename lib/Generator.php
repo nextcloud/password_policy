@@ -3,6 +3,7 @@
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2018, Roeland Jago Douma <roeland@famdouma.nl>
+ * @copyright Copyright (c) 2023, Sebastian Faul <sebastian@faul.info>
  *
  * @author Roeland Jago Douma <roeland@famdouma.nl>
  *
@@ -52,6 +53,41 @@ class Generator {
 	 * @throws HintException
 	 */
 	public function generate(): string {
+		if ($this->config->getGeneratePassphrases()) {
+			return $this->generate_phrase();
+		} else {
+			return $this->generate_random();
+		}
+	}
+
+	private function generate_phrase(): string {
+		$minLength = max($this->config->getMinLength(), 8);
+		$word_count = max($this->config->getWordCount(), 3);
+
+		$seperator = "-";
+		$wordlistFile = "eff_large_wordlist.php";
+		$eff_large_wordlist = require_once $wordlistFile;
+		$wl_size = count($eff_large_wordlist);
+
+		$words = array();
+
+
+		for ($i=0; strlen(join($seperator, $words)) + 1 < $minLength || sizeof($words) < $word_count;$i++){
+			$index = \random_int(0, $wl_size - 1);
+			$words[$i] = ucfirst($eff_large_wordlist[$index]);
+		}
+		$num_pos = \random_int(0, sizeof($words)-1);
+		$num = $this->random->generate(1, ISecureRandom::CHAR_DIGITS);
+		$words[$num_pos] .= $num;
+
+		$password = join($seperator, $words);
+		
+		$this->validator->validate($password);
+		
+		return $password;
+	}
+
+	private function generate_random(): string {
 		$minLength = max($this->config->getMinLength(), 8);
 		$length = $minLength;
 
