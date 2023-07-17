@@ -54,24 +54,21 @@ class Generator {
 	 */
 	public function generate(): string {
 		if ($this->config->getGeneratePassphrases()) {
-			return $this->generate_phrase();
-		} else {
-			return $this->generate_random();
+			return $this->generatePhrase();
 		}
+		return $this->generateRandom();
 	}
 
-	private function generate_phrase(): string {
+	private function generatePhrase(): string {
 		$minLength = max($this->config->getMinLength(), 8);
-		$word_count = max($this->config->getWordCount(), 3);
+		$wordCount = max($this->config->getWordCount(), 3);
 
-		$seperator = "-";
+		$seperator = '-';
 		$wordlistFile = "eff_large_wordlist.php";
 		$eff_large_wordlist = require_once $wordlistFile;
 		$wl_size = count($eff_large_wordlist);
 
 		$words = array();
-
-
 		for ($i=0; strlen(join($seperator, $words)) + 1 < $minLength || sizeof($words) < $word_count;$i++){
 			$index = \random_int(0, $wl_size - 1);
 			$words[$i] = ucfirst($eff_large_wordlist[$index]);
@@ -87,7 +84,7 @@ class Generator {
 		return $password;
 	}
 
-	private function generate_random(): string {
+	private function generateRandom(): string {
 		$minLength = max($this->config->getMinLength(), 8);
 		$length = $minLength;
 

@@ -183,9 +183,7 @@ class PasswordPolicyConfig {
 	}
 
 	/**
-	 * number of words in passphrase
-	 *
-	 * @return int
+	 * Number of words in passphrase
 	 */
 	public function getWordCount(): int {
 		return $this->config->getAppValue(
@@ -196,11 +194,9 @@ class PasswordPolicyConfig {
 	}
 
 	/**
-	 * number of words in passphrase
-	 *
-	 * @param int $numWords
+	 * Number of words in passphrase
 	 */
-	public function setWordCount(int $numWords) {
+	public function setWordCount(int $numWords): void {
 		$this->config->setAppValue(
 			'password_policy',
 			'wordCount',
@@ -223,8 +219,6 @@ class PasswordPolicyConfig {
 
 	/**
 	 * generate passphrases
-	 *
-	 * @param bool $genPhrases
 	 */
 	public function setGeneratePassphrases(bool $genPhrases) {
 		$this->config->setAppValue(

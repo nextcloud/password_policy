@@ -115,7 +115,7 @@
 					{{ t('password_policy', 'Generate passpharses') }}
 				</CheckboxRadioSwitch>
 			</li>
-			<li>
+			<li v-if="config.genPhrases">
 				<div class="external-label">
 					<label for="password-gererator__settings__word-count">{{ t('password_policy', 'Number of words in passphrases') }}</label>
 						<NcTextField :value.sync="config.wordCount"
