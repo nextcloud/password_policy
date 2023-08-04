@@ -24,7 +24,7 @@
     "Minimal length has to be a non negative number" : "A lonxitude mínima ten que ser un número non negativo",
     "History size has to be a non negative number" : "O tamaño do historial ten que ser un número non negativo",
     "Expiration days have to be a non negative number" : "Os días de caducidade deben ser un número non negativo",
-    "Maximum login attempts have to be a non negative number" : "O máximo de intentos de inicio de sesión debe ser un número non negativo",
+    "Maximum login attempts have to be a non negative number" : "O máximo de intentos de acceso debe ser un número non negativo",
     "Settings saved" : "Axustes gardados",
     "Error while saving settings" : "Produciuse un erro ao gardar os axustes",
     "Saved" : "Gardado",
