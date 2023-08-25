@@ -1,7 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password is expired, please use forgot password method to reset" : "Термін дії пароля закінчився, скористайтеся методом «Забули пароль», щоб скинути його",
+    "Password is expired, please use forgot password method to reset" : "Термін дії пароля закінчився, скористайтеся методом \"Забули пароль\", щоб перевстановити його",
     "Password must not have been used recently before." : "Пароль не повинен використовуватися нещодавно.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Пароль",
     "Password is present in compromised password list. Please choose a different password." : "Пароль присутній у списку зламаних паролів. Виберіть інший пароль.",
