@@ -28,6 +28,8 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Vervaldagen moet een niet-negatief getal zijn",
     "Maximum login attempts have to be a non negative number" : "Maximum aantal inlogpogingen moet een niet-negatief getal zijn",
     "Settings saved" : "Instellingen opgeslagen",
-    "Saved" : "Opgeslagen"
+    "Error while saving settings" : "Probleem tijdens het opslaan van instellingen",
+    "Saved" : "Opgeslagen",
+    "Error while saving" : "Fout bij opslaan"
 },
 "nplurals=2; plural=(n != 1);");
