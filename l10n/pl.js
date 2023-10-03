@@ -28,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Dni do wygaśnięcia muszą być liczbą nieujemną",
     "Maximum login attempts have to be a non negative number" : "Maksymalna liczba prób logowania musi być liczbą nieujemną",
     "Settings saved" : "Ustawienia zapisane",
+    "Error while saving settings" : "Błąd podczas zapisywania ustawień",
     "Saved" : "Zapisano",
     "Error while saving" : "Błąd podczas zapisywania"
 },
