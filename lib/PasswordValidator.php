@@ -32,20 +32,16 @@ use OCA\Password_Policy\Validator\LengthValidator;
 use OCA\Password_Policy\Validator\NumericCharacterValidator;
 use OCA\Password_Policy\Validator\SpecialCharactersValidator;
 use OCA\Password_Policy\Validator\UpperCaseLoweCaseValidator;
-use OCP\AppFramework\IAppContainer;
-use OCP\AppFramework\QueryException;
-use OCP\ILogger;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\ContainerInterface;
+use Psr\Log\LoggerInterface;
 
 class PasswordValidator {
 
-	/** @var IAppContainer */
-	private $container;
-	/** @var ILogger */
-	private $logger;
-
-	public function __construct(IAppContainer $container, ILogger $logger) {
-		$this->container = $container;
-		$this->logger = $logger;
+	public function __construct(
+		private ContainerInterface $container,
+		private LoggerInterface $logger,
+	) {
 	}
 
 	/**
@@ -68,10 +64,10 @@ class PasswordValidator {
 		foreach ($validators as $validator) {
 			try {
 				/** @var IValidator $instance */
-				$instance = $this->container->query($validator);
-			} catch (QueryException $e) {
+				$instance = $this->container->get($validator);
+			} catch (ContainerExceptionInterface $e) {
 				//ignore and continue
-				$this->logger->logException($e, ['level' => ILogger::INFO]);
+				$this->logger->info('Could not get validator from container', ['validator' => $validator, 'exception' => $e]);
 				continue;
 			}
 

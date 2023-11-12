@@ -32,43 +32,30 @@ use OCA\Password_Policy\Compliance\HistoryCompliance;
 use OCA\Password_Policy\Compliance\IAuditor;
 use OCA\Password_Policy\Compliance\IEntryControl;
 use OCA\Password_Policy\Compliance\IUpdatable;
-use OCP\AppFramework\IAppContainer;
-use OCP\AppFramework\QueryException;
 use OCP\IConfig;
-use OCP\ILogger;
 use OCP\ISession;
 use OCP\IUser;
+use OCP\IUserManager;
 use OCP\IUserSession;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\ContainerInterface;
+use Psr\Log\LoggerInterface;
 
 class ComplianceService {
-	/** @var IAppContainer */
-	protected $container;
-	/** @var ILogger */
-	protected $logger;
 
 	protected const COMPLIANCERS = [
 		HistoryCompliance::class,
 		Expiration::class,
 	];
-	/** @var IUserSession */
-	private $userSession;
-	/** @var IConfig */
-	private $config;
-	/** @var ISession */
-	private $session;
 
 	public function __construct(
-		IAppContainer $container,
-		ILogger $logger,
-		IUserSession $userSession,
-		IConfig $config,
-		ISession $session
+		private ContainerInterface $container,
+		private LoggerInterface $logger,
+		private IUserSession $userSession,
+		private IConfig $config,
+		private ISession $session,
+		private IUserManager $userManager,
 	) {
-		$this->container = $container;
-		$this->logger = $logger;
-		$this->userSession = $userSession;
-		$this->config = $config;
-		$this->session = $session;
 	}
 
 	public function update(IUser $user, string $password) {
@@ -94,9 +81,9 @@ class ComplianceService {
 		/** @var IEntryControl $instance */
 		foreach ($this->getInstance(IEntryControl::class) as $instance) {
 			try {
-				$user = \OC::$server->getUserManager()->get($uid);
+				$user = $this->userManager->get($uid);
 
-				if (!($user instanceof IUser)) {
+				if ($user === null) {
 					break;
 				}
 
@@ -113,13 +100,13 @@ class ComplianceService {
 	protected function getInstance($interface) {
 		foreach (self::COMPLIANCERS as $compliance) {
 			try {
-				$instance = $this->container->query($compliance);
+				$instance = $this->container->get($compliance);
 				if (!$instance instanceof $interface) {
 					continue;
 				}
-			} catch (QueryException $e) {
+			} catch (ContainerExceptionInterface $e) {
 				//ignore and continue
-				$this->logger->logException($e, ['level' => ILogger::INFO]);
+				$this->logger->info('Could not query compliance', ['compliance' => $compliance, 'exception' => $e]);
 				continue;
 			}
 

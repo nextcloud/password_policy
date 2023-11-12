@@ -30,17 +30,17 @@ use OCA\Password_Policy\Validator\LengthValidator;
 use OCA\Password_Policy\Validator\NumericCharacterValidator;
 use OCA\Password_Policy\Validator\SpecialCharactersValidator;
 use OCA\Password_Policy\Validator\UpperCaseLoweCaseValidator;
-use OCP\AppFramework\IAppContainer;
-use OCP\AppFramework\QueryException;
-use OCP\ILogger;
 use PHPUnit\Framework\MockObject\MockObject;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\ContainerInterface;
+use Psr\Log\LoggerInterface;
 
 class PasswordValidatorTest extends TestCase {
 
-	/** @var IAppContainer|MockObject */
+	/** @var ContainerInterface|MockObject */
 	private $container;
 
-	/** @var ILogger|MockObject */
+	/** @var LoggerInterface|MockObject */
 	private $logger;
 
 	/** @var PasswordValidator */
@@ -50,8 +50,8 @@ class PasswordValidatorTest extends TestCase {
 	protected function setUp(): void {
 		parent::setUp();
 
-		$this->container = $this->createMock(IAppContainer::class);
-		$this->logger = $this->createMock(ILogger::class);
+		$this->container = $this->createMock(ContainerInterface::class);
+		$this->logger = $this->createMock(LoggerInterface::class);
 
 		$this->validator = new PasswordValidator($this->container, $this->logger);
 	}
@@ -66,7 +66,7 @@ class PasswordValidatorTest extends TestCase {
 			HIBPValidator::class,
 		];
 
-		$this->container->method('query')
+		$this->container->method('get')
 			->willReturnCallback(function ($class) use (&$validators) {
 				if (($key = array_search($class, $validators)) !== false) {
 					$validator = $this->createMock(IValidator::class);
@@ -79,7 +79,7 @@ class PasswordValidatorTest extends TestCase {
 					return $validator;
 				}
 
-				throw new QueryException();
+				throw $this->createMock(ContainerExceptionInterface::class);
 			});
 
 		$this->logger->expects($this->never())->method($this->anything());
