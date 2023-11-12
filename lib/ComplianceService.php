@@ -8,13 +8,13 @@ declare(strict_types=1);
 
 namespace OCA\Password_Policy;
 
-use OC\HintException;
 use OC\User\LoginException;
 use OCA\Password_Policy\Compliance\Expiration;
 use OCA\Password_Policy\Compliance\HistoryCompliance;
 use OCA\Password_Policy\Compliance\IAuditor;
 use OCA\Password_Policy\Compliance\IEntryControl;
 use OCA\Password_Policy\Compliance\IUpdatable;
+use OCP\HintException;
 use OCP\IConfig;
 use OCP\ISession;
 use OCP\IUser;
