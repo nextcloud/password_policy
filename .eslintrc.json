@@ -1,0 +1,8 @@
+{
+	"globals": {
+		"appName": true
+	},
+	"extends": [
+		"@nextcloud"
+	]
+}
