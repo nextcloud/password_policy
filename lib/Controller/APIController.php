@@ -25,12 +25,12 @@ declare(strict_types=1);
 
 namespace OCA\Password_Policy\Controller;
 
-use OC\HintException;
 use OCA\Password_Policy\Generator;
 use OCA\Password_Policy\PasswordValidator;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\OCSController;
+use OCP\HintException;
 use OCP\IRequest;
 
 class APIController extends OCSController {

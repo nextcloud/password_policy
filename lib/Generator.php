@@ -25,7 +25,7 @@ declare(strict_types=1);
 
 namespace OCA\Password_Policy;
 
-use OC\HintException;
+use OCP\HintException;
 use OCP\Security\ISecureRandom;
 
 class Generator {

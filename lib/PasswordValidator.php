@@ -24,7 +24,6 @@ declare(strict_types=1);
 
 namespace OCA\Password_Policy;
 
-use OC\HintException;
 use OCA\Password_Policy\Validator\CommonPasswordsValidator;
 use OCA\Password_Policy\Validator\HIBPValidator;
 use OCA\Password_Policy\Validator\IValidator;
@@ -34,6 +33,7 @@ use OCA\Password_Policy\Validator\SpecialCharactersValidator;
 use OCA\Password_Policy\Validator\UpperCaseLoweCaseValidator;
 use OCP\AppFramework\IAppContainer;
 use OCP\AppFramework\QueryException;
+use OCP\HintException;
 use OCP\ILogger;
 
 class PasswordValidator {

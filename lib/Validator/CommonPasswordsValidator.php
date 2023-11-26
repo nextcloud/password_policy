@@ -25,8 +25,8 @@ declare(strict_types=1);
 
 namespace OCA\Password_Policy\Validator;
 
-use OC\HintException;
 use OCA\Password_Policy\PasswordPolicyConfig;
+use OCP\HintException;
 use OCP\IL10N;
 
 class CommonPasswordsValidator implements IValidator {

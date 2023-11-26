@@ -18,6 +18,12 @@
 	"require-dev": {
 		"christophwurst/nextcloud_testing": "^0.12.4",
 		"nextcloud/coding-standard": "^1.0.0",
+		"nextcloud/ocp": "dev-master",
 		"phpunit/phpunit": "^9.5"
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"OCP\\": "vendor/nextcloud/ocp/OCP"
+		}
 	}
 }
