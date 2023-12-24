@@ -1,4 +1,5 @@
 { "translations": {
+    "Password is expired, please use forgot password method to reset" : "La contraseña caducó, usa'l métodu de contraseñes escaecíes pa reafitala",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "La contraseña ta ente'l 1000000 más frecuente. Crea una contraseña única.",
     "Password needs to contain at least one numeric character." : "La contraseña tien de contener polo menos un caráuter numbéricu.",
     "Password needs to contain at least one special character." : "La contraseña tien de contener polo menos un caráuter especial.",
