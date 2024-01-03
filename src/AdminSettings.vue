@@ -22,7 +22,7 @@
   -->
 
 <template>
-	<NcSettingsSection :title="t('password_policy', 'Password policy')">
+	<NcSettingsSection :name="t('password_policy', 'Password policy')">
 		<ul class="password-policy__settings-list">
 			<li>
 				<input id="password-policy__settings__min-length"
