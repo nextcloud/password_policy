@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Password is expired, please use forgot password method to reset" : "La contraseña ha caducado. Por favor, usa el método de contraseña olvidada para resetearla.",
     "Password must not have been used recently before." : "La contraseña no debe haber sido utilizada recientemente.",
-    "Password is among the 1,000,000 most common ones. Please make it unique." : "La contraseña está entre el millón más común. Por favor, elige una diferente.",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "Esta contraseña está entre las 1,000,000 más comunes. Por favor, hágala única.",
     "Password is present in compromised password list. Please choose a different password." : "La contraseña se encuentra en una lista de contraseñas filtradas. Por favor, escoge una contraseña diferente.",
     "Password needs to be at least %s characters long." : "La contraseña debe tener un mínimo de %s caracteres.",
     "Password needs to contain at least one numeric character." : "La contraseña debe contener al menos un número.",
