@@ -28,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Dní do expirácie musí byť kladné číslo",
     "Maximum login attempts have to be a non negative number" : "Maximálny počet pokusov o prihlásenie musí byť kladné číslo",
     "Settings saved" : "Nastavenia uložené",
+    "Error while saving settings" : "Chyba pri ukladaní nastavení",
     "Saved" : "Uložené",
     "Error while saving" : "Chyba pri ukladaní"
 },
