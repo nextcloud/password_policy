@@ -26,32 +26,24 @@ declare(strict_types=1);
 namespace OCA\Password_Policy;
 
 use OCP\AppFramework\Http\TemplateResponse;
-use OCP\IInitialStateService;
+use OCP\AppFramework\Services\IInitialState;
 use OCP\Settings\ISettings;
 use OCP\Util;
 
 class Settings implements ISettings {
-	private $appName;
 
-	/** @var PasswordPolicyConfig */
-	private $config;
-
-	/** @var IInitialStateService */
-	private $initialStateService;
-
-	public function __construct(string $appName,
-		PasswordPolicyConfig $config,
-		IInitialStateService $initialStateService) {
-		$this->appName = $appName;
-		$this->config = $config;
-		$this->initialStateService = $initialStateService;
+	public function __construct(
+		private string $appName,
+		private PasswordPolicyConfig $config,
+		private IInitialState $initialStateService,
+	) {
 	}
 
 	public function getForm(): TemplateResponse {
 		Util::addStyle($this->appName, 'password_policy-settings');
 		Util::addScript($this->appName, 'password_policy-settings');
 
-		$this->initialStateService->provideInitialState($this->appName, 'config', [
+		$this->initialStateService->provideInitialState('config', [
 			'minLength' => $this->config->getMinLength(),
 			'enforceNonCommonPassword' => $this->config->getEnforceNonCommonPassword(),
 			'enforceUpperLowerCase' => $this->config->getEnforceUpperLowerCase(),
