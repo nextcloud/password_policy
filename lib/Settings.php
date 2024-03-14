@@ -48,6 +48,7 @@ class Settings implements ISettings {
 	}
 
 	public function getForm(): TemplateResponse {
+		Util::addStyle($this->appName, 'password_policy-settings');
 		Util::addScript($this->appName, 'password_policy-settings');
 
 		$this->initialStateService->provideInitialState($this->appName, 'config', [
