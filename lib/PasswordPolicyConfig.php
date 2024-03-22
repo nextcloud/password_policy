@@ -180,7 +180,50 @@ class PasswordPolicyConfig {
 	public function setEnforceHaveIBeenPwned(bool $enforceHaveIBeenPwned) {
 		$this->config->setAppValue('password_policy', 'enforceHaveIBeenPwned', $enforceHaveIBeenPwned ? '1' : '0');
 	}
+	
+	/**
+	 * Number of words in passphrase
+	 */
+	public function getWordCount(): int {
+		return $this->config->getAppValue(
+			'password_policy',
+			'wordCount',
+			4
+		);
+	}
 
+	/**
+	 * Number of words in passphrase
+	 */
+	public function setWordCount(int $numWords): void {
+		$this->config->setAppValue(
+			'password_policy',
+			'wordCount',
+			$numWords);
+	}
+
+
+	/**
+	 * Generate passphrases
+	 */
+	public function getGeneratePassphrases(): bool {
+		return $this->config->getAppValue(
+			'password_policy',
+			'genPhrases',
+			'1'
+		) === '1';
+	}
+
+	/**
+	 * Generate passphrases
+	 */
+	public function setGeneratePassphrases(bool $genPhrases) : void {
+		$this->config->setAppValue(
+			'password_policy',
+			'genPhrases',
+			$genPhrases ? '1' : '0');
+	}
+	
 	public function getHistorySize(): int {
 		return (int)$this->config->getAppValue(
 			'password_policy',

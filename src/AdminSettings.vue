@@ -106,6 +106,26 @@
 				</p>
 			</li>
 		</ul>
+		<ul class="password-generator__settings-list">
+			<li>
+				<CheckboxRadioSwitch :checked.sync="config.genPhrases"
+					type="switch"
+					@update:checked="updateBoolSetting('genPhrases')">
+					{{ t('password_policy', 'Generate passpharses') }}
+				</CheckboxRadioSwitch>
+			</li>
+			<li v-if="config.genPhrases">
+				<div class="external-label">
+					<label for="password-gererator__word-count">{{ t('password_policy', 'Number of words in passphrases') }}</label>
+					<NcTextField id="password-gererator__word-count"
+						:value.sync="config.wordCount"
+						:label-outside="true"
+						min=0
+						type="number"
+						@change="updateNumberSetting('wordCount')" />
+				</div>
+			</li>
+		</ul>
 	</NcSettingsSection>
 </template>
 
@@ -115,12 +135,14 @@ import { loadState } from '@nextcloud/initial-state'
 
 import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
 import NcSettingsSection from '@nextcloud/vue/dist/Components/NcSettingsSection.js'
+import NcTextField from '@nextcloud/vue/dist/Components/NcTextField.js'
 
 export default {
 	name: 'AdminSettings',
 	components: {
 		NcCheckboxRadioSwitch,
 		NcSettingsSection,
+		NcTextField,
 	},
 
 	data() {
@@ -177,6 +199,7 @@ export default {
 
 <style lang="scss" scoped>
 .password-policy {
+	&__settings-list li div NcTextField[type='number'],
 	&__settings-list li input[type='number'] {
 		width: 75px;
 	}
