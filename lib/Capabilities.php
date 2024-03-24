@@ -3,6 +3,7 @@
 declare(strict_types=1);
 /**
  * @copyright Copyright (c) 2017 Bjoern Schiessle <bjoern@schiessle.org>
+ * @copyright Copyright (c) 2023, Sebastian Faul <sebastian@faul.info>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -50,6 +51,8 @@ class Capabilities implements ICapability {
 			'password_policy' =>
 				[
 					'minLength' => $this->config->getMinLength(),
+					'genPhrases' => $this->config->getGeneratePassphrases(),
+					'wordCount' => $this->config->getWordCount(),
 					'enforceNonCommonPassword' => $this->config->getEnforceNonCommonPassword(),
 					'enforceNumericCharacters' => $this->config->getEnforceNumericCharacters(),
 					'enforceSpecialCharacters' => $this->config->getEnforceSpecialCharacters(),
