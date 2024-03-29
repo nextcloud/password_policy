@@ -23,8 +23,6 @@ OC.L10N.register(
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin",
     "Unknown error" : "Tuntematon virhe",
     "Settings saved" : "Asetukset tallennettu",
-    "Error while saving settings" : "Virhe tallennettaessa asetuksia",
-    "Saved" : "Tallennettu",
-    "Error while saving" : "Virhe tallentaessa"
+    "Error while saving settings" : "Virhe tallennettaessa asetuksia"
 },
 "nplurals=2; plural=(n != 1);");

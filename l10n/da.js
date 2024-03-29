@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Udløbstiden må ikke være negativ",
     "Maximum login attempts have to be a non negative number" : "Antal tilladte loginforsøg må ikke være negativ",
     "Settings saved" : "Indstillinger gemt",
-    "Error while saving settings" : "Der opstod en fejl under lagring af indstillinger",
-    "Saved" : "Gemt",
-    "Error while saving" : "Kunne ikke gemme de nye værdier"
+    "Error while saving settings" : "Der opstod en fejl under lagring af indstillinger"
 },
 "nplurals=2; plural=(n != 1);");

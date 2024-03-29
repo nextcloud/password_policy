@@ -27,8 +27,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Историската должина неможе да биде негативен број",
     "Expiration days have to be a non negative number" : "Датумот на истекување неможе да биде негативен број",
     "Maximum login attempts have to be a non negative number" : "Максималниот број на обиди неможе да биде негативен број",
-    "Settings saved" : "Параматрите се зачувани",
-    "Saved" : "Зачувано",
-    "Error while saving" : "Грешка при зачувување"
+    "Settings saved" : "Параматрите се зачувани"
 },
 "nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;");

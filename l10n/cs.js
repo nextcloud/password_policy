@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Je třeba, aby počet dnů do skončení platnosti nebylo záporné číslo",
     "Maximum login attempts have to be a non negative number" : "Je třeba, aby nejvyšší umožněný počet pokusů o přihlášení nebylo záporné číslo",
     "Settings saved" : "Nastavení uložena",
-    "Error while saving settings" : "Chyba při ukládání nastavení",
-    "Saved" : "Uloženo",
-    "Error while saving" : "Chyba při ukládání"
+    "Error while saving settings" : "Chyba při ukládání nastavení"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

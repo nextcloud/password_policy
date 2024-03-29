@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Expiration days have to be a non negative number",
     "Maximum login attempts have to be a non negative number" : "Maximum login attempts have to be a non negative number",
     "Settings saved" : "تنظیمات ذخیره شد",
-    "Error while saving settings" : "Error while saving settings",
-    "Saved" : "دخیره شد",
-    "Error while saving" : "Error while saving"
+    "Error while saving settings" : "Error while saving settings"
 },
 "nplurals=2; plural=(n > 1);");

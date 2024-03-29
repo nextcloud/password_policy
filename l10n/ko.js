@@ -27,8 +27,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "만료일은 음수가 될 수 없습니다",
     "Maximum login attempts have to be a non negative number" : "최대 로그인 시도 수는 음수가 될 수 없습니다",
     "Settings saved" : "설정 저장됨",
-    "Error while saving settings" : "설정 저장 중 오류 발생",
-    "Saved" : "저장됨",
-    "Error while saving" : "설정 저장 중 오류 발생"
+    "Error while saving settings" : "설정 저장 중 오류 발생"
 },
 "nplurals=1; plural=0;");

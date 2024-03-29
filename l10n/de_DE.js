@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Verfallstage müssen eine nicht negative Zahl sein",
     "Maximum login attempts have to be a non negative number" : "Maximale Anmeldeversuche muss eine nicht negative Zahl sein",
     "Settings saved" : "Einstellungen gespeichert",
-    "Error while saving settings" : "Fehler beim Speichern der Einstellungen",
-    "Saved" : "Gespeichert",
-    "Error while saving" : "Fehler beim Speichern"
+    "Error while saving settings" : "Fehler beim Speichern der Einstellungen"
 },
 "nplurals=2; plural=(n != 1);");
