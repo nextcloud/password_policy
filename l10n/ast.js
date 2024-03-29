@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Los díes de caducidá tienen de ser númberos positivos",
     "Maximum login attempts have to be a non negative number" : "Los intentos máximos d'aniciar la sesión tienen de ser númberos positivos",
     "Settings saved" : "Guardóse la configuración",
-    "Error while saving settings" : "Hebo un error mentanto se guardaba la configuración",
-    "Saved" : "Guardóse",
-    "Error while saving" : "Hebo un error mentanto se guardaba"
+    "Error while saving settings" : "Hebo un error mentanto se guardaba la configuración"
 },
 "nplurals=2; plural=(n != 1);");

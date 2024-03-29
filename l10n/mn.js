@@ -7,7 +7,6 @@ OC.L10N.register(
     "Enforce numeric characters" : "Тоон тэмдэгт шаардах",
     "Enforce special characters" : "Тусгай тэмдэгт шаардах",
     "Unknown error" : "үл мэдэгдэх алдаа",
-    "Settings saved" : "Тохиргоо хадгалагдлаа",
-    "Saved" : "Хадгалах"
+    "Settings saved" : "Тохиргоо хадгалагдлаа"
 },
 "nplurals=2; plural=(n != 1);");

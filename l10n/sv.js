@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Dagar till utgång måste vara ett icke-negativt tal",
     "Maximum login attempts have to be a non negative number" : "Maximala inloggningsförsök måste vara ett icke-negativt tal",
     "Settings saved" : "Inställningar sparade",
-    "Error while saving settings" : "Fel när inställningarna skulle sparas",
-    "Saved" : "Sparad",
-    "Error while saving" : "Kunde inte spara"
+    "Error while saving settings" : "Fel när inställningarna skulle sparas"
 },
 "nplurals=2; plural=(n != 1);");

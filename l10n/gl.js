@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Os días de caducidade deben ser un número non negativo",
     "Maximum login attempts have to be a non negative number" : "O máximo de intentos de acceso debe ser un número non negativo",
     "Settings saved" : "Axustes gardados",
-    "Error while saving settings" : "Produciuse un erro ao gardar os axustes",
-    "Saved" : "Gardado",
-    "Error while saving" : "Produciuse un erro ao gardar"
+    "Error while saving settings" : "Produciuse un erro ao gardar os axustes"
 },
 "nplurals=2; plural=(n != 1);");

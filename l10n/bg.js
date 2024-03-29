@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Срокът на  валидност не трябва да е отрицателно число",
     "Maximum login attempts have to be a non negative number" : "Максималният брой опити за влизане не трябва да е отрицателно число",
     "Settings saved" : "Настройките са запазени",
-    "Error while saving settings" : "Грешка при запазване на настройките",
-    "Saved" : "Запазено",
-    "Error while saving" : "Грешка при запазване"
+    "Error while saving settings" : "Грешка при запазване на настройките"
 },
 "nplurals=2; plural=(n != 1);");

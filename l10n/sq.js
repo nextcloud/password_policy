@@ -11,7 +11,6 @@ OC.L10N.register(
     "Enforce numeric characters" : "Detyro karakteret numerike ",
     "Enforce special characters" : "Detyro karakteret e veçanta",
     "Unknown error" : "Gabim i panjohur",
-    "Settings saved" : "Opsjonet u Ruajtën.",
-    "Saved" : "Ruajtur"
+    "Settings saved" : "Opsjonet u Ruajtën."
 },
 "nplurals=2; plural=(n != 1);");
