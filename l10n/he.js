@@ -27,7 +27,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "גודל ההיסטוריה חייב להיות מספר לא שלילי",
     "Expiration days have to be a non negative number" : "ימי תפוגת התוקף חייבים להיות מספר לא שלילי",
     "Maximum login attempts have to be a non negative number" : "כמות ניסיונות הכניסה המרבית חייבת להיות מספר לא שלילי",
-    "Settings saved" : "הגדרות נשמרו",
-    "Saved" : "נשמרה"
+    "Settings saved" : "הגדרות נשמרו"
 },
 "nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;");

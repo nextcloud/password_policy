@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "有効期限にマイナスの数は設定できません",
     "Maximum login attempts have to be a non negative number" : "最大ログイン試行回数にマイナスの数は設定できません",
     "Settings saved" : "設定が保存されました",
-    "Error while saving settings" : "設定の保存中にエラーが発生",
-    "Saved" : "保存しました",
-    "Error while saving" : "保存中にエラーが発生しました"
+    "Error while saving settings" : "設定の保存中にエラーが発生"
 },
 "nplurals=1; plural=0;");

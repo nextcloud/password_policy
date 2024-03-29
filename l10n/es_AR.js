@@ -7,7 +7,6 @@ OC.L10N.register(
     "Enforce numeric characters" : "Imponer caracteres numéricos",
     "Enforce special characters" : "Imponer caracteres especiales",
     "Unknown error" : "Error desconocido",
-    "Settings saved" : "Configuraciones guardadas",
-    "Saved" : "Guardado"
+    "Settings saved" : "Configuraciones guardadas"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

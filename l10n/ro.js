@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Numărul zilelor până la expirare trebuie să fie pozitiv",
     "Maximum login attempts have to be a non negative number" : "Numărul de încercări de autentificare trebuie să fie un număr pozitiv",
     "Settings saved" : "Setările au fost salvate",
-    "Error while saving settings" : "Eroare la salvarea setărilor",
-    "Saved" : "Salvat",
-    "Error while saving" : "Eroare la salvare"
+    "Error while saving settings" : "Eroare la salvarea setărilor"
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");

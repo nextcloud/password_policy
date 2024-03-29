@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "La date d'expiration doit être un nombre positif",
     "Maximum login attempts have to be a non negative number" : "Le nombre de tentatives de connexion doit être un nombre positif",
     "Settings saved" : "Paramètres sauvegardés",
-    "Error while saving settings" : "Erreur lors de l'enregistrement des paramètres",
-    "Saved" : "Enregistré",
-    "Error while saving" : "Erreur lors de l'enregistrement"
+    "Error while saving settings" : "Erreur lors de l'enregistrement des paramètres"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
