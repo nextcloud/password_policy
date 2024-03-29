@@ -7,7 +7,6 @@ OC.L10N.register(
     "Enforce numeric characters" : "Berlakukan karakter numerik",
     "Enforce special characters" : "Berlakukan karakter spesial",
     "Unknown error" : "Kesalahan tidak diketahui",
-    "Settings saved" : "Setelan tersimpan",
-    "Saved" : "Disimpan"
+    "Settings saved" : "Setelan tersimpan"
 },
 "nplurals=1; plural=0;");

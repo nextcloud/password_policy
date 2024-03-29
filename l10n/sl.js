@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Število dni do pretaka mora biti ne-negativna vrednost.",
     "Maximum login attempts have to be a non negative number" : "Največje število poskusov prijave mora biti ne-negativna vrednost.",
     "Settings saved" : "Nastavitve so shranjene",
-    "Error while saving settings" : "Prišlo je do napake med shranjevanjem nastavitev",
-    "Saved" : "Shranjeno",
-    "Error while saving" : "Napaka med shranjevanjem"
+    "Error while saving settings" : "Prišlo je do napake med shranjevanjem nastavitev"
 },
 "nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);");

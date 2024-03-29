@@ -11,7 +11,6 @@ OC.L10N.register(
     "Enforce numeric characters" : "Forçar caracteres numéricos",
     "Enforce special characters" : "Forçar caracteres especiais",
     "Unknown error" : "Erro desconhecido",
-    "Settings saved" : "Definições guardadas",
-    "Saved" : "Guardado"
+    "Settings saved" : "Definições guardadas"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

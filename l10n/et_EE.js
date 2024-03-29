@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Aegumise päevad peavad olema positiivne arv",
     "Maximum login attempts have to be a non negative number" : "Sisselogimise katsete arv peab olema positiivne arv",
     "Settings saved" : "Seaded salvestatud",
-    "Error while saving settings" : "Viga seadete salvestamisel",
-    "Saved" : "Salvestatud",
-    "Error while saving" : "Viga salvestamisel"
+    "Error while saving settings" : "Viga seadete salvestamisel"
 },
 "nplurals=2; plural=(n != 1);");

@@ -28,8 +28,6 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Fjöldi gildisdaga þarf að vera jákvæð tala",
     "Maximum login attempts have to be a non negative number" : "Fjöldi tilrauna til innskráningar þarf að vera jákvæð tala",
     "Settings saved" : "Stillingar vistaðar",
-    "Error while saving settings" : "Villa við að vista stillingar",
-    "Saved" : "Vistað",
-    "Error while saving" : "Villa við vistun"
+    "Error while saving settings" : "Villa við að vista stillingar"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

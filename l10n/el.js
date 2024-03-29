@@ -27,8 +27,6 @@ OC.L10N.register(
     "History size has to be a non negative number" : "Το μέγεθος ιστορικού πρέπει να είναι μη αρνητικός αριθμός",
     "Expiration days have to be a non negative number" : "Οι ημέρες λήξης πρέπει να είναι μη αρνητικοί αριθμοί",
     "Maximum login attempts have to be a non negative number" : "Οι μέγιστες προσπάθειες σύνδεσης πρέπει να είναι μη αρνητικός αριθμός",
-    "Settings saved" : "Οι ρυθμίσεις αποθηκεύτηκαν",
-    "Saved" : "Αποθηκεύτηκε",
-    "Error while saving" : "Σφάλμα κατά την αποθήκευση"
+    "Settings saved" : "Οι ρυθμίσεις αποθηκεύτηκαν"
 },
 "nplurals=2; plural=(n != 1);");
