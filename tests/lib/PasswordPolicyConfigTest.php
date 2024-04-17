@@ -145,6 +145,16 @@ class PasswordPolicyConfigTest extends TestCase {
 		$this->instance->setEnforceSpecialCharacters($setValue);
 	}
 
+	/**
+	 * @dataProvider configTestData
+	 */
+	public function testSetGeneratePassphrases($expected, $setValue){
+		$this->config->expects($this->once())->method('setAppValue')
+			->with('password_policy', 'genPhrases', $expected);
+
+		$this->instance->setGeneratePassphrases($setValue);
+	}
+
 	public function configTestData() {
 		return [
 			['1', true],
