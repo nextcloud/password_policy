@@ -15,7 +15,6 @@ OC.L10N.register(
     "Minimum password length" : "Мінімальна довжина пароля",
     "User password history" : "Історія паролів користувача",
     "Number of days until user password expires" : "Кількість днів до закінчення терміну дії пароля користувача",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Кількість спроб входу до блокування облікового запису користувача (0 без обмежень)",
     "Forbid common passwords" : "Заборонити загальні паролі",
     "Enforce upper and lower case characters" : "Застосування символів верхнього та нижнього регістру",
     "Enforce numeric characters" : "Застосування цифрових символів",

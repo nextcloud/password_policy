@@ -15,7 +15,6 @@ OC.L10N.register(
     "Minimum password length" : "Lágmarkslengd lykilorðs",
     "User password history" : "Ferill lykilorða notanda",
     "Number of days until user password expires" : "Fjöldi daga þar til lykilorð notanda rennur út",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Fjöldi tilrauna til innskráningar áður en lokað er á notandaaðgang (0 fyrir engin takmörk)",
     "Forbid common passwords" : "Banna algeng lykilorð",
     "Enforce upper and lower case characters" : "Krefjast há- og lágstafa",
     "Enforce numeric characters" : "Krefjast tölustafa",

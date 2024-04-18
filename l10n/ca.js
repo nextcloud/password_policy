@@ -15,7 +15,6 @@ OC.L10N.register(
     "Minimum password length" : "Longitud mínima de la contrasenya",
     "User password history" : "Historial de contrasenyes de l'usuari",
     "Number of days until user password expires" : "Nombre de dies fins que caduca la contrasenya de l'usuari",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Nombre d'intents d'inici de sessió abans de blocar el compte d'usuari (0: sense límit)",
     "Forbid common passwords" : "Prohibeix les contrasenyes freqüents",
     "Enforce upper and lower case characters" : "Força els caràcters en majúscula i minúscula",
     "Enforce numeric characters" : "Força els caràcters numèrics",
