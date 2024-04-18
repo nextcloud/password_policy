@@ -13,7 +13,6 @@
     "Minimum password length" : "Llongura mínima de la contraseña",
     "User password history" : "Historial de contraseñes del usuariu",
     "Number of days until user password expires" : "Númberu de díes hasta que la contraseña del usuariu caduque",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Númberu d'intentos d'aniciar la sesión enantes de bloquiar la cuenta (0 pa nun tener llende)",
     "Forbid common passwords" : "Prohibir les contraseñes habituales",
     "Enforce upper and lower case characters" : "Obligar a poner mayúscules y minúscules",
     "Enforce numeric characters" : "Obligar a poner númberos",

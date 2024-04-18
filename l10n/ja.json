@@ -13,7 +13,6 @@
     "Minimum password length" : "最低限のパスワードの長さ",
     "User password history" : "ユーザーのパスワード履歴",
     "Number of days until user password expires" : "ユーザーのパスワードが失効するまでの日数",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "ユーザーアカウントがブロックされるまでのログイン試行回数 (制限なしの場合は0)",
     "Forbid common passwords" : "一般的なパスワードを禁止する",
     "Enforce upper and lower case characters" : "大文字と小文字を必ず含む",
     "Enforce numeric characters" : "数字を必ず含む",

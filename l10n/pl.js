@@ -15,7 +15,6 @@ OC.L10N.register(
     "Minimum password length" : "Minimalna długość hasła",
     "User password history" : "Historia haseł użytkownika",
     "Number of days until user password expires" : "Liczba dni do wygaśnięcia hasła użytkownika",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Liczba prób logowania przed zablokowaniem konta użytkownika (0 bez limitu)",
     "Forbid common passwords" : "Zabroń takich samych haseł",
     "Enforce upper and lower case characters" : "Wymuś wielkie i małe litery",
     "Enforce numeric characters" : "Wymuś znaki numeryczne",

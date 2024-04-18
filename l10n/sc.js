@@ -15,7 +15,6 @@ OC.L10N.register(
     "Minimum password length" : "Longària mìnima de crae",
     "User password history" : "Cronologia de is craes de s'utente",
     "Number of days until user password expires" : "Nùmeru de dies in antis de s'iscadèntzia de sa crae",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Nùmeru de tentativos de intrada in antis de su blocu de su contu (0 pro perunu lìmite)",
     "Forbid common passwords" : "Proibi is craes comunes",
     "Enforce upper and lower case characters" : "Pone caràteres a piticu e a mannu",
     "Enforce numeric characters" : "Pone caràtere numèricos",

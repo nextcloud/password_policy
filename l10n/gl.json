@@ -13,7 +13,6 @@
     "Minimum password length" : "Lonxitude mínima do contrasinal",
     "User password history" : "Historial de contrasinais do usuario",
     "Number of days until user password expires" : "Número de días ata que caduque o contrasinal do usuario",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Número de intentos de acceso antes de que se bloquee a conta do usuario. (0 para sen límite)",
     "Forbid common passwords" : "Prohibir contrasinais comúns",
     "Enforce upper and lower case characters" : "Impor caracteres en maiúsculas e minúsculas",
     "Enforce numeric characters" : "Impor caracteres numéricos",

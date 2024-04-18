@@ -15,7 +15,6 @@ OC.L10N.register(
     "Minimum password length" : "En kısa parola uzunluğu",
     "User password history" : "Kullanıcının parola geçmişi",
     "Number of days until user password expires" : "Kullanıcı parolasının geçerlilik süresinin dolmasına kalan gün",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Kullanıcının hesabı kilitlenmeden önce deneyebileceği oturum açma girişimi sayısı (sınırlama olmaması için 0 yazın)",
     "Forbid common passwords" : "Sık kullanılan parolalar kullanılamasın",
     "Enforce upper and lower case characters" : "Parolada büyük ve küçük harfler bulunsun",
     "Enforce numeric characters" : "Parolada rakam bulunsun",

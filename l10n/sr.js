@@ -15,7 +15,6 @@ OC.L10N.register(
     "Minimum password length" : "Минимална дужина лозинке",
     "User password history" : "Користи историјат лозинки",
     "Number of days until user password expires" : "Број дана до истека важења коринискове лозинке",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Број покушаја пријаве пре блокирања корисничког налога (0 без ограничења)",
     "Forbid common passwords" : "Забрани честе лозинке",
     "Enforce upper and lower case characters" : "Захтевај употребу и малих и великих слова",
     "Enforce numeric characters" : "Захтевај употребу цифри",

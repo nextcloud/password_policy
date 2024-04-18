@@ -15,7 +15,6 @@ OC.L10N.register(
     "Minimum password length" : "密碼最小長度",
     "User password history" : "用戶密碼歷史記錄",
     "Number of days until user password expires" : "距離密碼到期天數",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "封鎖用戶賬戶前的登入嘗試次數（0 為沒有限制）",
     "Forbid common passwords" : "禁止常用密碼",
     "Enforce upper and lower case characters" : "一定要各用一個大寫與小寫",
     "Enforce numeric characters" : "一定要用數字",
