@@ -13,7 +13,6 @@
     "Minimum password length" : "الحد الأدنى لطول كلمة السر",
     "User password history" : "استعمل السجل التاريخي كلمات السر السابقة",
     "Number of days until user password expires" : "عدد الأيام المتبقية حتى انتهاء صلاحية كلمة سر المستخدم",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "عدد محاولات الدخول الفاشلة قبل قفل حساب المستخدم (0 تعني بدون حدود)",
     "Forbid common passwords" : "إمنع الكلمات الشائعة",
     "Enforce upper and lower case characters" : "إفرض استعمال الحروف الصغيرة و الكبيرة",
     "Enforce numeric characters" : "إفرض استعمال الخانات العددية",

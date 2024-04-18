@@ -13,7 +13,6 @@
     "Minimum password length" : "Pasahitzaren gutxieneko luzera",
     "User password history" : "Erabiltzailearen pasahitz historia",
     "Number of days until user password expires" : "Erabiltzailearen pasahitza iraungi arteko egun kopurua",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Erabiltzaile kontua blokeatu aurretik saioa hasteko saiakera kopurua (0 mugarik ez ezartzeko) ",
     "Forbid common passwords" : "Pasahitz ohikoenak debekatu",
     "Enforce upper and lower case characters" : "Behartu hizki xehe eta larriak erabiltzera",
     "Enforce numeric characters" : "Behartu karaktere numerikoak erabiltzera",

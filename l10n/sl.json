@@ -13,7 +13,6 @@
     "Minimum password length" : "Najmanjša dolžina gesla",
     "User password history" : "Uporabniška zgodovina gesel",
     "Number of days until user password expires" : "Število dni do preteka uporabniškega gesla",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Število poskusov prijave, preden se dostop do uporabniškega računa zaklene (0 pomeni brez omejitve).",
     "Forbid common passwords" : "Prepreči splošna gesla",
     "Enforce upper and lower case characters" : "Zahtevaj velike in male črkovne znake",
     "Enforce numeric characters" : "Zahtevaj številske znake",

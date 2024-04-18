@@ -15,7 +15,6 @@ OC.L10N.register(
     "Minimum password length" : "Lungimea minimă a parolei",
     "User password history" : "Istoric parole",
     "Number of days until user password expires" : "Numărul de zile după care parola expiră",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Numărul de încercări înainte de blocarea contului (0 pentru nelimitat)",
     "Forbid common passwords" : "Refuză parole comune",
     "Enforce upper and lower case characters" : "Impune litere mari și mici",
     "Enforce numeric characters" : "Impune caractere numerice",

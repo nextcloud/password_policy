@@ -15,7 +15,6 @@ OC.L10N.register(
     "Minimum password length" : "Longueur minimale du mot de passe",
     "User password history" : "Historique des mots de passe de l'utilisateur",
     "Number of days until user password expires" : "Nombre de jours avant expiration du mot de passe",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Nombre de tentatives de connexion avant de verrouiller le compte utilisateur (0 pour indiquer aucune limite)",
     "Forbid common passwords" : "Interdire les mots de passe courants",
     "Enforce upper and lower case characters" : "Imposer des caractères en majuscules et en minuscules",
     "Enforce numeric characters" : "Imposer des chiffres",

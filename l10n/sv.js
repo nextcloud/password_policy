@@ -15,7 +15,6 @@ OC.L10N.register(
     "Minimum password length" : "Minsta lösenordslängd",
     "User password history" : "Lösenordshistorik",
     "Number of days until user password expires" : "Antal dagar tills lösenordet går ut",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Antalet inloggningsförsök innan användarkontot blockeras (0 för obegränsat)",
     "Forbid common passwords" : "Förbjud de vanligaste lösenorden",
     "Enforce upper and lower case characters" : "Kräv stor och liten bokstav i lösenordet",
     "Enforce numeric characters" : "Kräv en siffra i lösenordet",
