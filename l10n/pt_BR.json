@@ -13,7 +13,6 @@
     "Minimum password length" : "Tamanho mínimo para senhas",
     "User password history" : "Histórico de senhas do usuário",
     "Number of days until user password expires" : "Número de dias até a expiração da senha do usuário",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Número de tentativas de autenticação antes que a conta do usuário seja bloqueada (0 para sem limite)",
     "Forbid common passwords" : "Proibir senhas comuns",
     "Enforce upper and lower case characters" : "Forçar caracteres maiúsculos e minúsculos",
     "Enforce numeric characters" : "Forçar aplicar caracteres numéricos",

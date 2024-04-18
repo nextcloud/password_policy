@@ -13,7 +13,6 @@
     "Minimum password length" : "Minimum password length",
     "User password history" : "User password history",
     "Number of days until user password expires" : "Number of days until user password expires",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Number of login attempts before the user account is blocked (0 for no limit)",
     "Forbid common passwords" : "ممنوع کردن کلمه عبور مشترک",
     "Enforce upper and lower case characters" : "کاراکترهای بزرگ و پایین را اجرا کنید",
     "Enforce numeric characters" : "اجرای شخصیت های عددی",

@@ -13,7 +13,6 @@
     "Minimum password length" : "Minimaalne parooli pikkus",
     "User password history" : "Kasutaja parooli ajalugu",
     "Number of days until user password expires" : "Päevade arv parooli aegumiseni",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Sisselogimise katsete arv enne kasutajakonto blokeerimist (limiidi puudumiseks 0)",
     "Forbid common passwords" : "Keela laialtlevinud paroolid",
     "Enforce upper and lower case characters" : "Nõua suured ja väikesed tähed",
     "Enforce numeric characters" : "Nõua numbrilised sümbolid",

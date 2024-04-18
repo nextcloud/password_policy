@@ -15,7 +15,6 @@ OC.L10N.register(
     "Minimum password length" : "최소 암호 길이",
     "User password history" : "사용자 암호 기록",
     "Number of days until user password expires" : "암호 만기일 수",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "최대 로그인 실패 횟수 (0을 입력할 시 무제한이며 초과시 계정이 차단됩니다.)",
     "Forbid common passwords" : "일반적인 암호 금지",
     "Enforce upper and lower case characters" : "대문자와 소문자 사용",
     "Enforce numeric characters" : "숫자 사용",

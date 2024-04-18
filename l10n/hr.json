@@ -13,7 +13,6 @@
     "Minimum password length" : "Minimalna dužina zaporke",
     "User password history" : "Povijest zaporki korisnika",
     "Number of days until user password expires" : "Broj dana do isteka zaporke",
-    "Number of login attempts before the user account is blocked (0 for no limit)" : "Broj pokušaja prijave prije blokiranja računa korisnika (0 za neograničeno)",
     "Forbid common passwords" : "Zabrani česte zaporke",
     "Enforce upper and lower case characters" : "Obavezna uporaba velikih i malih slova",
     "Enforce numeric characters" : "Obavezna uporaba numeričkih znakova",
