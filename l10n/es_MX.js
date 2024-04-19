@@ -15,6 +15,8 @@ OC.L10N.register(
     "Minimum password length" : "Longitud mínima de la contraseña.",
     "User password history" : "Historial de contraseñas del usuario.",
     "Number of days until user password expires" : "Número de días hasta que la contraseña del usuario caduque",
+    "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Número de intentos de inicio de sesión antes de que la cuenta de usuario se deshabilite hasta que se tomen medidas manualmente. (0 para sin límite)",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Por favor, note que esta opción está diseñada para proteger cuentas bajo ataque. Las cuentas deshabilitadas tienen que ser rehabilitadas manualmente por la administración. Se bloquearán las direcciones IP de los atacantes que intenten adivinar las contraseñas de las cuentas por la protección contra fuerza bruta, independientemente de esta configuración.",
     "Forbid common passwords" : "Restringir contraseñas comunes",
     "Enforce upper and lower case characters" : "Imponer caracteres en mayúsculas y minúsculas",
     "Enforce numeric characters" : "Imponer caracteres numéricos",
