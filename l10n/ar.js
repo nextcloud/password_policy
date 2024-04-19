@@ -15,6 +15,8 @@ OC.L10N.register(
     "Minimum password length" : "الحد الأدنى لطول كلمة السر",
     "User password history" : "استعمل السجل التاريخي كلمات السر السابقة",
     "Number of days until user password expires" : "عدد الأيام المتبقية حتى انتهاء صلاحية كلمة سر المستخدم",
+    "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "عدد محاولات تسجيل الدخول قبل تعطيل حساب المستخدم حتى يتم اتخاذ الإجراء اليدوي. (0 بلا حدود)",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "يرجى ملاحظة أن هذا الخيار يهدف إلى حماية الحسابات التي تعرضت للهجوم. يجب إعادة تمكين الحسابات المعطلة يدويًا بواسطة الإدارة. المهاجمون الذين يحاولون تخمين كلمات مرور الحسابات سيتم حظر عنوان IP الخاص بهم بواسطة إجراءات الحماية من هجمات القوة الكاسحة بشكل مستقل عن هذا الإعداد.",
     "Forbid common passwords" : "إمنع الكلمات الشائعة",
     "Enforce upper and lower case characters" : "إفرض استعمال الحروف الصغيرة و الكبيرة",
     "Enforce numeric characters" : "إفرض استعمال الخانات العددية",
