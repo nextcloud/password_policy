@@ -64,7 +64,7 @@
 					{{ t('password_policy', 'Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)') }}
 				</label>
 				<p class="havibeenpwned-hint">
-					{{ t('password_policy', 'Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting.') }}
+					{{ t('password_policy', 'Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting.') }}
 				</p>
 			</li>
 		</ul>
