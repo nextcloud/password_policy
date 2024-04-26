@@ -16,7 +16,6 @@ OC.L10N.register(
     "User password history" : "Historique des mots de passe de l'utilisateur",
     "Number of days until user password expires" : "Nombre de jours avant expiration du mot de passe",
     "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Nombre de tentatives de connexion avant que le compte utilisateur soit désactivé jusqu’à ce qu’une action manuelle soit faite. (0 pour indiquer aucune limite)",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Veuillez noter que cette option est destinée à protéger les comptes attaqués. Les comptes désactivés doivent être réactivés manuellement par l’administration. Les attaquants qui essaient de deviner les mots de passe des comptes verront leur adresse IP bloquée par la protection anti force brute indépendante de ce réglage.",
     "Forbid common passwords" : "Interdire les mots de passe courants",
     "Enforce upper and lower case characters" : "Imposer des caractères en majuscules et en minuscules",
     "Enforce numeric characters" : "Imposer des chiffres",
@@ -29,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "La date d'expiration doit être un nombre positif",
     "Maximum login attempts have to be a non negative number" : "Le nombre de tentatives de connexion doit être un nombre positif",
     "Settings saved" : "Paramètres sauvegardés",
-    "Error while saving settings" : "Erreur lors de l'enregistrement des paramètres"
+    "Error while saving settings" : "Erreur lors de l'enregistrement des paramètres",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Veuillez noter que cette option est destinée à protéger les comptes attaqués. Les comptes désactivés doivent être réactivés manuellement par l’administration. Les attaquants qui essaient de deviner les mots de passe des comptes verront leur adresse IP bloquée par la protection anti force brute indépendante de ce réglage."
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
