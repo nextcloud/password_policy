@@ -16,7 +16,6 @@ OC.L10N.register(
     "User password history" : "Historial de contrasenyes de l'usuari",
     "Number of days until user password expires" : "Nombre de dies fins que caduca la contrasenya de l'usuari",
     "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Nombre d'intents d'inici de sessió abans d'inhabilitar el compte d'usuari fins que hi hagi una acció manual. (0: sense límit)",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Tingueu en compte que aquesta opció té la intenció de protegir els comptes atacats. L'administració ha de tornar a habilitar els comptes inhabilitats manualment. Si els atacants intenten endevinar les contrasenyes dels comptes, la protecció contra els atacs de força bruta (independent d'aquest paràmetre) en blocarà l'adreça IP.",
     "Forbid common passwords" : "Prohibeix les contrasenyes freqüents",
     "Enforce upper and lower case characters" : "Força els caràcters en majúscula i minúscula",
     "Enforce numeric characters" : "Força els caràcters numèrics",
@@ -29,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "El nombre de dies de caducitat ha de ser un nombre no negatiu",
     "Maximum login attempts have to be a non negative number" : "El nombre màxim d'intents d'inici de sessió ha de ser un nombre no negatiu",
     "Settings saved" : "S'han desat els paràmetres",
-    "Error while saving settings" : "S'ha produït un error en desar els paràmetres"
+    "Error while saving settings" : "S'ha produït un error en desar els paràmetres",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Tingueu en compte que aquesta opció té la intenció de protegir els comptes atacats. L'administració ha de tornar a habilitar els comptes inhabilitats manualment. Si els atacants intenten endevinar les contrasenyes dels comptes, la protecció contra els atacs de força bruta (independent d'aquest paràmetre) en blocarà l'adreça IP."
 },
 "nplurals=2; plural=(n != 1);");

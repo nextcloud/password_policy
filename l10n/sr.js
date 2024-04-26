@@ -16,7 +16,6 @@ OC.L10N.register(
     "User password history" : "Користи историјат лозинки",
     "Number of days until user password expires" : "Број дана до истека важења коринискове лозинке",
     "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Број покушаја пријаве пре него што се кориснички налог блокира све до ручне интервенције. (0 без ограничења)",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Молимо вас да имате на уму да је намена ове опција заштита нападнутих налога. Администрација мора поново ручно да укључи искључене налоге. Заштита од грубе силе ће блокирати IP адресе нападача који покушавају да погоде лозинке налога, независно од овог подешавања.",
     "Forbid common passwords" : "Забрани честе лозинке",
     "Enforce upper and lower case characters" : "Захтевај употребу и малих и великих слова",
     "Enforce numeric characters" : "Захтевај употребу цифри",
@@ -29,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Дани истицања не смеју да буду негативан број",
     "Maximum login attempts have to be a non negative number" : "Максимални број покушаја пријаве не сме да буде негативан број",
     "Settings saved" : "Поставке сачуване",
-    "Error while saving settings" : "Грешка приликом чувања подешавања"
+    "Error while saving settings" : "Грешка приликом чувања подешавања",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Молимо вас да имате на уму да је намена ове опција заштита нападнутих налога. Администрација мора поново ручно да укључи искључене налоге. Заштита од грубе силе ће блокирати IP адресе нападача који покушавају да погоде лозинке налога, независно од овог подешавања."
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);");

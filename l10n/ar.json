@@ -14,7 +14,6 @@
     "User password history" : "استعمل السجل التاريخي كلمات السر السابقة",
     "Number of days until user password expires" : "عدد الأيام المتبقية حتى انتهاء صلاحية كلمة سر المستخدم",
     "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "عدد محاولات تسجيل الدخول قبل تعطيل حساب المستخدم حتى يتم اتخاذ الإجراء اليدوي. (0 بلا حدود)",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "يرجى ملاحظة أن هذا الخيار يهدف إلى حماية الحسابات التي تعرضت للهجوم. يجب إعادة تمكين الحسابات المعطلة يدويًا بواسطة الإدارة. المهاجمون الذين يحاولون تخمين كلمات مرور الحسابات سيتم حظر عنوان IP الخاص بهم بواسطة إجراءات الحماية من هجمات القوة الكاسحة بشكل مستقل عن هذا الإعداد.",
     "Forbid common passwords" : "إمنع الكلمات الشائعة",
     "Enforce upper and lower case characters" : "إفرض استعمال الحروف الصغيرة و الكبيرة",
     "Enforce numeric characters" : "إفرض استعمال الخانات العددية",
@@ -27,6 +26,7 @@
     "Expiration days have to be a non negative number" : "عدد الأيام المتبقية حتى انتهاء الصلاحية يجب ألاّ يكون أقل من صفر",
     "Maximum login attempts have to be a non negative number" : "أقصى عدد لمحاولات الدخول يجب ألاّ يكون أقل من صفر",
     "Settings saved" : "تم حفظ الإعدادات",
-    "Error while saving settings" : "خطأ أثناء حفظ الإعدادات"
+    "Error while saving settings" : "خطأ أثناء حفظ الإعدادات",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "يرجى ملاحظة أن هذا الخيار يهدف إلى حماية الحسابات التي تعرضت للهجوم. يجب إعادة تمكين الحسابات المعطلة يدويًا بواسطة الإدارة. المهاجمون الذين يحاولون تخمين كلمات مرور الحسابات سيتم حظر عنوان IP الخاص بهم بواسطة إجراءات الحماية من هجمات القوة الكاسحة بشكل مستقل عن هذا الإعداد."
 },"pluralForm" :"nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;"
 }
