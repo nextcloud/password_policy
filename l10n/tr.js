@@ -15,6 +15,7 @@ OC.L10N.register(
     "Minimum password length" : "En kısa parola uzunluğu",
     "User password history" : "Kullanıcının parola geçmişi",
     "Number of days until user password expires" : "Kullanıcı parolasının geçerlilik süresinin dolmasına kalan gün",
+    "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Kullanıcı hesabı el ile işlem yapılana kadar devre dışı bırakılmadan önce yapılabilecek oturum açma girişimlerinin sayısı. (sınır olmaması için 0)",
     "Forbid common passwords" : "Sık kullanılan parolalar kullanılamasın",
     "Enforce upper and lower case characters" : "Parolada büyük ve küçük harfler bulunsun",
     "Enforce numeric characters" : "Parolada rakam bulunsun",
@@ -27,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Geçerlilik süresi negatif bir sayı olamaz",
     "Maximum login attempts have to be a non negative number" : "En fazla oturum açma girişimi sayısı negatif bir sayı olamaz",
     "Settings saved" : "Ayarlar kaydedildi",
-    "Error while saving settings" : "Ayarlar kaydedilirken sorun çıktı"
+    "Error while saving settings" : "Ayarlar kaydedilirken sorun çıktı",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Lütfen bu seçeneğin saldırıya uğrayan hesapları koruma amaçlı olduğunu unutmayın. Devre dışı bırakılan hesapların yönetim tarafından el ile yeniden etkinleştirilmesi gerekir. Hesapların parolalarını bulmaya çalışan saldırganların IP adresleri bu ayardan bağımsız olarak kaba kuvvet saldırısı koruması tarafından engellenecektir."
 },
 "nplurals=2; plural=(n > 1);");
