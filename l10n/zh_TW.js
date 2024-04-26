@@ -16,7 +16,6 @@ OC.L10N.register(
     "User password history" : "使用者密碼歷史紀錄",
     "Number of days until user password expires" : "密碼到期天數",
     "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "在採取手動操作之前，使用者帳號將被停用先前的登入嘗試次數。 （0 表示無限制）",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "請注意，此選項是用來保護受攻擊的帳號。已停用的帳號必須由管理員手動重新啟用。嘗試猜測帳號密碼的攻擊者將透過與此設定無關的暴力保護來封鎖其 IP 位址。",
     "Forbid common passwords" : "禁止常見的密碼",
     "Enforce upper and lower case characters" : "強制使用大寫與小寫字母",
     "Enforce numeric characters" : "強制使用數字字元",
@@ -29,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "到期天數必須為非負數",
     "Maximum login attempts have to be a non negative number" : "最大登入嘗試次數必須為非負數",
     "Settings saved" : "設定已儲存",
-    "Error while saving settings" : "儲存設定時發生錯誤"
+    "Error while saving settings" : "儲存設定時發生錯誤",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "請注意，此選項是用來保護受攻擊的帳號。已停用的帳號必須由管理員手動重新啟用。嘗試猜測帳號密碼的攻擊者將透過與此設定無關的暴力保護來封鎖其 IP 位址。"
 },
 "nplurals=1; plural=0;");
