@@ -4,6 +4,8 @@
 -->
 # Password policy
 
+[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/password_policy)](https://api.reuse.software/info/github.com/nextcloud/password_policy)
+
 This app enables the the admin to define certain rules for passwords, for example the minimum length of a password.
 
 Once the app is enabled you find the "Password policy" settings in the admin section:
