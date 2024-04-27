@@ -16,6 +16,7 @@ OC.L10N.register(
     "User password history" : "Користи историјат лозинки",
     "Number of days until user password expires" : "Број дана до истека важења коринискове лозинке",
     "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Број покушаја пријаве пре него што се кориснички налог блокира све до ручне интервенције. (0 без ограничења)",
+    "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Молимо вас да имате на уму да је намена ове опција заштита нападнутих налога. Администрација мора поново ручно да укључи искључене налоге. Заштита од грубе силе ће блокирати IP адресе нападача који покушавају да погоде лозинке налога, независно од овог подешавања.",
     "Forbid common passwords" : "Забрани честе лозинке",
     "Enforce upper and lower case characters" : "Захтевај употребу и малих и великих слова",
     "Enforce numeric characters" : "Захтевај употребу цифри",
