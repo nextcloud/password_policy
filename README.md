@@ -1,3 +1,7 @@
+<!--
+  - SPDX-FileCopyrightText: 2016-2024 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: CC0-1.0
+-->
 # Password policy
 
 This app enables the the admin to define certain rules for passwords, for example the minimum length of a password.
