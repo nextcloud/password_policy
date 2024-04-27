@@ -15,6 +15,8 @@ OC.L10N.register(
     "Minimum password length" : "Minimálna dĺžka hesla",
     "User password history" : "História hesiel používateľa",
     "Number of days until user password expires" : "Počet dní do vypršania platnosti hesla používateľa",
+    "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Počet pokusov o prihlásenie pred deaktiváciou užívateľského účtu, kým sa nevykoná manuálna akcia. (0 bez obmedzenia)",
+    "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Upozorňujeme, že táto možnosť je určená na ochranu napadnutých účtov. Deaktivované účty je potrebné znova povoliť manuálne administráciou. Útočníkom, ktorí sa pokúsia uhádnuť heslá účtov, bude ich IP adresa zablokovaná ochranou bruteforce nezávisle od tohto nastavenia.",
     "Forbid common passwords" : "Zakázať najpoužívanejšie heslá",
     "Enforce upper and lower case characters" : "Vynútiť veľké a malé znaky",
     "Enforce numeric characters" : "Vynútiť numerické znaky",
@@ -27,6 +29,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Dní do expirácie musí byť kladné číslo",
     "Maximum login attempts have to be a non negative number" : "Maximálny počet pokusov o prihlásenie musí byť kladné číslo",
     "Settings saved" : "Nastavenia uložené",
-    "Error while saving settings" : "Chyba pri ukladaní nastavení"
+    "Error while saving settings" : "Chyba pri ukladaní nastavení",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Upozorňujeme, že táto možnosť je určená na ochranu napadnutých účtov. Deaktivované účty je potrebné znova povoliť manuálne administráciou. Útočníkom, ktorí sa pokúsia uhádnuť heslá účtov, bude ich IP adresa zablokovaná ochranou bruteforce nezávisle od tohto nastavenia."
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");
