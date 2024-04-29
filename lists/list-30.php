@@ -1,4 +1,8 @@
 <?php
+/**
+ * SPDX-FileCopyrightText: 2016 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
 return array (
   'xfgfxfgf8923116434889231160080' => true,
   'xc8xf3xf2xf8xfcxf4xeaxe4xf9xf6' => true,
