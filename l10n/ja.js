@@ -15,6 +15,8 @@ OC.L10N.register(
     "Minimum password length" : "最低限のパスワードの長さ",
     "User password history" : "ユーザーのパスワード履歴",
     "Number of days until user password expires" : "ユーザーのパスワードが失効するまでの日数",
+    "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "手動アクションによる処置が行われるまでユーザー アカウントが無効になるまでのログイン試行回数。(制限なしの場合は 0)",
+    "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "このオプションはアカウント攻撃から守るためです",
     "Forbid common passwords" : "一般的なパスワードを禁止する",
     "Enforce upper and lower case characters" : "大文字と小文字を必ず含む",
     "Enforce numeric characters" : "数字を必ず含む",
