@@ -15,6 +15,8 @@ OC.L10N.register(
     "Minimum password length" : "Minimum passordlengde",
     "User password history" : "Brukers passordhistorikk",
     "Number of days until user password expires" : "Antall dager før brukerpassordet utløper",
+    "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Antall påloggingsforsøk før brukerkontoen deaktiveres inntil manuelle tiltak iverksettes. (0 for ingen grense)",
+    "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Vær oppmerksom på at dette alternativet er ment å beskytte angrepne kontoer. Deaktiverte kontoer må aktiveres på nytt manuelt av administrasjonen. Angripere som prøver å gjette passord for kontoer, vil få IP-adressen blokkert av bruteforce-beskyttelsen uavhengig av denne innstillingen.",
     "Forbid common passwords" : "Forby mest brukte passord",
     "Enforce upper and lower case characters" : "Krev stor og liten bokstav",
     "Enforce numeric characters" : "Krev numerisk tegn",
@@ -27,6 +29,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Utløpsdager må være et ikke-negativt tall",
     "Maximum login attempts have to be a non negative number" : "Maksimalt antall påloggingsforsøk må være et ikke-negativt tall",
     "Settings saved" : "Innstillinger lagret",
-    "Error while saving settings" : "Feil ved lagring av innstillinger"
+    "Error while saving settings" : "Feil ved lagring av innstillinger",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Vær oppmerksom på at dette alternativet er ment å beskytte angrepne kontoer. Deaktiverte kontoer må aktiveres på nytt manuelt av administrasjonen. Angripere som prøver å gjette passord for kontoer, vil få IP-adressen blokkert av bruteforce-beskyttelsen uavhengig av denne innstillingen."
 },
 "nplurals=2; plural=(n != 1);");
