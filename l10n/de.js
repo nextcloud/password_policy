@@ -15,6 +15,8 @@ OC.L10N.register(
     "Minimum password length" : "Minimale Passwortlänge",
     "User password history" : "Benutzerpasswort-Verlauf",
     "Number of days until user password expires" : "Anzahl der Tage bis zum Ablauf des Benutzerkennworts",
+    "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Anzahl der Anmeldeversuche, bevor das Konto so lange deaktiviert wird, bis manuell eingegriffen wird. (0 für kein Limit)",
+    "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Bitte beachte, dass diese Option dem Schutz angegriffener Konten dient. Deaktivierte Konten müssen von der Administration manuell wieder aktiviert werden. Angreifer, die versuchen, Passwörter von Konten zu erraten, werden unabhängig von dieser Einstellung durch den Bruteforce-Schutz blockiert.",
     "Forbid common passwords" : "Häufig verwendete Passwörter verbieten",
     "Enforce upper and lower case characters" : "Groß- und Kleinbuchstaben erzwingen",
     "Enforce numeric characters" : "Zahlen erzwingen",
@@ -27,6 +29,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Die Ablauffrist darf keine negative Zahl sein",
     "Maximum login attempts have to be a non negative number" : "Maximum der Anmeldeversuche darf keine negative Zahl sein",
     "Settings saved" : "Einstellungen gespeichert",
-    "Error while saving settings" : "Fehler beim Speichern der Einstellungen"
+    "Error while saving settings" : "Fehler beim Speichern der Einstellungen",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Bitte beachte, dass diese Option dem Schutz angegriffener Konten dient. Deaktivierte Konten müssen von der Administration manuell wieder aktiviert werden. Angreifer, die versuchen, Passwörter von Konten zu erraten, werden unabhängig von dieser Einstellung durch den Bruteforce-Schutz blockiert."
 },
 "nplurals=2; plural=(n != 1);");
