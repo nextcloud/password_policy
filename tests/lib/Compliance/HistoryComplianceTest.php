@@ -31,24 +31,19 @@ use OCA\Password_Policy\Compliance\HistoryCompliance;
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\IConfig;
 use OCP\IL10N;
-use OCP\ILogger;
 use OCP\IUser;
 use OCP\IUserSession;
 use OCP\Security\IHasher;
 use PHPUnit\Framework\MockObject\MockObject;
+use Psr\Log\LoggerInterface;
 
 class HistoryComplianceTest extends TestCase {
 
-	/** @var HistoryCompliance */
-	protected $instance;
-	/** @var PasswordPolicyConfig|MockObject */
-	protected $policyConfig;
-	/** @var IConfig|MockObject */
-	protected $config;
-	/** @var IUserSession|MockObject */
-	protected $session;
-	/** @var IHasher|MockObject */
-	protected $hasher;
+	protected HistoryCompliance $instance;
+	protected PasswordPolicyConfig&MockObject $policyConfig;
+	protected IConfig&MockObject $config;
+	protected IUserSession&MockObject $session;
+	protected IHasher&MockObject $hasher;
 
 	public function setUp(): void {
 		parent::setUp();
@@ -58,13 +53,18 @@ class HistoryComplianceTest extends TestCase {
 		$this->session = $this->createMock(IUserSession::class);
 		$this->hasher = $this->createMock(IHasher::class);
 
+		/** @var IL10N&MockObject */
+		$l10n = $this->createMock(IL10N::class);
+		/** @var LoggerInterface&MockObject */
+		$logger = $this->createMock(LoggerInterface::class);
+
 		$this->instance = new HistoryCompliance(
 			$this->policyConfig,
 			$this->config,
 			$this->session,
 			$this->hasher,
-			$this->createMock(IL10N::class),
-			$this->createMock(ILogger::class)
+			$l10n,
+			$logger,
 		);
 	}
 

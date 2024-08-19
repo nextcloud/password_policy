@@ -12,43 +12,22 @@ use OC\HintException;
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\IConfig;
 use OCP\IL10N;
-use OCP\ILogger;
 use OCP\IUser;
 use OCP\IUserSession;
 use OCP\PreConditionNotMetException;
 use OCP\Security\IHasher;
+use Psr\Log\LoggerInterface;
 
 class HistoryCompliance implements IAuditor, IUpdatable {
-	/** @var string */
-	protected $uid;
-
-	/** @var PasswordPolicyConfig */
-	private $policyConfig;
-	/** @var IConfig */
-	private $config;
-	/** @var IUserSession */
-	private $session;
-	/** @var IHasher */
-	private $hasher;
-	/** @var IL10N */
-	private $l;
-	/** @var ILogger */
-	private $logger;
 
 	public function __construct(
-		PasswordPolicyConfig $policyConfig,
-		IConfig $config,
-		IUserSession $session,
-		IHasher $hasher,
-		IL10N $l,
-		ILogger $logger
+		protected PasswordPolicyConfig $policyConfig,
+		protected IConfig $config,
+		protected IUserSession $session,
+		protected IHasher $hasher,
+		protected IL10N $l,
+		protected LoggerInterface $logger
 	) {
-		$this->policyConfig = $policyConfig;
-		$this->config = $config;
-		$this->session = $session;
-		$this->hasher = $hasher;
-		$this->l = $l;
-		$this->logger = $logger;
 	}
 
 	/**
