@@ -6,9 +6,15 @@ SPDX-PackageSupplier = "Nextcloud <info@nextcloud.com>"
 SPDX-PackageDownloadLocation = "https://github.com/nextcloud/external"
 
 [[annotations]]
-path = [".gitattributes", ".editorconfig", "babel.config.js", ".php-cs-fixer.dist.php", "package-lock.json", "package.json", "composer.json", "composer.lock", "webpack.js", "stylelint.config.js", ".eslintrc.js", ".gitignore", ".jshintrc", ".l10nignore", "action/.gitignore", "action/package.json", "action/package-lock.json", "action/dist/index.js", "tests/**", "psalm.xml", "vendor-bin/**/composer.json", "vendor-bin/**/composer.lock", ".tx/config", "webpack.config.js", "js/vendor.LICENSE.txt", ".github/CODEOWNERS", "vite.config.js", "stylelint.config.cjs", ".eslintrc.json"]
+path = ["package-lock.json", "package.json", ".l10nignore", "composer.json", "composer.lock", "vendor-bin/**/composer.json", "vendor-bin/**/composer.lock", ".tx/config", "js/vendor.LICENSE.txt", ".github/CODEOWNERS", ".eslintrc.json"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["screenshots/*.png"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024 Nextcloud GmbH and Nextcloud contributors"
 SPDX-License-Identifier = "CC0-1.0"
 
 [[annotations]]
