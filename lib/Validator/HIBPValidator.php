@@ -12,27 +12,16 @@ use OC\HintException;
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\Http\Client\IClientService;
 use OCP\IL10N;
-use OCP\ILogger;
+use Psr\Log\LoggerInterface;
 
 class HIBPValidator implements IValidator {
 
-	/** @var PasswordPolicyConfig */
-	private $config;
-	/** @var IL10N */
-	private $l;
-	/** @var IClientService */
-	private $clientService;
-	/** @var ILogger */
-	private $logger;
-
-	public function __construct(PasswordPolicyConfig $config,
-		IL10N $l,
-		IClientService $clientService,
-		ILogger $logger) {
-		$this->config = $config;
-		$this->l = $l;
-		$this->clientService = $clientService;
-		$this->logger = $logger;
+	public function __construct(
+		private PasswordPolicyConfig $config,
+		private IL10N $l,
+		private IClientService $clientService,
+		private LoggerInterface $logger,
+	) {
 	}
 
 	public function validate(string $password): void {
@@ -54,7 +43,7 @@ class HIBPValidator implements IValidator {
 					]
 				);
 			} catch (\Exception $e) {
-				$this->logger->logException($e, ['level' => ILogger::INFO]);
+				$this->logger->info('Could not connect to HaveIBeenPwned API', ['exception' => $e]);
 				return;
 			}
 
