@@ -68,6 +68,10 @@ jobs:
       matrix:
         php-versions: ${{ fromJson(needs.matrix.outputs.php-version) }}
         server-versions: ${{ fromJson(needs.matrix.outputs.server-max) }}
+        include:
+          - php-versions: '8.2'
+            server-versions: master
+            coverage: true
 
     name: SQLite PHP ${{ matrix.php-versions }} Nextcloud ${{ matrix.server-versions }}
 
@@ -95,7 +99,7 @@ jobs:
           php-version: ${{ matrix.php-versions }}
           # https://docs.nextcloud.com/server/stable/admin_manual/installation/source_installation.html#prerequisites-for-manual-installation
           extensions: bz2, ctype, curl, dom, fileinfo, gd, iconv, intl, json, libxml, mbstring, openssl, pcntl, posix, session, simplexml, xmlreader, xmlwriter, zip, zlib, sqlite, pdo_sqlite
-          coverage: none
+          coverage: ${{ matrix.coverage && 'xdebug' || 'none' }}
           ini-file: development
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -131,7 +135,17 @@ jobs:
         # Only run if phpunit config file exists
         if: steps.check_phpunit.outcome == 'success'
         working-directory: apps/${{ env.APP_NAME }}
-        run: composer run test:unit
+        run: composer run test:unit${{ matrix.coverage && ':coverage' }}
+
+      - name: Upload Unit coverage
+        if: matrix.coverage == true
+        uses: codecov/codecov-action@v4
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          root_dir: ./apps/${{ env.APP_NAME }}
+          files: ./apps/${{ env.APP_NAME }}/tests/clover.unit.xml
+          fail_ci_if_error: false
 
       - name: Check PHPUnit integration script is defined
         id: check_integration
