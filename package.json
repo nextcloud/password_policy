@@ -2,7 +2,7 @@
   "name": "password_policy",
   "description": "Password Policy for nextcloud",
   "version": "3.0.0",
-  "author": "Bjoern Schiessle",
+  "author": "Nextcloud GmbH and Nextcloud contributors",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nextcloud/password_policy.git"
@@ -11,7 +11,7 @@
     "url": "https://github.com/nextcloud/password_policy/issues"
   },
   "homepage": "https://github.com/nextcloud/password_policy#readme",
-  "license": "AGPL-3.0",
+  "license": "AGPL-3.0-or-later",
   "private": true,
   "type": "module",
   "scripts": {
