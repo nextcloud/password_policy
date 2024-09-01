@@ -29,8 +29,10 @@ use OCP\User\Events\PasswordUpdatedEvent;
 use OCP\User\Events\UserLoggedInEvent;
 
 class Application extends App implements IBootstrap {
+	public const APP_ID = 'password_policy';
+
 	public function __construct() {
-		parent::__construct('password_policy');
+		parent::__construct(self::APP_ID);
 	}
 
 	public function register(IRegistrationContext $context): void {
