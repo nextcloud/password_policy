@@ -12,10 +12,10 @@ use OCP\IConfig;
 
 class PasswordPolicyConfigTest extends TestCase {
 
-	/** @var  IConfig|\PHPUnit_Framework_MockObject_MockObject */
+	/** @var IConfig|\PHPUnit_Framework_MockObject_MockObject */
 	private $config;
 
-	/** @var  PasswordPolicyConfig */
+	/** @var PasswordPolicyConfig */
 	private $instance;
 
 	protected function setUp(): void {
@@ -26,7 +26,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	}
 
 	public function testGetMinLength() {
-		$appConfigValue = "42";
+		$appConfigValue = '42';
 		$expected = 42;
 
 		$this->config->expects($this->once())->method('getAppValue')
