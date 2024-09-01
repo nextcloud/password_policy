@@ -63,7 +63,7 @@ class Expiration implements IUpdatable, IEntryControl {
 			$user->getUID(),
 			'password_policy',
 			'pwd_last_updated',
-			time()
+			(string)time()
 		);
 	}
 
