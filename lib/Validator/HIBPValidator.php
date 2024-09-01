@@ -48,6 +48,9 @@ class HIBPValidator implements IValidator {
 			}
 
 			$result = $response->getBody();
+			if (is_resource($result)) {
+				$result = stream_get_contents($result);
+			}
 			$result = preg_replace('/^([0-9A-Z]+:0)$/m', '', $result);
 
 			if (strpos($result, $needle) !== false) {

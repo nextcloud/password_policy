@@ -26,9 +26,14 @@ class CommonPasswordsValidator implements IValidator {
 
 	public function validate(string $password): void {
 		$enforceNonCommonPassword = $this->config->getEnforceNonCommonPassword();
+		if (!$enforceNonCommonPassword) {
+			return;
+		}
+
 		$passwordFile = __DIR__ . '/../../lists/list-'.strlen($password).'.php';
-		if ($enforceNonCommonPassword && file_exists($passwordFile)) {
+		if (file_exists($passwordFile)) {
 			$commonPasswords = require_once $passwordFile;
+			assert(is_array($commonPasswords));
 			if (isset($commonPasswords[strtolower($password)])) {
 				$message = 'Password is among the 1,000,000 most common ones. Please make it unique.';
 				$message_t = $this->l->t(

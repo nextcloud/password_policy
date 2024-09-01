@@ -21,7 +21,7 @@ class FailedLoginCompliance {
 	) {
 	}
 
-	public function onFailedLogin(string $uid) {
+	public function onFailedLogin(string $uid): void {
 		$user = $this->userManager->get($uid);
 
 		if (!($user instanceof IUser)) {
@@ -52,7 +52,7 @@ class FailedLoginCompliance {
 		$this->setAttempts($uid, $attempts);
 	}
 
-	public function onSucessfullLogin(IUser $user) {
+	public function onSuccessfulLogin(IUser $user): void {
 		$this->setAttempts($user->getUID(), 0);
 	}
 

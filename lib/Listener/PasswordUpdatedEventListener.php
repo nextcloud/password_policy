@@ -13,6 +13,9 @@ use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\User\Events\PasswordUpdatedEvent;
 
+/**
+ * @template-implements IEventListener<PasswordUpdatedEvent>
+ */
 class PasswordUpdatedEventListener implements IEventListener {
 	/** @var ComplianceService */
 	private $complianceUpdater;

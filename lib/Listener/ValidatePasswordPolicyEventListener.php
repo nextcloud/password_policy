@@ -13,6 +13,9 @@ use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\Security\Events\ValidatePasswordPolicyEvent;
 
+/**
+ * @template-implements IEventListener<ValidatePasswordPolicyEvent>
+ */
 class ValidatePasswordPolicyEventListener implements IEventListener {
 	/** @var PasswordValidator */
 	private $passwordValidator;

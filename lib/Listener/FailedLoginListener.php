@@ -13,6 +13,9 @@ use OCP\Authentication\Events\LoginFailedEvent;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 
+/**
+ * @template-implements IEventListener<LoginFailedEvent>
+ */
 class FailedLoginListener implements IEventListener {
 	/** @var FailedLoginCompliance */
 	private $compliance;
