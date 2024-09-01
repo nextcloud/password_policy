@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
 # SPDX-License-Identifier: CC0-1.0
 
-/vendor/
+**/vendor/
 /.php-cs-fixer.cache
 
 node_modules/

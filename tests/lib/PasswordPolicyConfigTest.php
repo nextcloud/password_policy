@@ -9,14 +9,12 @@ namespace OCA\Password_Policy\Tests;
 use ChristophWurst\Nextcloud\Testing\TestCase;
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\IConfig;
+use PHPUnit\Framework\MockObject\MockObject;
 
 class PasswordPolicyConfigTest extends TestCase {
 
-	/** @var IConfig|\PHPUnit_Framework_MockObject_MockObject */
-	private $config;
-
-	/** @var PasswordPolicyConfig */
-	private $instance;
+	private IConfig&MockObject $config;
+	private PasswordPolicyConfig $instance;
 
 	protected function setUp(): void {
 		parent::setUp();
@@ -130,7 +128,7 @@ class PasswordPolicyConfigTest extends TestCase {
 		$this->instance->setEnforceSpecialCharacters($setValue);
 	}
 
-	public function configTestData() {
+	public static function configTestData() {
 		return [
 			['1', true],
 			['0', false]
