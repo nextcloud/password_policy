@@ -112,7 +112,7 @@ class HistoryComplianceTest extends TestCase {
 		$this->instance->update($user, 'newPassword');
 	}
 
-	public function auditCaseProvider(): array {
+	public static function auditCaseProvider(): array {
 		$history = ['pwHash1', 'pwHash2', 'pwHash3', 'pwHash4', 'pwHash5', 'pwHash6'];
 		return [
 			[
@@ -130,7 +130,7 @@ class HistoryComplianceTest extends TestCase {
 		];
 	}
 
-	public function updateCaseProvider(): array {
+	public static function updateCaseProvider(): array {
 		$history = ['pwHash1', 'pwHash2', 'pwHash3', 'pwHash4', 'pwHash5', 'pwHash6'];
 		return [
 			[

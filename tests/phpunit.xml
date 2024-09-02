@@ -3,17 +3,16 @@
  - SPDX-FileCopyrightText: 2017 Nextcloud GmbH and Nextcloud contributors
  - SPDX-License-Identifier: CC0-1.0
 -->
-<phpunit bootstrap="./bootstrap.php"
-	verbose="true"
-	convertDeprecationsToExceptions="true"
+<phpunit
+	bootstrap="./bootstrap.php"
+	cacheDirectory=".phpunit.cache"
 	colors="true"
 	timeoutForSmallTests="900"
 	timeoutForMediumTests="900"
-	timeoutForLargeTests="900">
+	timeoutForLargeTests="900"
+	xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<coverage>
-		<include>
-			<directory suffix=".php">../lib</directory>
-		</include>
 		<report>
 			<!-- and this is where your report will be written -->
 			<clover outputFile="./clover.unit.xml"/>
@@ -22,4 +21,9 @@
 	<testsuite name="Password Policy Tests">
 		<directory suffix="Test.php">.</directory>
 	</testsuite>
+	<source>
+		<include>
+			<directory suffix=".php">../lib</directory>
+		</include>
+	</source>
 </phpunit>

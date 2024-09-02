@@ -18,23 +18,18 @@ use PHPUnit\Framework\MockObject\MockObject;
 
 class SpecialCharactersValidatorTest extends TestCase {
 
-	/** @var PasswordPolicyConfig|MockObject */
-	private $confg;
-
-	/** @var IL10N|MockObject */
-	private $l;
-
-	/** @var IValidator */
-	private $validator;
+	private PasswordPolicyConfig&MockObject $config;
+	private IL10N&MockObject $l;
+	private IValidator $validator;
 
 	protected function setUp(): void {
 		parent::setUp();
 
-		$this->confg = $this->createMock(PasswordPolicyConfig::class);
+		$this->config = $this->createMock(PasswordPolicyConfig::class);
 		$this->l = $this->createMock(IL10N::class);
 
 		$this->validator = new SpecialCharactersValidator(
-			$this->confg,
+			$this->config,
 			$this->l
 		);
 	}
@@ -43,7 +38,7 @@ class SpecialCharactersValidatorTest extends TestCase {
 	 * @dataProvider dataValidate
 	 */
 	public function testValidate(string $password, bool $enforced, bool $valid) {
-		$this->confg->method('getEnforceSpecialCharacters')
+		$this->config->method('getEnforceSpecialCharacters')
 			->willReturn($enforced);
 
 		if (!$valid) {
@@ -54,7 +49,7 @@ class SpecialCharactersValidatorTest extends TestCase {
 		$this->validator->validate($password);
 	}
 
-	public function dataValidate() {
+	public static function dataValidate() {
 		return [
 			['password', false,  true],
 			['p@ssword', false,  true],
