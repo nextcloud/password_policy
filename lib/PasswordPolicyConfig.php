@@ -6,9 +6,10 @@ declare(strict_types=1);
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-
 namespace OCA\Password_Policy;
 
+use OCA\Password_Policy\AppInfo\Application;
+use OCP\IAppConfig;
 use OCP\IConfig;
 
 /**
@@ -20,129 +21,93 @@ use OCP\IConfig;
  */
 class PasswordPolicyConfig {
 
-	/** @var IConfig */
-	private $config;
-
 	/**
 	 * Config constructor.
-	 *
-	 * @param IConfig $config
 	 */
-	public function __construct(IConfig $config) {
-		$this->config = $config;
+	public function __construct(
+		private IConfig $config,
+		private IAppConfig $appConfig,
+	) {
 	}
 
 	/**
 	 * get the enforced minimum length of passwords
-	 *
-	 * @return int
 	 */
 	public function getMinLength(): int {
-		return (int)$this->config->getAppValue('password_policy', 'minLength', '10');
+		return $this->appConfig->getValueInt(Application::APP_ID, 'minLength', 10);
 	}
 
 	/**
 	 * Whether non-common passwords should be enforced
-	 *
-	 * @return bool
 	 */
 	public function getEnforceNonCommonPassword(): bool {
-		$enforceNonCommonPasswords = $this->config->getAppValue(
-			'password_policy',
+		return $this->appConfig->getValueBool(
+			Application::APP_ID,
 			'enforceNonCommonPassword',
-			'1'
+			true
 		);
-		return $enforceNonCommonPasswords === '1';
 	}
 
 	/**
 	 * does the password need to contain upper and lower case characters
-	 *
-	 * @return bool
 	 */
 	public function getEnforceUpperLowerCase(): bool {
-		$enforceUpperLowerCase = $this->config->getAppValue(
-			'password_policy',
+		return $this->appConfig->getValueBool(
+			Application::APP_ID,
 			'enforceUpperLowerCase',
-			'0'
 		);
-
-		return $enforceUpperLowerCase === '1';
 	}
 
 	/**
 	 * does the password need to contain numeric characters
-	 *
-	 * @return bool
 	 */
 	public function getEnforceNumericCharacters(): bool {
-		$enforceNumericCharacters = $this->config->getAppValue(
-			'password_policy',
+		return $this->appConfig->getValueBool(
+			Application::APP_ID,
 			'enforceNumericCharacters',
-			'0'
 		);
-
-		return $enforceNumericCharacters === '1';
 	}
 
 	/**
 	 * does the password need to contain special characters
-	 *
-	 * @return bool
 	 */
 	public function getEnforceSpecialCharacters(): bool {
-		$enforceSpecialCharacters = $this->config->getAppValue(
-			'password_policy',
+		return $this->appConfig->getValueBool(
+			Application::APP_ID,
 			'enforceSpecialCharacters',
-			'0'
 		);
-
-		return $enforceSpecialCharacters === '1';
 	}
 
 	/**
 	 * set minimal length of passwords
-	 *
-	 * @param int $minLength
 	 */
-	public function setMinLength(int $minLength) {
-		$this->config->setAppValue('password_policy', 'minLength', $minLength);
+	public function setMinLength(int $minLength): void {
+		$this->appConfig->setValueInt(Application::APP_ID, 'minLength', $minLength);
 	}
 
 	/**
 	 * enforce upper and lower case characters
-	 *
-	 * @param bool $enforceUpperLowerCase
 	 */
-	public function setEnforceUpperLowerCase(bool $enforceUpperLowerCase) {
-		$value = $enforceUpperLowerCase === true ? '1' : '0';
-		$this->config->setAppValue('password_policy', 'enforceUpperLowerCase', $value);
+	public function setEnforceUpperLowerCase(bool $enforceUpperLowerCase): void {
+		$this->appConfig->setValueBool(Application::APP_ID, 'enforceUpperLowerCase', $enforceUpperLowerCase);
 	}
 
 	/**
 	 * enforce numeric characters
-	 *
-	 * @param bool $enforceNumericCharacters
 	 */
-	public function setEnforceNumericCharacters(bool $enforceNumericCharacters) {
-		$value = $enforceNumericCharacters === true ? '1' : '0';
-		$this->config->setAppValue('password_policy', 'enforceNumericCharacters', $value);
+	public function setEnforceNumericCharacters(bool $enforceNumericCharacters): void {
+		$this->appConfig->setValueBool(Application::APP_ID, 'enforceNumericCharacters', $enforceNumericCharacters);
 	}
 
 	/**
 	 * enforce special characters
-	 *
-	 * @param bool $enforceSpecialCharacters
 	 */
-	public function setEnforceSpecialCharacters(bool $enforceSpecialCharacters) {
-		$value = $enforceSpecialCharacters === true ? '1' : '0';
-		$this->config->setAppValue('password_policy', 'enforceSpecialCharacters', $value);
+	public function setEnforceSpecialCharacters(bool $enforceSpecialCharacters): void {
+		$this->appConfig->setValueBool(Application::APP_ID, 'enforceSpecialCharacters', $enforceSpecialCharacters);
 	}
 
 	/**
 	 * Do we check against the HaveIBeenPwned passwords
-	 *
-	 * @return bool
 	 */
 	public function getEnforceHaveIBeenPwned(): bool {
 		$hasInternetConnection = $this->config->getSystemValue('has_internet_connection', true);
@@ -150,11 +115,11 @@ class PasswordPolicyConfig {
 			return false;
 		}
 
-		return $this->config->getAppValue(
-			'password_policy',
+		return $this->appConfig->getValueBool(
+			Application::APP_ID,
 			'enforceHaveIBeenPwned',
-			'1'
-		) === '1';
+			true,
+		);
 	}
 
 	/**
@@ -162,23 +127,21 @@ class PasswordPolicyConfig {
 	 *
 	 * @param bool $enforceHaveIBeenPwned
 	 */
-	public function setEnforceHaveIBeenPwned(bool $enforceHaveIBeenPwned) {
-		$this->config->setAppValue('password_policy', 'enforceHaveIBeenPwned', $enforceHaveIBeenPwned ? '1' : '0');
+	public function setEnforceHaveIBeenPwned(bool $enforceHaveIBeenPwned): void {
+		$this->appConfig->setValueBool(Application::APP_ID, 'enforceHaveIBeenPwned', $enforceHaveIBeenPwned);
 	}
 
 	public function getHistorySize(): int {
-		return (int)$this->config->getAppValue(
-			'password_policy',
+		return $this->appConfig->getValueInt(
+			Application::APP_ID,
 			'historySize',
-			0
 		);
 	}
 
 	public function getExpiryInDays(): int {
-		return (int)$this->config->getAppValue(
-			'password_policy',
+		return $this->appConfig->getValueInt(
+			Application::APP_ID,
 			'expiration',
-			0
 		);
 	}
 
@@ -186,10 +149,9 @@ class PasswordPolicyConfig {
 	 * @return int if 0 then there is no limit
 	 */
 	public function getMaximumLoginAttempts(): int {
-		return (int)$this->config->getAppValue(
-			'password_policy',
+		return $this->appConfig->getValueInt(
+			Application::APP_ID,
 			'maximumLoginAttempts',
-			0
 		);
 	}
 }
