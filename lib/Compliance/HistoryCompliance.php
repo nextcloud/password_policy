@@ -73,6 +73,9 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 		);
 	}
 
+	/**
+	 * @return list<string> List of previously used passwords (hashed)
+	 */
 	protected function getHistory(IUser $user): array {
 		$history = $this->config->getUserValue(
 			$user->getUID(),
@@ -80,6 +83,7 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 			'passwordHistory',
 			'[]'
 		);
+		/** @var string[]|string */
 		$history = \json_decode($history, true);
 		if (!is_array($history)) {
 			$this->logger->warning(
@@ -90,6 +94,6 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 		}
 		$history = \array_slice($history, 0, $this->policyConfig->getHistorySize());
 
-		return $history;
+		return \array_values($history);
 	}
 }

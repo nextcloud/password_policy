@@ -13,25 +13,16 @@ use OCP\Security\ISecureRandom;
 
 class Generator {
 
-	/** @var PasswordPolicyConfig */
-	private $config;
+	public const PASSWORD_GENERATION_MAX_ROUNDS = 10;
 
-	/** @var PasswordValidator */
-	private $validator;
-
-	/** @var ISecureRandom */
-	private $random;
-
-	public function __construct(PasswordPolicyConfig $config,
-		PasswordValidator $validator,
-		ISecureRandom $random) {
-		$this->config = $config;
-		$this->validator = $validator;
-		$this->random = $random;
+	public function __construct(
+		private PasswordPolicyConfig $config,
+		private PasswordValidator $validator,
+		private ISecureRandom $random,
+	) {
 	}
 
 	/**
-	 * @return string
 	 * @throws HintException
 	 */
 	public function generate(): string {
@@ -41,8 +32,7 @@ class Generator {
 		$password = '';
 		$chars = '';
 
-		$found = false;
-		for ($i = 0; $i < 10; $i++) {
+		for ($i = 0; $i < self::PASSWORD_GENERATION_MAX_ROUNDS; $i++) {
 			if ($this->config->getEnforceUpperLowerCase()) {
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_UPPER);
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_LOWER);
@@ -67,20 +57,18 @@ class Generator {
 			}
 
 			$password .= $chars = $this->random->generate($length, $chars);
-
 			// Shuffle string so the order is random
 			$password = str_shuffle($password);
 
+			if ($password === '') {
+				// something went wrong
+				break;
+			}
+
 			try {
 				$this->validator->validate($password);
-
-				if ($password === null || $password === '') {
-					// something went wrong
-					break;
-				}
-
-				$found = true;
-				break;
+				// Validation succeeded
+				return $password;
 			} catch (HintException $e) {
 				/*
 				 * Invalid so lets go for another round
@@ -90,10 +78,6 @@ class Generator {
 			}
 		}
 
-		if ($found === false) {
-			throw new HintException('Could not generate a valid password');
-		}
-
-		return $password;
+		throw new HintException('Could not generate a valid password');
 	}
 }

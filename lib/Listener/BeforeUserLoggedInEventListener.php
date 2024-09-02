@@ -13,6 +13,9 @@ use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\User\Events\BeforeUserLoggedInEvent;
 
+/**
+ * @template-implements IEventListener<BeforeUserLoggedInEvent>
+ */
 class BeforeUserLoggedInEventListener implements IEventListener {
 	/** @var ComplianceService */
 	private $complianceUpdater;

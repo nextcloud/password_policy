@@ -14,25 +14,14 @@ use OCP\IUserManager;
 
 class FailedLoginCompliance {
 
-	/** @var IConfig */
-	private $config;
-
-	/** @var IUserManager */
-	private $userManager;
-
-	/** @var PasswordPolicyConfig */
-	private $passwordPolicyConfig;
-
 	public function __construct(
-		IConfig $config,
-		IUserManager $userManager,
-		PasswordPolicyConfig $passwordPolicyConfig) {
-		$this->config = $config;
-		$this->userManager = $userManager;
-		$this->passwordPolicyConfig = $passwordPolicyConfig;
+		private IConfig $config,
+		private IUserManager $userManager,
+		private PasswordPolicyConfig $passwordPolicyConfig,
+	) {
 	}
 
-	public function onFailedLogin(string $uid) {
+	public function onFailedLogin(string $uid): void {
 		$user = $this->userManager->get($uid);
 
 		if (!($user instanceof IUser)) {
@@ -63,15 +52,15 @@ class FailedLoginCompliance {
 		$this->setAttempts($uid, $attempts);
 	}
 
-	public function onSucessfullLogin(IUser $user) {
+	public function onSuccessfulLogin(IUser $user): void {
 		$this->setAttempts($user->getUID(), 0);
 	}
 
 	private function getAttempts(string $uid): int {
-		return (int)$this->config->getUserValue($uid, 'password_policy', 'failedLoginAttempts', 0);
+		return (int)$this->config->getUserValue($uid, 'password_policy', 'failedLoginAttempts', '0');
 	}
 
 	private function setAttempts(string $uid, int $attempts): void {
-		$this->config->setUserValue($uid, 'password_policy', 'failedLoginAttempts', $attempts);
+		$this->config->setUserValue($uid, 'password_policy', 'failedLoginAttempts', (string)$attempts);
 	}
 }

@@ -13,6 +13,9 @@ use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\User\Events\UserLoggedInEvent;
 
+/**
+ * @template-implements IEventListener<UserLoggedInEvent>
+ */
 class SuccesfullLoginListener implements IEventListener {
 	/** @var FailedLoginCompliance */
 	private $compliance;
@@ -26,6 +29,6 @@ class SuccesfullLoginListener implements IEventListener {
 			return;
 		}
 
-		$this->compliance->onSucessfullLogin($event->getUser());
+		$this->compliance->onSuccessfulLogin($event->getUser());
 	}
 }

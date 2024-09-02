@@ -63,7 +63,7 @@ class Expiration implements IUpdatable, IEntryControl {
 			$user->getUID(),
 			'password_policy',
 			'pwd_last_updated',
-			time()
+			(string)time()
 		);
 	}
 
@@ -78,7 +78,7 @@ class Expiration implements IUpdatable, IEntryControl {
 		}
 	}
 
-	protected function isPasswordExpired(IUser $user) {
+	protected function isPasswordExpired(IUser $user): bool {
 		$updatedAt = (int)$this->config->getUserValue(
 			$user->getUID(),
 			'password_policy',
@@ -97,7 +97,7 @@ class Expiration implements IUpdatable, IEntryControl {
 		return $expiresIn <= time();
 	}
 
-	protected function isLocalUser(IUser $user) {
+	protected function isLocalUser(IUser $user): bool {
 		$localBackends = ['Database', 'Guests'];
 		return in_array($user->getBackendClassName(), $localBackends);
 	}
