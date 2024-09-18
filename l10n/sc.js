@@ -1,7 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password is expired, please use forgot password method to reset" : "Sa crae est iscadida, imprea su mètodu de crae iscaressida pro torrare a impostare",
+    "Password is expired, please use forgot password method to reset" : "Sa crae est iscadida, imprea su mètodu de s'ismèntigu de sa crae pro dda torrare a cunfigurare",
     "Password must not have been used recently before." : "Sa crae non depet èssere istada impreada pagu ora in antis",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Sa crae est in una lista de 1,000,000 de craes prus comunes. Faghe chi siat ùnica.",
     "Password is present in compromised password list. Please choose a different password." : "Sa crae est presente in una lista de craes cumprometidas. Sebera·nde un'àtera.",
