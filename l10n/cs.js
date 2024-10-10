@@ -29,6 +29,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Je třeba, aby počet dnů do skončení platnosti nebylo záporné číslo",
     "Maximum login attempts have to be a non negative number" : "Je třeba, aby nejvyšší umožněný počet pokusů o přihlášení nebylo záporné číslo",
     "Settings saved" : "Nastavení uložena",
-    "Error while saving settings" : "Chyba při ukládání nastavení"
+    "Error while saving settings" : "Chyba při ukládání nastavení",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Mějte na paměti, že toto nastavení je určeno k ochraně napadených účtů. Zablokované účty je nutné manuálně zapnout v administraci. Útočníkům snažícím se uhádnout hesla uživatelských účtů bude jejich IP adresa zablokována nezávisle na tomto nastavení."
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");
