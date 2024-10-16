@@ -1,7 +1,7 @@
 { "translations": {
     "Password is expired, please use forgot password method to reset" : "انتهت صلاحية كلمة المرور. يرجى إعادة تعيينها من خلال \"نسيت كلمة المرور\" .",
     "Password must not have been used recently before." : "يجب ألاّ تكون كلمة المرور قد أُستُخدمت مؤخراً.",
-    "Password is among the 1,000,000 most common ones. Please make it unique." : "كلمة المرور هذه ضمن الـ 1,000,000 كلمة الأكثر شيوعاً. رجاءً، إجعلها مُميّزة.",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "كلمة المرور هذه ضمن الـ 1,000,000 كلمة الأكثر شيوعاً. رجاءً، إجعلها فريدة ومختلفة.",
     "Password is present in compromised password list. Please choose a different password." : "كلمة المرور هذه ضمن قائمة كلمات المرور المُتسرّبة. رجاءً، إختر كلمةً مخلتفةً",
     "Password needs to be at least %s characters long." : "يجب ألّا يقل طول كلمة المرور عن %s حروف.",
     "Password needs to contain at least one numeric character." : "يجب أن تحوي كلمة المرور خانة عددية و احدة على الأقل.",
