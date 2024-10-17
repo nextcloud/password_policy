@@ -27,16 +27,6 @@
 				</label>
 			</li>
 			<li>
-				<input id="password-policy-expiration"
-					v-model="config.expiration"
-					min="0"
-					type="number"
-					@change="updateNumberSetting('expiration')">
-				<label for="password-policy-expiration">
-					{{ t('password_policy', 'Number of days until user password expires') }}
-				</label>
-			</li>
-			<li>
 				<input id="password-policy_failed-login"
 					v-model="config.maximumLoginAttempts"
 					min="0"
@@ -47,6 +37,19 @@
 				</label>
 				<p class="havibeenpwned-hint">
 					{{ t('password_policy', 'Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting.') }}
+				</p>
+			</li>
+			<li>
+				<input id="password-policy-expiration"
+					v-model="config.expiration"
+					min="0"
+					type="number"
+					@change="updateNumberSetting('expiration')">
+				<label for="password-policy-expiration">
+					{{ t('password_policy', 'Number of days until user password expires') }}
+				</label>
+				<p class="havibeenpwned-hint">
+					{{ t('password_policy', 'Warning: enabling password expiration is nowadays considered a security risk by several security agencies.') }}
 				</p>
 			</li>
 		</ul>
