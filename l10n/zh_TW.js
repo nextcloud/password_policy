@@ -17,6 +17,7 @@ OC.L10N.register(
     "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "在採取手動操作之前，使用者帳號將被停用先前的登入嘗試次數。 （0 表示無限制）",
     "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "請注意，此選項是用來保護受攻擊的帳號。已停用的帳號必須由管理員手動重新啟用。嘗試猜測帳號密碼的攻擊者將透過與此設定無關的暴力保護來封鎖其 IP 位址。",
     "Number of days until user password expires" : "密碼到期天數",
+    "Warning: enabling password expiration is nowadays considered a security risk by several security agencies." : "警告：啟用密碼過期現在已被多家安全機構視為一種安全風險。",
     "Forbid common passwords" : "禁止常見的密碼",
     "Enforce upper and lower case characters" : "強制使用大寫與小寫字母",
     "Enforce numeric characters" : "強制使用數字字元",
