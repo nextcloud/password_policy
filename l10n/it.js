@@ -17,6 +17,7 @@ OC.L10N.register(
     "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Numero di tentativi di accesso prima che l'account utente venga disattivato fino a intervento manuale. (0 per nessun limite)",
     "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Si noti che questa opzione è pensata per proteggere gli account sotto attacco. Gli account disattivati devono essere riattivati a mano da un amministratore. Gli aggressori che tentano di indovinare le password degli account avranno il loro indirizzo IP bloccato dalla protezione bruteforce indipendentemente da questa impostazione.",
     "Number of days until user password expires" : "Numero di giorni per la scadenza della password dell'utente",
+    "Warning: enabling password expiration is nowadays considered a security risk by several security agencies." : "Attenzione: abilitare la scadenza della password è oggi considerato un rischio per la sicurezza da numerose agenzie di sicurezza.",
     "Forbid common passwords" : "Vieta le password comuni",
     "Enforce upper and lower case characters" : "Forza i caratteri maiuscoli e minuscoli",
     "Enforce numeric characters" : "Forza i caratteri numerici",

@@ -17,6 +17,7 @@ OC.L10N.register(
     "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Antal inloggningsförsök innan användarkontot kommer att inaktiveras tills manuell åtgärd vidtas. (0 för ingen gräns)",
     "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Observera att det här alternativet är tänkt att skydda attackerade konton. Inaktiverade konton måste återaktiveras manuellt av administrationen. Angripare som försöker gissa lösenord för konton kommer att få sin IP-adress blockerad av bruteforce-skyddet oberoende av denna inställning.",
     "Number of days until user password expires" : "Antal dagar tills lösenordet går ut",
+    "Warning: enabling password expiration is nowadays considered a security risk by several security agencies." : "Varning: aktivera att lösenord går ut anses numera som en säkerhetsrisk av flera säkerhetsbyråer.",
     "Forbid common passwords" : "Förbjud de vanligaste lösenorden",
     "Enforce upper and lower case characters" : "Kräv stor och liten bokstav i lösenordet",
     "Enforce numeric characters" : "Kräv en siffra i lösenordet",
