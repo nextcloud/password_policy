@@ -16,6 +16,7 @@ OC.L10N.register(
     "Enforce numeric characters" : "Versti naudoti skaitmenų simbolius",
     "Enforce special characters" : "Versti naudoti specialius simbolius",
     "Unknown error" : "Nežinoma klaida",
-    "Settings saved" : "Nustatymai įrašyti"
+    "Settings saved" : "Nustatymai įrašyti",
+    "Error while saving settings" : "Klaida įrašant nustatymus"
 },
 "nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);");
