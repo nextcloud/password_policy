@@ -17,6 +17,7 @@ OC.L10N.register(
     "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Kullanıcı hesabı el ile işlem yapılana kadar devre dışı bırakılmadan önce yapılabilecek oturum açma girişimlerinin sayısı. (sınır olmaması için 0)",
     "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Lütfen bu seçeneğin saldırıya uğrayan hesapları koruma amaçlı olduğunu unutmayın. Devre dışı bırakılan hesapların yönetim tarafından el ile yeniden etkinleştirilmesi gerekir. Hesapların parolalarını bulmaya çalışan saldırganların IP adresleri bu ayardan bağımsız olarak kaba kuvvet saldırısı koruması tarafından engellenecektir.",
     "Number of days until user password expires" : "Kullanıcı parolasının geçerlilik süresinin dolmasına kalan gün",
+    "Warning: enabling password expiration is nowadays considered a security risk by several security agencies." : "Uyarı: Parola geçerlilik süresini kullanmak günümüzde birçok güvenlik kuruluşu tarafından bir güvenlik riski olarak kabul ediliyor.",
     "Forbid common passwords" : "Sık kullanılan parolalar kullanılamasın",
     "Enforce upper and lower case characters" : "Parolada büyük ve küçük harfler bulunsun",
     "Enforce numeric characters" : "Parolada rakam bulunsun",
