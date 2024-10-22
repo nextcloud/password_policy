@@ -78,5 +78,9 @@ class CommonPasswordsValidatorTest extends TestCase {
 			['banana',  true, false],
 			['bananabananabananabanana',  true,  true],
 		];
+		for ($i = 1; $i <= 39; $i++) {
+			$attempts[] = [str_repeat('$', $i), true, true];
+		}
+		return $attempts;
 	}
 }
