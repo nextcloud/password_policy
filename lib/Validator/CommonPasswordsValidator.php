@@ -32,7 +32,7 @@ class CommonPasswordsValidator implements IValidator {
 
 		$passwordFile = __DIR__ . '/../../lists/list-'.strlen($password).'.php';
 		if (file_exists($passwordFile)) {
-			$commonPasswords = require_once $passwordFile;
+			$commonPasswords = require $passwordFile;
 			assert(is_array($commonPasswords));
 			if (isset($commonPasswords[strtolower($password)])) {
 				$message = 'Password is among the 1,000,000 most common ones. Please make it unique.';

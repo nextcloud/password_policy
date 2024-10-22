@@ -50,11 +50,15 @@ class CommonPasswordsValidatorTest extends TestCase {
 	}
 
 	public static function dataValidate() {
-		return [
+		$attempts = [
 			['banana', false,  true],
 			['bananabananabananabanana', false,  true],
 			['banana',  true, false],
 			['bananabananabananabanana',  true,  true],
 		];
+		for ($i = 1; $i <= 39; $i++) {
+			$attempts[] = [str_repeat('$', $i), true, true];
+		}
+		return $attempts;
 	}
 }
