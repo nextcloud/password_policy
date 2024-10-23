@@ -28,5 +28,18 @@ while(!feof($file)){
 fclose($file);
 
 foreach($passwordLengthArray as $length => $passwords) {
-	file_put_contents(__DIR__ . '/list-'.$length.'.php', "<?php\nreturn ".var_export($passwords, true).";");
+	$content = <<<EOF
+<?php
+/**
+ * SPDX-FileCopyrightText: 2016 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+return array (
+
+EOF;
+	foreach ($passwords as $password => $true) {
+		$content .= '  \'' . str_replace("'", "\\'", str_replace('\\', '\\\\', $password)) . '\' => true,' . "\n";
+	}
+	$content .= ');';
+	file_put_contents(__DIR__ . '/list-'.$length.'.php', $content);
 }
