@@ -9,4 +9,5 @@ return array (
   'x' => true,
   'e' => true,
   'j' => true,
+  'p' => true,
 );
