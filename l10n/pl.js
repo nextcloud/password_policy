@@ -14,6 +14,7 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Zezwala administratorowi na definiowanie określonych warunków wstępnych dla hasła, np. wymuszenie minimalnej długości",
     "Minimum password length" : "Minimalna długość hasła",
     "User password history" : "Historia haseł użytkownika",
+    "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Pamiętaj, że ta opcja ma na celu ochronę zaatakowanych kont. Wyłączone konta muszą zostać ponownie włączone ręcznie przez administratora. Adresy IP atakujących próbujących odgadnąć hasła do kont zostaną zablokowane przez ochronę bruteforce niezależną od tego ustawienia.",
     "Number of days until user password expires" : "Liczba dni do wygaśnięcia hasła użytkownika",
     "Forbid common passwords" : "Zabroń takich samych haseł",
     "Enforce upper and lower case characters" : "Wymuś wielkie i małe litery",
@@ -27,6 +28,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Dni do wygaśnięcia muszą być liczbą nieujemną",
     "Maximum login attempts have to be a non negative number" : "Maksymalna liczba prób logowania musi być liczbą nieujemną",
     "Settings saved" : "Ustawienia zapisane",
-    "Error while saving settings" : "Błąd podczas zapisywania ustawień"
+    "Error while saving settings" : "Błąd podczas zapisywania ustawień",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Pamiętaj, że ta opcja ma na celu ochronę zaatakowanych kont. Wyłączone konta muszą zostać ponownie włączone ręcznie przez administratora. Adresy IP atakujących próbujących odgadnąć hasła do kont zostaną zablokowane przez ochronę bruteforce niezależną od tego ustawienia."
 },
 "nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);");
