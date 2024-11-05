@@ -5,7 +5,7 @@
     "Password needs to contain at least one special character." : "Parolei jāsatur vismaz vienu speciālo rakstzīmi.",
     "Password needs to contain at least one lower and one upper case character." : "Parolē ir jābūt vismaz vienam mazajam un vienam lielajam burtam.",
     "Password policy" : "Paroles politika",
-    "Allows admins to configure a password policy" : "Ļauj administrātoriem uzstādīt paroļu politiku",
+    "Allows admins to configure a password policy" : "Ļauj pārvaldītājiem konfigurēt paroļu nosacījumus",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Ļauj pārvaldītājam pievienot noteiktus paroles priekšnosacījumus, piemēram, uzspiest mazāko pieļaujamo garumu",
     "Forbid common passwords" : "Aizliegt kopīgas paroles",
     "Enforce upper and lower case characters" : "Uzspiest lielos un mazos burtus",
