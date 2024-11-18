@@ -19,12 +19,15 @@
 	},
 	"scripts": {
 		"post-install-cmd": [
-			"@composer bin psalm install --ansi",
-			"@composer bin phpunit install --ansi"
+			"@composer bin all install --ansi"
+		],
+		"post-update-cmd": [
+			"@composer bin all update --ansi"
 		],
 		"cs:fix": "php-cs-fixer fix",
 		"cs:check": "php-cs-fixer fix --dry-run --diff",
 		"lint": "find . -name \\*.php -not -path './vendor/*' -print0 | xargs -0 -n1 php -l",
+		"openapi": "generate-spec --verbose",
 		"test:unit": "phpunit -c tests/phpunit.xml --no-coverage",
 		"test:unit:coverage": "phpunit -c tests/phpunit.xml",
 		"psalm": "psalm --threads=1",

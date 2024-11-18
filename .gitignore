@@ -8,6 +8,7 @@ node_modules/
 
 # phpunit
 .phpunit.result.cache
+tests/.phpunit.cache
 clover.unit.xml
 
 # PhpStorm

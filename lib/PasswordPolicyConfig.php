@@ -32,9 +32,10 @@ class PasswordPolicyConfig {
 
 	/**
 	 * get the enforced minimum length of passwords
+	 * @return non-negative-int
 	 */
 	public function getMinLength(): int {
-		return $this->appConfig->getValueInt(Application::APP_ID, 'minLength', 10);
+		return max(0, $this->appConfig->getValueInt(Application::APP_ID, 'minLength', 10));
 	}
 
 	/**

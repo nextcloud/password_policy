@@ -11,30 +11,31 @@ namespace OCA\Password_Policy\Controller;
 use OCA\Password_Policy\Generator;
 use OCA\Password_Policy\PasswordValidator;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\OCSController;
 use OCP\HintException;
 use OCP\IRequest;
 
 class APIController extends OCSController {
-
-	/** @var PasswordValidator */
-	private $validator;
-	/** @var Generator */
-	private $generator;
-
-	public function __construct(string $appName, IRequest $request, PasswordValidator $validator, Generator $generator) {
+	public function __construct(
+		string $appName,
+		IRequest $request,
+		private PasswordValidator $validator,
+		private Generator $generator,
+	) {
 		parent::__construct($appName, $request);
-		$this->validator = $validator;
-		$this->generator = $generator;
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * Validate a password against the enabled password policy rules
 	 *
-	 * @param string $password
-	 * @return DataResponse
+	 * @param string $password The password to validate
+	 * @return DataResponse<Http::STATUS_OK, array{passed: bool, reason?: string}, array{}>
+	 *
+	 * 200: Always
 	 */
+	#[NoAdminRequired]
 	public function validate(string $password): DataResponse {
 		try {
 			$this->validator->validate($password);
@@ -51,14 +52,18 @@ class APIController extends OCSController {
 	}
 
 	/**
-	 * @NoAdminRequired
+	 * Generate a random password that validates against the enabled password policy rules
 	 *
-	 * @return DataResponse
+	 * @return DataResponse<Http::STATUS_OK, array{password: string}, array{}>|DataResponse<Http::STATUS_CONFLICT, list<empty>, array{}>
+	 *
+	 * 200: Password generated
+	 * 409: Generated password accidentally failed to validate against the rules, retry.
 	 */
+	#[NoAdminRequired]
 	public function generate(): DataResponse {
 		try {
 			$password = $this->generator->generate();
-		} catch (HintException $e) {
+		} catch (HintException) {
 			return new DataResponse([], Http::STATUS_CONFLICT);
 		}
 

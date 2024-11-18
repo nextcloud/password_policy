@@ -37,7 +37,7 @@ class CommonPasswordsValidatorTest extends TestCase {
 	/**
 	 * @dataProvider dataValidate
 	 */
-	public function testValidate(string $password, bool $enforced, bool $valid) {
+	public function testValidate(string $password, bool $enforced, bool $valid): void {
 		$this->config->method('getEnforceNonCommonPassword')
 			->willReturn($enforced);
 
@@ -49,7 +49,7 @@ class CommonPasswordsValidatorTest extends TestCase {
 		$this->validator->validate($password);
 	}
 
-	public static function dataValidate() {
+	public static function dataValidate(): array {
 		$attempts = [
 			['banana', false,  true],
 			['bananabananabananabanana', false,  true],
@@ -57,7 +57,7 @@ class CommonPasswordsValidatorTest extends TestCase {
 			['bananabananabananabanana',  true,  true],
 		];
 		for ($i = 1; $i <= 39; $i++) {
-			$attempts[] = [str_repeat('$', $i), true, true];
+			$attempts[] = [str_repeat('$', $i), true, $i !== 6];
 		}
 		return $attempts;
 	}

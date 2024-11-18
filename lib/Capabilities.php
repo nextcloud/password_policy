@@ -13,21 +13,26 @@ use OCP\Capabilities\ICapability;
 use OCP\IURLGenerator;
 
 class Capabilities implements ICapability {
-
-	/** @var PasswordPolicyConfig */
-	private $config;
-	/** @var IURLGenerator */
-	private $urlGenerator;
-
-	public function __construct(PasswordPolicyConfig $config, IURLGenerator $urlGenerator) {
-		$this->config = $config;
-		$this->urlGenerator = $urlGenerator;
+	public function __construct(
+		private PasswordPolicyConfig $config,
+		private IURLGenerator $urlGenerator,
+	) {
 	}
 
 	/**
-	 * Function an app uses to return the capabilities
-	 *
-	 * @return array<string, array<string, mixed>> Array containing the apps capabilities
+	 * @return array{
+	 *   password_policy: array{
+	 *     minLength: non-negative-int,
+	 *     enforceNonCommonPassword: bool,
+	 *     enforceNumericCharacters: bool,
+	 *     enforceSpecialCharacters: bool,
+	 *     enforceUpperLowerCase: bool,
+	 *     api: array{
+	 *       generate: string,
+	 *       validate: string,
+	 *     },
+	 *   }
+	 * } Array containing the app's capabilities
 	 * @since 12.0.0
 	 */
 	public function getCapabilities(): array {
