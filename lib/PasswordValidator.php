@@ -17,6 +17,7 @@ use OCA\Password_Policy\Validator\NumericCharacterValidator;
 use OCA\Password_Policy\Validator\SpecialCharactersValidator;
 use OCA\Password_Policy\Validator\UpperCaseLoweCaseValidator;
 use OCP\HintException;
+use OCP\Security\PasswordContext;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
@@ -34,7 +35,7 @@ class PasswordValidator {
 	 *
 	 * @throws HintException
 	 */
-	public function validate(string $password): void {
+	public function validate(string $password, ?PasswordContext $context = null): void {
 		$validators = [
 			CommonPasswordsValidator::class,
 			LengthValidator::class,
@@ -57,7 +58,7 @@ class PasswordValidator {
 			}
 
 			try {
-				$instance->validate($password);
+				$instance->validate($password, $context);
 			} catch (HintException $e) {
 				$errors[] = $e->getMessage();
 				$hints[] = $e->getHint();
