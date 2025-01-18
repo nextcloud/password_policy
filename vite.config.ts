@@ -5,7 +5,7 @@
 import { createAppConfig } from '@nextcloud/vite-config'
 
 export default createAppConfig({
-	settings: 'src/settings.js',
+	settings: 'src/settings.ts',
 }, {
 	// Setup REUSE information extraction
 	extractLicenseInformation: {
@@ -13,6 +13,10 @@ export default createAppConfig({
 		includeSourceMaps: true,
 	},
 	thirdPartyLicense: false,
+	// Also clear the CSS directory
+	emptyOutputDirectory: {
+		additionalDirectories: ['css'],
+	},
 	// Make sure we have one cache-able CSS entry point per JS entry
 	createEmptyCSSEntryPoints: true,
 	// Enable CSS code splitting to create correct CSS files per JS entry
