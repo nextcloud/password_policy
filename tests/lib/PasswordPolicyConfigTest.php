@@ -10,6 +10,7 @@ use ChristophWurst\Nextcloud\Testing\TestCase;
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\IAppConfig;
 use OCP\IConfig;
+use OCP\Security\PasswordContext;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class PasswordPolicyConfigTest extends TestCase {
@@ -26,20 +27,34 @@ class PasswordPolicyConfigTest extends TestCase {
 		$this->instance = new PasswordPolicyConfig($this->config, $this->appConfig);
 	}
 
-	public function testGetMinLength() {
-		$appConfigValue = 42;
-		$expected = 42;
-
+	/**
+	 * @dataProvider dataGetMinLength
+	 */
+	public function testGetMinLength(?PasswordContext $context, bool $hasContext, int $expected) {
+		$this->appConfig
+			->method('getValueArray')
+			->with('password_policy', 'passwordContexts', ['account'])
+			->willReturn($hasContext ? ['account', 'sharing'] : ['account']);
 		$this->appConfig
 			->expects(self::once())
 			->method('getValueInt')
-			->with('password_policy', 'minLength', 10)
-			->willReturn($appConfigValue);
+			->willReturnMap([
+				['password_policy', 'minLength', 10, 20],
+				['password_policy', 'minLength_sharing', 10, 42],
+			]);
 
-		$this->assertSame($expected,
-			$this->instance->getMinLength()
-		);
+		$this->assertSame($expected, $this->instance->getMinLength($context));
 	}
+
+	public static function dataGetMinLength(): array {
+		return [
+			[null, true, 20],
+			[PasswordContext::ACCOUNT, true, 20],
+			[PasswordContext::SHARING, true, 42],
+			[PasswordContext::SHARING, false, 20],
+		];
+	}
+
 	/**
 	 * @dataProvider configTestData
 	 */

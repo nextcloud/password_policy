@@ -29,14 +29,66 @@
                     "password_policy": {
                         "type": "object",
                         "required": [
+                            "api",
+                            "policies",
                             "minLength",
                             "enforceNonCommonPassword",
                             "enforceNumericCharacters",
                             "enforceSpecialCharacters",
-                            "enforceUpperLowerCase",
-                            "api"
+                            "enforceUpperLowerCase"
                         ],
                         "properties": {
+                            "api": {
+                                "type": "object",
+                                "required": [
+                                    "generate",
+                                    "validate"
+                                ],
+                                "properties": {
+                                    "generate": {
+                                        "type": "string"
+                                    },
+                                    "validate": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "policies": {
+                                "type": "object",
+                                "additionalProperties": {
+                                    "type": "object",
+                                    "required": [
+                                        "minLength",
+                                        "enforceHaveIBeenPwned",
+                                        "enforceNonCommonPassword",
+                                        "enforceNumericCharacters",
+                                        "enforceSpecialCharacters",
+                                        "enforceUpperLowerCase"
+                                    ],
+                                    "properties": {
+                                        "minLength": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "minimum": 0
+                                        },
+                                        "enforceHaveIBeenPwned": {
+                                            "type": "boolean"
+                                        },
+                                        "enforceNonCommonPassword": {
+                                            "type": "boolean"
+                                        },
+                                        "enforceNumericCharacters": {
+                                            "type": "boolean"
+                                        },
+                                        "enforceSpecialCharacters": {
+                                            "type": "boolean"
+                                        },
+                                        "enforceUpperLowerCase": {
+                                            "type": "boolean"
+                                        }
+                                    }
+                                }
+                            },
                             "minLength": {
                                 "type": "integer",
                                 "format": "int64",
@@ -53,21 +105,6 @@
                             },
                             "enforceUpperLowerCase": {
                                 "type": "boolean"
-                            },
-                            "api": {
-                                "type": "object",
-                                "required": [
-                                    "generate",
-                                    "validate"
-                                ],
-                                "properties": {
-                                    "generate": {
-                                        "type": "string"
-                                    },
-                                    "validate": {
-                                        "type": "string"
-                                    }
-                                }
                             }
                         }
                     }
