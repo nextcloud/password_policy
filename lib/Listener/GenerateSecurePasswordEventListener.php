@@ -29,6 +29,8 @@ class GenerateSecurePasswordEventListener implements IEventListener {
 			return;
 		}
 
-		$event->setPassword($this->generator->generate());
+		$event->setPassword(
+			$this->generator->generate($event->getContext()),
+		);
 	}
 }
