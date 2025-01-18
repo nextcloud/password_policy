@@ -30,7 +30,7 @@ class CommonPasswordsValidator implements IValidator {
 			return;
 		}
 
-		$passwordFile = __DIR__ . '/../../lists/list-'.strlen($password).'.php';
+		$passwordFile = __DIR__ . '/../../lists/list-' . strlen($password) . '.php';
 		if (file_exists($passwordFile)) {
 			$commonPasswords = require $passwordFile;
 			assert(is_array($commonPasswords));
