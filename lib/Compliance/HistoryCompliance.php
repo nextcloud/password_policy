@@ -26,7 +26,7 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 		protected IUserSession $session,
 		protected IHasher $hasher,
 		protected IL10N $l,
-		protected LoggerInterface $logger
+		protected LoggerInterface $logger,
 	) {
 	}
 

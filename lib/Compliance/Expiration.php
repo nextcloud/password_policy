@@ -35,7 +35,7 @@ class Expiration implements IUpdatable, IEntryControl {
 		PasswordPolicyConfig $policyConfig,
 		IUserManager $userManager,
 		IEventDispatcher $eventDispatcher,
-		IL10N $l
+		IL10N $l,
 	) {
 		$this->config = $config;
 		$this->policyConfig = $policyConfig;
