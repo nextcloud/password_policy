@@ -10,7 +10,7 @@
 	<description>
 		Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length
 	</description>
-	<version>3.0.0</version>
+	<version>4.0.0-dev.0</version>
 	<licence>agpl</licence>
 	<author>Bjoern Schiessle</author>
 	<namespace>Password_Policy</namespace>
@@ -21,7 +21,7 @@
 	<category>security</category>
 	<bugs>https://github.com/nextcloud/password_policy/issues</bugs>
 	<dependencies>
-		<nextcloud min-version="31" max-version="31" />
+		<nextcloud min-version="32" max-version="32" />
 	</dependencies>
 
 	<settings>
