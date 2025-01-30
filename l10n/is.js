@@ -14,6 +14,7 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Gerir stjórnendum kleift að skilgreina formótaðar kvaðir varðandi lykilorð, t.d. að hafa ákveðna lágmarkslengd á þeim",
     "Minimum password length" : "Lágmarkslengd lykilorðs",
     "User password history" : "Ferill lykilorða notanda",
+    "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Fjöldi tilrauna til innskráningar áður en notandaaðgangur er gerður óvirkur og taka þarf til aðgerða handvirkt (0 fyrir engin takmörk)",
     "Number of days until user password expires" : "Fjöldi daga þar til lykilorð notanda rennur út",
     "Forbid common passwords" : "Banna algeng lykilorð",
     "Enforce upper and lower case characters" : "Krefjast há- og lágstafa",
