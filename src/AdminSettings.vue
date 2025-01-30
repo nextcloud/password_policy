@@ -3,180 +3,98 @@
   - SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
-<template>
-	<NcSettingsSection :name="t('password_policy', 'Password policy')">
-		<ul class="password-policy__settings-list">
-			<li>
-				<input id="password-policy__settings__min-length"
-					v-model="config.minLength"
-					min="0"
-					type="number"
-					@change="updateNumberSetting('minLength')">
-				<label for="password-policy__settings__min-length">
-					{{ t('password_policy', 'Minimum password length') }}
-				</label>
-			</li>
-			<li>
-				<input id="password-policy-history-size"
-					v-model="config.historySize"
-					min="0"
-					type="number"
-					@change="updateNumberSetting('historySize')">
-				<label for="password-policy-history-size">
-					{{ t('password_policy', 'User password history') }}
-				</label>
-			</li>
-			<li>
-				<input id="password-policy_failed-login"
-					v-model="config.maximumLoginAttempts"
-					min="0"
-					type="number"
-					@change="updateNumberSetting('maximumLoginAttempts')">
-				<label for="password-policy_failed-login">
-					{{ t('password_policy', 'Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)') }}
-				</label>
-				<p class="havibeenpwned-hint">
-					{{ t('password_policy', 'Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting.') }}
-				</p>
-			</li>
-			<li>
-				<input id="password-policy-expiration"
-					v-model="config.expiration"
-					min="0"
-					type="number"
-					@change="updateNumberSetting('expiration')">
-				<label for="password-policy-expiration">
-					{{ t('password_policy', 'Number of days until user password expires') }}
-				</label>
-				<p class="havibeenpwned-hint">
-					{{ t('password_policy', 'Warning: enabling password expiration is nowadays considered a security risk by several security agencies.') }}
-				</p>
-			</li>
-		</ul>
+<script setup lang="ts">
+import { getCapabilities } from '@nextcloud/capabilities'
+import { t } from '@nextcloud/l10n'
+import Vue, { computed, ref } from 'vue'
+import { DefaultPolicyValues, PolicyHeadings } from './constants'
 
-		<ul class="password-policy__settings-list">
-			<li>
-				<NcCheckboxRadioSwitch :checked.sync="config.enforceNonCommonPassword"
-					type="switch"
-					@update:checked="updateBoolSetting('enforceNonCommonPassword')">
-					{{ t('password_policy', 'Forbid common passwords') }}
-				</NcCheckboxRadioSwitch>
-			</li>
-			<li>
-				<NcCheckboxRadioSwitch :checked.sync="config.enforceUpperLowerCase"
-					type="switch"
-					@update:checked="updateBoolSetting('enforceUpperLowerCase')">
-					{{ t('password_policy', 'Enforce upper and lower case characters') }}
-				</NcCheckboxRadioSwitch>
-			</li>
-			<li>
-				<NcCheckboxRadioSwitch :checked.sync="config.enforceNumericCharacters"
-					type="switch"
-					@update:checked="updateBoolSetting('enforceNumericCharacters')">
-					{{ t('password_policy', 'Enforce numeric characters') }}
-				</NcCheckboxRadioSwitch>
-			</li>
-			<li>
-				<NcCheckboxRadioSwitch :checked.sync="config.enforceSpecialCharacters"
-					type="switch"
-					@update:checked="updateBoolSetting('enforceSpecialCharacters')">
-					{{ t('password_policy', 'Enforce special characters') }}
-				</NcCheckboxRadioSwitch>
-			</li>
-			<li>
-				<NcCheckboxRadioSwitch :checked.sync="config.enforceHaveIBeenPwned"
-					type="switch"
-					@update:checked="updateBoolSetting('enforceHaveIBeenPwned')">
-					{{ t('password_policy', 'Check password against the list of breached passwords from haveibeenpwned.com') }}
-				</NcCheckboxRadioSwitch>
-				<p class="havibeenpwned-hint">
-					{{ t('password_policy', 'This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set.') }}
-				</p>
-			</li>
-		</ul>
-	</NcSettingsSection>
-</template>
-
-<script>
-import { showError, showSuccess } from '@nextcloud/dialogs'
-import { loadState } from '@nextcloud/initial-state'
-
-import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
 import NcSettingsSection from '@nextcloud/vue/dist/Components/NcSettingsSection.js'
+import PasswordPolicy from './components/PasswordPolicy.vue'
+import ComplianceConfig from './components/ComplianceConfig.vue'
+import AddPolicyButton from './components/AddPolicyButton.vue'
+import type { IPasswordPolicy } from './types'
 
-export default {
-	name: 'AdminSettings',
-	components: {
-		NcCheckboxRadioSwitch,
-		NcSettingsSection,
-	},
+const policies = ref(getCapabilities().password_policy.policies)
+const configuredPolicies = computed(() => Object.keys(policies.value))
 
-	data() {
-		return {
-			config: loadState('password_policy', 'config'),
+/**
+ * Update a password policy
+ * @param context The password context the policy is for
+ * @param policy The updated policy
+ */
+function onUpdatePolicy(context: string, policy: IPasswordPolicy): void {
+	console.debug(`Update password policy ${context}`, policy)
+
+	for (const [key, value] of Object.entries(policy)) {
+		if (value !== policies.value[context]?.[key]) {
+			const update = typeof value === 'boolean' ? (value ? '1' : '0') : String(value)
+			window.OCP.AppConfig.setValue('password_policy', context === 'account' ? key : `${key}_${context}`, update)
 		}
-	},
+	}
 
-	methods: {
-		async updateBoolSetting(setting) {
-			await this.setValue(setting, this.config[setting] ? '1' : '0')
-		},
-		async updateNumberSetting(setting) {
-			// If value not only (positive) numbers
-			if (!/^\d+$/.test(this.config[setting])) {
-				let message = t('password_policy', 'Unknown error')
-				switch (setting) {
-				case 'minLength':
-					message = t('password_policy', 'Minimal length has to be a non negative number')
-					break
-				case 'historySize':
-					message = t('password_policy', 'History size has to be a non negative number')
-					break
-				case 'expiration':
-					message = t('password_policy', 'Expiration days have to be a non negative number')
-					break
-				case 'maximumLoginAttempts':
-					message = t('password_policy', 'Maximum login attempts have to be a non negative number')
-					break
-				}
-				showError(message)
-				return
-			}
+	Vue.set(policies.value, context, policy)
+}
 
-			// Otherwise store Value
-			await this.setValue(setting, this.config[setting])
-		},
+/**
+ * Create a new policy for specified password context
+ * @param context The password context
+ */
+function onAddPolicy(context: string): void {
+	if (context in policies.value) {
+		console.warn(`Password context "${context}" already registered`)
+		return
+	}
 
-		/**
-		 * Save the provided setting and value
-		 *
-		 * @param {string} setting the app config key
-		 * @param {string} value the app config value
-		 */
-		async setValue(setting, value) {
-			OCP.AppConfig.setValue('password_policy', setting, value, {
-				success: () => showSuccess(t('password_policy', 'Settings saved')),
-				error: () => showError(t('password_policy', 'Error while saving settings')),
-			})
-		},
-	},
+	const passwordContexts = [...Object.keys(policies.value), context]
+	window.OCP.AppConfig.setValue('password_policy', 'passwordContexts', JSON.stringify(passwordContexts))
+	Vue.set(policies.value, context, { ...DefaultPolicyValues })
+}
+
+/**
+ * Remove a policy configuration
+ * @param context The password context to remove the policy for
+ */
+function onRemovePolicy(context: string): void {
+	console.debug(`Remove password policy ${context}`)
+	const passwordContexts = Object.keys(policies.value).filter((key) => key !== context)
+	window.OCP.AppConfig.setValue('password_policy', 'passwordContexts', JSON.stringify(passwordContexts))
+	Vue.delete(policies.value, context)
 }
 </script>
 
-<style lang="scss" scoped>
-.password-policy {
-	&__settings-list li input[type='number'] {
-		width: 75px;
-	}
+<template>
+	<NcSettingsSection :name="t('password_policy', 'Password policy')">
+		<ComplianceConfig />
 
-	// Little spacing between two lists (used between number/checkbox inputs)
-	&__settings-list + &__settings-list {
-		margin-top: 8px;
-	}
+		<div :class="$style.policyWrapper">
+			<PasswordPolicy v-for="policyName in configuredPolicies"
+				:key="policyName"
+				:can-remove="policyName !== 'account'"
+				:heading="configuredPolicies.length === 1 ? t('password_policy', 'General password policies') : PolicyHeadings[policyName]"
+				:model-value="policies[policyName]"
+				@update:modelValue="onUpdatePolicy(policyName, $event)"
+				@remove="onRemovePolicy(policyName)" />
+
+			<AddPolicyButton v-if="configuredPolicies.length < Object.keys(PolicyHeadings).length"
+				:policies="policies"
+				@add-policy="onAddPolicy" />
+		</div>
+	</NcSettingsSection>
+</template>
+
+<style module>
+.policyWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
 }
 
-.havibeenpwned-hint {
-	opacity: 0.7;
-	padding-left: 28px;
+.policyWrapper > * {
+	min-width: 446px;
+	max-width: 446px;
+	padding: 8px;
+	border: 1px solid var(--color-border);
+	border-radius: var(--border-radius-container);
 }
 </style>

@@ -11,21 +11,18 @@ namespace OCA\Password_Policy\Validator;
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\HintException;
 use OCP\IL10N;
+use OCP\Security\PasswordContext;
 
 class LengthValidator implements IValidator {
 
-	/** @var PasswordPolicyConfig */
-	private $config;
-	/** @var IL10N */
-	private $l;
-
-	public function __construct(PasswordPolicyConfig $config, IL10N $l) {
-		$this->config = $config;
-		$this->l = $l;
+	public function __construct(
+		private PasswordPolicyConfig $config,
+		private IL10N $l,
+	) {
 	}
 
-	public function validate(string $password): void {
-		$minLength = $this->config->getMinLength();
+	public function validate(string $password, ?PasswordContext $context = null): void {
+		$minLength = $this->config->getMinLength($context);
 		if (strlen($password) < $minLength) {
 			$message = 'Password needs to be at least ' . $minLength . ' characters long.';
 			$message_t = $this->l->t(

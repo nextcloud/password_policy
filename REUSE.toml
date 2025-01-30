@@ -5,8 +5,16 @@ SPDX-PackageName = "external"
 SPDX-PackageSupplier = "Nextcloud <info@nextcloud.com>"
 SPDX-PackageDownloadLocation = "https://github.com/nextcloud/external"
 
+# Dependency management
 [[annotations]]
-path = ["package-lock.json", "package.json", ".l10nignore", "composer.json", "composer.lock", "vendor-bin/**/composer.json", "vendor-bin/**/composer.lock", ".tx/config", "js/vendor.LICENSE.txt", ".github/CODEOWNERS", ".eslintrc.json", "tests/psalm-baseline.xml"]
+path = ["package-lock.json", "package.json", "composer.json", "composer.lock", "vendor-bin/**/composer.json", "vendor-bin/**/composer.lock", "js/vendor.LICENSE.txt"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
+
+# Build config files
+[[annotations]]
+path = [".l10nignore", "tsconfig.json", ".tx/config", ".github/CODEOWNERS", ".eslintrc.json", "tests/psalm-baseline.xml"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "none"
 SPDX-License-Identifier = "CC0-1.0"

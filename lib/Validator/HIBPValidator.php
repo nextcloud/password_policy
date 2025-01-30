@@ -12,6 +12,7 @@ use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\HintException;
 use OCP\Http\Client\IClientService;
 use OCP\IL10N;
+use OCP\Security\PasswordContext;
 use Psr\Log\LoggerInterface;
 
 class HIBPValidator implements IValidator {
@@ -24,8 +25,8 @@ class HIBPValidator implements IValidator {
 	) {
 	}
 
-	public function validate(string $password): void {
-		if ($this->config->getEnforceHaveIBeenPwned()) {
+	public function validate(string $password, ?PasswordContext $context = null): void {
+		if ($this->config->getEnforceHaveIBeenPwned($context)) {
 			$hash = sha1($password);
 			$range = substr($hash, 0, 5);
 			$needle = strtoupper(substr($hash, 5));

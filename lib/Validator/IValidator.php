@@ -9,11 +9,12 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\Validator;
 
 use OCP\HintException;
+use OCP\Security\PasswordContext;
 
 interface IValidator {
 
 	/**
 	 * @throws HintException
 	 */
-	public function validate(string $password): void;
+	public function validate(string $password, ?PasswordContext $context = null): void;
 }

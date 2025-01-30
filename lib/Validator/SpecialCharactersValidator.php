@@ -11,21 +11,18 @@ namespace OCA\Password_Policy\Validator;
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\HintException;
 use OCP\IL10N;
+use OCP\Security\PasswordContext;
 
 class SpecialCharactersValidator implements IValidator {
 
-	/** @var PasswordPolicyConfig */
-	private $config;
-	/** @var IL10N */
-	private $l;
-
-	public function __construct(PasswordPolicyConfig $config, IL10N $l) {
-		$this->config = $config;
-		$this->l = $l;
+	public function __construct(
+		private PasswordPolicyConfig $config,
+		private IL10N $l,
+	) {
 	}
 
-	public function validate(string $password): void {
-		$enforceSpecialCharacters = $this->config->getEnforceSpecialCharacters();
+	public function validate(string $password, ?PasswordContext $context = null): void {
+		$enforceSpecialCharacters = $this->config->getEnforceSpecialCharacters($context);
 		if ($enforceSpecialCharacters && ctype_alnum($password)) {
 			$message = 'Password needs to contain at least one special character.';
 			$message_t = $this->l->t(
