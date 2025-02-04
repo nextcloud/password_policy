@@ -22,15 +22,9 @@ use Psr\Log\LoggerInterface;
 
 class PasswordValidatorTest extends TestCase {
 
-	/** @var ContainerInterface|MockObject */
-	private $container;
-
-	/** @var LoggerInterface|MockObject */
-	private $logger;
-
-	/** @var PasswordValidator */
-	private $validator;
-
+	private ContainerInterface&MockObject $container;
+	private LoggerInterface&MockObject $logger;
+	private PasswordValidator $validator;
 
 	protected function setUp(): void {
 		parent::setUp();

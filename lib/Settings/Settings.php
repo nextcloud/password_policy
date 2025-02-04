@@ -6,8 +6,9 @@ declare(strict_types=1);
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-namespace OCA\Password_Policy;
+namespace OCA\Password_Policy\Settings;
 
+use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Services\IInitialState;
 use OCP\Settings\ISettings;
@@ -26,13 +27,7 @@ class Settings implements ISettings {
 		Util::addStyle($this->appName, 'password_policy-settings');
 		Util::addScript($this->appName, 'password_policy-settings');
 
-		$this->initialStateService->provideInitialState('config', [
-			'minLength' => $this->config->getMinLength(),
-			'enforceNonCommonPassword' => $this->config->getEnforceNonCommonPassword(),
-			'enforceUpperLowerCase' => $this->config->getEnforceUpperLowerCase(),
-			'enforceNumericCharacters' => $this->config->getEnforceNumericCharacters(),
-			'enforceSpecialCharacters' => $this->config->getEnforceSpecialCharacters(),
-			'enforceHaveIBeenPwned' => $this->config->getEnforceHaveIBeenPwned(),
+		$this->initialStateService->provideInitialState('loginConfig', [
 			'historySize' => $this->config->getHistorySize(),
 			'expiration' => $this->config->getExpiryInDays(),
 			'maximumLoginAttempts' => $this->config->getMaximumLoginAttempts(),

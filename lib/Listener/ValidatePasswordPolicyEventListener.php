@@ -17,11 +17,10 @@ use OCP\Security\Events\ValidatePasswordPolicyEvent;
  * @template-implements IEventListener<ValidatePasswordPolicyEvent>
  */
 class ValidatePasswordPolicyEventListener implements IEventListener {
-	/** @var PasswordValidator */
-	private $passwordValidator;
 
-	public function __construct(PasswordValidator $passwordValidator) {
-		$this->passwordValidator = $passwordValidator;
+	public function __construct(
+		private PasswordValidator $passwordValidator,
+	) {
 	}
 
 	public function handle(Event $event): void {
@@ -29,6 +28,9 @@ class ValidatePasswordPolicyEventListener implements IEventListener {
 			return;
 		}
 
-		$this->passwordValidator->validate($event->getPassword());
+		$this->passwordValidator->validate(
+			$event->getPassword(),
+			$event->getContext(),
+		);
 	}
 }

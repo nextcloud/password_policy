@@ -14,6 +14,7 @@ use OCA\Password_Policy\Validator\CommonPasswordsValidator;
 use OCA\Password_Policy\Validator\IValidator;
 use OCP\HintException;
 use OCP\IL10N;
+use OCP\Security\PasswordContext;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class CommonPasswordsValidatorTest extends TestCase {
@@ -35,10 +36,41 @@ class CommonPasswordsValidatorTest extends TestCase {
 	}
 
 	/**
+	 * Ensure that different contexts can yield different configuration values
+	 * @dataProvider dataValidateWithContext
+	 */
+	public function testValidateWithContext(?PasswordContext $context, bool $expected): void {
+		$this->config
+			->method('getEnforceNonCommonPassword')
+			->willReturnMap([
+				[null, true],
+				[PasswordContext::ACCOUNT, true],
+				[PasswordContext::SHARING, false],
+			]);
+
+		if (!$expected) {
+			$this->expectException(HintException::class);
+		} else {
+			$this->assertTrue(true);
+		}
+
+		$this->validator->validate('banana', $context);
+	}
+
+	public static function dataValidateWithContext(): array {
+		return [
+			[null, false],
+			[PasswordContext::ACCOUNT, false],
+			[PasswordContext::SHARING, true],
+		];
+	}
+
+	/**
 	 * @dataProvider dataValidate
 	 */
 	public function testValidate(string $password, bool $enforced, bool $valid): void {
-		$this->config->method('getEnforceNonCommonPassword')
+		$this->config->expects(self::once())
+			->method('getEnforceNonCommonPassword')
 			->willReturn($enforced);
 
 		if (!$valid) {
@@ -51,10 +83,10 @@ class CommonPasswordsValidatorTest extends TestCase {
 
 	public static function dataValidate(): array {
 		$attempts = [
-			['banana', false,  true],
-			['bananabananabananabanana', false,  true],
-			['banana',  true, false],
-			['bananabananabananabanana',  true,  true],
+			'not enforced but common' => ['banana', false, true],
+			'not enforced unique' => ['bananabananabananabanana', false, true],
+			'enforced and common' => ['banana', true, false],
+			'enforced unique' => ['bananabananabananabanana', true, true],
 		];
 		for ($i = 1; $i <= 39; $i++) {
 			$attempts[] = [str_repeat('$', $i), true, $i !== 6];

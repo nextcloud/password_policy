@@ -10,6 +10,7 @@ namespace OCA\Password_Policy;
 
 use OCP\HintException;
 use OCP\Security\ISecureRandom;
+use OCP\Security\PasswordContext;
 
 class Generator {
 
@@ -24,29 +25,31 @@ class Generator {
 
 	/**
 	 * @throws HintException
+	 * @since 3.0.0 support password context
 	 */
-	public function generate(): string {
-		$minLength = max($this->config->getMinLength(), 8);
+	public function generate(?PasswordContext $context = null): string {
+		$context = $context ?? PasswordContext::ACCOUNT;
+		$minLength = max($this->config->getMinLength($context), 8);
 		$length = $minLength;
 
 		$password = '';
 		$chars = '';
 
 		for ($i = 0; $i < self::PASSWORD_GENERATION_MAX_ROUNDS; $i++) {
-			if ($this->config->getEnforceUpperLowerCase()) {
+			if ($this->config->getEnforceUpperLowerCase($context)) {
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_UPPER);
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_LOWER);
 				$length -= 2;
 				$chars .= ISecureRandom::CHAR_UPPER . ISecureRandom::CHAR_LOWER;
 			}
 
-			if ($this->config->getEnforceNumericCharacters()) {
+			if ($this->config->getEnforceNumericCharacters($context)) {
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_DIGITS);
 				$length -= 1;
 				$chars .= ISecureRandom::CHAR_DIGITS;
 			}
 
-			if ($this->config->getEnforceSpecialCharacters()) {
+			if ($this->config->getEnforceSpecialCharacters($context)) {
 				$password .= $this->random->generate(1, ISecureRandom::CHAR_SYMBOLS);
 				$length -= 1;
 				$chars .= ISecureRandom::CHAR_SYMBOLS;
@@ -66,7 +69,7 @@ class Generator {
 			}
 
 			try {
-				$this->validator->validate($password);
+				$this->validator->validate($password, $context);
 				// Validation succeeded
 				return $password;
 			} catch (HintException $e) {

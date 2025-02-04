@@ -25,6 +25,6 @@
 	</dependencies>
 
 	<settings>
-		<admin>OCA\Password_Policy\Settings</admin>
+		<admin>OCA\Password_Policy\Settings\Settings</admin>
 	</settings>
 </info>

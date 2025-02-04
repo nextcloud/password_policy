@@ -14,6 +14,7 @@ use OCA\Password_Policy\Validator\IValidator;
 use OCA\Password_Policy\Validator\UpperCaseLoweCaseValidator;
 use OCP\HintException;
 use OCP\IL10N;
+use OCP\Security\PasswordContext;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class UpperCaseLowerCaseValidatorTest extends TestCase {
@@ -32,6 +33,36 @@ class UpperCaseLowerCaseValidatorTest extends TestCase {
 			$this->config,
 			$this->l
 		);
+	}
+
+	/**
+	 * Ensure that different contexts can yield different configuration values
+	 * @dataProvider dataValidateWithContext
+	 */
+	public function testValidateWithContext(?PasswordContext $context, bool $expected): void {
+		$this->config
+			->method('getEnforceUpperLowerCase')
+			->willReturnMap([
+				[null, true],
+				[PasswordContext::ACCOUNT, true],
+				[PasswordContext::SHARING, false],
+			]);
+
+		if (!$expected) {
+			$this->expectException(HintException::class);
+		} else {
+			$this->assertTrue(true);
+		}
+
+		$this->validator->validate('password', $context);
+	}
+
+	public static function dataValidateWithContext(): array {
+		return [
+			[null, false],
+			[PasswordContext::ACCOUNT, false],
+			[PasswordContext::SHARING, true],
+		];
 	}
 
 	/**
