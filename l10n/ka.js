@@ -20,13 +20,13 @@ OC.L10N.register(
     "Enforce special characters" : "Enforce special characters",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Check password against the list of breached passwords from haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set.",
-    "User password history" : "User password history",
     "Unknown error" : "Unknown error",
     "Minimal length has to be a non negative number" : "Minimal length has to be a non negative number",
     "History size has to be a non negative number" : "History size has to be a non negative number",
     "Expiration days have to be a non negative number" : "Expiration days have to be a non negative number",
     "Maximum login attempts have to be a non negative number" : "Maximum login attempts have to be a non negative number",
     "Settings saved" : "Settings saved",
-    "Error while saving settings" : "Error while saving settings"
+    "Error while saving settings" : "Error while saving settings",
+    "User password history" : "User password history"
 },
 "nplurals=2; plural=(n!=1);");

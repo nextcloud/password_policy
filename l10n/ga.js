@@ -33,14 +33,14 @@ OC.L10N.register(
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Cruthaíonn an tseiceáil seo hash den fhocal faire agus seolann sé na chéad 5 charachtar den hash seo chuig an haveibeenpwned.com API chun liosta a fháil de na hashes ar fad a thosaíonn leo siúd. Ansin seiceálann sé ar an gcéad Nextcloud an bhfuil an hash pasfhocal sa tacar torthaí.",
     "Account password policies" : "Polasaithe pasfhocail cuntais",
     "Share password policies" : "Roinn polasaithe pasfhocail",
-    "User password history" : "Stair pasfhocail úsáideora",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Tabhair faoi deara, le do thoil, go bhfuil an rogha seo i gceist chun cuntais ionsaithe a chosaint. Ní mór don riarachán cuntais míchumasaithe a athchumasú de láimh. Ionsaitheoirí a dhéanann iarracht pasfhocail chuntas a thomhas, cuirfear bac ar a seoladh IP ag an gcosaint bruteforce neamhspleách ón socrú seo.",
     "Unknown error" : "Earráid anaithnid",
     "Minimal length has to be a non negative number" : "Caithfidh an t-íosfhad a bheith ina uimhir neamhdhiúltach",
     "History size has to be a non negative number" : "Caithfidh méid na staire a bheith ina uimhir neamhdhiúltach",
     "Expiration days have to be a non negative number" : "Caithfidh laethanta éaga a bheith ina uimhir neamhdhiúltach",
     "Maximum login attempts have to be a non negative number" : "Caithfidh na huasiarrachtaí logáil isteach a bheith ina n-uimhir neamhdhiúltach",
     "Settings saved" : "Socruithe sábháilte",
-    "Error while saving settings" : "Earráid agus na socruithe á sábháil"
+    "Error while saving settings" : "Earráid agus na socruithe á sábháil",
+    "User password history" : "Stair pasfhocail úsáideora",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Tabhair faoi deara, le do thoil, go bhfuil an rogha seo i gceist chun cuntais ionsaithe a chosaint. Ní mór don riarachán cuntais míchumasaithe a athchumasú de láimh. Ionsaitheoirí a dhéanann iarracht pasfhocail chuntas a thomhas, cuirfear bac ar a seoladh IP ag an gcosaint bruteforce neamhspleách ón socrú seo."
 },
 "nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);");

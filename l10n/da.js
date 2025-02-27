@@ -33,14 +33,14 @@ OC.L10N.register(
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Dette check danner et krypteret hash af adgangskoden og sender de første 4 tegn af dette hash til haveibeenpwned.com's API for at modtage en liste med alle has'er, der starter med disse tegn. Derefter kontrollerer det, om adgangskodehashen findes i Nextcloud installationen.",
     "Account password policies" : "Politikker for kontoadgangskode",
     "Share password policies" : "Del adgangskodepolitikker",
-    "User password history" : "Adgangskodehistorik",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Bemærk venligst, at denne mulighed er beregnet til at beskytte angrebne konti. Deaktiverede konti skal genaktiveres manuelt af administrationen. Angribere, der forsøger at gætte adgangskoder til konti, vil få deres IP adresse blokeret af bruteforce beskyttelsen uafhængigt af denne indstilling.",
     "Unknown error" : "Ukendt fejl",
     "Minimal length has to be a non negative number" : "Minimumslængden må ikke være negativ",
     "History size has to be a non negative number" : "Historik størrelsen må ikke være negativ",
     "Expiration days have to be a non negative number" : "Udløbstiden må ikke være negativ",
     "Maximum login attempts have to be a non negative number" : "Antal tilladte loginforsøg må ikke være negativ",
     "Settings saved" : "Indstillinger gemt",
-    "Error while saving settings" : "Der opstod en fejl under lagring af indstillinger"
+    "Error while saving settings" : "Der opstod en fejl under lagring af indstillinger",
+    "User password history" : "Adgangskodehistorik",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Bemærk venligst, at denne mulighed er beregnet til at beskytte angrebne konti. Deaktiverede konti skal genaktiveres manuelt af administrationen. Angribere, der forsøger at gætte adgangskoder til konti, vil få deres IP adresse blokeret af bruteforce beskyttelsen uafhængigt af denne indstilling."
 },
 "nplurals=2; plural=(n != 1);");
