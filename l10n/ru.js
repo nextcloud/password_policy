@@ -33,14 +33,14 @@ OC.L10N.register(
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Для проверки пароля создаётся его хеш, после чего первые 5 символов этого хеша передаются в API сайта hasibeenpwned.com. Полученные с сайта хеши паролей сравниваются с хешами паролей сервера Nextcloud.",
     "Account password policies" : "Политика использования паролей для учетных записей",
     "Share password policies" : "Политика общего доступа к паролям",
-    "User password history" : "История паролей пользователей",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Обратите внимание, что эта настройка предназначена для защиты атакуемых учетных записей. Отключенные учетные записи включаются администратором вручную. IP-адреса злоумышленников, пытающихся угадать пароли учетных записей, будут блокироваться механизмом защиты от перебора независимо от этой настройки.",
     "Unknown error" : "Неизвестная ошибка",
     "Minimal length has to be a non negative number" : "Минимальная длина должна быть неотрицательным числом",
     "History size has to be a non negative number" : "Размер истории должен быть неотрицательным числом",
     "Expiration days have to be a non negative number" : "Срок действия должен быть неотрицательным числом",
     "Maximum login attempts have to be a non negative number" : "Максимальное количество попыток входа в систему должно быть неотрицательным числом",
     "Settings saved" : "Настройки сохранены",
-    "Error while saving settings" : "Ошибка при сохранении параметров"
+    "Error while saving settings" : "Ошибка при сохранении параметров",
+    "User password history" : "История паролей пользователей",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Обратите внимание, что эта настройка предназначена для защиты атакуемых учетных записей. Отключенные учетные записи включаются администратором вручную. IP-адреса злоумышленников, пытающихся угадать пароли учетных записей, будут блокироваться механизмом защиты от перебора независимо от этой настройки."
 },
 "nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);");
