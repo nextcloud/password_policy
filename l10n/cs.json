@@ -31,14 +31,14 @@
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Tato kontrola vytvoří otisk (hash) hesla a pošle prvních 5 znaků tohoto otisku na aplikační program. rozhraní (API) služby haveibeenpwned.com pro získání seznamu všech otisků, které začínají na tento. Pak zkontroluje na instanci Nextcloud, zda se ve výsledné sadě vyskytuje otisk daného hesla.",
     "Account password policies" : "Zásady ohledně hesel k účtům",
     "Share password policies" : "Zásady ohledně hesel ke sdílením",
-    "User password history" : "Historie hesel uživatele",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Mějte na paměti, že toto nastavení je určeno k ochraně napadených účtů. Zablokované účty je nutné manuálně zapnout v administraci. Útočníkům snažícím se uhádnout hesla uživatelských účtů bude jejich IP adresa zablokována nezávisle na tomto nastavení.",
     "Unknown error" : "Neznámá chyba",
     "Minimal length has to be a non negative number" : "Je třeba, aby nejkratší přípustná délka nebylo záporné číslo",
     "History size has to be a non negative number" : "Je třeba, aby hloubka historie nebylo záporné číslo",
     "Expiration days have to be a non negative number" : "Je třeba, aby počet dnů do skončení platnosti nebylo záporné číslo",
     "Maximum login attempts have to be a non negative number" : "Je třeba, aby nejvyšší umožněný počet pokusů o přihlášení nebylo záporné číslo",
     "Settings saved" : "Nastavení uložena",
-    "Error while saving settings" : "Chyba při ukládání nastavení"
+    "Error while saving settings" : "Chyba při ukládání nastavení",
+    "User password history" : "Historie hesel uživatele",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Mějte na paměti, že toto nastavení je určeno k ochraně napadených účtů. Zablokované účty je nutné manuálně zapnout v administraci. Útočníkům snažícím se uhádnout hesla uživatelských účtů bude jejich IP adresa zablokována nezávisle na tomto nastavení."
 },"pluralForm" :"nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;"
 }

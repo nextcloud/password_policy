@@ -22,14 +22,14 @@ OC.L10N.register(
     "Enforce special characters" : "Krev spesialtegn",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Check password against the list of breached passwords from haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Denne sjekken oppretter en hash av passordet og sender de første 5 tegnene i denne hashen til haveibeenpwned.com API for å hente en liste over alle hashen som starter med disse. Deretter sjekker den Nextcloud-forekomsten om passordhashen er i resultatsettet.",
-    "User password history" : "Brukers passordhistorikk",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Vær oppmerksom på at dette alternativet er ment å beskytte angrepne kontoer. Deaktiverte kontoer må aktiveres på nytt manuelt av administrasjonen. Angripere som prøver å gjette passord for kontoer, vil få IP-adressen blokkert av bruteforce-beskyttelsen uavhengig av denne innstillingen.",
     "Unknown error" : "Ukjent feil",
     "Minimal length has to be a non negative number" : "Minimal lengde må være et ikke-negativt tall",
     "History size has to be a non negative number" : "Historiestørrelsen må være et ikke-negativt tall",
     "Expiration days have to be a non negative number" : "Utløpsdager må være et ikke-negativt tall",
     "Maximum login attempts have to be a non negative number" : "Maksimalt antall påloggingsforsøk må være et ikke-negativt tall",
     "Settings saved" : "Innstillinger lagret",
-    "Error while saving settings" : "Feil ved lagring av innstillinger"
+    "Error while saving settings" : "Feil ved lagring av innstillinger",
+    "User password history" : "Brukers passordhistorikk",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Vær oppmerksom på at dette alternativet er ment å beskytte angrepne kontoer. Deaktiverte kontoer må aktiveres på nytt manuelt av administrasjonen. Angripere som prøver å gjette passord for kontoer, vil få IP-adressen blokkert av bruteforce-beskyttelsen uavhengig av denne innstillingen."
 },
 "nplurals=2; plural=(n != 1);");

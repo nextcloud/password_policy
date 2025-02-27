@@ -17,9 +17,9 @@
     "Enforce numeric characters" : "Pakota käyttämään numeroita",
     "Enforce special characters" : "Pakota käyttämään erikoismerkkejä",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin",
-    "User password history" : "Käyttäjän salasanahistoria",
     "Unknown error" : "Tuntematon virhe",
     "Settings saved" : "Asetukset tallennettu",
-    "Error while saving settings" : "Virhe tallennettaessa asetuksia"
+    "Error while saving settings" : "Virhe tallennettaessa asetuksia",
+    "User password history" : "Käyttäjän salasanahistoria"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

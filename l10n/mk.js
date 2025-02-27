@@ -20,12 +20,12 @@ OC.L10N.register(
     "Enforce special characters" : "Задолжителни специјални карактери",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Проверка на лозинките дали се на компромирана листа на haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Оваа проверка создава хаш на лозинката и ги испраќа првите 5 карактери на овој хаш на hasibeenpwned.com преку API за да се добие список на сите хашови кои започнуваат со тие карактери. Потоа, Nextcloud серверот ја проверува листата на хашови со хашот на лозинката.",
-    "User password history" : "Историја на лозинки за корисник",
     "Unknown error" : "Непозната грешка",
     "Minimal length has to be a non negative number" : "Минималната должина неможе да биде негативен број",
     "History size has to be a non negative number" : "Историската должина неможе да биде негативен број",
     "Expiration days have to be a non negative number" : "Датумот на истекување неможе да биде негативен број",
     "Maximum login attempts have to be a non negative number" : "Максималниот број на обиди неможе да биде негативен број",
-    "Settings saved" : "Параматрите се зачувани"
+    "Settings saved" : "Параматрите се зачувани",
+    "User password history" : "Историја на лозинки за корисник"
 },
 "nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;");

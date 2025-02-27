@@ -20,13 +20,13 @@ OC.L10N.register(
     "Enforce special characters" : "شخصیت های خاص را اجرا کنید",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "گذرواژه را در برابر لیست گذرواژه های نقض شده از hasibeenpwned.com بررسی کنید",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "این بررسی یک هشی از رمز عبور ایجاد می کند و 5 کاراکتر اول این هش را به API haveibeenpwned.com می فرستد تا لیستی از همه هش ها را که با آن شروع می شود بازیابی کنید. سپس در مثال نکست کلود بررسی می کند که آیا رمز عبور در مجموعه نتایج قرار دارد یا خیر.",
-    "User password history" : "User password history",
     "Unknown error" : "خطای ناشناخته",
     "Minimal length has to be a non negative number" : "Minimal length has to be a non negative number",
     "History size has to be a non negative number" : "History size has to be a non negative number",
     "Expiration days have to be a non negative number" : "Expiration days have to be a non negative number",
     "Maximum login attempts have to be a non negative number" : "Maximum login attempts have to be a non negative number",
     "Settings saved" : "تنظیمات ذخیره شد",
-    "Error while saving settings" : "Error while saving settings"
+    "Error while saving settings" : "Error while saving settings",
+    "User password history" : "User password history"
 },
 "nplurals=2; plural=(n > 1);");

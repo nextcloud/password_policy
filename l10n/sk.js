@@ -33,14 +33,14 @@ OC.L10N.register(
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Toto vytvorí kontrolný súčet z hesla a pošle prvých 5 znakov kontrolného súčtu do haveibeenpwned.com API. Prijme sa zoznam všetkých kontrolných súčtov, ktoré začínajú na tých 5 znakov. Potom sa kontroluje, či sa zadané heslo nachádza v prijatom zozname.",
     "Account password policies" : "Zásady hesla účtu",
     "Share password policies" : "Zásady hesla pre zdieľanie",
-    "User password history" : "História hesiel používateľa",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Upozorňujeme, že táto možnosť je určená na ochranu napadnutých účtov. Deaktivované účty je potrebné znova povoliť manuálne administráciou. Útočníkom, ktorí sa pokúsia uhádnuť heslá účtov, bude ich IP adresa zablokovaná ochranou bruteforce nezávisle od tohto nastavenia.",
     "Unknown error" : "Neznáma chyba",
     "Minimal length has to be a non negative number" : "Minimálna dĺžka musí byť kladné číslo",
     "History size has to be a non negative number" : "Veľkosť histórie musí byť kladné číslo",
     "Expiration days have to be a non negative number" : "Dní do expirácie musí byť kladné číslo",
     "Maximum login attempts have to be a non negative number" : "Maximálny počet pokusov o prihlásenie musí byť kladné číslo",
     "Settings saved" : "Nastavenia uložené",
-    "Error while saving settings" : "Chyba pri ukladaní nastavení"
+    "Error while saving settings" : "Chyba pri ukladaní nastavení",
+    "User password history" : "História hesiel používateľa",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Upozorňujeme, že táto možnosť je určená na ochranu napadnutých účtov. Deaktivované účty je potrebné znova povoliť manuálne administráciou. Útočníkom, ktorí sa pokúsia uhádnuť heslá účtov, bude ich IP adresa zablokovaná ochranou bruteforce nezávisle od tohto nastavenia."
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");

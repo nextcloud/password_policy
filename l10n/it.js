@@ -33,14 +33,14 @@ OC.L10N.register(
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Questo controllo crea un hash della password e invia i primi 5 caratteri di questo hash alle API di haveibeenpwned.com per recuperare un elenco di tutti gli hash che iniziano con questi caratteri. Poi controlla se la password dell'istanza Nextcloud è presente nei risultati.",
     "Account password policies" : "Criteri per le password degli account",
     "Share password policies" : "Condividi le policy sulle password",
-    "User password history" : "Cronologia della password degli utenti",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Si noti che questa opzione è pensata per proteggere gli account sotto attacco. Gli account disattivati devono essere riattivati a mano da un amministratore. Gli aggressori che tentano di indovinare le password degli account avranno il loro indirizzo IP bloccato dalla protezione bruteforce indipendentemente da questa impostazione.",
     "Unknown error" : "Errore sconosciuto",
     "Minimal length has to be a non negative number" : "La lunghezza minima deve essere un numero positivo",
     "History size has to be a non negative number" : "La dimensione della cronologia deve essere un numero positivo",
     "Expiration days have to be a non negative number" : "I giorni di scadenza devono essere un numero positivo",
     "Maximum login attempts have to be a non negative number" : "I massimi tentativi di accesso devono essere un numero positivo",
     "Settings saved" : "Impostazioni salvate",
-    "Error while saving settings" : "Errore durante il salvataggio delle impostazioni"
+    "Error while saving settings" : "Errore durante il salvataggio delle impostazioni",
+    "User password history" : "Cronologia della password degli utenti",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Si noti che questa opzione è pensata per proteggere gli account sotto attacco. Gli account disattivati devono essere riattivati a mano da un amministratore. Gli aggressori che tentano di indovinare le password degli account avranno il loro indirizzo IP bloccato dalla protezione bruteforce indipendentemente da questa impostazione."
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

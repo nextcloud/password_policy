@@ -21,13 +21,13 @@ OC.L10N.register(
     "Enforce special characters" : "Krefjast sértákna",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Athugaðu hvort lykilorðið sé í lista yfir stolin lykilorð frá haveibeenpwnd.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Þessi prófun útbýr tætigildi lykilorðsins og sendir fyrstu 5 stafi tætigildisins inn á API-forritsviðmót haveibeenpwned.com til að fá til baka lista yfir öll þau tætigildi sem byrja á þessum stöfum. Síðan er athugað á Nextcloud-kerfinu hvort tætigildið fyrirfinnst þar.",
-    "User password history" : "Ferill lykilorða notanda",
     "Unknown error" : "Óþekkt villa",
     "Minimal length has to be a non negative number" : "Lágmarkslengd þarf að vera jákvæð tala",
     "History size has to be a non negative number" : "Lengd ferils þarf að vera jákvæð tala",
     "Expiration days have to be a non negative number" : "Fjöldi gildisdaga þarf að vera jákvæð tala",
     "Maximum login attempts have to be a non negative number" : "Fjöldi tilrauna til innskráningar þarf að vera jákvæð tala",
     "Settings saved" : "Stillingar vistaðar",
-    "Error while saving settings" : "Villa við að vista stillingar"
+    "Error while saving settings" : "Villa við að vista stillingar",
+    "User password history" : "Ferill lykilorða notanda"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

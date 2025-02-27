@@ -20,13 +20,13 @@ OC.L10N.register(
     "Enforce special characters" : "Impune caractere speciale",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Verifică parola într-o listă de parole compromise de la haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Aceasta creează un hash al parolei și trimite primele 5 caracterre ale hash-ului la haveibeenpwned.com API pentru a obține o listă de hash-uri care încep cu acestea. Apoi verifică în instanța Nextcloud dacă hash-ul este în lista obținută.",
-    "User password history" : "Istoric parole",
     "Unknown error" : "Eroare necunoscută",
     "Minimal length has to be a non negative number" : "Lungimea minimă trebuie să fie pozitivă",
     "History size has to be a non negative number" : "Mărimea istoricului trebuie să fie pozitivă",
     "Expiration days have to be a non negative number" : "Numărul zilelor până la expirare trebuie să fie pozitiv",
     "Maximum login attempts have to be a non negative number" : "Numărul de încercări de autentificare trebuie să fie un număr pozitiv",
     "Settings saved" : "Setările au fost salvate",
-    "Error while saving settings" : "Eroare la salvarea setărilor"
+    "Error while saving settings" : "Eroare la salvarea setărilor",
+    "User password history" : "Istoric parole"
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");
