@@ -33,14 +33,14 @@ OC.L10N.register(
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "这会创建一个密码哈希，并将此哈希的前5个字符发送到 haveibeenpwned.com 的 API，获取以这些哈希开头的所有哈希列表。然后在 Nextcloud 实例中检查此密码哈希是否在在结果集中。",
     "Account password policies" : "账号密码策略",
     "Share password policies" : "共享密码策略",
-    "User password history" : "用户密码记录",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "请注意，此选项旨在保护受攻击的帐户。 禁用的帐户必须由管理员手动重新启用。 尝试猜测帐户密码的攻击者将通过与此设置无关的暴力保护来阻止其 IP 地址。",
     "Unknown error" : "未知错误",
     "Minimal length has to be a non negative number" : "最小长度必须是一个非负数",
     "History size has to be a non negative number" : "历史记录大小必须是非负数 ",
     "Expiration days have to be a non negative number" : "过期天数必须是非负数 ",
     "Maximum login attempts have to be a non negative number" : "最大登录尝试次数必须是非负数",
     "Settings saved" : "已保存设置",
-    "Error while saving settings" : "保存设定时发生错误"
+    "Error while saving settings" : "保存设定时发生错误",
+    "User password history" : "用户密码记录",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "请注意，此选项旨在保护受攻击的帐户。 禁用的帐户必须由管理员手动重新启用。 尝试猜测帐户密码的攻击者将通过与此设置无关的暴力保护来阻止其 IP 地址。"
 },
 "nplurals=1; plural=0;");

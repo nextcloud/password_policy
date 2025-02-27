@@ -20,12 +20,12 @@ OC.L10N.register(
     "Enforce special characters" : "Υποχρεωτική χρήση ειδικών χαρακτήρων",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Ελέγξτε τον κωδικό πρόσβασης κατά της λίστας παραβιασμένων συνθηματικών από το haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Αυτός ο έλεγχος δημιουργεί ένα αναγνωριστικό του κωδικού πρόσβασης και στέλνει τους πρώτους 5 χαρακτήρες στο API του hasibeenpwned.com για να ανακτήσει μια λίστα όλων των hashes που αρχίζουν με αυτούς. Έπειτα, ελέγχει την αρμόδια υπηρεσία του Nextcloud εάν το hash του συνθηματικού βρίσκεται στα αποτελέσματα.",
-    "User password history" : "Ιστορικό συνθηματικών χρήστη",
     "Unknown error" : "Άγνωστο σφάλμα",
     "Minimal length has to be a non negative number" : "Το ελάχιστο μήκος πρέπει να είναι μη αρνητικός αριθμός",
     "History size has to be a non negative number" : "Το μέγεθος ιστορικού πρέπει να είναι μη αρνητικός αριθμός",
     "Expiration days have to be a non negative number" : "Οι ημέρες λήξης πρέπει να είναι μη αρνητικοί αριθμοί",
     "Maximum login attempts have to be a non negative number" : "Οι μέγιστες προσπάθειες σύνδεσης πρέπει να είναι μη αρνητικός αριθμός",
-    "Settings saved" : "Οι ρυθμίσεις αποθηκεύτηκαν"
+    "Settings saved" : "Οι ρυθμίσεις αποθηκεύτηκαν",
+    "User password history" : "Ιστορικό συνθηματικών χρήστη"
 },
 "nplurals=2; plural=(n != 1);");

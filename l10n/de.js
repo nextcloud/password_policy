@@ -33,14 +33,14 @@ OC.L10N.register(
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Es wird ein Hash des Passwortes erstellt und dessen ersten 5 Zeichen an haveibeenpwned.com gesendet. Danach wird eine Liste aller Hashes empfangen, welche mit diesen 5 Zeichen beginnen. Nextcloud prüft nun, ob der Hash des eingegebenen Passwortes in der Liste der Hashes enthalten ist.",
     "Account password policies" : "Kontopasswortrichtlinien",
     "Share password policies" : "Passwortrichtlinien freigeben",
-    "User password history" : "Benutzerpasswort-Verlauf",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Bitte beachte, dass diese Option dem Schutz angegriffener Konten dient. Deaktivierte Konten müssen von der Administration manuell wieder aktiviert werden. Angreifer, die versuchen, Passwörter von Konten zu erraten, werden unabhängig von dieser Einstellung durch den Bruteforce-Schutz blockiert.",
     "Unknown error" : "Unbekannter Fehler",
     "Minimal length has to be a non negative number" : "Die minimale Länge darf keine negative Zahl sein",
     "History size has to be a non negative number" : "Der Umfang der Chronik darf keine negative Zahl sein",
     "Expiration days have to be a non negative number" : "Die Ablauffrist darf keine negative Zahl sein",
     "Maximum login attempts have to be a non negative number" : "Maximum der Anmeldeversuche darf keine negative Zahl sein",
     "Settings saved" : "Einstellungen gespeichert",
-    "Error while saving settings" : "Fehler beim Speichern der Einstellungen"
+    "Error while saving settings" : "Fehler beim Speichern der Einstellungen",
+    "User password history" : "Benutzerpasswort-Verlauf",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Bitte beachte, dass diese Option dem Schutz angegriffener Konten dient. Deaktivierte Konten müssen von der Administration manuell wieder aktiviert werden. Angreifer, die versuchen, Passwörter von Konten zu erraten, werden unabhängig von dieser Einstellung durch den Bruteforce-Schutz blockiert."
 },
 "nplurals=2; plural=(n != 1);");

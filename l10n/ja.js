@@ -33,14 +33,14 @@ OC.L10N.register(
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "このチェックでは、パスワードのハッシュを生成して先頭5文字をhaveibeenpwned.com APIに送信し、その5文字から始まるすべてのハッシュリストを取得します。 そして、パスワードハッシュが結果セットに含まれているかどうかNextcloudサーバーをチェックします。",
     "Account password policies" : "アカウントパスワードポリシー",
     "Share password policies" : "パスワードポリシーの共有",
-    "User password history" : "ユーザーのパスワード履歴",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "このオプションは攻撃されたアカウントを保護するためのものであることに注意してください。無効にされたアカウントは、管理者が手動で再度有効にする必要があります。アカウントのパスワードを推測しようとする攻撃者は、この設定とは無関係にブルートフォース保護によってIPアドレスがブロックされます。",
     "Unknown error" : "不明なエラー",
     "Minimal length has to be a non negative number" : "最小の長さにマイナスの数は設定できません",
     "History size has to be a non negative number" : "履歴サイズにマイナスの数は設定できません",
     "Expiration days have to be a non negative number" : "有効期限にマイナスの数は設定できません",
     "Maximum login attempts have to be a non negative number" : "最大ログイン試行回数にマイナスの数は設定できません",
     "Settings saved" : "設定が保存されました",
-    "Error while saving settings" : "設定の保存中にエラーが発生"
+    "Error while saving settings" : "設定の保存中にエラーが発生",
+    "User password history" : "ユーザーのパスワード履歴",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "このオプションは攻撃されたアカウントを保護するためのものであることに注意してください。無効にされたアカウントは、管理者が手動で再度有効にする必要があります。アカウントのパスワードを推測しようとする攻撃者は、この設定とは無関係にブルートフォース保護によってIPアドレスがブロックされます。"
 },
 "nplurals=1; plural=0;");

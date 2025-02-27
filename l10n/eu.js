@@ -23,14 +23,14 @@ OC.L10N.register(
     "Enforce special characters" : "Behartu karaktere bereziak erabiltzera",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Pasahitzak haveibeenpwned.com zerbitzuan egiaztatu",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Egiaztapen honek pasahitzaren hash bat sortzen du eta lehenengo bost karaktereak haveibeenpwned.com zerbitzuaren APIra bidaltzen ditu, berdin hasten diren hashak jasotzeko. Ondoren Nextcloud instantzia barruan egiaztatzen du pasahitzaren hasha zerrenda horretan dagoen ala ez.",
-    "User password history" : "Erabiltzailearen pasahitz historia",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Kontuan hartu aukera hau erasotako kontuak babesteko dela. Desgaitutako kontuak administrazioarengatik gaitu behar dira eskuz. Kontuen pasahitzak asmatzen saiatzen diren erasotzaileak indarrezko erasoen kontrako babesarengatik haien IP helbidea blokeatuko dute, ezarpen honetatik independente.",
     "Unknown error" : "Errore ezezaguna",
     "Minimal length has to be a non negative number" : "Gutxieneko luzerak zenbaki ez negatiboa izan behar du",
     "History size has to be a non negative number" : "Historiaren tamainak zenbaki ez negatiboa izan behar du",
     "Expiration days have to be a non negative number" : "Iraungitze egun kopuruak zenbaki ez negatiboa izan behar du",
     "Maximum login attempts have to be a non negative number" : "Saioa hasteko saiakera mugak zenbaki ez negatiboa izan behar du",
     "Settings saved" : "Ezarpenak gordeta",
-    "Error while saving settings" : "Errorea ezarpenak gordetzean"
+    "Error while saving settings" : "Errorea ezarpenak gordetzean",
+    "User password history" : "Erabiltzailearen pasahitz historia",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Kontuan hartu aukera hau erasotako kontuak babesteko dela. Desgaitutako kontuak administrazioarengatik gaitu behar dira eskuz. Kontuen pasahitzak asmatzen saiatzen diren erasotzaileak indarrezko erasoen kontrako babesarengatik haien IP helbidea blokeatuko dute, ezarpen honetatik independente."
 },
 "nplurals=2; plural=(n != 1);");

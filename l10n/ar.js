@@ -33,14 +33,14 @@ OC.L10N.register(
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "يقوم هذا بتوليد مستخلص hash من كلمة المرور ثم يرسل الـ 15 حرفاً الأولى منه إلى API الموقع haveibeenpwned.com؛ و ذلك لاسترجاع قائمة بكل المستخلصات في الموقع التي تبدأ بنفس بدايات المستخلص الحالي. بعدها يقوم بمقارنة المستخلص الحالي كاملاً بالمستخلصات المسترجعة من الموقع الخارجي.",
     "Account password policies" : "سياسات كلمة مرور الحساب",
     "Share password policies" : "سياسات كلمة مرور المُشارَكة",
-    "User password history" : "استعمل السجل التاريخي لكلمات المرور السابقة",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "يرجى ملاحظة أن هذا الخيار يهدف إلى حماية الحسابات التي تعرضت للهجوم. يجب إعادة تمكين الحسابات المعطلة يدويًا بواسطة الإدارة. المهاجمون الذين يحاولون تخمين كلمات مرور الحسابات سيتم حظر عنوان IP الخاص بهم بواسطة إجراءات الحماية من هجمات القوة الكاسحة بشكل مستقل عن هذا الإعداد.",
     "Unknown error" : "خطأ غير مُحدّد",
     "Minimal length has to be a non negative number" : "الحد الأدنى للطول يجب إلاً يكون أقل من صفر.",
     "History size has to be a non negative number" : "حجم السجل التاريخي يجب ألاّ يكون أقل من صفر",
     "Expiration days have to be a non negative number" : "عدد الأيام المتبقية حتى انتهاء الصلاحية يجب ألاّ يكون أقل من صفر",
     "Maximum login attempts have to be a non negative number" : "أقصى عدد لمحاولات الدخول يجب ألاّ يكون أقل من صفر",
     "Settings saved" : "تم حفظ الإعدادات",
-    "Error while saving settings" : "خطأ أثناء حفظ الإعدادات"
+    "Error while saving settings" : "خطأ أثناء حفظ الإعدادات",
+    "User password history" : "استعمل السجل التاريخي لكلمات المرور السابقة",
+    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "يرجى ملاحظة أن هذا الخيار يهدف إلى حماية الحسابات التي تعرضت للهجوم. يجب إعادة تمكين الحسابات المعطلة يدويًا بواسطة الإدارة. المهاجمون الذين يحاولون تخمين كلمات مرور الحسابات سيتم حظر عنوان IP الخاص بهم بواسطة إجراءات الحماية من هجمات القوة الكاسحة بشكل مستقل عن هذا الإعداد."
 },
 "nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;");
