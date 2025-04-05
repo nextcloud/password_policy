@@ -39,7 +39,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Dias para expiração não pode ser um número negativo",
     "Maximum login attempts have to be a non negative number" : "O máximo de tentativas de login não pode ser um número negativo",
     "Settings saved" : "Configurações salvas",
-    "Error while saving settings" : "Error while saving settings",
+    "Error while saving settings" : "Erro ao salvar as configurações",
     "User password history" : "Histórico de senhas do usuário",
     "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Observe que esta opção se destina a proteger contas atacadas. As contas desativadas devem ser reativadas manualmente pela administração. Os invasores que tentarem adivinhar as senhas das contas terão seus endereços IP bloqueados pela proteção de força bruta independente desta configuração."
 },
