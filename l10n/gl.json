@@ -38,7 +38,6 @@
     "Maximum login attempts have to be a non negative number" : "O máximo de intentos de acceso debe ser un número non negativo",
     "Settings saved" : "Axustes gardados",
     "Error while saving settings" : "Produciuse un erro ao gardar os axustes",
-    "User password history" : "Historial de contrasinais do usuario",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Teña en conta que esta opción está destinada a protexer as contas atacadas. As contas desactivadas teñen que ser reactivadas manualmente pola administración. Os atacantes que intenten adiviñar os contrasinais das contas terán o seu enderezo IP bloqueado pola protección de forza bruta independentemente deste axuste."
+    "User password history" : "Historial de contrasinais do usuario"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
