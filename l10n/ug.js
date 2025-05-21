@@ -30,7 +30,6 @@ OC.L10N.register(
     "Maximum login attempts have to be a non negative number" : "ئەڭ چوڭ كىرىش سىنىقى مەنپىي بولمىغان سان بولۇشى كېرەك",
     "Settings saved" : "تەڭشەكلەر ساقلاندى",
     "Error while saving settings" : "تەڭشەكلەرنى ساقلاش جەريانىدا خاتالىق",
-    "User password history" : "ئىشلەتكۈچى پارول تارىخى",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "دىققەت قىلىڭ ، بۇ تاللاش ھۇجۇم قىلىنغان ھېساباتلارنى قوغداشنى مەقسەت قىلىدۇ. چەكلەنگەن ھېساباتلارنى باشقۇرۇش ئارقىلىق قولدا قايتا قوزغىتىش كېرەك. ھېسابات مەخپىي نومۇرىنى پەرەز قىلماقچى بولغان ھۇجۇمچىلار IP ئادرېسىنى بۇ تەڭشەكتىن مۇستەقىل ھالدا رەھىمسىزلەرچە قوغداش تەرىپىدىن توسۇۋالىدۇ."
+    "User password history" : "ئىشلەتكۈچى پارول تارىخى"
 },
 "nplurals=2; plural=(n != 1);");

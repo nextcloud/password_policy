@@ -40,7 +40,6 @@ OC.L10N.register(
     "Maximum login attempts have to be a non negative number" : "Caithfidh na huasiarrachtaí logáil isteach a bheith ina n-uimhir neamhdhiúltach",
     "Settings saved" : "Socruithe sábháilte",
     "Error while saving settings" : "Earráid agus na socruithe á sábháil",
-    "User password history" : "Stair pasfhocail úsáideora",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Tabhair faoi deara, le do thoil, go bhfuil an rogha seo i gceist chun cuntais ionsaithe a chosaint. Ní mór don riarachán cuntais míchumasaithe a athchumasú de láimh. Ionsaitheoirí a dhéanann iarracht pasfhocail chuntas a thomhas, cuirfear bac ar a seoladh IP ag an gcosaint bruteforce neamhspleách ón socrú seo."
+    "User password history" : "Stair pasfhocail úsáideora"
 },
 "nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);");

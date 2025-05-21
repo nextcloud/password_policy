@@ -38,7 +38,6 @@
     "Maximum login attempts have to be a non negative number" : "أقصى عدد لمحاولات الدخول يجب ألاّ يكون أقل من صفر",
     "Settings saved" : "تم حفظ الإعدادات",
     "Error while saving settings" : "خطأ أثناء حفظ الإعدادات",
-    "User password history" : "استعمل السجل التاريخي لكلمات المرور السابقة",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "يرجى ملاحظة أن هذا الخيار يهدف إلى حماية الحسابات التي تعرضت للهجوم. يجب إعادة تمكين الحسابات المعطلة يدويًا بواسطة الإدارة. المهاجمون الذين يحاولون تخمين كلمات مرور الحسابات سيتم حظر عنوان IP الخاص بهم بواسطة إجراءات الحماية من هجمات القوة الكاسحة بشكل مستقل عن هذا الإعداد."
+    "User password history" : "استعمل السجل التاريخي لكلمات المرور السابقة"
 },"pluralForm" :"nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;"
 }

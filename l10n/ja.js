@@ -40,7 +40,6 @@ OC.L10N.register(
     "Maximum login attempts have to be a non negative number" : "最大ログイン試行回数にマイナスの数は設定できません",
     "Settings saved" : "設定が保存されました",
     "Error while saving settings" : "設定の保存中にエラーが発生",
-    "User password history" : "ユーザーのパスワード履歴",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "このオプションは攻撃されたアカウントを保護するためのものであることに注意してください。無効にされたアカウントは、管理者が手動で再度有効にする必要があります。アカウントのパスワードを推測しようとする攻撃者は、この設定とは無関係にブルートフォース保護によってIPアドレスがブロックされます。"
+    "User password history" : "ユーザーのパスワード履歴"
 },
 "nplurals=1; plural=0;");
