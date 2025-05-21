@@ -28,7 +28,6 @@ OC.L10N.register(
     "Maximum login attempts have to be a non negative number" : "Los intentos máximos d'aniciar la sesión tienen de ser númberos positivos",
     "Settings saved" : "Guardóse la configuración",
     "Error while saving settings" : "Hebo un error mentanto se guardaba la configuración",
-    "User password history" : "Historial de contraseñes del usuariu",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Decátate qu'esta opción ta destinada a protexer cuentes protexíes con contraseña. L'alministración tien de volver activar manualmente les cuentes desactivaes. La proteición escontra la fuerza bruta va bloquiar les IPs de los atacadores que tenten d'aldovinar les contraseñes de les cuentes, independientemente d'esta configuración."
+    "User password history" : "Historial de contraseñes del usuariu"
 },
 "nplurals=2; plural=(n != 1);");

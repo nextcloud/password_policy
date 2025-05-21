@@ -40,7 +40,6 @@ OC.L10N.register(
     "Maximum login attempts have to be a non negative number" : "Sisselogimiskatsete arv peab olema positiivne arv",
     "Settings saved" : "Seadistused on salvestatud",
     "Error while saving settings" : "Viga seadistuste salvestamisel",
-    "User password history" : "Kasutaja salasõna ajalugu",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Pane tähele, et see valik on mõeldud rünnatud kontode kaitsmiseks. Keelatud kontod peab peakasutaja käsitsi uuesti lubama. Kui ründaja üritab ära arvata kasutajakontode salasõnu, siis tema IP-aadress saab olema blokeeritud jõuründe kaitsega, sõltumata sellest seadistusest."
+    "User password history" : "Kasutaja salasõna ajalugu"
 },
 "nplurals=2; plural=(n != 1);");

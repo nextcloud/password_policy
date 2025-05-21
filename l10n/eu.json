@@ -28,7 +28,6 @@
     "Maximum login attempts have to be a non negative number" : "Saioa hasteko saiakera mugak zenbaki ez negatiboa izan behar du",
     "Settings saved" : "Ezarpenak gordeta",
     "Error while saving settings" : "Errorea ezarpenak gordetzean",
-    "User password history" : "Erabiltzailearen pasahitz historia",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Kontuan hartu aukera hau erasotako kontuak babesteko dela. Desgaitutako kontuak administrazioarengatik gaitu behar dira eskuz. Kontuen pasahitzak asmatzen saiatzen diren erasotzaileak indarrezko erasoen kontrako babesarengatik haien IP helbidea blokeatuko dute, ezarpen honetatik independente."
+    "User password history" : "Erabiltzailearen pasahitz historia"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

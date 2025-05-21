@@ -30,7 +30,6 @@ OC.L10N.register(
     "Maximum login attempts have to be a non negative number" : "El número máximo de intentos de inicio de sesión no puede ser un número negativo",
     "Settings saved" : "Ajustes guardados",
     "Error while saving settings" : "Error al guardar los ajustes",
-    "User password history" : "Histórico de contraseñas del usuario",
-    "Please note, that this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Por favor, note que esta opción está diseñada para proteger cuentas bajo ataque. Las cuentas deshabilitadas tienen que ser rehabilitadas manualmente por la administración. Se bloquearán las direcciones IP de los atacantes que intenten adivinar las contraseñas de las cuentas por la protección contra fuerza bruta, independientemente de esta configuración."
+    "User password history" : "Histórico de contraseñas del usuario"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
