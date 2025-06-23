@@ -10,6 +10,8 @@
     "Password policy" : "Wachtwoordenbeleid",
     "Allows admins to configure a password policy" : "Staat toe dat beheerders een wachtwoordenbeleid configureren",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Sta beheerder toe om bepaalde randvoorwaarden te definiëren voor het wachtwoord. B.v. minimum wachtwoordlengte",
+    "General password policies" : "Algemeen wachtwoordbeleid",
+    "Add policy set" : "Beleidsgroep toevoegen",
     "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Aantal inlogpogingen voordat het gebruikersaccount wordt geblokkeerd totdat handmatige actie wordt ondernomen. (0 voor onbeperkt)",
     "Number of days until user password expires" : "Aantal dagen tot het wachtwoord van de gebruiker verloopt",
     "Warning: enabling password expiration is nowadays considered a security risk by several security agencies." : "Waarschuwing: inschakelen wachtwoordvervalbeleid wordt tegenwoordig door meerder veiligeheidsinstellingen gezien als een beveligingsrisico.",
