@@ -51,10 +51,13 @@ class HIBPValidator implements IValidator {
 			$result = $response->getBody();
 			if (is_resource($result)) {
 				$result = stream_get_contents($result);
+			} elseif ($result === null) {
+				$this->logger->info('Could not read content from HaveIBeenPwned API, body was null');
+				return;
 			}
 			$result = preg_replace('/^([0-9A-Z]+:0)$/m', '', $result);
 
-			if (strpos($result, $needle) !== false) {
+			if (str_contains($result, $needle)) {
 				$message = 'Password is present in compromised password list. Please choose a different password.';
 				$message_t = $this->l->t(
 					'Password is present in compromised password list. Please choose a different password.'
