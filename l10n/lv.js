@@ -1,7 +1,7 @@
 OC.L10N.register(
     "password_policy",
     {
-    "Password is among the 1,000,000 most common ones. Please make it unique." : "Parole ir vien no 1,000,000 izplatītākajām parolēm. Lūdzu, padari to unikālu.",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "Parole ir viena no 1,000,000 izplatītākajām. Lūgums padarīt to neatkārtojamu.",
     "Password is present in compromised password list. Please choose a different password." : "Parole ir atrodama uzlauzto paroļu sarakstā. Lūgums izvēlēties citu paroli.",
     "Password needs to contain at least one numeric character." : "Parolē ir jābūt vismaz vienam skaitlim.",
     "Password needs to contain at least one special character." : "Parolei jāsatur vismaz vienu speciālo rakstzīmi.",
