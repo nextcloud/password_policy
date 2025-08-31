@@ -11,12 +11,14 @@ namespace OCA\Password_Policy;
 use OCP\IConfig;
 use OCP\IUser;
 use OCP\IUserManager;
+use Psr\Log\LoggerInterface;
 
 class FailedLoginCompliance {
 
 	public function __construct(
 		private IConfig $config,
 		private IUserManager $userManager,
+		private LoggerInterface $logger,
 		private PasswordPolicyConfig $passwordPolicyConfig,
 	) {
 	}
@@ -46,6 +48,10 @@ class FailedLoginCompliance {
 		if ($attempts >= $allowedAttempts) {
 			$this->setAttempts($uid, 0);
 			$user->setEnabled(false);
+			$this->logger->warning(
+				'Too many consecutive failed login attempts, disabling user',
+				['app' => 'password_policy', 'uid' => $uid]
+			);
 			return;
 		}
 
