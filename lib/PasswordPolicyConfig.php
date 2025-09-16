@@ -226,7 +226,7 @@ class PasswordPolicyConfig {
 		if ($context === null || $this->hasConfigurationContext($context) === false) {
 			$context = PasswordContext::ACCOUNT;
 		}
- 
+
 		if ($context === PasswordContext::ACCOUNT) {
 			return $key;
 		}
