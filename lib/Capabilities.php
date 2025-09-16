@@ -60,8 +60,8 @@ class Capabilities implements ICapability {
 		}
 
 		return [
-			'password_policy' =>
-				[
+			'password_policy'
+				=> [
 					'api' => [
 						'generate' => $this->urlGenerator->linkToOCSRouteAbsolute('password_policy.API.generate'),
 						'validate' => $this->urlGenerator->linkToOCSRouteAbsolute('password_policy.API.validate'),
