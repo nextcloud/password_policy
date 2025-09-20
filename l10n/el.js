@@ -26,6 +26,7 @@ OC.L10N.register(
     "Expiration days have to be a non negative number" : "Οι ημέρες λήξης πρέπει να είναι μη αρνητικοί αριθμοί",
     "Maximum login attempts have to be a non negative number" : "Οι μέγιστες προσπάθειες σύνδεσης πρέπει να είναι μη αρνητικός αριθμός",
     "Settings saved" : "Οι ρυθμίσεις αποθηκεύτηκαν",
+    "Error while saving settings" : "Σφάλμα κατά την αποθήκευση ρυθμίσεων",
     "User password history" : "Ιστορικό συνθηματικών χρήστη"
 },
 "nplurals=2; plural=(n != 1);");
