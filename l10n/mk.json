@@ -24,6 +24,7 @@
     "Expiration days have to be a non negative number" : "Датумот на истекување неможе да биде негативен број",
     "Maximum login attempts have to be a non negative number" : "Максималниот број на обиди неможе да биде негативен број",
     "Settings saved" : "Параматрите се зачувани",
+    "Error while saving settings" : "Грешка при зачувување на поставките",
     "User password history" : "Историја на лозинки за корисник"
 },"pluralForm" :"nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;"
 }
