@@ -17,14 +17,6 @@
     "Enforce numeric characters" : "Изискват се числа",
     "Enforce special characters" : "Изискват се специални символи",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Паролите се проверяват за присъствие в списъка на пароли изтекли в Интернет от haveibeenpwnd.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Тази проверка създава хеш на паролата и изпраща първите 5 знака от този хеш към API на hasibeenpwned.com, за да извлече списък с всички хешове, които започват с тях. След това проверява на Nextcloud  екземпляра дали хешът на паролата е в набора от резултати.",
-    "Unknown error" : "Неизвестна грешка",
-    "Minimal length has to be a non negative number" : "Минималната дължина трябва да не е отрицателно число",
-    "History size has to be a non negative number" : "Размерът на историята трябва да не е отрицателно число",
-    "Expiration days have to be a non negative number" : "Срокът на  валидност не трябва да е отрицателно число",
-    "Maximum login attempts have to be a non negative number" : "Максималният брой опити за влизане не трябва да е отрицателно число",
-    "Settings saved" : "Настройките са запазени",
-    "Error while saving settings" : "Грешка при запазване на настройките",
-    "User password history" : "История на потребителската парола"
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Тази проверка създава хеш на паролата и изпраща първите 5 знака от този хеш към API на hasibeenpwned.com, за да извлече списък с всички хешове, които започват с тях. След това проверява на Nextcloud  екземпляра дали хешът на паролата е в набора от резултати."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

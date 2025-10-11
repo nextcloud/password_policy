@@ -32,14 +32,6 @@ OC.L10N.register(
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Comprova la contrasenya amb la llista de contrasenyes compromeses de haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Aquesta comprovació crea una suma de verificació de la contrasenya i n'envia els 5 primers caràcters a l'API de haveibeenpwned.com per a recuperar una llista de totes les sumes de verificació que comencen per aquests caràcters. A continuació, comprova a la instància del Nextcloud si la contrasenya es troba en el conjunt de resultats.",
     "Account password policies" : "Polítiques de contrasenya del compte",
-    "Share password policies" : "Comparteix polítiques de contrasenyes",
-    "Unknown error" : "Error desconegut",
-    "Minimal length has to be a non negative number" : "La longitud mínima ha de ser un nombre no negatiu",
-    "History size has to be a non negative number" : "La mida de l'historial ha de ser un nombre no negatiu",
-    "Expiration days have to be a non negative number" : "El nombre de dies de caducitat ha de ser un nombre no negatiu",
-    "Maximum login attempts have to be a non negative number" : "El nombre màxim d'intents d'inici de sessió ha de ser un nombre no negatiu",
-    "Settings saved" : "S'han desat els paràmetres",
-    "Error while saving settings" : "S'ha produït un error en desar els paràmetres",
-    "User password history" : "Historial de contrasenyes de l'usuari"
+    "Share password policies" : "Comparteix polítiques de contrasenyes"
 },
 "nplurals=2; plural=(n != 1);");

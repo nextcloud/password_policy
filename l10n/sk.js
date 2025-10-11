@@ -32,14 +32,6 @@ OC.L10N.register(
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Kontrolovať heslo v zozname uniknutých hesiel z haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Toto vytvorí kontrolný súčet z hesla a pošle prvých 5 znakov kontrolného súčtu do haveibeenpwned.com API. Prijme sa zoznam všetkých kontrolných súčtov, ktoré začínajú na tých 5 znakov. Potom sa kontroluje, či sa zadané heslo nachádza v prijatom zozname.",
     "Account password policies" : "Zásady hesla účtu",
-    "Share password policies" : "Zásady hesla pre zdieľanie",
-    "Unknown error" : "Neznáma chyba",
-    "Minimal length has to be a non negative number" : "Minimálna dĺžka musí byť kladné číslo",
-    "History size has to be a non negative number" : "Veľkosť histórie musí byť kladné číslo",
-    "Expiration days have to be a non negative number" : "Dní do expirácie musí byť kladné číslo",
-    "Maximum login attempts have to be a non negative number" : "Maximálny počet pokusov o prihlásenie musí byť kladné číslo",
-    "Settings saved" : "Nastavenia uložené",
-    "Error while saving settings" : "Chyba pri ukladaní nastavení",
-    "User password history" : "História hesiel používateľa"
+    "Share password policies" : "Zásady hesla pre zdieľanie"
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");

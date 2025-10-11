@@ -9,9 +9,6 @@ OC.L10N.register(
     "Forbid common passwords" : "palavras-passe comuns proibidas",
     "Enforce upper and lower case characters" : "Forçar letras maiúsculas e minúsculas",
     "Enforce numeric characters" : "Forçar caracteres numéricos",
-    "Enforce special characters" : "Forçar caracteres especiais",
-    "Unknown error" : "Erro desconhecido",
-    "Settings saved" : "Definições guardadas",
-    "Error while saving settings" : "Error while saving settings"
+    "Enforce special characters" : "Forçar caracteres especiais"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

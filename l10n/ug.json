@@ -20,14 +20,6 @@
     "Enforce numeric characters" : "رەقەملىك ھەرپلەرنى ئىجرا قىلىڭ",
     "Enforce special characters" : "ئالاھىدە ھەرپلەرنى ئىجرا قىلىڭ",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Haveibeenpwned.com دىكى پارولنىڭ بۇزۇلغان پارول تىزىملىكىگە قارشى پارولنى تەكشۈرۈڭ",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "بۇ تەكشۈرۈش پارولنىڭ ھەش-پەش دېگۈسىنى ھاسىل قىلىدۇ ۋە بۇ ھاشنىڭ ئالدىنقى 5 ھەرپلىرىنى haveibeenpwned.com API غا ئەۋەتىپ ، شۇلاردىن باشلانغان بارلىق ئالدىراشلارنىڭ تىزىملىكىنى ئالىدۇ. ئاندىن Nextcloud مىسالىدا پارول hash نىڭ نەتىجە توپلىمى بار-يوقلۇقىنى تەكشۈرىدۇ.",
-    "Unknown error" : "يوچۇن خاتالىق",
-    "Minimal length has to be a non negative number" : "ئەڭ كىچىك ئۇزۇنلۇق مەنپىي بولمىغان سان بولۇشى كېرەك",
-    "History size has to be a non negative number" : "تارىخنىڭ چوڭلۇقى مەنپىي بولمىغان سان بولۇشى كېرەك",
-    "Expiration days have to be a non negative number" : "مۇددىتى توشقان كۈنلەر مەنپىي بولمىغان سان بولۇشى كېرەك",
-    "Maximum login attempts have to be a non negative number" : "ئەڭ چوڭ كىرىش سىنىقى مەنپىي بولمىغان سان بولۇشى كېرەك",
-    "Settings saved" : "تەڭشەكلەر ساقلاندى",
-    "Error while saving settings" : "تەڭشەكلەرنى ساقلاش جەريانىدا خاتالىق",
-    "User password history" : "ئىشلەتكۈچى پارول تارىخى"
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "بۇ تەكشۈرۈش پارولنىڭ ھەش-پەش دېگۈسىنى ھاسىل قىلىدۇ ۋە بۇ ھاشنىڭ ئالدىنقى 5 ھەرپلىرىنى haveibeenpwned.com API غا ئەۋەتىپ ، شۇلاردىن باشلانغان بارلىق ئالدىراشلارنىڭ تىزىملىكىنى ئالىدۇ. ئاندىن Nextcloud مىسالىدا پارول hash نىڭ نەتىجە توپلىمى بار-يوقلۇقىنى تەكشۈرىدۇ."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -32,14 +32,6 @@ OC.L10N.register(
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Comprobar o contrasinal contra a lista de contrasinais comprometidos de haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Esta comprobación crea un resumo criptográfico dos contrasinais e envía os 5 primeiros caracteres deste resumo criptográfico á API de haveibeenpwned.com para recuperar unha lista de todos os resumo criptográfico que comezan desa forma. Após comprobase na instancia de Nextcloud se o resumo criptográfico do contrasinal está no conxunto de resultados.",
     "Account password policies" : "Directiva de contrasinais de contas",
-    "Share password policies" : "Directiva de contrasinais de comparticións",
-    "Unknown error" : "Produciuse un erro descoñecido",
-    "Minimal length has to be a non negative number" : "A lonxitude mínima ten que ser un número non negativo",
-    "History size has to be a non negative number" : "O tamaño do historial ten que ser un número non negativo",
-    "Expiration days have to be a non negative number" : "Os días de caducidade deben ser un número non negativo",
-    "Maximum login attempts have to be a non negative number" : "O máximo de intentos de acceso debe ser un número non negativo",
-    "Settings saved" : "Axustes gardados",
-    "Error while saving settings" : "Produciuse un erro ao gardar os axustes",
-    "User password history" : "Historial de contrasinais do usuario"
+    "Share password policies" : "Directiva de contrasinais de comparticións"
 },
 "nplurals=2; plural=(n != 1);");

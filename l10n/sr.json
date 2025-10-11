@@ -30,14 +30,6 @@
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Провери лозинке на листи најчешће проваљиваних лозинки на сајту haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ова провера прави хеш лозинке и шаље првих 5 карактера хеша на haveibeenpwned.com да дохвати све хешеве који почињу исто тако. Онда проверава на Некстклауд инстанци да ли је Ваш хеш у листи враћених хешева.",
     "Account password policies" : "Полисе за лозинку налога",
-    "Share password policies" : "Полисе за лозинке дељења",
-    "Unknown error" : "Непозната грешка",
-    "Minimal length has to be a non negative number" : "Минимална дужина не сме да буде негативан број",
-    "History size has to be a non negative number" : "Величина историје не сме да буде негативан број",
-    "Expiration days have to be a non negative number" : "Дани истицања не смеју да буду негативан број",
-    "Maximum login attempts have to be a non negative number" : "Максимални број покушаја пријаве не сме да буде негативан број",
-    "Settings saved" : "Поставке сачуване",
-    "Error while saving settings" : "Грешка приликом чувања подешавања",
-    "User password history" : "Користи историјат лозинки"
+    "Share password policies" : "Полисе за лозинке дељења"
 },"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);"
 }

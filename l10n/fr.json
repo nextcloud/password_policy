@@ -30,14 +30,6 @@
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Vérifier le mot de passe par rapport à la liste des mots de passe compromis sur haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Cette vérification crée un hachage du mot de passe et envoie les 5 premiers caractères de ce hachage à l'API haveibeenpwned.com pour récupérer une liste de tous les hachages qui commencent par ceux-là. Ensuite, il vérifie sur l'instance Nextcloud si le mot de passe est dans le jeu de résultats.",
     "Account password policies" : "Politiques de mots de passe de compte",
-    "Share password policies" : "Politiques de mots de passe de partage",
-    "Unknown error" : "Erreur inconnue",
-    "Minimal length has to be a non negative number" : "La longueur minimale doit être un nombre positif",
-    "History size has to be a non negative number" : "La taille de l'historique doit être un nombre positif",
-    "Expiration days have to be a non negative number" : "La date d'expiration doit être un nombre positif",
-    "Maximum login attempts have to be a non negative number" : "Le nombre de tentatives de connexion doit être un nombre positif",
-    "Settings saved" : "Paramètres sauvegardés",
-    "Error while saving settings" : "Erreur lors de l'enregistrement des paramètres",
-    "User password history" : "Historique des mots de passe de l'utilisateur"
+    "Share password policies" : "Politiques de mots de passe de partage"
 },"pluralForm" :"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

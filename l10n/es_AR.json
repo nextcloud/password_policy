@@ -19,14 +19,6 @@
     "Enforce numeric characters" : "Imponer caracteres numéricos",
     "Enforce special characters" : "Imponer caracteres especiales",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Verifica la contraseña contra la lista de contraseñas comprometidas de haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Esta comprobación crea un hash de las contraseñas y envía los 5 primeros caracteres de este hash a la API de haveibeenpwned.com para recuperar una lista de todos los hashes que comienzan de esa forma. Después se comprueba en la instancia de Nextcloud si el hash de la contraseña está en el conjunto de resultados.",
-    "Unknown error" : "Error desconocido",
-    "Minimal length has to be a non negative number" : "La longitud mínima debe ser un número no negativo",
-    "History size has to be a non negative number" : "El tamaño del historial debe ser un número no negativo",
-    "Expiration days have to be a non negative number" : "Los días de caducidad deben ser ser un número no negativo",
-    "Maximum login attempts have to be a non negative number" : "El número máximo de intentos de inicio de sesión debe ser un número no negativo",
-    "Settings saved" : "Configuraciones guardadas",
-    "Error while saving settings" : "Error al guardar la configuración",
-    "User password history" : "Historial de contraseñas del usuario."
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Esta comprobación crea un hash de las contraseñas y envía los 5 primeros caracteres de este hash a la API de haveibeenpwned.com para recuperar una lista de todos los hashes que comienzan de esa forma. Después se comprueba en la instancia de Nextcloud si el hash de la contraseña está en el conjunto de resultados."
 },"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

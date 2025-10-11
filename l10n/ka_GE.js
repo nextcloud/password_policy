@@ -10,8 +10,6 @@ OC.L10N.register(
     "Forbid common passwords" : "აკრძალეთ ერთნაირი პაროლები",
     "Enforce upper and lower case characters" : "შემოიღეთ დიდი და პატარა ასოები",
     "Enforce numeric characters" : "შემოიღეთ ნუმერიკული ნიშნები",
-    "Enforce special characters" : "შემოიღეთ სპეციალური ნიშნები",
-    "Unknown error" : "უცნობი შეცდომა",
-    "Settings saved" : "პარამეტრები შენახულია"
+    "Enforce special characters" : "შემოიღეთ სპეციალური ნიშნები"
 },
 "nplurals=2; plural=(n!=1);");
