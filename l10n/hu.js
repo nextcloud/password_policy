@@ -32,14 +32,6 @@ OC.L10N.register(
     "Check password against the list of breached passwords from haveibeenpwned.com" : "A jelszó összenézése a haveibeenpwned.com-ról származó feltört jelszavakkal",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ez az ellenőrzés ujjlenyomatot hoz létre a jelszóból, és ennek az első 5 karakterét elküldi a haveibeenpwned.com API-jának, hogy visszakapja az azzal kezdődő ujjlenyomatokat. Ezután leellenőrzi a Nextcloud példányon, hogy a megadott jelszó ujjlenyomata szerepel-e az eredményhalmazban.",
     "Account password policies" : "Fiókok jelszavának házirendjei",
-    "Share password policies" : "Megosztások jelszavának házirendjei",
-    "Unknown error" : "Ismeretlen hiba",
-    "Minimal length has to be a non negative number" : "A minimális hosszúságnak nem negatív számnak kell lennie",
-    "History size has to be a non negative number" : "Az előzmények méretének nem negatív számnak kell lennie",
-    "Expiration days have to be a non negative number" : "A lejárat napjainak számának nem negatív számnak kell lennie",
-    "Maximum login attempts have to be a non negative number" : "A maximális bejelentkezési kísérletnek nem negatív számnak kell lennie",
-    "Settings saved" : "Beállítások mentve",
-    "Error while saving settings" : "Hiba a beállítások mentése során",
-    "User password history" : "Felhasználói jelszó előzményei"
+    "Share password policies" : "Megosztások jelszavának házirendjei"
 },
 "nplurals=2; plural=(n != 1);");

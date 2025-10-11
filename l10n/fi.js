@@ -18,10 +18,6 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Pakota käyttämään isoja ja pieniä kirjaimia",
     "Enforce numeric characters" : "Pakota käyttämään numeroita",
     "Enforce special characters" : "Pakota käyttämään erikoismerkkejä",
-    "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin",
-    "Unknown error" : "Tuntematon virhe",
-    "Settings saved" : "Asetukset tallennettu",
-    "Error while saving settings" : "Virhe tallennettaessa asetuksia",
-    "User password history" : "Käyttäjän salasanahistoria"
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin"
 },
 "nplurals=2; plural=(n != 1);");

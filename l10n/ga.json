@@ -30,14 +30,6 @@
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Seiceáil an pasfhocal in aghaidh an liosta pasfhocail sáraithe ó haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Cruthaíonn an tseiceáil seo hash den fhocal faire agus seolann sé na chéad 5 charachtar den hash seo chuig an haveibeenpwned.com API chun liosta a fháil de na hashes ar fad a thosaíonn leo siúd. Ansin seiceálann sé ar an gcéad Nextcloud an bhfuil an hash pasfhocal sa tacar torthaí.",
     "Account password policies" : "Polasaithe pasfhocail cuntais",
-    "Share password policies" : "Roinn polasaithe pasfhocail",
-    "Unknown error" : "Earráid anaithnid",
-    "Minimal length has to be a non negative number" : "Caithfidh an t-íosfhad a bheith ina uimhir neamhdhiúltach",
-    "History size has to be a non negative number" : "Caithfidh méid na staire a bheith ina uimhir neamhdhiúltach",
-    "Expiration days have to be a non negative number" : "Caithfidh laethanta éaga a bheith ina uimhir neamhdhiúltach",
-    "Maximum login attempts have to be a non negative number" : "Caithfidh na huasiarrachtaí logáil isteach a bheith ina n-uimhir neamhdhiúltach",
-    "Settings saved" : "Socruithe sábháilte",
-    "Error while saving settings" : "Earráid agus na socruithe á sábháil",
-    "User password history" : "Stair pasfhocail úsáideora"
+    "Share password policies" : "Roinn polasaithe pasfhocail"
 },"pluralForm" :"nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);"
 }

@@ -20,14 +20,6 @@ OC.L10N.register(
     "Enforce numeric characters" : "Obligar a poner númberos",
     "Enforce special characters" : "Obligar a poner caráuteres especiales",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Comprueba la contraseña na llista de contraseñes comprometíes de haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Esta comprobación crea un hash de la contraseña y unvia los primeros 5 caráuteres a l'API de haveibeenpwned.com pa recuperar una llista de tolos hashes que comiencen per estos caráuteres. Dempués, comprueba na instancia de Nextcloud si'l hash de la contraseña ta nel conxuntu de resultaos.",
-    "Unknown error" : "Error desconocíu",
-    "Minimal length has to be a non negative number" : "La llongura mínima tien de ser un númberu positivu",
-    "History size has to be a non negative number" : "El tamañu del historial tien de ser un númberu positivu",
-    "Expiration days have to be a non negative number" : "Los díes de caducidá tienen de ser númberos positivos",
-    "Maximum login attempts have to be a non negative number" : "Los intentos máximos d'aniciar la sesión tienen de ser númberos positivos",
-    "Settings saved" : "Guardóse la configuración",
-    "Error while saving settings" : "Hebo un error mentanto se guardaba la configuración",
-    "User password history" : "Historial de contraseñes del usuariu"
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Esta comprobación crea un hash de la contraseña y unvia los primeros 5 caráuteres a l'API de haveibeenpwned.com pa recuperar una llista de tolos hashes que comiencen per estos caráuteres. Dempués, comprueba na instancia de Nextcloud si'l hash de la contraseña ta nel conxuntu de resultaos."
 },
 "nplurals=2; plural=(n != 1);");

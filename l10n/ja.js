@@ -32,14 +32,6 @@ OC.L10N.register(
     "Check password against the list of breached passwords from haveibeenpwned.com" : "haveibeenpwned.comの侵害されたパスワードのリストと比較してパスワードをチェックする",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "このチェックでは、パスワードのハッシュを生成して先頭5文字をhaveibeenpwned.com APIに送信し、その5文字から始まるすべてのハッシュリストを取得します。 そして、パスワードハッシュが結果セットに含まれているかどうかNextcloudサーバーをチェックします。",
     "Account password policies" : "アカウントパスワードポリシー",
-    "Share password policies" : "パスワードポリシーの共有",
-    "Unknown error" : "不明なエラー",
-    "Minimal length has to be a non negative number" : "最小の長さにマイナスの数は設定できません",
-    "History size has to be a non negative number" : "履歴サイズにマイナスの数は設定できません",
-    "Expiration days have to be a non negative number" : "有効期限にマイナスの数は設定できません",
-    "Maximum login attempts have to be a non negative number" : "最大ログイン試行回数にマイナスの数は設定できません",
-    "Settings saved" : "設定が保存されました",
-    "Error while saving settings" : "設定の保存中にエラーが発生",
-    "User password history" : "ユーザーのパスワード履歴"
+    "Share password policies" : "パスワードポリシーの共有"
 },
 "nplurals=1; plural=0;");

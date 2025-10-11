@@ -32,14 +32,6 @@ OC.L10N.register(
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Έλεγχος συνθηματικού κατά της λίστας παραβιασμένων συνθηματικών από το haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Αυτός ο έλεγχος δημιουργεί ένα hash του συνθηματικού και στέλνει τους πρώτους 5 χαρακτήρες αυτού του hash στο API του haveibeenpwned.com για να ανακτήσει μια λίστα όλων των hashes που ξεκινούν με αυτούς. Έπειτα, ελέγχει στην εγκατάσταση Nextcloud εάν το hash του συνθηματικού βρίσκεται στο σύνολο αποτελεσμάτων.",
     "Account password policies" : "Πολιτικές συνθηματικών λογαριασμού",
-    "Share password policies" : "Πολιτικές συνθηματικών διαμοιρασμού",
-    "Unknown error" : "Άγνωστο σφάλμα",
-    "Minimal length has to be a non negative number" : "Το ελάχιστο μήκος πρέπει να είναι μη αρνητικός αριθμός",
-    "History size has to be a non negative number" : "Το μέγεθος ιστορικού πρέπει να είναι μη αρνητικός αριθμός",
-    "Expiration days have to be a non negative number" : "Οι ημέρες λήξης πρέπει να είναι μη αρνητικοί αριθμοί",
-    "Maximum login attempts have to be a non negative number" : "Οι μέγιστες προσπάθειες σύνδεσης πρέπει να είναι μη αρνητικός αριθμός",
-    "Settings saved" : "Οι ρυθμίσεις αποθηκεύτηκαν",
-    "Error while saving settings" : "Σφάλμα κατά την αποθήκευση ρυθμίσεων",
-    "User password history" : "Ιστορικό συνθηματικών χρήστη"
+    "Share password policies" : "Πολιτικές συνθηματικών διαμοιρασμού"
 },
 "nplurals=2; plural=(n != 1);");
