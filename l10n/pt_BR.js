@@ -32,14 +32,6 @@ OC.L10N.register(
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Verificar a senha com relação à lista de senhas violadas de haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Essa verificação cria um hash da senha e envia os primeiros 5 caracteres desse hash para a API haveibeenpwned.com para recuperar uma lista de todos os hashes que começam com eles. Em seguida, ele verifica com o servidor Nextcloud se o hash da senha está no conjunto de resultados.",
     "Account password policies" : "Políticas de senha de contas",
-    "Share password policies" : "Políticas de senha de compartilhamentos",
-    "Unknown error" : "Erro desconhecido",
-    "Minimal length has to be a non negative number" : "O tamanho mínimo não pode ser um número negativo",
-    "History size has to be a non negative number" : "O tamanho do histórico não pode ser um número negativo",
-    "Expiration days have to be a non negative number" : "Dias para expiração não pode ser um número negativo",
-    "Maximum login attempts have to be a non negative number" : "O máximo de tentativas de login não pode ser um número negativo",
-    "Settings saved" : "Configurações salvas",
-    "Error while saving settings" : "Erro ao salvar as configurações",
-    "User password history" : "Histórico de senhas do usuário"
+    "Share password policies" : "Políticas de senha de compartilhamentos"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

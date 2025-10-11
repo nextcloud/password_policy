@@ -30,14 +30,6 @@
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Controleer het wachtwoord met de lijst van gelekte wachtwoorden van haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Deze controle maakt een hash van het wachtwoord en verstuurd de eerste 5 tekens van deze hash naar de haveibeenpwned.com API om een lijst op te halen met al de hashes die ook daarmee beginnen. Daarna wordt deze lijst tegen de Nexcloud installatie gehouden om te controleren of de wachtwoord hash als resultaat terugkomt.",
     "Account password policies" : "Accountwachtwoordenbeleid",
-    "Share password policies" : "Wachtwoordbeleid delen",
-    "Unknown error" : "Onbekende fout",
-    "Minimal length has to be a non negative number" : "Minimale lengte moet een niet-negatief getal zijn",
-    "History size has to be a non negative number" : "Geschiedenisaantal moet een niet-negatief getal zijn",
-    "Expiration days have to be a non negative number" : "Vervaldagen moet een niet-negatief getal zijn",
-    "Maximum login attempts have to be a non negative number" : "Maximum aantal inlogpogingen moet een niet-negatief getal zijn",
-    "Settings saved" : "Instellingen opgeslagen",
-    "Error while saving settings" : "Fout tijdens het opslaan van instellingen",
-    "User password history" : "Geschiedenis van het gebruikerswachtwoord"
+    "Share password policies" : "Wachtwoordbeleid delen"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

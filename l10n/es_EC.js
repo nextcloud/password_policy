@@ -19,14 +19,6 @@ OC.L10N.register(
     "Enforce numeric characters" : "Imponer caracteres numéricos",
     "Enforce special characters" : "Imponer caracteres especiales",
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Verifica la contraseña contra la lista de contraseñas comprometidas de haveibeenpwned.com",
-    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Esta verificación crea un resumen de la contraseña y envia los primeros 5 caracteres de este resumen al API haveibeenpwned.com para obtener una lista de todos los resumenes que empezan con ellos. Después verfica en la instancia de Nextcloud si la contraseña está en el juego de resultados.",
-    "Unknown error" : "Error desconocido",
-    "Minimal length has to be a non negative number" : "La longitud mínima debe ser un número no negativo.",
-    "History size has to be a non negative number" : "El tamaño del historial debe ser un número no negativo.",
-    "Expiration days have to be a non negative number" : "Los días de vencimiento deben ser un número no negativo.",
-    "Maximum login attempts have to be a non negative number" : "El número máximo de intentos de inicio de sesión debe ser un número no negativo.",
-    "Settings saved" : "Se han guardado las configuraciones ",
-    "Error while saving settings" : "Error al guardar la configuración.",
-    "User password history" : "Historial de contraseñas del usuario."
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Esta verificación crea un resumen de la contraseña y envia los primeros 5 caracteres de este resumen al API haveibeenpwned.com para obtener una lista de todos los resumenes que empezan con ellos. Después verfica en la instancia de Nextcloud si la contraseña está en el juego de resultados."
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

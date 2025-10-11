@@ -9,8 +9,6 @@ OC.L10N.register(
     "Forbid common passwords" : "Ndalo fjalëkalimet e zakonshme",
     "Enforce upper and lower case characters" : "Detyro karakteret me shkronjë të madhe dhe të vogël",
     "Enforce numeric characters" : "Detyro karakteret numerike ",
-    "Enforce special characters" : "Detyro karakteret e veçanta",
-    "Unknown error" : "Gabim i panjohur",
-    "Settings saved" : "Opsjonet u Ruajtën."
+    "Enforce special characters" : "Detyro karakteret e veçanta"
 },
 "nplurals=2; plural=(n != 1);");
