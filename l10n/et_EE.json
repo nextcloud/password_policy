@@ -10,7 +10,7 @@
     "Password policy" : "Salasõnade reeglid",
     "Allows admins to configure a password policy" : "Lubab peakasutajatel seadistada salasõnade reegleid",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Luba peakasutajatel määrata teatud eelnõuded salasõnadele, nt. kehtestada miinimumpikkus.",
-    "General password policies" : "Üldised reeglid salasõnadele",
+    "General password policies" : "Üldised salasõnade reeglid",
     "Add policy set" : "Lisa reegel",
     "Login policies" : "Sisselogimise reeglid",
     "Password history size" : "Salasõnade ajaloo pikkus",
