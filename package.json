@@ -1,27 +1,27 @@
 {
   "name": "password_policy",
-  "description": "Password Policy for nextcloud",
   "version": "5.0.0-dev.0",
-  "author": "Nextcloud GmbH and Nextcloud contributors",
+  "private": true,
+  "description": "Password Policy for nextcloud",
+  "homepage": "https://github.com/nextcloud/password_policy#readme",
+  "bugs": {
+    "url": "https://github.com/nextcloud/password_policy/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nextcloud/password_policy.git"
   },
-  "bugs": {
-    "url": "https://github.com/nextcloud/password_policy/issues"
-  },
-  "homepage": "https://github.com/nextcloud/password_policy#readme",
   "license": "AGPL-3.0-or-later",
-  "private": true,
+  "author": "Nextcloud GmbH and Nextcloud contributors",
   "type": "module",
   "scripts": {
     "build": "vite --mode production build",
     "dev": "vite --mode development build",
-    "watch": "vite --mode development build --watch",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --ext .js,.vue src --fix",
     "stylelint": "stylelint src/**/*.scss src/**/*.vue src/**/*.vue",
-    "stylelint:fix": "stylelint src/**/*.scss src/**/*.vue --fix"
+    "stylelint:fix": "stylelint src/**/*.scss src/**/*.vue --fix",
+    "watch": "vite --mode development build --watch"
   },
   "dependencies": {
     "@nextcloud/capabilities": "^1.2.0",
@@ -32,18 +32,18 @@
     "vue": "^2.7.16",
     "vue-material-design-icons": "^5.3.1"
   },
-  "engines": {
-    "node": "^24.0.0",
-    "npm": "^11.3.0"
-  },
   "devDependencies": {
     "@nextcloud/browserslist-config": "^3.0.1",
     "@nextcloud/eslint-config": "^8.4.2",
     "@nextcloud/stylelint-config": "^3.1.0",
-    "@nextcloud/vite-config": "^1.5.4",
+    "@nextcloud/vite-config": "^1.7.2",
     "@vue/tsconfig": "^0.5.1",
     "sass": "^1.93.2",
     "typescript": "^5.9.3",
-    "vite": "^6.3.5"
+    "vite": "^7.3.0"
+  },
+  "engines": {
+    "node": "^24.0.0",
+    "npm": "^11.3.0"
   }
 }
