@@ -12,12 +12,19 @@ OC.L10N.register(
     "Password policy" : "Salasanakäytäntö",
     "Allows admins to configure a password policy" : "Mahdollistaa ylläpitäjien määrittää salasanakäytännön",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Salli ylläpitäjän määrittää ennalta määritettyjä ehtoja salasanalle, esimerkiksi vähimmäispituuden",
+    "General password policies" : "Yleiset salasanakäytännöt",
+    "Login policies" : "Kirjautumiskäytännöt",
+    "Password history size" : "Salasanahistorian koko",
+    "Maximum login attempts" : "Sisäänkirjautumisyritysten enimmäismäärä",
     "Number of days until user password expires" : "Salasanan vanhenemisen aika päivissä",
+    "Password expiration" : "Salasanan vanheneminen",
     "Minimum password length" : "Salasanan vähimmäispituus",
     "Forbid common passwords" : "Kiellä yleisimmät salasanat",
     "Enforce upper and lower case characters" : "Pakota käyttämään isoja ja pieniä kirjaimia",
     "Enforce numeric characters" : "Pakota käyttämään numeroita",
     "Enforce special characters" : "Pakota käyttämään erikoismerkkejä",
-    "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin"
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Tarkista salasanan vastaavuus haveibeenpwned.comin keräämiin vuotaneisiin salasanoihin",
+    "Account password policies" : "Tilin salasanakäytännöt",
+    "Share password policies" : "Jaon salasanakäytännöt"
 },
 "nplurals=2; plural=(n != 1);");
