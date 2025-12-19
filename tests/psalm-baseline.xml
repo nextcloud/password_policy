@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.25.0@01a8eb06b9e9cc6cfb6a320bf9fb14331919d505">
+<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+  <file src="lib/Compliance/Expiration.php">
+    <DeprecatedMethod>
+      <code><![CDATA[deleteUserValue]]></code>
+      <code><![CDATA[getUserValue]]></code>
+      <code><![CDATA[setUserValue]]></code>
+    </DeprecatedMethod>
+  </file>
+  <file src="lib/Compliance/HistoryCompliance.php">
+    <DeprecatedMethod>
+      <code><![CDATA[deleteUserValue]]></code>
+      <code><![CDATA[getUserValue]]></code>
+      <code><![CDATA[setUserValue]]></code>
+    </DeprecatedMethod>
+  </file>
   <file src="lib/ComplianceService.php">
     <DeprecatedMethod>
       <code><![CDATA[\OCP\Util::emitHook('\OCA\Files_Sharing\API\Server2Server', 'preLoginNameUsedAsUserName', ['uid' => &$uid])]]></code>
+    </DeprecatedMethod>
+  </file>
+  <file src="lib/FailedLoginCompliance.php">
+    <DeprecatedMethod>
+      <code><![CDATA[getUserValue]]></code>
+      <code><![CDATA[setUserValue]]></code>
     </DeprecatedMethod>
   </file>
 </files>
