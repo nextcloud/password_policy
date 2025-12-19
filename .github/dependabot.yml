@@ -1,5 +1,6 @@
-# SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
-# SPDX-License-Identifier: MIT
+# SPDX-FileCopyrightText: Nextcloud GmbH and Nextcloud contributors
+# SPDX-License-Identifier: CC0-1.0
+
 version: 2
 updates:
 - package-ecosystem: composer
@@ -9,10 +10,10 @@ updates:
     day: saturday
     time: "03:00"
     timezone: Europe/Paris
-  open-pull-requests-limit: 10
   labels:
-  - 3. to review
-  - dependencies
+    - "3. to review"
+    - "dependencies"
+
 - package-ecosystem: npm
   directory: "/"
   schedule:
@@ -20,7 +21,37 @@ updates:
     day: saturday
     time: "03:00"
     timezone: Europe/Paris
-  open-pull-requests-limit: 10
   labels:
-  - 3. to review
-  - dependencies
+    - "3. to review"
+    - "dependencies"
+
+# Main stableXX npm
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: saturday
+    time: "03:00"
+    timezone: Europe/Paris
+  target-branch: stable32
+  labels:
+    - "3. to review"
+    - "dependencies"
+  ignore:
+    - dependency-name: "*"
+      update-types: ["version-update:semver-major"]
+
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: saturday
+    time: "03:00"
+    timezone: Europe/Paris
+  target-branch: stable31
+  labels:
+    - "3. to review"
+    - "dependencies"
+  ignore:
+    - dependency-name: "*"
+      update-types: ["version-update:semver-major", "version-update:semver-minor"]
