@@ -29,7 +29,7 @@ OC.L10N.register(
     "Enforce upper and lower case characters" : "Forza i caratteri maiuscoli e minuscoli",
     "Enforce numeric characters" : "Forza i caratteri numerici",
     "Enforce special characters" : "Forza i caratteri speciali",
-    "Check password against the list of breached passwords from haveibeenpwned.com" : "Verifica la password con l'elenco di password compromesse di haveibeenpwnd.com",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Verifica la password con l'elenco di password compromesse di haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Questo controllo crea un hash della password e invia i primi 5 caratteri di questo hash alle API di haveibeenpwned.com per recuperare un elenco di tutti gli hash che iniziano con questi caratteri. Poi controlla se la password dell'istanza Nextcloud è presente nei risultati.",
     "Account password policies" : "Criteri per le password degli account",
     "Share password policies" : "Condividi le policy sulle password"
