@@ -30,6 +30,6 @@
     "Check password against the list of breached passwords from haveibeenpwned.com" : "Перевіряти пароль у списку зламаних паролів з сайту haveibeenpwned.com",
     "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ця перевірка створює хеш пароля та надсилає перші 5 символів цього хешу до API haveibeenpwned.com для отримання списку всіх хешів, які починаються з них. Потім він перевіряє хмару Nextcloud, чи присутній хеш пароля в наборі результатів.",
     "Account password policies" : "Політика паролів облікових записів",
-    "Share password policies" : "Поділіться політиками паролів"
+    "Share password policies" : "Поділітися політиками паролів"
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);"
 }
