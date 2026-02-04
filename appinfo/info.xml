@@ -10,7 +10,7 @@
 	<description>
 		Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length
 	</description>
-	<version>4.0.0-dev.0</version>
+	<version>4.0.0</version>
 	<licence>agpl</licence>
 	<author>Bjoern Schiessle</author>
 	<namespace>Password_Policy</namespace>
