@@ -171,4 +171,20 @@ class PasswordPolicyConfigTest extends TestCase {
 			[false, false]
 		];
 	}
+
+	/**
+	 * @dataProvider dataGetPasswordContext
+	 */
+	public function testGetPasswordContext(string $input, PasswordContext $expected): void {
+		$this->assertSame($expected, PasswordPolicyConfig::getPasswordContext($input));
+	}
+
+	public static function dataGetPasswordContext(): array {
+		return [
+			['account', PasswordContext::ACCOUNT],
+			['sharing', PasswordContext::SHARING],
+			['invalid', PasswordContext::ACCOUNT],
+			['', PasswordContext::ACCOUNT],
+		];
+	}
 }
