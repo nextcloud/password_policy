@@ -200,7 +200,7 @@ class PasswordPolicyConfig {
 
 	/**
 	 * Get a PasswordContext enum from a string
-	 * @since 3.0.0
+	 * @since 4.0.1
 	 */
 	public static function getPasswordContext(string $context): PasswordContext {
 		return match ($context) {
