@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\Controller;
 
 use OCA\Password_Policy\Generator;
+use OCA\Password_Policy\PasswordPolicyConfig;
 use OCA\Password_Policy\PasswordValidator;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\Attribute\NoAdminRequired;
@@ -31,14 +32,15 @@ class APIController extends OCSController {
 	 * Validate a password against the enabled password policy rules
 	 *
 	 * @param string $password The password to validate
+	 * @param string $context The context for which the password is validated (account or sharing)
 	 * @return DataResponse<Http::STATUS_OK, array{passed: bool, reason?: string}, array{}>
 	 *
 	 * 200: Always
 	 */
 	#[NoAdminRequired]
-	public function validate(string $password): DataResponse {
+	public function validate(string $password, string $context = 'account'): DataResponse {
 		try {
-			$this->validator->validate($password);
+			$this->validator->validate($password, PasswordPolicyConfig::getPasswordContext($context));
 		} catch (HintException $e) {
 			return new DataResponse([
 				'passed' => false,
@@ -54,15 +56,16 @@ class APIController extends OCSController {
 	/**
 	 * Generate a random password that validates against the enabled password policy rules
 	 *
+	 * @param string $context The context for which the password is generated (account or sharing)
 	 * @return DataResponse<Http::STATUS_OK, array{password: string}, array{}>|DataResponse<Http::STATUS_CONFLICT, list<empty>, array{}>
 	 *
 	 * 200: Password generated
 	 * 409: Generated password accidentally failed to validate against the rules, retry.
 	 */
 	#[NoAdminRequired]
-	public function generate(): DataResponse {
+	public function generate(string $context = 'account'): DataResponse {
 		try {
-			$password = $this->generator->generate();
+			$password = $this->generator->generate(PasswordPolicyConfig::getPasswordContext($context));
 		} catch (HintException) {
 			return new DataResponse([], Http::STATUS_CONFLICT);
 		}

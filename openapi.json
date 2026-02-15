@@ -154,6 +154,15 @@
                 ],
                 "parameters": [
                     {
+                        "name": "context",
+                        "in": "query",
+                        "description": "The context for which the password is generated (account or sharing)",
+                        "schema": {
+                            "type": "string",
+                            "default": "account"
+                        }
+                    },
+                    {
                         "name": "OCS-APIRequest",
                         "in": "header",
                         "description": "Required to be true for the API request to pass",
@@ -262,6 +271,11 @@
                                     "password": {
                                         "type": "string",
                                         "description": "The password to validate"
+                                    },
+                                    "context": {
+                                        "type": "string",
+                                        "default": "account",
+                                        "description": "The context for which the password is validated (account or sharing)"
                                     }
                                 }
                             }
