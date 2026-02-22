@@ -1,10 +1,27 @@
 OC.L10N.register(
     "password_policy",
     {
+    "Password is expired, please use forgot password method to reset" : "Нууц үгийн хугацаа дууссан, шинэчлэхийн тулд нууц үг мартсан аргыг ашиглана уу",
+    "Password must not have been used recently before." : "Нууц үг саяхан ашиглагдаагүй байх ёстой.",
+    "Password needs to be at least %s characters long." : "Нууц үг дор хаяж %s тэмдэгт урттай байх ёстой.",
+    "Password needs to contain at least one numeric character." : "Нууц үгэнд дор хаяж нэг тоон тэмдэгт байх ёстой.",
+    "Password needs to contain at least one special character." : "Нууц үгэнд дор хаяж нэг тусгай тэмдэгт байх ёстой.",
     "Password policy" : "Нууц үг сонгох журам",
+    "Allows admins to configure a password policy" : "Админуудад нууц үгийн бодлого тохируулах боломжийг олгодог",
+    "General password policies" : "Ерөнхий нууц үгийн бодлого",
+    "Add policy set" : "Бодлогын багц нэмэх",
+    "Login policies" : "Нэвтрэлтийн бодлого",
+    "Password history size" : "Нууц үгийн түүхийн хэмжээ",
+    "Maximum login attempts" : "Нэвтрэх оролдлогын дээд хязгаар",
+    "Number of days until user password expires" : "Хэрэглэгчийн нууц үгийн хугацаа дуусах өдрийн тоо",
+    "Password expiration" : "Нууц үгийн хугацаа дуусах",
+    "Remove policy" : "Бодлого хасах",
+    "Minimum password length" : "Нууц үгийн хамгийн бага урт",
     "Forbid common passwords" : "Өргөн хэрэглээний нууц үг хориглох",
     "Enforce upper and lower case characters" : "Том, жижиг үсэг шаардах",
     "Enforce numeric characters" : "Тоон тэмдэгт шаардах",
-    "Enforce special characters" : "Тусгай тэмдэгт шаардах"
+    "Enforce special characters" : "Тусгай тэмдэгт шаардах",
+    "Account password policies" : "Хаягийн нууц үгийн бодлого",
+    "Share password policies" : "Хуваалцалтын нууц үгийн бодлого"
 },
 "nplurals=2; plural=(n != 1);");
