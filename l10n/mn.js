@@ -3,9 +3,11 @@ OC.L10N.register(
     {
     "Password is expired, please use forgot password method to reset" : "Нууц үгийн хугацаа дууссан, шинэчлэхийн тулд нууц үг мартсан аргыг ашиглана уу",
     "Password must not have been used recently before." : "Нууц үг саяхан ашиглагдаагүй байх ёстой.",
+    "Password is among the 1,000,000 most common ones. Please make it unique." : "Нууц үг нь хамгийн түгээмэл 1,000,000 нууц үгийн нэг юм. Өвөрмөц болгоно уу.",
     "Password needs to be at least %s characters long." : "Нууц үг дор хаяж %s тэмдэгт урттай байх ёстой.",
     "Password needs to contain at least one numeric character." : "Нууц үгэнд дор хаяж нэг тоон тэмдэгт байх ёстой.",
     "Password needs to contain at least one special character." : "Нууц үгэнд дор хаяж нэг тусгай тэмдэгт байх ёстой.",
+    "Password needs to contain at least one lower and one upper case character." : "Нууц үгэнд дор хаяж нэг жижиг, нэг том үсэг байх ёстой.",
     "Password policy" : "Нууц үг сонгох журам",
     "Allows admins to configure a password policy" : "Админуудад нууц үгийн бодлого тохируулах боломжийг олгодог",
     "General password policies" : "Ерөнхий нууц үгийн бодлого",
