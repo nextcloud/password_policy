@@ -199,6 +199,17 @@ class PasswordPolicyConfig {
 	}
 
 	/**
+	 * Get a PasswordContext enum from a string
+	 * @since 5.0.1
+	 */
+	public static function getPasswordContext(string $context): PasswordContext {
+		return match ($context) {
+			'sharing' => PasswordContext::SHARING,
+			default => PasswordContext::ACCOUNT,
+		};
+	}
+
+	/**
 	 * Get all password contexts for which a policy was setup
 	 * @return PasswordContext[]
 	 * @since 3.0.0
