@@ -1,5 +1,8 @@
 { "translations": {
+    "Password is expired, please use forgot password method to reset" : "Slaptažodžio galiojimo laikas pasibaigęs. Norėdami jį atkurti, naudokitės funkcija „Pamiršau slaptažodį“",
+    "Password must not have been used recently before." : "Slaptažodis neturėjo būti anksčiau naudotas.",
     "Password is among the 1,000,000 most common ones. Please make it unique." : "Slaptažodis įeina į 1,000,000 populiariausiai naudojamų slaptažodžių sąrašą. Prašome pasirinkti kitą.",
+    "Password is present in compromised password list. Please choose a different password." : "Slaptažodis yra pažeistų slaptažodžių sąraše. Pasirinkite kitą slaptažodį.",
     "Password needs to be at least %s characters long." : "Slaptažodis turi būti bent %s simbolių ilgio.",
     "Password needs to contain at least one numeric character." : "Slaptažodyje turi būti bent vienas skaičius.",
     "Password needs to contain at least one special character." : "Slaptažodyje turi būti bent vienas specialus simbolis.",
@@ -7,10 +10,26 @@
     "Password policy" : "Slaptažodžio politika",
     "Allows admins to configure a password policy" : "Leidžia administratoriams konfigūruoti slaptažodžių politiką",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Leisti administratoriams apibrėžti tam tikras išankstines sąlygas slaptažodžiui, pvz., priverstinis mažiausias slaptažodžio ilgis",
+    "General password policies" : "Bendroji slaptažodžių politika",
+    "Add policy set" : "Pridėti politikų rinkinį",
+    "Login policies" : "Prisijungimo taisyklės",
+    "Password history size" : "Slaptažodžių istorijos dydis",
+    "Number of passwords to keep (securely hashed) to prevent users from reusing previously used passwords." : "Slaptažodžių, kuriuos reikia saugoti (saugiai sumaišius), skaičius, kad vartotojai negalėtų pakartotinai naudoti anksčiau naudotų slaptažodžių",
+    "Maximum login attempts" : "Maksimalus prisijungimo bandymų skaičius",
+    "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Prisijungimo bandymų skaičius prieš išjungiant vartotojo paskyrą, kol bus imtasi rankinių veiksmų. (0 – neribojama)",
+    "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Atkreipkite dėmesį, kad ši funkcija skirta apsaugoti nuo įsilaužimų nukentėjusias paskyras. Blokuotas paskyras administracija turi vėl aktyvuoti rankiniu būdu. Atakuotojų, bandančių atspėti paskyrų slaptažodžius, IP adresai bus blokuojami naudojant apsaugą nuo slaptažodžių parinkimo atakų, nepriklausomai nuo šio nustatymo.",
+    "Number of days until user password expires" : "Dienų skaičius iki vartotojo slaptažodžio galiojimo pabaigos",
+    "Password expiration" : "Slaptažodžio galiojimo pabaiga",
+    "Warning: enabling password expiration is nowadays considered a security risk by several security agencies." : "Įspėjimas: šiuo metu dalis saugumo tarnybų laiko slaptažodžių galiojimo pabaigos nustatymą kaip saugumo riziką.",
+    "Remove policy" : "Panaikinti taisyklę",
     "Minimum password length" : "Mažiausias slaptažodžio ilgis",
     "Forbid common passwords" : "Uždrausti paplitusius slaptažodžius",
     "Enforce upper and lower case characters" : "Versti naudoti didžiąsias ir mažąsias raides",
     "Enforce numeric characters" : "Versti naudoti skaitmenų simbolius",
-    "Enforce special characters" : "Versti naudoti specialius simbolius"
+    "Enforce special characters" : "Versti naudoti specialius simbolius",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Patikrinkite slaptažodį pažeistų slaptažodžių sąraše \"haveibeenpwned.com\"",
+    "This check creates a hash of the password and sends the first 5 characters of this hash to the haveibeenpwned.com API to retrieve a list of all hashes that start with those. Then it checks on the Nextcloud instance if the password hash is in the result set." : "Ši patikra sukuria slaptažodžio šifrą ir nusiunčia pirmuosius 5 šio šifro simbolius į „haveibeenpwned.com“ API, kad gautų visų šifrų, prasidedančių šiais simboliais, sąrašą. Tada „Nextcloud“ instancijoje patikrinama, ar slaptažodžio šifras yra rezultatų sąraše.",
+    "Account password policies" : "Paskyros slaptažodžių taisyklės",
+    "Share password policies" : "Pasidalinti slaptažodžių taisyklėmis"
 },"pluralForm" :"nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);"
 }
