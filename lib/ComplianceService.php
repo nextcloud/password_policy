@@ -34,9 +34,6 @@ class ComplianceService {
 	public function __construct(
 		private ContainerInterface $container,
 		private LoggerInterface $logger,
-		private IUserSession $userSession,
-		private IConfig $config,
-		private ISession $session,
 		private IUserManager $userManager,
 	) {
 	}
@@ -57,8 +54,7 @@ class ComplianceService {
 	 * @throws LoginException
 	 */
 	public function entryControl(string $loginName, ?string $password): void {
-		$uid = $loginName;
-		\OCP\Util::emitHook('\OCA\Files_Sharing\API\Server2Server', 'preLoginNameUsedAsUserName', ['uid' => &$uid]);
+		$uid = $this->userManager->getUserNameFromLoginName($loginName);
 
 		/** @var IEntryControl $instance */
 		foreach ($this->getInstance(IEntryControl::class) as $instance) {
