@@ -24,6 +24,7 @@ class GenerateSecurePasswordEventListener implements IEventListener {
 		$this->generator = $generator;
 	}
 
+	#[\Override]
 	public function handle(Event $event): void {
 		if (!($event instanceof GenerateSecurePasswordEvent)) {
 			return;

@@ -21,6 +21,7 @@ class SpecialCharactersValidator implements IValidator {
 	) {
 	}
 
+	#[\Override]
 	public function validate(string $password, ?PasswordContext $context = null): void {
 		$enforceSpecialCharacters = $this->config->getEnforceSpecialCharacters($context);
 		if ($enforceSpecialCharacters && ctype_alnum($password)) {

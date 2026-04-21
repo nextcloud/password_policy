@@ -21,6 +21,7 @@ class LengthValidator implements IValidator {
 	) {
 	}
 
+	#[\Override]
 	public function validate(string $password, ?PasswordContext $context = null): void {
 		$minLength = $this->config->getMinLength($context);
 		if (strlen($password) < $minLength) {

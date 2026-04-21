@@ -25,6 +25,7 @@ class HIBPValidator implements IValidator {
 	) {
 	}
 
+	#[\Override]
 	public function validate(string $password, ?PasswordContext $context = null): void {
 		if ($this->config->getEnforceHaveIBeenPwned($context)) {
 			$hash = sha1($password);
@@ -51,13 +52,14 @@ class HIBPValidator implements IValidator {
 			$result = $response->getBody();
 			if (is_resource($result)) {
 				$result = stream_get_contents($result);
-			} elseif ($result === null) {
+			}
+			if ($result === null || $result === false) {
 				$this->logger->info('Could not read content from HaveIBeenPwned API, body was null');
 				return;
 			}
 			$result = preg_replace('/^([0-9A-Z]+:0)$/m', '', $result);
 
-			if (str_contains($result, $needle)) {
+			if ($result !== null && str_contains($result, $needle)) {
 				$message = 'Password is present in compromised password list. Please choose a different password.';
 				$message_t = $this->l->t(
 					'Password is present in compromised password list. Please choose a different password.'

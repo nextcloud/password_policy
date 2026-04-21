@@ -33,6 +33,7 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 	/**
 	 * @throws HintException
 	 */
+	#[\Override]
 	public function audit(IUser $user, string $password): void {
 		if ($this->policyConfig->getHistorySize() === 0) {
 			return;
@@ -54,6 +55,7 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 	/**
 	 * @throws PreConditionNotMetException
 	 */
+	#[\Override]
 	public function update(IUser $user, string $password): void {
 		$historySize = $this->policyConfig->getHistorySize();
 		if ($historySize === 0) {
@@ -69,7 +71,7 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 			$user->getUID(),
 			'password_policy',
 			'passwordHistory',
-			\json_encode($history)
+			(string)\json_encode($history)
 		);
 	}
 
