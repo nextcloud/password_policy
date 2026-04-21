@@ -25,6 +25,7 @@ use OCP\Security\Events\GenerateSecurePasswordEvent;
 use OCP\Security\Events\ValidatePasswordPolicyEvent;
 use OCP\User\Events\BeforePasswordUpdatedEvent;
 use OCP\User\Events\BeforeUserLoggedInEvent;
+use OCP\User\Events\BeforeUserLoggedInWithCookieEvent;
 use OCP\User\Events\PasswordUpdatedEvent;
 use OCP\User\Events\UserLoggedInEvent;
 
@@ -44,6 +45,7 @@ class Application extends App implements IBootstrap {
 		$context->registerEventListener(BeforePasswordUpdatedEvent::class, BeforePasswordUpdatedEventListener::class);
 		$context->registerEventListener(PasswordUpdatedEvent::class, PasswordUpdatedEventListener::class);
 		$context->registerEventListener(BeforeUserLoggedInEvent::class, BeforeUserLoggedInEventListener::class);
+		$context->registerEventListener(BeforeUserLoggedInWithCookieEvent::class, BeforeUserLoggedInEventListener::class);
 		$context->registerEventListener(LoginFailedEvent::class, FailedLoginListener::class);
 		$context->registerEventListener(UserLoggedInEvent::class, SuccesfullLoginListener::class);
 	}
