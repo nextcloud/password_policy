@@ -23,6 +23,7 @@ class Settings implements ISettings {
 	) {
 	}
 
+	#[\Override]
 	public function getForm(): TemplateResponse {
 		Util::addStyle($this->appName, 'password_policy-settings');
 		Util::addScript($this->appName, 'password_policy-settings');
@@ -36,10 +37,12 @@ class Settings implements ISettings {
 		return new TemplateResponse($this->appName, 'settings');
 	}
 
+	#[\Override]
 	public function getSection(): string {
 		return 'security';
 	}
 
+	#[\Override]
 	public function getPriority(): int {
 		return 50;
 	}

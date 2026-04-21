@@ -47,6 +47,7 @@ class Expiration implements IUpdatable, IEntryControl {
 	/**
 	 * @throws PreConditionNotMetException
 	 */
+	#[\Override]
 	public function update(IUser $user, string $password): void {
 		if (!$this->isLocalUser($user)) {
 			return;
@@ -67,6 +68,7 @@ class Expiration implements IUpdatable, IEntryControl {
 		);
 	}
 
+	#[\Override]
 	public function entryControl(IUser $user, ?string $password): void {
 		if ($this->policyConfig->getExpiryInDays() !== 0
 			&& $this->isLocalUser($user)

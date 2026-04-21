@@ -26,4 +26,7 @@
 	<stubs>
 		<file name="tests/stubs/OC_User_LoginException.php" />
 	</stubs>
+    <issueHandlers>
+        <ClassMustBeFinal errorLevel="info" />
+    </issueHandlers>
 </psalm>
