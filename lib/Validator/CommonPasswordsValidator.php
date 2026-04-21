@@ -21,6 +21,7 @@ class CommonPasswordsValidator implements IValidator {
 	) {
 	}
 
+	#[\Override]
 	public function validate(string $password, ?PasswordContext $context = null): void {
 		$enforceNonCommonPassword = $this->config->getEnforceNonCommonPassword($context);
 		if (!$enforceNonCommonPassword) {

@@ -24,6 +24,7 @@ class SuccesfullLoginListener implements IEventListener {
 		$this->compliance = $compliance;
 	}
 
+	#[\Override]
 	public function handle(Event $event): void {
 		if (!($event instanceof UserLoggedInEvent)) {
 			return;
