@@ -21,6 +21,7 @@ class NumericCharacterValidator implements IValidator {
 	) {
 	}
 
+	#[\Override]
 	public function validate(string $password, ?PasswordContext $context = null): void {
 		$enforceNumericCharacters = $this->config->getEnforceNumericCharacters($context);
 		if ($enforceNumericCharacters) {

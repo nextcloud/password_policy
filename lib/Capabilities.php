@@ -44,6 +44,7 @@ class Capabilities implements ICapability {
 	 * @since 12.0.0
 	 * @since 31.0.0 new policies per context
 	 */
+	#[\Override]
 	public function getCapabilities(): array {
 		/* Get an array [['context' => [policies]], ...] */
 		$policies = [];

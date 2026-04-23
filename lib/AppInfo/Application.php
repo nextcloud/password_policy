@@ -36,6 +36,7 @@ class Application extends App implements IBootstrap {
 		parent::__construct(self::APP_ID);
 	}
 
+	#[\Override]
 	public function register(IRegistrationContext $context): void {
 		$context->registerCapability(Capabilities::class);
 
@@ -49,6 +50,7 @@ class Application extends App implements IBootstrap {
 		$context->registerEventListener(UserLoggedInEvent::class, SuccesfullLoginListener::class);
 	}
 
+	#[\Override]
 	public function boot(IBootContext $context): void {
 	}
 }

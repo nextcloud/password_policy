@@ -21,6 +21,7 @@ class UpperCaseLoweCaseValidator implements IValidator {
 	) {
 	}
 
+	#[\Override]
 	public function validate(string $password, ?PasswordContext $context = null): void {
 		$enforceUpperLowerCase = $this->config->getEnforceUpperLowerCase($context);
 		if ($enforceUpperLowerCase) {

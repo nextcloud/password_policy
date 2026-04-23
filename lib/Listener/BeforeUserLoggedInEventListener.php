@@ -25,6 +25,7 @@ class BeforeUserLoggedInEventListener implements IEventListener {
 		$this->complianceUpdater = $complianceUpdater;
 	}
 
+	#[\Override]
 	public function handle(Event $event): void {
 		if ($event instanceof BeforeUserLoggedInEvent) {
 			$this->complianceUpdater->entryControl($event->getUsername(), $event->getPassword());

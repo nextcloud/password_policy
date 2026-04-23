@@ -24,6 +24,7 @@ class BeforePasswordUpdatedEventListener implements IEventListener {
 		$this->complianceUpdater = $complianceUpdater;
 	}
 
+	#[\Override]
 	public function handle(Event $event): void {
 		if (!($event instanceof BeforePasswordUpdatedEvent)) {
 			return;
