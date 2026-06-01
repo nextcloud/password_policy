@@ -8,8 +8,12 @@ declare(strict_types=1);
 
 namespace OCA\Password_Policy\Compliance;
 
+use OCP\HintException;
 use OCP\IUser;
 
 interface IUpdatable {
+	/**
+	 * @throws HintException
+	 */
 	public function update(IUser $user, string $password): void;
 }

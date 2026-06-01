@@ -15,11 +15,8 @@ use OCA\Password_Policy\Compliance\IAuditor;
 use OCA\Password_Policy\Compliance\IEntryControl;
 use OCA\Password_Policy\Compliance\IUpdatable;
 use OCP\HintException;
-use OCP\IConfig;
-use OCP\ISession;
 use OCP\IUser;
 use OCP\IUserManager;
-use OCP\IUserSession;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
@@ -34,22 +31,29 @@ class ComplianceService {
 	public function __construct(
 		private ContainerInterface $container,
 		private LoggerInterface $logger,
-		private IUserSession $userSession,
-		private IConfig $config,
-		private ISession $session,
 		private IUserManager $userManager,
 	) {
 	}
 
 	public function update(IUser $user, string $password): void {
 		foreach ($this->getInstance(IUpdatable::class) as $instance) {
-			$instance->update($user, $password);
+			try {
+				$instance->update($user, $password);
+			} catch (HintException $e) {
+				$this->logger->info('Password could not be updated ' . get_class($instance) . ' with following hint: ' . $e->getMessage());
+				throw $e;
+			}
 		}
 	}
 
 	public function audit(IUser $user, string $password): void {
 		foreach ($this->getInstance(IAuditor::class) as $instance) {
-			$instance->audit($user, $password);
+			try {
+				$instance->audit($user, $password);
+			} catch (HintException $e) {
+				$this->logger->info('Password failed audit ' . get_class($instance) . ' with following hint: ' . $e->getMessage());
+				throw $e;
+			}
 		}
 	}
 
@@ -81,7 +85,7 @@ class ComplianceService {
 	 * @psalm-param class-string<T> $interface
 	 * @return Iterable<T>
 	 */
-	protected function getInstance($interface) {
+	protected function getInstance($interface): iterable {
 		foreach (self::COMPLIANCERS as $compliance) {
 			try {
 				$instance = $this->container->get($compliance);
