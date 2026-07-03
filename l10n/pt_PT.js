@@ -8,11 +8,17 @@ OC.L10N.register(
     "Password needs to contain at least one special character." : "A palavra-passe precisa de conter pelo menos um carácter especial.",
     "Password needs to contain at least one lower and one upper case character." : "A palavra-passe precisa de conter pelo menos uma letra minúscula e uma maiúscula.",
     "Password policy" : "Política de palavras-passe",
+    "Allows admins to configure a password policy" : "Permite aos administradores configurarem uma política de senha",
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Permitir que o administrador defina determinadas pré-condições para a senha, por exemplo,  um tamanho mínimo",
+    "Login policies" : "Políticas para logins",
+    "Maximum login attempts" : "Número máximo de tentativas de login",
+    "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Observe que esta opção destina-se a proteger contas atacadas. As contas desativadas devem ser reativadas manualmente pela administração. Os invasores que tentarem adivinhar as senhas das contas terão seus endereços IP bloqueados pela proteção de força bruta independente desta configuração.",
+    "Warning: enabling password expiration is nowadays considered a security risk by several security agencies." : "Aviso: habilitar a expiração de senha é atualmente considerado um risco de segurança por diversas agências de segurança.",
     "Forbid common passwords" : "palavras-passe comuns proibidas",
     "Enforce upper and lower case characters" : "Forçar letras maiúsculas e minúsculas",
     "Enforce numeric characters" : "Forçar caracteres numéricos",
     "Enforce special characters" : "Forçar caracteres especiais",
+    "Check password against the list of breached passwords from haveibeenpwned.com" : "Verificar a senha com relação à lista de senhas violadas de haveibeenpwned.com",
     "Share password policies" : "Políticas de senha de compartilhamentos"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
