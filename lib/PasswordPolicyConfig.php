@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 /**
  * SPDX-FileCopyrightText: 2016 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: AGPL-3.0-or-later
@@ -21,13 +22,12 @@ use OCP\Security\PasswordContext;
  * @package OCA\Password_Policy
  */
 class PasswordPolicyConfig {
-
 	/**
 	 * PasswordContext that are supported by the app.
 	 * This does not mean all of those have been setup by the admin!
 	 * @since 3.0.0
 	 */
-	protected const SUPPORTED_CONTEXTS = [PasswordContext::ACCOUNT, PasswordContext::SHARING];
+	protected const array SUPPORTED_CONTEXTS = [PasswordContext::ACCOUNT, PasswordContext::SHARING];
 
 	/**
 	 * Config constructor.

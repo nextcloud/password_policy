@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 /**
  * SPDX-FileCopyrightText: 2018 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: AGPL-3.0-or-later
@@ -11,15 +12,14 @@ namespace OCA\Password_Policy;
 use OCP\HintException;
 use OCP\Security\ISecureRandom;
 use OCP\Security\PasswordContext;
+use Random\Randomizer;
 
 class Generator {
-
-	public const PASSWORD_GENERATION_MAX_ROUNDS = 10;
+	public const int PASSWORD_GENERATION_MAX_ROUNDS = 10;
 
 	public function __construct(
 		private PasswordPolicyConfig $config,
 		private PasswordValidator $validator,
-		private ISecureRandom $random,
 	) {
 	}
 
@@ -35,22 +35,23 @@ class Generator {
 		$password = '';
 		$chars = '';
 
+		$random = new Randomizer();
 		for ($i = 0; $i < self::PASSWORD_GENERATION_MAX_ROUNDS; $i++) {
 			if ($this->config->getEnforceUpperLowerCase($context)) {
-				$password .= $this->random->generate(1, ISecureRandom::CHAR_UPPER);
-				$password .= $this->random->generate(1, ISecureRandom::CHAR_LOWER);
+				$password .= $random->getBytesFromString(ISecureRandom::CHAR_UPPER, 1);
+				$password .= $random->getBytesFromString(ISecureRandom::CHAR_LOWER, 1);
 				$length -= 2;
 				$chars .= ISecureRandom::CHAR_UPPER . ISecureRandom::CHAR_LOWER;
 			}
 
 			if ($this->config->getEnforceNumericCharacters($context)) {
-				$password .= $this->random->generate(1, ISecureRandom::CHAR_DIGITS);
+				$password .= $random->getBytesFromString(ISecureRandom::CHAR_DIGITS, 1);
 				$length -= 1;
 				$chars .= ISecureRandom::CHAR_DIGITS;
 			}
 
 			if ($this->config->getEnforceSpecialCharacters($context)) {
-				$password .= $this->random->generate(1, ISecureRandom::CHAR_SYMBOLS);
+				$password .= $random->getBytesFromString(ISecureRandom::CHAR_SYMBOLS, 1);
 				$length -= 1;
 				$chars .= ISecureRandom::CHAR_SYMBOLS;
 			}
@@ -59,7 +60,7 @@ class Generator {
 				$chars = ISecureRandom::CHAR_HUMAN_READABLE;
 			}
 
-			$password .= $chars = $this->random->generate($length, $chars);
+			$password .= $chars = $random->getBytesFromString($chars, $length);
 			// Shuffle string so the order is random
 			$password = str_shuffle($password);
 
@@ -74,7 +75,7 @@ class Generator {
 				return $password;
 			} catch (HintException $e) {
 				/*
-				 * Invalid so lets go for another round
+				 * Invalid so let's go for another round
 				 * Reset the length so we don't run below zero
 				 */
 				$length = $minLength;
