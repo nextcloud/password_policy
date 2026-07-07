@@ -51,7 +51,6 @@ class HistoryComplianceTest extends TestCase {
 		);
 	}
 
-
 	/**
 	 * @dataProvider auditCaseProvider
 	 */
