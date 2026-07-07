@@ -101,7 +101,6 @@ class PasswordPolicyConfigTest extends TestCase {
 		);
 	}
 
-
 	/**
 	 * @dataProvider configTestData
 	 */
@@ -151,7 +150,6 @@ class PasswordPolicyConfigTest extends TestCase {
 
 		$this->instance->setEnforceNumericCharacters($setValue);
 	}
-
 
 	/**
 	 * @dataProvider configTestData
