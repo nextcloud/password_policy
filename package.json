@@ -17,8 +17,8 @@
   "scripts": {
     "build": "vite --mode production build",
     "dev": "vite --mode development build",
-    "lint": "eslint --ext .js,.vue src",
-    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "stylelint": "stylelint src/**/*.scss src/**/*.vue src/**/*.vue",
     "stylelint:fix": "stylelint src/**/*.scss src/**/*.vue --fix",
     "watch": "vite --mode development build --watch"
