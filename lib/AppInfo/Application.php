@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 /**
  * SPDX-FileCopyrightText: 2017 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: AGPL-3.0-or-later
@@ -30,7 +31,7 @@ use OCP\User\Events\PasswordUpdatedEvent;
 use OCP\User\Events\UserLoggedInEvent;
 
 class Application extends App implements IBootstrap {
-	public const APP_ID = 'password_policy';
+	public const string APP_ID = 'password_policy';
 
 	public function __construct() {
 		parent::__construct(self::APP_ID);
