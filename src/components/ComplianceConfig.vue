@@ -52,7 +52,7 @@ function saveComplianceConfig(): void {
 			<NcInputField
 				v-model="config.historySize"
 				:label="t('password_policy', 'Password history size')"
-				:helper-text="t('password_policy', 'Number of passwords to keep (securely hashed) to prevent users from reusing previously used passwords.')"
+				:helperText="t('password_policy', 'Number of passwords to keep (securely hashed) to prevent users from reusing previously used passwords.')"
 				min="0"
 				type="number" />
 		</div>
@@ -63,7 +63,7 @@ function saveComplianceConfig(): void {
 				:label="t('password_policy', 'Maximum login attempts')"
 				min="0"
 				type="number"
-				:helper-text="t('password_policy', 'Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)')" />
+				:helperText="t('password_policy', 'Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)')" />
 			<NcNoteCard
 				v-show="config.maximumLoginAttempts > 0"
 				:heading="t('password_policy', 'Maximum login attempts')"

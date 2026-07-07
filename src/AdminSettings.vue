@@ -8,7 +8,7 @@ import type { IPasswordPolicy } from './types.d.ts'
 
 import { getCapabilities } from '@nextcloud/capabilities'
 import { t } from '@nextcloud/l10n'
-import Vue, { computed, ref } from 'vue'
+import { computed, ref } from 'vue'
 import NcSettingsSection from '@nextcloud/vue/components/NcSettingsSection'
 import AddPolicyButton from './components/AddPolicyButton.vue'
 import ComplianceConfig from './components/ComplianceConfig.vue'
@@ -35,7 +35,7 @@ function onUpdatePolicy(context: string, policy: IPasswordPolicy): void {
 		}
 	}
 
-	Vue.set(policies.value, context, policy)
+	policies.value[context] = policy
 }
 
 /**
@@ -52,7 +52,7 @@ function onAddPolicy(context: string): void {
 
 	const passwordContexts = [...Object.keys(policies.value), context]
 	window.OCP.AppConfig.setValue('password_policy', 'passwordContexts', JSON.stringify(passwordContexts))
-	Vue.set(policies.value, context, { ...DefaultPolicyValues })
+	policies.value[context] = { ...DefaultPolicyValues }
 }
 
 /**
@@ -64,7 +64,7 @@ function onRemovePolicy(context: string): void {
 	logger.debug(`Remove password policy ${context}`)
 	const passwordContexts = Object.keys(policies.value).filter((key) => key !== context)
 	window.OCP.AppConfig.setValue('password_policy', 'passwordContexts', JSON.stringify(passwordContexts))
-	Vue.delete(policies.value, context)
+	delete policies.value[context]
 }
 </script>
 
@@ -76,16 +76,16 @@ function onRemovePolicy(context: string): void {
 			<PasswordPolicy
 				v-for="policyName in configuredPolicies"
 				:key="policyName"
-				:can-remove="policyName !== 'account'"
+				:canRemove="policyName !== 'account'"
 				:heading="configuredPolicies.length === 1 ? t('password_policy', 'General password policies') : PolicyHeadings[policyName]"
-				:model-value="policies[policyName]"
+				:modelValue="policies[policyName]"
 				@update:modelValue="onUpdatePolicy(policyName, $event)"
 				@remove="onRemovePolicy(policyName)" />
 
 			<AddPolicyButton
 				v-if="configuredPolicies.length < Object.keys(PolicyHeadings).length"
 				:policies="policies"
-				@add-policy="onAddPolicy" />
+				@addPolicy="onAddPolicy" />
 		</div>
 	</NcSettingsSection>
 </template>

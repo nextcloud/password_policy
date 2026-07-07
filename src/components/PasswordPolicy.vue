@@ -4,7 +4,7 @@
 -->
 
 <script setup lang="ts">
-/* eslint-disable vue/custom-event-name-casing -- TODO activate again with Vue 3  */
+
 import type { IPasswordPolicy } from '../types.d.ts'
 
 import { t } from '@nextcloud/l10n'

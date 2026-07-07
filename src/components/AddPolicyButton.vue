@@ -19,7 +19,7 @@ const props = defineProps<{
 }>()
 
 defineEmits<{
-	(e: 'add-policy', v: string): void
+	addPolicy: [v: string]
 }>()
 
 const allPasswordContexts = ['account', 'sharing']
@@ -28,15 +28,15 @@ const unusedPasswordContexts = computed(() => allPasswordContexts.filter((p) => 
 
 <template>
 	<div :class="$style.container">
-		<NcActions :menu-name="t('password_policy', 'Add policy set')" force-menu>
+		<NcActions :menuName="t('password_policy', 'Add policy set')" forceMenu>
 			<template #icon>
 				<IconPlus :size="20" />
 			</template>
 			<NcActionButton
 				v-for="passwordContext of unusedPasswordContexts"
 				:key="passwordContext"
-				close-after-click
-				@click="$emit('add-policy', passwordContext)">
+				closeAfterClick
+				@click="$emit('addPolicy', passwordContext)">
 				<template #icon>
 					<IconShieldCheck :size="20" />
 				</template>
