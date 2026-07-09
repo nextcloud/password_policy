@@ -1,13 +1,10 @@
 /**
- * SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-FileCopyrightText: 2026 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-import Vue from 'vue'
+import { createApp } from 'vue'
 import AdminSettings from './AdminSettings.vue'
 
-export default new Vue({
-	el: '#password_policy-settings',
-	name: 'AdminSettings',
-	render: (h) => h(AdminSettings),
-})
+const app = createApp(AdminSettings)
+app.mount('#password_policy-settings')
