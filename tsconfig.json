@@ -3,8 +3,10 @@
 	"include": ["./src/**/*.ts", "./src/**/*.vue"],
 	"compilerOptions": {
 		"allowJs": true,
+		"allowImportingTsExtensions": true,
 		"allowSyntheticDefaultImports": true,
-		"moduleResolution": "Bundler",
+		"rewriteRelativeImportExtensions": true,
+		"moduleResolution": "bundler",
 		"noImplicitAny": false,
 		"outDir": "./js/",
 		"strict": true
