@@ -4,13 +4,14 @@
 -->
 
 <script setup lang="ts">
-import type { IPasswordPolicy } from '../types'
+/* eslint-disable vue/custom-event-name-casing -- TODO activate again with Vue 3  */
+import type { IPasswordPolicy } from '../types.d.ts'
+
 import { t } from '@nextcloud/l10n'
 import { computed } from 'vue'
-
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
-import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
-import NcInputField from '@nextcloud/vue/dist/Components/NcInputField.js'
+import NcButton from '@nextcloud/vue/components/NcButton'
+import NcCheckboxRadioSwitch from '@nextcloud/vue/components/NcCheckboxRadioSwitch'
+import NcInputField from '@nextcloud/vue/components/NcInputField'
 import IconTrashbin from 'vue-material-design-icons/TrashCan.vue'
 
 const props = defineProps<{
@@ -56,38 +57,45 @@ const enforceUpperLowerCase = computed({
 			<h3 :class="$style.heading">
 				{{ heading }}
 			</h3>
-			<NcButton v-if="canRemove"
+			<NcButton
+				v-if="canRemove"
 				:aria-label="t('password_policy', 'Remove policy')"
 				:title="t('password_policy', 'Remove policy')"
-				type="tertiary"
+				variant="tertiary"
 				@click="$emit('remove')">
 				<template #icon>
 					<IconTrashbin :size="20" />
 				</template>
 			</NcButton>
 		</div>
-		<NcInputField v-model="minLength"
+		<NcInputField
+			v-model="minLength"
 			:class="$style.inputField"
 			:label="t('password_policy', 'Minimum password length')"
 			type="number"
 			min="0" />
-		<NcCheckboxRadioSwitch :checked.sync="enforceNonCommonPassword"
+		<NcCheckboxRadioSwitch
+			v-model="enforceNonCommonPassword"
 			type="switch">
 			{{ t('password_policy', 'Forbid common passwords') }}
 		</NcCheckboxRadioSwitch>
-		<NcCheckboxRadioSwitch :checked.sync="enforceUpperLowerCase"
+		<NcCheckboxRadioSwitch
+			v-model="enforceUpperLowerCase"
 			type="switch">
 			{{ t('password_policy', 'Enforce upper and lower case characters') }}
 		</NcCheckboxRadioSwitch>
-		<NcCheckboxRadioSwitch :checked.sync="enforceNumericCharacters"
+		<NcCheckboxRadioSwitch
+			v-model="enforceNumericCharacters"
 			type="switch">
 			{{ t('password_policy', 'Enforce numeric characters') }}
 		</NcCheckboxRadioSwitch>
-		<NcCheckboxRadioSwitch :checked.sync="enforceSpecialCharacters"
+		<NcCheckboxRadioSwitch
+			v-model="enforceSpecialCharacters"
 			type="switch">
 			{{ t('password_policy', 'Enforce special characters') }}
 		</NcCheckboxRadioSwitch>
-		<NcCheckboxRadioSwitch :checked.sync="enforceHaveIBeenPwned"
+		<NcCheckboxRadioSwitch
+			v-model="enforceHaveIBeenPwned"
 			type="switch">
 			{{ t('password_policy', 'Check password against the list of breached passwords from haveibeenpwned.com') }}
 		</NcCheckboxRadioSwitch>

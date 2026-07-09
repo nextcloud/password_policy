@@ -12,5 +12,5 @@ interface ICapabilities {
 }
 
 declare module '@nextcloud/capabilities' {
-	function getCapabilities(): ICapabilities;
+	function getCapabilities(): ICapabilities
 }

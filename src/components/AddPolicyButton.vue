@@ -5,14 +5,14 @@
 
 <script setup lang="ts">
 import type { IPasswordPolicies } from '../types.d.ts'
+
 import { t } from '@nextcloud/l10n'
 import { computed } from 'vue'
-import { PolicyHeadings } from '../constants.js'
-
-import NcActions from '@nextcloud/vue/dist/Components/NcActions.js'
-import NcActionButton from '@nextcloud/vue/dist/Components/NcActionButton.js'
+import NcActionButton from '@nextcloud/vue/components/NcActionButton'
+import NcActions from '@nextcloud/vue/components/NcActions'
 import IconPlus from 'vue-material-design-icons/Plus.vue'
 import IconShieldCheck from 'vue-material-design-icons/ShieldCheck.vue'
+import { PolicyHeadings } from '../constants.js'
 
 const props = defineProps<{
 	policies: IPasswordPolicies
@@ -32,7 +32,8 @@ const unusedPasswordContexts = computed(() => allPasswordContexts.filter((p) => 
 			<template #icon>
 				<IconPlus :size="20" />
 			</template>
-			<NcActionButton v-for="passwordContext of unusedPasswordContexts"
+			<NcActionButton
+				v-for="passwordContext of unusedPasswordContexts"
 				:key="passwordContext"
 				close-after-click
 				@click="$emit('add-policy', passwordContext)">

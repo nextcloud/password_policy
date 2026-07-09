@@ -4,6 +4,7 @@
  */
 
 import type { IPasswordPolicy } from './types.d.ts'
+
 import { t } from '@nextcloud/l10n'
 
 export const PolicyHeadings = {
