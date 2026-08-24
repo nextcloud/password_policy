@@ -1,10 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * SPDX-FileCopyrightText: 2016 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
-
 namespace OCA\Password_Policy\Tests;
 
 use ChristophWurst\Nextcloud\Testing\TestCase;
@@ -17,7 +18,9 @@ use PHPUnit\Framework\MockObject\MockObject;
 class PasswordPolicyConfigTest extends TestCase {
 
 	private IConfig&MockObject $config;
+
 	private IAppConfig&MockObject $appConfig;
+
 	private PasswordPolicyConfig $instance;
 
 	protected function setUp(): void {
@@ -31,7 +34,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider dataGetMinLength
 	 */
-	public function testGetMinLength(?PasswordContext $context, bool $hasContext, int $expected) {
+	public function testGetMinLength(?PasswordContext $context, bool $hasContext, int $expected): void {
 		$this->appConfig
 			->method('getValueArray')
 			->with('password_policy', 'passwordContexts', ['account'])
@@ -59,7 +62,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testGetEnforceNonCommonPassword($appConfigValue, $expected) {
+	public function testGetEnforceNonCommonPassword($appConfigValue, $expected): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('getValueBool')
@@ -74,7 +77,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testGetEnforceUpperLowerCase($appConfigValue, $expected) {
+	public function testGetEnforceUpperLowerCase($appConfigValue, $expected): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('getValueBool')
@@ -89,7 +92,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testGetEnforceNumericCharacters($appConfigValue, $expected) {
+	public function testGetEnforceNumericCharacters($appConfigValue, $expected): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('getValueBool')
@@ -104,7 +107,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testGetEnforceSpecialCharacters($appConfigValue, $expected) {
+	public function testGetEnforceSpecialCharacters($appConfigValue, $expected): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('getValueBool')
@@ -116,7 +119,7 @@ class PasswordPolicyConfigTest extends TestCase {
 		);
 	}
 
-	public function testSetMinLength() {
+	public function testSetMinLength(): void {
 		$expected = 42;
 
 		$this->appConfig
@@ -130,7 +133,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testSetEnforceUpperLowerCase($expected, $setValue) {
+	public function testSetEnforceUpperLowerCase($expected, $setValue): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('setValueBool')
@@ -142,7 +145,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testSetEnforceNumericCharacters($expected, $setValue) {
+	public function testSetEnforceNumericCharacters($expected, $setValue): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('setValueBool')
@@ -154,7 +157,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testSetEnforceSpecialCharacters($expected, $setValue) {
+	public function testSetEnforceSpecialCharacters($expected, $setValue): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('setValueBool')

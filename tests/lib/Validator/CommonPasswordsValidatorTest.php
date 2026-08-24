@@ -20,7 +20,9 @@ use PHPUnit\Framework\MockObject\MockObject;
 class CommonPasswordsValidatorTest extends TestCase {
 
 	private PasswordPolicyConfig&MockObject $config;
+
 	private IL10N&MockObject $l;
+
 	private IValidator $validator;
 
 	protected function setUp(): void {
@@ -40,7 +42,7 @@ class CommonPasswordsValidatorTest extends TestCase {
 	 * @dataProvider dataValidateWithContext
 	 */
 	public function testValidateWithContext(?PasswordContext $context, bool $expected): void {
-		$this->config
+		$this->config->expects($this->atLeast(3))
 			->method('getEnforceNonCommonPassword')
 			->willReturnMap([
 				[null, true],
@@ -88,9 +90,10 @@ class CommonPasswordsValidatorTest extends TestCase {
 			'enforced and common' => ['banana', true, false],
 			'enforced unique' => ['bananabananabananabanana', true, true],
 		];
-		for ($i = 1; $i <= 39; $i++) {
+		for ($i = 1; $i <= 39; ++$i) {
 			$attempts[] = [str_repeat('$', $i), true, $i !== 6];
 		}
+
 		return $attempts;
 	}
 }

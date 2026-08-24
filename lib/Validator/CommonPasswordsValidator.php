@@ -16,8 +16,8 @@ use OCP\Security\PasswordContext;
 class CommonPasswordsValidator implements IValidator {
 
 	public function __construct(
-		private PasswordPolicyConfig $config,
-		private IL10N $l,
+		private readonly PasswordPolicyConfig $config,
+		private readonly IL10N $l,
 	) {
 	}
 

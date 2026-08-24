@@ -24,9 +24,13 @@ use Psr\Log\LoggerInterface;
 class HIBPValidatorTest extends TestCase {
 
 	private PasswordPolicyConfig&MockObject $config;
+
 	private IL10N&MockObject $l;
+
 	private IClientService&MockObject $clientService;
+
 	private LoggerInterface&MockObject $logger;
+
 	private IValidator $validator;
 
 	protected static array $resources = [];
@@ -51,6 +55,7 @@ class HIBPValidatorTest extends TestCase {
 		foreach (self::$resources as $resource) {
 			fclose($resource);
 		}
+
 		self::$resources = [];
 
 		parent::tearDown();
@@ -61,7 +66,7 @@ class HIBPValidatorTest extends TestCase {
 	 * @dataProvider dataValidateWithContext
 	 */
 	public function testValidateWithContext(?PasswordContext $context, bool $expected): void {
-		$this->config
+		$this->config->expects($this->atLeast(3))
 			->method('getEnforceHaveIBeenPwned')
 			->willReturnMap([
 				[null, true],
@@ -106,7 +111,7 @@ class HIBPValidatorTest extends TestCase {
 			self::$resources[] = $responseBody;
 		}
 
-		$this->config
+		$this->config->expects($this->atLeast(3))
 			->method('getEnforceHaveIBeenPwned')
 			->willReturnMap([
 				[null, true],
@@ -135,15 +140,8 @@ class HIBPValidatorTest extends TestCase {
 	}
 
 	public static function dataValidate(): array {
-		function mkResource(string $text) {
-			$resource = fopen('php://temp', 'r+');
-			fwrite($resource, $text);
-			rewind($resource);
-			return $resource;
-		}
-
-		$resourceBad = mkResource("7EB3AD72E4AC6182E6E831E33395F97C419:1\n7F12A5AB6972A0895D290C4792F0A326EA8:270322");
-		$resourceGood = mkResource('7EB3AD72E4AC6182E6E831E33395F97C419:1');
+		$resourceBad = self::mkResource("7EB3AD72E4AC6182E6E831E33395F97C419:1\n7F12A5AB6972A0895D290C4792F0A326EA8:270322");
+		$resourceGood = self::mkResource('7EB3AD72E4AC6182E6E831E33395F97C419:1');
 
 		return [
 			'pwned' => ["7EB3AD72E4AC6182E6E831E33395F97C419:1\n7F12A5AB6972A0895D290C4792F0A326EA8:270322", false],
@@ -153,4 +151,11 @@ class HIBPValidatorTest extends TestCase {
 			'resource like' => [$resourceGood, true],
 		];
 	}
+    private static function mkResource(string $text)
+    {
+        $resource = fopen('php://temp', 'r+');
+        fwrite($resource, $text);
+        rewind($resource);
+        return $resource;
+    }
 }

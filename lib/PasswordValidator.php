@@ -24,8 +24,8 @@ use Psr\Log\LoggerInterface;
 class PasswordValidator {
 
 	public function __construct(
-		private ContainerInterface $container,
-		private LoggerInterface $logger,
+		private readonly ContainerInterface $container,
+		private readonly LoggerInterface $logger,
 	) {
 	}
 
@@ -64,7 +64,7 @@ class PasswordValidator {
 			}
 		}
 
-		if (!empty($errors)) {
+		if ($errors !== []) {
 			throw new HintException(
 				implode(' ', $errors),
 				implode(' ', $hints)

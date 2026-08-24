@@ -27,6 +27,7 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 		protected IHasher $hasher,
 		protected IL10N $l,
 		protected LoggerInterface $logger,
+        private readonly \OCP\Config\IUserConfig $userConfig,
 	) {
 	}
 
@@ -59,7 +60,7 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 	public function update(IUser $user, string $password): void {
 		$historySize = $this->policyConfig->getHistorySize();
 		if ($historySize === 0) {
-			$this->config->deleteUserValue($user->getUID(), 'password_policy', 'passwordHistory');
+			$this->userConfig->deleteUserConfig($user->getUID(), 'password_policy', 'passwordHistory');
 			return;
 		}
 
@@ -67,7 +68,7 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 		array_unshift($history, $this->hasher->hash($password));
 		$history = \array_slice($history, 0, $historySize);
 
-		$this->config->setUserValue(
+		$this->userConfig->setValueString(
 			$user->getUID(),
 			'password_policy',
 			'passwordHistory',
@@ -79,7 +80,7 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 	 * @return list<string> List of previously used passwords (hashed)
 	 */
 	protected function getHistory(IUser $user): array {
-		$history = $this->config->getUserValue(
+		$history = $this->userConfig->getValueString(
 			$user->getUID(),
 			'password_policy',
 			'passwordHistory',
@@ -94,6 +95,7 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 			);
 			$history = [];
 		}
+
 		$history = \array_slice($history, 0, $this->policyConfig->getHistorySize());
 
 		return \array_values($history);

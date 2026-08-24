@@ -23,9 +23,13 @@ use Psr\Log\LoggerInterface;
 class HistoryComplianceTest extends TestCase {
 
 	protected HistoryCompliance $instance;
+
 	protected PasswordPolicyConfig&MockObject $policyConfig;
+
 	protected IConfig&MockObject $config;
+
 	protected IUserSession&MockObject $session;
+
 	protected IHasher&MockObject $hasher;
 
 	public function setUp(): void {
@@ -54,7 +58,7 @@ class HistoryComplianceTest extends TestCase {
 	/**
 	 * @dataProvider auditCaseProvider
 	 */
-	public function testAudit(int $historySize, array $history, string $newPasswordHash, bool $expectException) {
+	public function testAudit(int $historySize, array $history, string $newPasswordHash, bool $expectException): void {
 		[$uid, $user] = $this->getUserMock();
 
 		$this->policyConfig->expects($this->any())
@@ -69,9 +73,7 @@ class HistoryComplianceTest extends TestCase {
 
 		$this->hasher->expects($this->any())
 			->method('verify')
-			->willReturnCallback(function ($pwd, $compareHash) use ($newPasswordHash) {
-				return $newPasswordHash === $compareHash;
-			});
+			->willReturnCallback(fn($pwd, $compareHash) => $newPasswordHash === $compareHash);
 
 		if ($expectException) {
 			$this->expectException(HintException::class);
@@ -84,7 +86,7 @@ class HistoryComplianceTest extends TestCase {
 	/**
 	 * @dataProvider updateCaseProvider
 	 */
-	public function testUpdate(int $historySize, array $history, string $newPasswordHash) {
+	public function testUpdate(int $historySize, array $history, string $newPasswordHash): void {
 		[$uid, $user] = $this->getUserMock();
 
 		$this->policyConfig->expects($this->any())
@@ -99,7 +101,7 @@ class HistoryComplianceTest extends TestCase {
 		$this->config->expects($this->once())
 			->method('setUserValue')
 			->with($uid, 'password_policy', 'passwordHistory', $this->anything())
-			->willReturnCallback(function ($uid, $app, $key, $value) use ($newPasswordHash) {
+			->willReturnCallback(function ($uid, $app, $key, $value) use ($newPasswordHash): void {
 				$history = \json_decode($value, true);
 				$this->assertSame($newPasswordHash, $history[0]);
 			});

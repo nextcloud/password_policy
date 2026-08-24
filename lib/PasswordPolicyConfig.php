@@ -33,8 +33,8 @@ class PasswordPolicyConfig {
 	 * Config constructor.
 	 */
 	public function __construct(
-		private IConfig $config,
-		private IAppConfig $appConfig,
+		private readonly IConfig $config,
+		private readonly IAppConfig $appConfig,
 	) {
 	}
 
@@ -150,11 +150,9 @@ class PasswordPolicyConfig {
 	}
 
 	/**
-	 * Enforce checking against haveibeenpwned.com
-	 *
-	 * @param bool $enforceHaveIBeenPwned
-	 */
-	public function setEnforceHaveIBeenPwned(bool $enforceHaveIBeenPwned, ?PasswordContext $context = null): void {
+     * Enforce checking against haveibeenpwned.com
+     */
+    public function setEnforceHaveIBeenPwned(bool $enforceHaveIBeenPwned, ?PasswordContext $context = null): void {
 		$this->appConfig->setValueBool(
 			Application::APP_ID,
 			$this->getScopedAppConfig('enforceHaveIBeenPwned', $context),
@@ -219,12 +217,11 @@ class PasswordPolicyConfig {
 	}
 
 	/**
-	 * Check if a configuration for this password context is available
-	 * @param PasswordContext $context
-	 * @return bool
-	 * @since 3.0.0
-	 */
-	private function hasConfigurationContext(?PasswordContext $context = null): bool {
+     * Check if a configuration for this password context is available
+     * @param PasswordContext $context
+     * @since 3.0.0
+     */
+    private function hasConfigurationContext(?PasswordContext $context = null): bool {
 		$available = $this->appConfig->getValueArray(Application::APP_ID, 'passwordContexts', ['account']);
 		return match ($context) {
 			PasswordContext::ACCOUNT => true,
@@ -234,7 +231,7 @@ class PasswordPolicyConfig {
 	}
 
 	private function getScopedAppConfig(string $key, ?PasswordContext $context): string {
-		if ($context === null || $this->hasConfigurationContext($context) === false) {
+		if (!$context instanceof \OCP\Security\PasswordContext || $this->hasConfigurationContext($context) === false) {
 			$context = PasswordContext::ACCOUNT;
 		}
 

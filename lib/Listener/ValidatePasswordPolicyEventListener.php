@@ -19,7 +19,7 @@ use OCP\Security\Events\ValidatePasswordPolicyEvent;
 class ValidatePasswordPolicyEventListener implements IEventListener {
 
 	public function __construct(
-		private PasswordValidator $passwordValidator,
+		private readonly PasswordValidator $passwordValidator,
 	) {
 	}
 

@@ -20,7 +20,9 @@ use PHPUnit\Framework\MockObject\MockObject;
 class LengthValidatorTest extends TestCase {
 
 	private PasswordPolicyConfig&MockObject $config;
+
 	private IL10N&MockObject $l;
+
 	private IValidator $validator;
 
 	protected function setUp(): void {
@@ -40,7 +42,7 @@ class LengthValidatorTest extends TestCase {
 	 * @dataProvider dataValidateWithContext
 	 */
 	public function testValidateWithContext(?PasswordContext $context, bool $expected): void {
-		$this->config
+		$this->config->expects($this->atLeast(3))
 			->method('getMinLength')
 			->willReturnMap([
 				[null, 10],
@@ -68,7 +70,7 @@ class LengthValidatorTest extends TestCase {
 	/**
 	 * @dataProvider dataValidate
 	 */
-	public function testValidate(string $password, int $length, bool $valid) {
+	public function testValidate(string $password, int $length, bool $valid): void {
 		$this->config->method('getMinLength')
 			->willReturn($length);
 

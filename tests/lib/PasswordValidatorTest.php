@@ -1,10 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * SPDX-FileCopyrightText: 2016 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
-
 namespace OCA\Password_Policy\Tests;
 
 use ChristophWurst\Nextcloud\Testing\TestCase;
@@ -24,7 +25,9 @@ use Psr\Log\LoggerInterface;
 class PasswordValidatorTest extends TestCase {
 
 	private ContainerInterface&MockObject $container;
+
 	private LoggerInterface&MockObject $logger;
+
 	private PasswordValidator $validator;
 
 	protected function setUp(): void {
@@ -36,7 +39,7 @@ class PasswordValidatorTest extends TestCase {
 		$this->validator = new PasswordValidator($this->container, $this->logger);
 	}
 
-	public function testValidate() {
+	public function testValidate(): void {
 		$validators = [
 			CommonPasswordsValidator::class,
 			LengthValidator::class,
@@ -48,7 +51,7 @@ class PasswordValidatorTest extends TestCase {
 
 		$this->container->method('get')
 			->willReturnCallback(function ($class) use (&$validators) {
-				if (($key = array_search($class, $validators)) !== false) {
+				if (($key = array_search($class, $validators, true)) !== false) {
 					$validator = $this->createMock(IValidator::class);
 					$validator->expects($this->once())
 						->method('validate')

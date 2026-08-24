@@ -29,9 +29,9 @@ class ComplianceService {
 	];
 
 	public function __construct(
-		private ContainerInterface $container,
-		private LoggerInterface $logger,
-		private IUserManager $userManager,
+		private readonly ContainerInterface $container,
+		private readonly LoggerInterface $logger,
+		private readonly IUserManager $userManager,
 	) {
 	}
 
@@ -40,7 +40,7 @@ class ComplianceService {
 			try {
 				$instance->update($user, $password);
 			} catch (HintException $e) {
-				$this->logger->info('Password could not be updated ' . get_class($instance) . ' with following hint: ' . $e->getMessage());
+				$this->logger->info('Password could not be updated ' . $instance::class . ' with following hint: ' . $e->getMessage());
 				throw $e;
 			}
 		}
@@ -51,7 +51,7 @@ class ComplianceService {
 			try {
 				$instance->audit($user, $password);
 			} catch (HintException $e) {
-				$this->logger->info('Password failed audit ' . get_class($instance) . ' with following hint: ' . $e->getMessage());
+				$this->logger->info('Password failed audit ' . $instance::class . ' with following hint: ' . $e->getMessage());
 				throw $e;
 			}
 		}
@@ -67,7 +67,7 @@ class ComplianceService {
 		/** @var IEntryControl $instance */
 		foreach ($this->getInstance(IEntryControl::class) as $instance) {
 			try {
-				$user = $this->userManager->get((string)$uid);
+				$user = $this->userManager->get($uid);
 
 				if ($user === null) {
 					break;
@@ -75,7 +75,7 @@ class ComplianceService {
 
 				$instance->entryControl($user, $password);
 			} catch (HintException $e) {
-				throw new LoginException($e->getHint());
+				throw new LoginException($e->getHint(), $e->getCode(), $e);
 			}
 		}
 	}

@@ -16,10 +16,10 @@ use Psr\Log\LoggerInterface;
 class FailedLoginCompliance {
 
 	public function __construct(
-		private IConfig $config,
-		private IUserManager $userManager,
-		private LoggerInterface $logger,
-		private PasswordPolicyConfig $passwordPolicyConfig,
+		private readonly IUserManager $userManager,
+		private readonly LoggerInterface $logger,
+		private readonly PasswordPolicyConfig $passwordPolicyConfig,
+        private readonly \OCP\Config\IUserConfig $userConfig,
 	) {
 	}
 
@@ -43,7 +43,7 @@ class FailedLoginCompliance {
 		}
 
 		$attempts = $this->getAttempts($uid);
-		$attempts++;
+		++$attempts;
 
 		if ($attempts >= $allowedAttempts) {
 			$this->setAttempts($uid, 0);
@@ -63,10 +63,10 @@ class FailedLoginCompliance {
 	}
 
 	private function getAttempts(string $uid): int {
-		return (int)$this->config->getUserValue($uid, 'password_policy', 'failedLoginAttempts', '0');
+		return (int)$this->userConfig->getValueString($uid, 'password_policy', 'failedLoginAttempts', '0');
 	}
 
 	private function setAttempts(string $uid, int $attempts): void {
-		$this->config->setUserValue($uid, 'password_policy', 'failedLoginAttempts', (string)$attempts);
+		$this->userConfig->setValueString($uid, 'password_policy', 'failedLoginAttempts', (string)$attempts);
 	}
 }

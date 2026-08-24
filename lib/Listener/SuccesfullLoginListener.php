@@ -17,12 +17,9 @@ use OCP\User\Events\UserLoggedInEvent;
  * @template-implements IEventListener<UserLoggedInEvent>
  */
 class SuccesfullLoginListener implements IEventListener {
-	/** @var FailedLoginCompliance */
-	private $compliance;
-
-	public function __construct(FailedLoginCompliance $compliance) {
-		$this->compliance = $compliance;
-	}
+	public function __construct(private readonly FailedLoginCompliance $compliance)
+    {
+    }
 
 	#[\Override]
 	public function handle(Event $event): void {

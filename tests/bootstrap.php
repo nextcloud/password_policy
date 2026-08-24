@@ -11,8 +11,9 @@ if (!defined('PHPUNIT_RUN')) {
 
 require_once __DIR__ . '/../../../lib/base.php';
 
-if (!class_exists('\PHPUnit\Framework\TestCase')) {
-	require_once('PHPUnit/Autoload.php');
+if (!class_exists(\PHPUnit\Framework\TestCase::class)) {
+	require_once(__DIR__ . '/PHPUnit/Autoload.php');
 }
+
 \OC_App::loadApp('password_policy');
 OC_Hook::clear();

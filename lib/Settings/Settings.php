@@ -17,9 +17,9 @@ use OCP\Util;
 class Settings implements ISettings {
 
 	public function __construct(
-		private string $appName,
-		private PasswordPolicyConfig $config,
-		private IInitialState $initialStateService,
+		private readonly string $appName,
+		private readonly PasswordPolicyConfig $config,
+		private readonly IInitialState $initialStateService,
 	) {
 	}
 

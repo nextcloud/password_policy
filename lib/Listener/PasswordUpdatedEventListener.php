@@ -17,18 +17,16 @@ use OCP\User\Events\PasswordUpdatedEvent;
  * @template-implements IEventListener<PasswordUpdatedEvent>
  */
 class PasswordUpdatedEventListener implements IEventListener {
-	/** @var ComplianceService */
-	private $complianceUpdater;
-
-	public function __construct(ComplianceService $complianceUpdater) {
-		$this->complianceUpdater = $complianceUpdater;
-	}
+	public function __construct(private readonly ComplianceService $complianceUpdater)
+    {
+    }
 
 	#[\Override]
 	public function handle(Event $event): void {
 		if (!($event instanceof PasswordUpdatedEvent)) {
 			return;
 		}
+
 		$this->complianceUpdater->update($event->getUser(), $event->getPassword());
 	}
 }

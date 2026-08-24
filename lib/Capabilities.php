@@ -13,8 +13,8 @@ use OCP\IURLGenerator;
 
 class Capabilities implements ICapability {
 	public function __construct(
-		private PasswordPolicyConfig $config,
-		private IURLGenerator $urlGenerator,
+		private readonly PasswordPolicyConfig $config,
+		private readonly IURLGenerator $urlGenerator,
 	) {
 	}
 

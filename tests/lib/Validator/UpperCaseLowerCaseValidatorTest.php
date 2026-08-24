@@ -20,7 +20,9 @@ use PHPUnit\Framework\MockObject\MockObject;
 class UpperCaseLowerCaseValidatorTest extends TestCase {
 
 	private PasswordPolicyConfig&MockObject $config;
+
 	private IL10N&MockObject $l;
+
 	private IValidator $validator;
 
 	protected function setUp(): void {
@@ -40,7 +42,7 @@ class UpperCaseLowerCaseValidatorTest extends TestCase {
 	 * @dataProvider dataValidateWithContext
 	 */
 	public function testValidateWithContext(?PasswordContext $context, bool $expected): void {
-		$this->config
+		$this->config->expects($this->atLeast(3))
 			->method('getEnforceUpperLowerCase')
 			->willReturnMap([
 				[null, true],
@@ -68,7 +70,7 @@ class UpperCaseLowerCaseValidatorTest extends TestCase {
 	/**
 	 * @dataProvider dataValidate
 	 */
-	public function testValidate(string $password, bool $enforced, bool $valid) {
+	public function testValidate(string $password, bool $enforced, bool $valid): void {
 		$this->config->method('getEnforceUpperLowerCase')
 			->willReturn($enforced);
 

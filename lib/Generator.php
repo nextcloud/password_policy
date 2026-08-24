@@ -18,8 +18,8 @@ class Generator {
 	public const int PASSWORD_GENERATION_MAX_ROUNDS = 10;
 
 	public function __construct(
-		private PasswordPolicyConfig $config,
-		private PasswordValidator $validator,
+		private readonly PasswordPolicyConfig $config,
+		private readonly PasswordValidator $validator,
 	) {
 	}
 
@@ -28,7 +28,7 @@ class Generator {
 	 * @since 3.0.0 support password context
 	 */
 	public function generate(?PasswordContext $context = null): string {
-		$context = $context ?? PasswordContext::ACCOUNT;
+		$context ??= PasswordContext::ACCOUNT;
 		$minLength = max($this->config->getMinLength($context), 8);
 		$length = $minLength;
 
@@ -36,7 +36,7 @@ class Generator {
 		$chars = '';
 
 		$random = new Randomizer();
-		for ($i = 0; $i < self::PASSWORD_GENERATION_MAX_ROUNDS; $i++) {
+		for ($i = 0; $i < self::PASSWORD_GENERATION_MAX_ROUNDS; ++$i) {
 			if ($this->config->getEnforceUpperLowerCase($context)) {
 				$password .= $random->getBytesFromString(ISecureRandom::CHAR_UPPER, 1);
 				$password .= $random->getBytesFromString(ISecureRandom::CHAR_LOWER, 1);
@@ -73,7 +73,7 @@ class Generator {
 				$this->validator->validate($password, $context);
 				// Validation succeeded
 				return $password;
-			} catch (HintException $e) {
+			} catch (HintException) {
 				/*
 				 * Invalid so let's go for another round
 				 * Reset the length so we don't run below zero

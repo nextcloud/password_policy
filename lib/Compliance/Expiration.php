@@ -21,26 +21,17 @@ class Expiration implements IUpdatable, IEntryControl {
 
 	/** @var IConfig */
 	private $config;
-	/** @var PasswordPolicyConfig */
-	private $policyConfig;
-	/** @var IUserManager */
-	private $userManager;
-	/** @var IEventDispatcher */
-	private $eventDispatcher;
 	/** @var IL10N */
 	private $l;
 
 	public function __construct(
 		IConfig $config,
-		PasswordPolicyConfig $policyConfig,
+		private readonly PasswordPolicyConfig $policyConfig,
 		IUserManager $userManager,
 		IEventDispatcher $eventDispatcher,
 		IL10N $l,
 	) {
 		$this->config = $config;
-		$this->policyConfig = $policyConfig;
-		$this->userManager = $userManager;
-		$this->eventDispatcher = $eventDispatcher;
 		$this->l = $l;
 	}
 
@@ -52,6 +43,7 @@ class Expiration implements IUpdatable, IEntryControl {
 		if (!$this->isLocalUser($user)) {
 			return;
 		}
+
 		if ($this->policyConfig->getExpiryInDays() === 0) {
 			$this->config->deleteUserValue(
 				$user->getUID(),
@@ -60,6 +52,7 @@ class Expiration implements IUpdatable, IEntryControl {
 			);
 			return;
 		}
+
 		$this->config->setUserValue(
 			$user->getUID(),
 			'password_policy',

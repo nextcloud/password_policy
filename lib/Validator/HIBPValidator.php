@@ -18,10 +18,10 @@ use Psr\Log\LoggerInterface;
 class HIBPValidator implements IValidator {
 
 	public function __construct(
-		private PasswordPolicyConfig $config,
-		private IL10N $l,
-		private IClientService $clientService,
-		private LoggerInterface $logger,
+		private readonly PasswordPolicyConfig $config,
+		private readonly IL10N $l,
+		private readonly IClientService $clientService,
+		private readonly LoggerInterface $logger,
 	) {
 	}
 
@@ -53,10 +53,12 @@ class HIBPValidator implements IValidator {
 			if (is_resource($result)) {
 				$result = stream_get_contents($result);
 			}
+
 			if ($result === null || $result === false) {
 				$this->logger->info('Could not read content from HaveIBeenPwned API, body was null');
 				return;
 			}
+
 			$result = preg_replace('/^([0-9A-Z]+:0)$/m', '', $result);
 
 			if ($result !== null && str_contains($result, $needle)) {

@@ -22,8 +22,8 @@ class APIController extends OCSController {
 	public function __construct(
 		string $appName,
 		IRequest $request,
-		private PasswordValidator $validator,
-		private Generator $generator,
+		private readonly PasswordValidator $validator,
+		private readonly Generator $generator,
 	) {
 		parent::__construct($appName, $request);
 	}
@@ -41,10 +41,10 @@ class APIController extends OCSController {
 	public function validate(string $password, string $context = 'account'): DataResponse {
 		try {
 			$this->validator->validate($password, PasswordPolicyConfig::getPasswordContext($context));
-		} catch (HintException $e) {
+		} catch (HintException $hintException) {
 			return new DataResponse([
 				'passed' => false,
-				'reason' => $e->getHint(),
+				'reason' => $hintException->getHint(),
 			]);
 		}
 
