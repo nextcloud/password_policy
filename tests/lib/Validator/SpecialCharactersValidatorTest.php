@@ -42,7 +42,7 @@ class SpecialCharactersValidatorTest extends TestCase {
 	 * @dataProvider dataValidateWithContext
 	 */
 	public function testValidateWithContext(?PasswordContext $context, bool $expected): void {
-		$this->config->expects($this->atLeast(3))
+		$this->config
 			->method('getEnforceSpecialCharacters')
 			->willReturnMap([
 				[null, true],

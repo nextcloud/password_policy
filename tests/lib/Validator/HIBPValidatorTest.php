@@ -66,7 +66,7 @@ class HIBPValidatorTest extends TestCase {
 	 * @dataProvider dataValidateWithContext
 	 */
 	public function testValidateWithContext(?PasswordContext $context, bool $expected): void {
-		$this->config->expects($this->atLeast(3))
+		$this->config
 			->method('getEnforceHaveIBeenPwned')
 			->willReturnMap([
 				[null, true],
@@ -111,7 +111,7 @@ class HIBPValidatorTest extends TestCase {
 			self::$resources[] = $responseBody;
 		}
 
-		$this->config->expects($this->atLeast(3))
+		$this->config
 			->method('getEnforceHaveIBeenPwned')
 			->willReturnMap([
 				[null, true],
@@ -151,11 +151,11 @@ class HIBPValidatorTest extends TestCase {
 			'resource like' => [$resourceGood, true],
 		];
 	}
-    private static function mkResource(string $text)
-    {
-        $resource = fopen('php://temp', 'r+');
-        fwrite($resource, $text);
-        rewind($resource);
-        return $resource;
-    }
+
+	private static function mkResource(string $text) {
+		$resource = fopen('php://temp', 'r+');
+		fwrite($resource, $text);
+		rewind($resource);
+		return $resource;
+	}
 }

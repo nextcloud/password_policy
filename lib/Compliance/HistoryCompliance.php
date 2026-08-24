@@ -9,25 +9,20 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\Compliance;
 
 use OCA\Password_Policy\PasswordPolicyConfig;
+use OCP\Config\IUserConfig;
 use OCP\HintException;
-use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IUser;
-use OCP\IUserSession;
 use OCP\PreConditionNotMetException;
 use OCP\Security\IHasher;
-use Psr\Log\LoggerInterface;
 
 class HistoryCompliance implements IAuditor, IUpdatable {
 
 	public function __construct(
-		protected PasswordPolicyConfig $policyConfig,
-		protected IConfig $config,
-		protected IUserSession $session,
-		protected IHasher $hasher,
-		protected IL10N $l,
-		protected LoggerInterface $logger,
-        private readonly \OCP\Config\IUserConfig $userConfig,
+		private readonly PasswordPolicyConfig $policyConfig,
+		private readonly IHasher $hasher,
+		private readonly IL10N $l,
+		private readonly IUserConfig $userConfig,
 	) {
 	}
 
@@ -68,11 +63,11 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 		array_unshift($history, $this->hasher->hash($password));
 		$history = \array_slice($history, 0, $historySize);
 
-		$this->userConfig->setValueString(
+		$this->userConfig->setValueArray(
 			$user->getUID(),
 			'password_policy',
 			'passwordHistory',
-			(string)\json_encode($history)
+			$history
 		);
 	}
 
@@ -80,24 +75,16 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 	 * @return list<string> List of previously used passwords (hashed)
 	 */
 	protected function getHistory(IUser $user): array {
-		$history = $this->userConfig->getValueString(
+		$history = $this->userConfig->getValueArray(
 			$user->getUID(),
 			'password_policy',
 			'passwordHistory',
-			'[]'
 		);
-		/** @var string[]|string */
-		$history = \json_decode($history, true);
-		if (!is_array($history)) {
-			$this->logger->warning(
-				'Received password history of {uid} had the unexpected value of {history}, resetting.',
-				['app' => 'password_policy', 'uid' => $user->getUID(), 'history' => $history]
-			);
-			$history = [];
-		}
 
 		$history = \array_slice($history, 0, $this->policyConfig->getHistorySize());
 
-		return \array_values($history);
+		/** @var list<string> $history */
+		$history = \array_values($history);
+		return $history;
 	}
 }

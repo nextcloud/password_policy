@@ -9,30 +9,19 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\Compliance;
 
 use OCA\Password_Policy\PasswordPolicyConfig;
-use OCP\EventDispatcher\IEventDispatcher;
+use OCP\Config\IUserConfig;
 use OCP\HintException;
-use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IUser;
-use OCP\IUserManager;
 use OCP\PreConditionNotMetException;
 
 class Expiration implements IUpdatable, IEntryControl {
 
-	/** @var IConfig */
-	private $config;
-	/** @var IL10N */
-	private $l;
-
 	public function __construct(
-		IConfig $config,
+		private readonly IUserConfig $userConfig,
 		private readonly PasswordPolicyConfig $policyConfig,
-		IUserManager $userManager,
-		IEventDispatcher $eventDispatcher,
-		IL10N $l,
+		private readonly IL10N $l,
 	) {
-		$this->config = $config;
-		$this->l = $l;
 	}
 
 	/**
@@ -45,7 +34,7 @@ class Expiration implements IUpdatable, IEntryControl {
 		}
 
 		if ($this->policyConfig->getExpiryInDays() === 0) {
-			$this->config->deleteUserValue(
+			$this->userConfig->deleteUserConfig(
 				$user->getUID(),
 				'password_policy',
 				'pwd_last_updated'
@@ -53,11 +42,11 @@ class Expiration implements IUpdatable, IEntryControl {
 			return;
 		}
 
-		$this->config->setUserValue(
+		$this->userConfig->setValueInt(
 			$user->getUID(),
 			'password_policy',
 			'pwd_last_updated',
-			(string)time()
+			time()
 		);
 	}
 
@@ -74,11 +63,10 @@ class Expiration implements IUpdatable, IEntryControl {
 	}
 
 	protected function isPasswordExpired(IUser $user): bool {
-		$updatedAt = (int)$this->config->getUserValue(
+		$updatedAt = $this->userConfig->getValueInt(
 			$user->getUID(),
 			'password_policy',
 			'pwd_last_updated',
-			0
 		);
 
 		if ($updatedAt === 0) {

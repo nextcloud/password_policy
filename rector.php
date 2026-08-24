@@ -10,6 +10,7 @@ declare(strict_types=1);
 use Nextcloud\Rector\Set\NextcloudSets;
 use Rector\Config\RectorConfig;
 use Rector\PHPUnit\CodeQuality\Rector\Class_\AddSeeTestAnnotationRector;
+use Rector\PHPUnit\CodeQuality\Rector\Expression\DecorateWillReturnMapWithExpectsMockRector;
 
 return RectorConfig::configure()
 	->withPaths([
@@ -37,4 +38,7 @@ return RectorConfig::configure()
 		symfonyConfigs: true,
 	)->withSkip([
 		AddSeeTestAnnotationRector::class,
+		// Assumes willReturnMap() is called once per map entry, which does not
+		// hold for our dataProvider-based tests (one entry is exercised per run).
+		DecorateWillReturnMapWithExpectsMockRector::class,
 	]);

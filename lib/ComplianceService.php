@@ -67,6 +67,7 @@ class ComplianceService {
 		/** @var IEntryControl $instance */
 		foreach ($this->getInstance(IEntryControl::class) as $instance) {
 			try {
+				/** @var string $uid */
 				$user = $this->userManager->get($uid);
 
 				if ($user === null) {

@@ -150,9 +150,9 @@ class PasswordPolicyConfig {
 	}
 
 	/**
-     * Enforce checking against haveibeenpwned.com
-     */
-    public function setEnforceHaveIBeenPwned(bool $enforceHaveIBeenPwned, ?PasswordContext $context = null): void {
+	 * Enforce checking against haveibeenpwned.com
+	 */
+	public function setEnforceHaveIBeenPwned(bool $enforceHaveIBeenPwned, ?PasswordContext $context = null): void {
 		$this->appConfig->setValueBool(
 			Application::APP_ID,
 			$this->getScopedAppConfig('enforceHaveIBeenPwned', $context),
@@ -217,11 +217,11 @@ class PasswordPolicyConfig {
 	}
 
 	/**
-     * Check if a configuration for this password context is available
-     * @param PasswordContext $context
-     * @since 3.0.0
-     */
-    private function hasConfigurationContext(?PasswordContext $context = null): bool {
+	 * Check if a configuration for this password context is available
+	 * @param PasswordContext $context
+	 * @since 3.0.0
+	 */
+	private function hasConfigurationContext(?PasswordContext $context = null): bool {
 		$available = $this->appConfig->getValueArray(Application::APP_ID, 'passwordContexts', ['account']);
 		return match ($context) {
 			PasswordContext::ACCOUNT => true,

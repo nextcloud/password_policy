@@ -11,14 +11,12 @@ namespace OCA\Password_Policy\Tests\Compliance;
 use ChristophWurst\Nextcloud\Testing\TestCase;
 use OCA\Password_Policy\Compliance\HistoryCompliance;
 use OCA\Password_Policy\PasswordPolicyConfig;
+use OCP\Config\IUserConfig;
 use OCP\HintException;
-use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IUser;
-use OCP\IUserSession;
 use OCP\Security\IHasher;
 use PHPUnit\Framework\MockObject\MockObject;
-use Psr\Log\LoggerInterface;
 
 class HistoryComplianceTest extends TestCase {
 
@@ -26,9 +24,7 @@ class HistoryComplianceTest extends TestCase {
 
 	protected PasswordPolicyConfig&MockObject $policyConfig;
 
-	protected IConfig&MockObject $config;
-
-	protected IUserSession&MockObject $session;
+	protected IUserConfig&MockObject $userConfig;
 
 	protected IHasher&MockObject $hasher;
 
@@ -36,22 +32,17 @@ class HistoryComplianceTest extends TestCase {
 		parent::setUp();
 
 		$this->policyConfig = $this->createMock(PasswordPolicyConfig::class);
-		$this->config = $this->createMock(IConfig::class);
-		$this->session = $this->createMock(IUserSession::class);
+		$this->userConfig = $this->createMock(IUserConfig::class);
 		$this->hasher = $this->createMock(IHasher::class);
 
 		/** @var IL10N&MockObject */
 		$l10n = $this->createMock(IL10N::class);
-		/** @var LoggerInterface&MockObject */
-		$logger = $this->createMock(LoggerInterface::class);
 
 		$this->instance = new HistoryCompliance(
 			$this->policyConfig,
-			$this->config,
-			$this->session,
 			$this->hasher,
 			$l10n,
-			$logger,
+			$this->userConfig,
 		);
 	}
 
@@ -65,15 +56,14 @@ class HistoryComplianceTest extends TestCase {
 			->method('getHistorySize')
 			->willReturn($historySize);
 
-		$history = \json_encode($history);
-		$this->config->expects($this->any())
-			->method('getUserValue')
-			->with($uid, 'password_policy', 'passwordHistory', '[]')
+		$this->userConfig->expects($this->any())
+			->method('getValueArray')
+			->with($uid, 'password_policy', 'passwordHistory')
 			->willReturn($history);
 
 		$this->hasher->expects($this->any())
 			->method('verify')
-			->willReturnCallback(fn($pwd, $compareHash) => $newPasswordHash === $compareHash);
+			->willReturnCallback(fn ($pwd, $compareHash): bool => $newPasswordHash === $compareHash);
 
 		if ($expectException) {
 			$this->expectException(HintException::class);
@@ -93,17 +83,16 @@ class HistoryComplianceTest extends TestCase {
 			->method('getHistorySize')
 			->willReturn($historySize);
 
-		$history = \json_encode($history);
-		$this->config->expects($this->any())
-			->method('getUserValue')
-			->with($uid, 'password_policy', 'passwordHistory', '[]')
+		$this->userConfig->expects($this->any())
+			->method('getValueArray')
+			->with($uid, 'password_policy', 'passwordHistory')
 			->willReturn($history);
-		$this->config->expects($this->once())
-			->method('setUserValue')
+		$this->userConfig->expects($this->once())
+			->method('setValueArray')
 			->with($uid, 'password_policy', 'passwordHistory', $this->anything())
-			->willReturnCallback(function ($uid, $app, $key, $value) use ($newPasswordHash): void {
-				$history = \json_decode($value, true);
-				$this->assertSame($newPasswordHash, $history[0]);
+			->willReturnCallback(function ($uid, $app, $key, $value) use ($newPasswordHash): bool {
+				$this->assertSame($newPasswordHash, $value[0]);
+				return true;
 			});
 
 		$this->hasher->expects($this->once())

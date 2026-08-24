@@ -17,9 +17,10 @@ use OCP\User\Events\PasswordUpdatedEvent;
  * @template-implements IEventListener<PasswordUpdatedEvent>
  */
 class PasswordUpdatedEventListener implements IEventListener {
-	public function __construct(private readonly ComplianceService $complianceUpdater)
-    {
-    }
+	public function __construct(
+		private readonly ComplianceService $complianceUpdater,
+	) {
+	}
 
 	#[\Override]
 	public function handle(Event $event): void {
