@@ -22,7 +22,7 @@ use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 
-class ComplianceService {
+final class ComplianceService {
 	protected const array COMPLIANCERS = [
 		HistoryCompliance::class,
 		Expiration::class,

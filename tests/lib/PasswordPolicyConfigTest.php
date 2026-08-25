@@ -16,7 +16,7 @@ use OCP\IConfig;
 use OCP\Security\PasswordContext;
 use PHPUnit\Framework\MockObject\MockObject;
 
-class PasswordPolicyConfigTest extends TestCase {
+final class PasswordPolicyConfigTest extends TestCase {
 
 	private IConfig&MockObject $config;
 

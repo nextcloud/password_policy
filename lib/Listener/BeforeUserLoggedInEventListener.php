@@ -17,7 +17,7 @@ use OCP\User\Events\BeforeUserLoggedInWithCookieEvent;
 /**
  * @template-implements IEventListener<BeforeUserLoggedInEvent|BeforeUserLoggedInWithCookieEvent>
  */
-class BeforeUserLoggedInEventListener implements IEventListener {
+final class BeforeUserLoggedInEventListener implements IEventListener {
 	public function __construct(
 		private readonly ComplianceService $complianceUpdater,
 	) {

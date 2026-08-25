@@ -30,7 +30,7 @@ use OCP\User\Events\BeforeUserLoggedInWithCookieEvent;
 use OCP\User\Events\PasswordUpdatedEvent;
 use OCP\User\Events\UserLoggedInEvent;
 
-class Application extends App implements IBootstrap {
+final class Application extends App implements IBootstrap {
 	public const string APP_ID = 'password_policy';
 
 	public function __construct() {

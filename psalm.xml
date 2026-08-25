@@ -32,7 +32,6 @@
 		<file name="tests/stubs/OC_User_LoginException.php" />
 	</stubs>
     <issueHandlers>
-        <ClassMustBeFinal errorLevel="info" />
 		<PropertyNotSetInConstructor>
 		  <errorLevel type="info">
 			<directory name="tests" />

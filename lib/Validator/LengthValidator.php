@@ -13,7 +13,7 @@ use OCP\HintException;
 use OCP\IL10N;
 use OCP\Security\PasswordContext;
 
-class LengthValidator implements IValidator {
+final class LengthValidator implements IValidator {
 
 	public function __construct(
 		private readonly PasswordPolicyConfig $config,

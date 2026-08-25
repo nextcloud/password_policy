@@ -15,7 +15,7 @@ use OCP\IL10N;
 use OCP\IUser;
 use OCP\PreConditionNotMetException;
 
-class Expiration implements IUpdatable, IEntryControl {
+final class Expiration implements IUpdatable, IEntryControl {
 
 	public function __construct(
 		private readonly IUserConfig $userConfig,

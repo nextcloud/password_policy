@@ -16,7 +16,7 @@ use OCP\Security\Events\GenerateSecurePasswordEvent;
 /**
  * @template-implements IEventListener<GenerateSecurePasswordEvent>
  */
-class GenerateSecurePasswordEventListener implements IEventListener {
+final class GenerateSecurePasswordEventListener implements IEventListener {
 	public function __construct(
 		private readonly Generator $generator,
 	) {

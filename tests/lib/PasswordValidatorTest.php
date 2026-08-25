@@ -23,7 +23,7 @@ use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 
-class PasswordValidatorTest extends TestCase {
+final class PasswordValidatorTest extends TestCase {
 
 	private ContainerInterface&MockObject $container;
 

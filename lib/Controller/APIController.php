@@ -18,7 +18,7 @@ use OCP\AppFramework\OCSController;
 use OCP\HintException;
 use OCP\IRequest;
 
-class APIController extends OCSController {
+final class APIController extends OCSController {
 	public function __construct(
 		string $appName,
 		IRequest $request,

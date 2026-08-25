@@ -13,7 +13,7 @@ use OCP\IUser;
 use OCP\IUserManager;
 use Psr\Log\LoggerInterface;
 
-class FailedLoginCompliance {
+final class FailedLoginCompliance {
 
 	public function __construct(
 		private readonly IUserManager $userManager,

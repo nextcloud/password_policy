@@ -17,7 +17,7 @@ use OCP\IL10N;
 use OCP\Security\PasswordContext;
 use PHPUnit\Framework\MockObject\MockObject;
 
-class UpperCaseLowerCaseValidatorTest extends TestCase {
+final class UpperCaseLowerCaseValidatorTest extends TestCase {
 
 	private PasswordPolicyConfig&MockObject $config;
 

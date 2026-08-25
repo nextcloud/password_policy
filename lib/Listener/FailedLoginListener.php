@@ -16,7 +16,7 @@ use OCP\EventDispatcher\IEventListener;
 /**
  * @template-implements IEventListener<LoginFailedEvent>
  */
-class FailedLoginListener implements IEventListener {
+final class FailedLoginListener implements IEventListener {
 	public function __construct(
 		private readonly FailedLoginCompliance $compliance,
 	) {

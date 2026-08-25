@@ -15,7 +15,7 @@ use OCP\IL10N;
 use OCP\Security\PasswordContext;
 use Psr\Log\LoggerInterface;
 
-class HIBPValidator implements IValidator {
+final class HIBPValidator implements IValidator {
 
 	public function __construct(
 		private readonly PasswordPolicyConfig $config,

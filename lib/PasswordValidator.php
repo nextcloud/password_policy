@@ -21,7 +21,7 @@ use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 
-class PasswordValidator {
+final class PasswordValidator {
 
 	public function __construct(
 		private readonly ContainerInterface $container,

@@ -16,7 +16,7 @@ use OCP\IUser;
 use OCP\PreConditionNotMetException;
 use OCP\Security\IHasher;
 
-class HistoryCompliance implements IAuditor, IUpdatable {
+final class HistoryCompliance implements IAuditor, IUpdatable {
 
 	public function __construct(
 		private readonly PasswordPolicyConfig $policyConfig,

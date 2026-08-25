@@ -21,7 +21,7 @@ use OCP\Security\PasswordContext;
 use PHPUnit\Framework\MockObject\MockObject;
 use Psr\Log\LoggerInterface;
 
-class HIBPValidatorTest extends TestCase {
+final class HIBPValidatorTest extends TestCase {
 
 	private PasswordPolicyConfig&MockObject $config;
 

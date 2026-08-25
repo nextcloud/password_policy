@@ -14,7 +14,7 @@ use OCP\Security\ISecureRandom;
 use OCP\Security\PasswordContext;
 use Random\Randomizer;
 
-class Generator {
+final class Generator {
 	public const int PASSWORD_GENERATION_MAX_ROUNDS = 10;
 
 	public function __construct(

@@ -17,7 +17,7 @@ use OCP\IL10N;
 use OCP\Security\PasswordContext;
 use PHPUnit\Framework\MockObject\MockObject;
 
-class LengthValidatorTest extends TestCase {
+final class LengthValidatorTest extends TestCase {
 
 	private PasswordPolicyConfig&MockObject $config;
 

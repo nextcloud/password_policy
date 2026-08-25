@@ -18,7 +18,7 @@ use OCP\IUser;
 use OCP\Security\IHasher;
 use PHPUnit\Framework\MockObject\MockObject;
 
-class HistoryComplianceTest extends TestCase {
+final class HistoryComplianceTest extends TestCase {
 
 	protected HistoryCompliance $instance;
 

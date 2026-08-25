@@ -13,7 +13,7 @@ use OCP\HintException;
 use OCP\IL10N;
 use OCP\Security\PasswordContext;
 
-class NumericCharacterValidator implements IValidator {
+final class NumericCharacterValidator implements IValidator {
 
 	public function __construct(
 		private readonly PasswordPolicyConfig $config,

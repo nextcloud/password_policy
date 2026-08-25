@@ -17,7 +17,7 @@ use OCP\IL10N;
 use OCP\Security\PasswordContext;
 use PHPUnit\Framework\MockObject\MockObject;
 
-class CommonPasswordsValidatorTest extends TestCase {
+final class CommonPasswordsValidatorTest extends TestCase {
 
 	private PasswordPolicyConfig&MockObject $config;
 

@@ -21,7 +21,7 @@ use OCP\Security\PasswordContext;
  *
  * @package OCA\Password_Policy
  */
-class PasswordPolicyConfig {
+final class PasswordPolicyConfig {
 	/**
 	 * PasswordContext that are supported by the app.
 	 * This does not mean all of those have been setup by the admin!
