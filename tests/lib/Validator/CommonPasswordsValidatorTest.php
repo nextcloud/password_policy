@@ -25,6 +25,7 @@ class CommonPasswordsValidatorTest extends TestCase {
 
 	private IValidator $validator;
 
+	#[\Override]
 	protected function setUp(): void {
 		parent::setUp();
 

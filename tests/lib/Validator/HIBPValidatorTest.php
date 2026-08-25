@@ -33,8 +33,10 @@ class HIBPValidatorTest extends TestCase {
 
 	private IValidator $validator;
 
+	/** @var array<int, resource> */
 	protected static array $resources = [];
 
+	#[\Override]
 	protected function setUp(): void {
 		parent::setUp();
 
@@ -51,6 +53,7 @@ class HIBPValidatorTest extends TestCase {
 		);
 	}
 
+	#[\Override]
 	protected function tearDown(): void {
 		foreach (self::$resources as $resource) {
 			fclose($resource);
@@ -103,6 +106,7 @@ class HIBPValidatorTest extends TestCase {
 	}
 
 	/**
+	 * @param string|resource $responseBody
 	 * @dataProvider dataValidate
 	 */
 	public function testValidate($responseBody, bool $expected): void {
@@ -152,8 +156,15 @@ class HIBPValidatorTest extends TestCase {
 		];
 	}
 
+	/**
+	 * @return resource
+	 */
 	private static function mkResource(string $text) {
 		$resource = fopen('php://temp', 'r+');
+		if ($resource === false) {
+			throw new \RuntimeException('Failed to open temporary stream');
+		}
+
 		fwrite($resource, $text);
 		rewind($resource);
 		return $resource;

@@ -24,6 +24,7 @@ class PasswordPolicyConfigTest extends TestCase {
 
 	private PasswordPolicyConfig $instance;
 
+	#[\Override]
 	protected function setUp(): void {
 		parent::setUp();
 
@@ -63,7 +64,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testGetEnforceNonCommonPassword($appConfigValue, $expected): void {
+	public function testGetEnforceNonCommonPassword(bool $appConfigValue, bool $expected): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('getValueBool')
@@ -78,7 +79,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testGetEnforceUpperLowerCase($appConfigValue, $expected): void {
+	public function testGetEnforceUpperLowerCase(bool $appConfigValue, bool $expected): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('getValueBool')
@@ -93,7 +94,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testGetEnforceNumericCharacters($appConfigValue, $expected): void {
+	public function testGetEnforceNumericCharacters(bool $appConfigValue, bool $expected): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('getValueBool')
@@ -108,7 +109,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testGetEnforceSpecialCharacters($appConfigValue, $expected): void {
+	public function testGetEnforceSpecialCharacters(bool $appConfigValue, bool $expected): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('getValueBool')
@@ -134,7 +135,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testSetEnforceUpperLowerCase($expected, $setValue): void {
+	public function testSetEnforceUpperLowerCase(bool $expected, bool $setValue): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('setValueBool')
@@ -146,7 +147,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testSetEnforceNumericCharacters($expected, $setValue): void {
+	public function testSetEnforceNumericCharacters(bool $expected, bool $setValue): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('setValueBool')
@@ -158,7 +159,7 @@ class PasswordPolicyConfigTest extends TestCase {
 	/**
 	 * @dataProvider configTestData
 	 */
-	public function testSetEnforceSpecialCharacters($expected, $setValue): void {
+	public function testSetEnforceSpecialCharacters(bool $expected, bool $setValue): void {
 		$this->appConfig
 			->expects(self::once())
 			->method('setValueBool')
@@ -167,7 +168,7 @@ class PasswordPolicyConfigTest extends TestCase {
 		$this->instance->setEnforceSpecialCharacters($setValue);
 	}
 
-	public static function configTestData() {
+	public static function configTestData(): array {
 		return [
 			[true, true],
 			[false, false]

@@ -28,6 +28,7 @@ class HistoryComplianceTest extends TestCase {
 
 	protected IHasher&MockObject $hasher;
 
+	#[\Override]
 	public function setUp(): void {
 		parent::setUp();
 
@@ -63,7 +64,7 @@ class HistoryComplianceTest extends TestCase {
 
 		$this->hasher->expects($this->any())
 			->method('verify')
-			->willReturnCallback(fn ($pwd, $compareHash): bool => $newPasswordHash === $compareHash);
+			->willReturnCallback(fn (string $pwd, string $compareHash): bool => $newPasswordHash === $compareHash);
 
 		if ($expectException) {
 			$this->expectException(HintException::class);
@@ -90,7 +91,7 @@ class HistoryComplianceTest extends TestCase {
 		$this->userConfig->expects($this->once())
 			->method('setValueArray')
 			->with($uid, 'password_policy', 'passwordHistory', $this->anything())
-			->willReturnCallback(function ($uid, $app, $key, $value) use ($newPasswordHash): bool {
+			->willReturnCallback(function (string $uid, string $app, string $key, array $value) use ($newPasswordHash): bool {
 				$this->assertSame($newPasswordHash, $value[0]);
 				return true;
 			});
@@ -135,6 +136,9 @@ class HistoryComplianceTest extends TestCase {
 		];
 	}
 
+	/**
+	 * @return array{string, IUser&MockObject}
+	 */
 	protected function getUserMock(): array {
 		$uid = 'alice';
 		$user = $this->createMock(IUser::class);

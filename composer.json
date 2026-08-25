@@ -31,7 +31,7 @@
 		"test:unit": "phpunit -c tests/phpunit.xml --no-coverage",
 		"test:unit:coverage": "phpunit -c tests/phpunit.xml",
 		"rector:check": "rector --dry-run",
-		"rector:fix": "rector",
+		"rector:fix": "rector && composer cs:fix",
 		"psalm": "psalm --threads=1",
 		"psalm:update-baseline": "psalm --threads=1 --update-baseline",
 		"psalm:clear": "psalm --clear-cache && psalm --clear-global-cache"

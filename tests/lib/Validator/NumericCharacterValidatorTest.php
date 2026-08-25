@@ -25,6 +25,7 @@ class NumericCharacterValidatorTest extends TestCase {
 
 	private IValidator $validator;
 
+	#[\Override]
 	protected function setUp(): void {
 		parent::setUp();
 
@@ -82,7 +83,7 @@ class NumericCharacterValidatorTest extends TestCase {
 		$this->validator->validate($password);
 	}
 
-	public static function dataValidate() {
+	public static function dataValidate(): array {
 		return [
 			['password',  false,  true],
 			['password1', false,  true],

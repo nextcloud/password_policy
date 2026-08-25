@@ -25,6 +25,7 @@ class LengthValidatorTest extends TestCase {
 
 	private IValidator $validator;
 
+	#[\Override]
 	protected function setUp(): void {
 		parent::setUp();
 
@@ -82,7 +83,7 @@ class LengthValidatorTest extends TestCase {
 		$this->validator->validate($password);
 	}
 
-	public static function dataValidate() {
+	public static function dataValidate(): array {
 		return [
 			['password', 10, false],
 			['password',  8,  true],

@@ -14,19 +14,29 @@
 	-->
 	<projectFiles>
 		<directory name="lib" />
+		<directory name="tests" />
 		<ignoreFiles>
 			<directory name="vendor" />
 			<directory name="vendor-bin" />
+			<directory name="tests/stubs"/>
+			<file name="tests/bootstrap.php" />
 		</ignoreFiles>
 	</projectFiles>
 	<extraFiles>
 		<directory name="vendor" />
 		<directory name="vendor-bin/psalm/vendor/nextcloud/ocp" />
+		<directory name="vendor-bin/phpunit/vendor/christophwurst" />
+		<directory name="vendor-bin/phpunit/vendor/phpunit" />
 	</extraFiles>
 	<stubs>
 		<file name="tests/stubs/OC_User_LoginException.php" />
 	</stubs>
     <issueHandlers>
         <ClassMustBeFinal errorLevel="info" />
+		<PropertyNotSetInConstructor>
+		  <errorLevel type="info">
+			<directory name="tests" />
+		  </errorLevel>
+		</PropertyNotSetInConstructor>
     </issueHandlers>
 </psalm>

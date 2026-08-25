@@ -31,6 +31,7 @@ class PasswordValidatorTest extends TestCase {
 
 	private PasswordValidator $validator;
 
+	#[\Override]
 	protected function setUp(): void {
 		parent::setUp();
 
@@ -41,6 +42,7 @@ class PasswordValidatorTest extends TestCase {
 	}
 
 	public function testValidate(): void {
+		/** @var list<class-string> $validators */
 		$validators = [
 			CommonPasswordsValidator::class,
 			LengthValidator::class,
@@ -51,7 +53,7 @@ class PasswordValidatorTest extends TestCase {
 		];
 
 		$this->container->method('get')
-			->willReturnCallback(function ($class) use (&$validators) {
+			->willReturnCallback(function (string $class) use (&$validators) {
 				if (($key = array_search($class, $validators, true)) !== false) {
 					$validator = $this->createMock(IValidator::class);
 					$validator->expects($this->once())
