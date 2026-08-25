@@ -16,13 +16,13 @@ use OCP\IUser;
 use OCP\PreConditionNotMetException;
 use OCP\Security\IHasher;
 
-final class HistoryCompliance implements IAuditor, IUpdatable {
+final readonly class HistoryCompliance implements IAuditor, IUpdatable {
 
 	public function __construct(
-		private readonly PasswordPolicyConfig $policyConfig,
-		private readonly IHasher $hasher,
-		private readonly IL10N $l,
-		private readonly IUserConfig $userConfig,
+		private PasswordPolicyConfig $policyConfig,
+		private IHasher $hasher,
+		private IL10N $l,
+		private IUserConfig $userConfig,
 	) {
 	}
 
@@ -74,7 +74,7 @@ final class HistoryCompliance implements IAuditor, IUpdatable {
 	/**
 	 * @return list<string> List of previously used passwords (hashed)
 	 */
-	protected function getHistory(IUser $user): array {
+	private function getHistory(IUser $user): array {
 		$history = $this->userConfig->getValueArray(
 			$user->getUID(),
 			'password_policy',

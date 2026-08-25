@@ -21,11 +21,11 @@ use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 
-final class PasswordValidator {
+final readonly class PasswordValidator {
 
 	public function __construct(
-		private readonly ContainerInterface $container,
-		private readonly LoggerInterface $logger,
+		private ContainerInterface $container,
+		private LoggerInterface $logger,
 	) {
 	}
 

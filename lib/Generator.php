@@ -14,12 +14,12 @@ use OCP\Security\ISecureRandom;
 use OCP\Security\PasswordContext;
 use Random\Randomizer;
 
-final class Generator {
+final readonly class Generator {
 	public const int PASSWORD_GENERATION_MAX_ROUNDS = 10;
 
 	public function __construct(
-		private readonly PasswordPolicyConfig $config,
-		private readonly PasswordValidator $validator,
+		private PasswordPolicyConfig $config,
+		private PasswordValidator $validator,
 	) {
 	}
 

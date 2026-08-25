@@ -13,11 +13,11 @@ use OCP\HintException;
 use OCP\IL10N;
 use OCP\Security\PasswordContext;
 
-final class UpperCaseLoweCaseValidator implements IValidator {
+final readonly class UpperCaseLoweCaseValidator implements IValidator {
 
 	public function __construct(
-		private readonly PasswordPolicyConfig $config,
-		private readonly IL10N $l,
+		private PasswordPolicyConfig $config,
+		private IL10N $l,
 	) {
 	}
 

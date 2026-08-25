@@ -15,12 +15,12 @@ use OCP\IL10N;
 use OCP\IUser;
 use OCP\PreConditionNotMetException;
 
-final class Expiration implements IUpdatable, IEntryControl {
+final readonly class Expiration implements IUpdatable, IEntryControl {
 
 	public function __construct(
-		private readonly IUserConfig $userConfig,
-		private readonly PasswordPolicyConfig $policyConfig,
-		private readonly IL10N $l,
+		private IUserConfig $userConfig,
+		private PasswordPolicyConfig $policyConfig,
+		private IL10N $l,
 	) {
 	}
 
@@ -62,7 +62,7 @@ final class Expiration implements IUpdatable, IEntryControl {
 		}
 	}
 
-	protected function isPasswordExpired(IUser $user): bool {
+	private function isPasswordExpired(IUser $user): bool {
 		$updatedAt = $this->userConfig->getValueInt(
 			$user->getUID(),
 			'password_policy',
@@ -80,7 +80,7 @@ final class Expiration implements IUpdatable, IEntryControl {
 		return $expiresIn <= time();
 	}
 
-	protected function isLocalUser(IUser $user): bool {
+	private function isLocalUser(IUser $user): bool {
 		$localBackends = ['Database', 'Guests'];
 		return in_array($user->getBackendClassName(), $localBackends);
 	}

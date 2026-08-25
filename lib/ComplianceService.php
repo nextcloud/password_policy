@@ -22,16 +22,16 @@ use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 
-final class ComplianceService {
-	protected const array COMPLIANCERS = [
+final readonly class ComplianceService {
+	private const array COMPLIANCERS = [
 		HistoryCompliance::class,
 		Expiration::class,
 	];
 
 	public function __construct(
-		private readonly ContainerInterface $container,
-		private readonly LoggerInterface $logger,
-		private readonly IUserManager $userManager,
+		private ContainerInterface $container,
+		private LoggerInterface $logger,
+		private IUserManager $userManager,
 	) {
 	}
 
@@ -86,7 +86,7 @@ final class ComplianceService {
 	 * @psalm-param class-string<T> $interface
 	 * @return Iterable<T>
 	 */
-	protected function getInstance($interface): iterable {
+	private function getInstance(string $interface): iterable {
 		foreach (self::COMPLIANCERS as $compliance) {
 			try {
 				$instance = $this->container->get($compliance);

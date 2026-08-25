@@ -21,20 +21,20 @@ use OCP\Security\PasswordContext;
  *
  * @package OCA\Password_Policy
  */
-final class PasswordPolicyConfig {
+final readonly class PasswordPolicyConfig {
 	/**
 	 * PasswordContext that are supported by the app.
 	 * This does not mean all of those have been setup by the admin!
 	 * @since 3.0.0
 	 */
-	protected const array SUPPORTED_CONTEXTS = [PasswordContext::ACCOUNT, PasswordContext::SHARING];
+	private const array SUPPORTED_CONTEXTS = [PasswordContext::ACCOUNT, PasswordContext::SHARING];
 
 	/**
 	 * Config constructor.
 	 */
 	public function __construct(
-		private readonly IConfig $config,
-		private readonly IAppConfig $appConfig,
+		private IConfig $config,
+		private IAppConfig $appConfig,
 	) {
 	}
 

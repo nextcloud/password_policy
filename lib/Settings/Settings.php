@@ -14,12 +14,12 @@ use OCP\AppFramework\Services\IInitialState;
 use OCP\Settings\ISettings;
 use OCP\Util;
 
-final class Settings implements ISettings {
+final readonly class Settings implements ISettings {
 
 	public function __construct(
-		private readonly string $appName,
-		private readonly PasswordPolicyConfig $config,
-		private readonly IInitialState $initialStateService,
+		private string $appName,
+		private PasswordPolicyConfig $config,
+		private IInitialState $initialStateService,
 	) {
 	}
 

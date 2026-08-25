@@ -21,5 +21,5 @@ require_once __DIR__ . '/../../../tests/autoload.php';
 Server::get(IAppManager::class)->loadApp('password_policy');
 
 if (!class_exists(TestCase::class)) {
-	require_once('PHPUnit/Autoload.php');
+	require_once(__DIR__ . '/PHPUnit/Autoload.php');
 }

@@ -16,9 +16,9 @@ use OCP\User\Events\BeforePasswordUpdatedEvent;
 /**
  * @template-implements IEventListener<BeforePasswordUpdatedEvent>
  */
-final class BeforePasswordUpdatedEventListener implements IEventListener {
+final readonly class BeforePasswordUpdatedEventListener implements IEventListener {
 	public function __construct(
-		private readonly ComplianceService $complianceUpdater,
+		private ComplianceService $complianceUpdater,
 	) {
 	}
 

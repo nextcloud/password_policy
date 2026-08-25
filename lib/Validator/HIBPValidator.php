@@ -15,13 +15,13 @@ use OCP\IL10N;
 use OCP\Security\PasswordContext;
 use Psr\Log\LoggerInterface;
 
-final class HIBPValidator implements IValidator {
+final readonly class HIBPValidator implements IValidator {
 
 	public function __construct(
-		private readonly PasswordPolicyConfig $config,
-		private readonly IL10N $l,
-		private readonly IClientService $clientService,
-		private readonly LoggerInterface $logger,
+		private PasswordPolicyConfig $config,
+		private IL10N $l,
+		private IClientService $clientService,
+		private LoggerInterface $logger,
 	) {
 	}
 
@@ -30,6 +30,7 @@ final class HIBPValidator implements IValidator {
 		if (!$this->config->getEnforceHaveIBeenPwned($context)) {
 			return;
 		}
+
 		$hash = sha1($password);
 		$range = substr($hash, 0, 5);
 		$needle = strtoupper(substr($hash, 5));
@@ -46,8 +47,8 @@ final class HIBPValidator implements IValidator {
 					]
 				]
 			);
-		} catch (\Exception $e) {
-			$this->logger->info('Could not connect to HaveIBeenPwned API', ['exception' => $e]);
+		} catch (\Exception $exception) {
+			$this->logger->info('Could not connect to HaveIBeenPwned API', ['exception' => $exception]);
 			return;
 		}
 
