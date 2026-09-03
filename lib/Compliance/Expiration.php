@@ -9,39 +9,19 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\Compliance;
 
 use OCA\Password_Policy\PasswordPolicyConfig;
-use OCP\EventDispatcher\IEventDispatcher;
+use OCP\Config\IUserConfig;
 use OCP\HintException;
-use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IUser;
-use OCP\IUserManager;
 use OCP\PreConditionNotMetException;
 
-class Expiration implements IUpdatable, IEntryControl {
-
-	/** @var IConfig */
-	private $config;
-	/** @var PasswordPolicyConfig */
-	private $policyConfig;
-	/** @var IUserManager */
-	private $userManager;
-	/** @var IEventDispatcher */
-	private $eventDispatcher;
-	/** @var IL10N */
-	private $l;
+final readonly class Expiration implements IUpdatable, IEntryControl {
 
 	public function __construct(
-		IConfig $config,
-		PasswordPolicyConfig $policyConfig,
-		IUserManager $userManager,
-		IEventDispatcher $eventDispatcher,
-		IL10N $l,
+		private IUserConfig $userConfig,
+		private PasswordPolicyConfig $policyConfig,
+		private IL10N $l,
 	) {
-		$this->config = $config;
-		$this->policyConfig = $policyConfig;
-		$this->userManager = $userManager;
-		$this->eventDispatcher = $eventDispatcher;
-		$this->l = $l;
 	}
 
 	/**
@@ -52,19 +32,21 @@ class Expiration implements IUpdatable, IEntryControl {
 		if (!$this->isLocalUser($user)) {
 			return;
 		}
+
 		if ($this->policyConfig->getExpiryInDays() === 0) {
-			$this->config->deleteUserValue(
+			$this->userConfig->deleteUserConfig(
 				$user->getUID(),
 				'password_policy',
 				'pwd_last_updated'
 			);
 			return;
 		}
-		$this->config->setUserValue(
+
+		$this->userConfig->setValueInt(
 			$user->getUID(),
 			'password_policy',
 			'pwd_last_updated',
-			(string)time()
+			time()
 		);
 	}
 
@@ -80,12 +62,11 @@ class Expiration implements IUpdatable, IEntryControl {
 		}
 	}
 
-	protected function isPasswordExpired(IUser $user): bool {
-		$updatedAt = (int)$this->config->getUserValue(
+	private function isPasswordExpired(IUser $user): bool {
+		$updatedAt = $this->userConfig->getValueInt(
 			$user->getUID(),
 			'password_policy',
 			'pwd_last_updated',
-			0
 		);
 
 		if ($updatedAt === 0) {
@@ -99,7 +80,7 @@ class Expiration implements IUpdatable, IEntryControl {
 		return $expiresIn <= time();
 	}
 
-	protected function isLocalUser(IUser $user): bool {
+	private function isLocalUser(IUser $user): bool {
 		$localBackends = ['Database', 'Guests'];
 		return in_array($user->getBackendClassName(), $localBackends);
 	}

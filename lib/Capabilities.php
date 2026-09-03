@@ -11,7 +11,7 @@ namespace OCA\Password_Policy;
 use OCP\Capabilities\ICapability;
 use OCP\IURLGenerator;
 
-class Capabilities implements ICapability {
+final readonly class Capabilities implements ICapability {
 	public function __construct(
 		private PasswordPolicyConfig $config,
 		private IURLGenerator $urlGenerator,

@@ -18,7 +18,6 @@ use OCA\Password_Policy\Listener\PasswordUpdatedEventListener;
 use OCA\Password_Policy\Listener\SuccesfullLoginListener;
 use OCA\Password_Policy\Listener\ValidatePasswordPolicyEventListener;
 use OCP\AppFramework\App;
-use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\Authentication\Events\LoginFailedEvent;
@@ -30,7 +29,7 @@ use OCP\User\Events\BeforeUserLoggedInWithCookieEvent;
 use OCP\User\Events\PasswordUpdatedEvent;
 use OCP\User\Events\UserLoggedInEvent;
 
-class Application extends App implements IBootstrap {
+final class Application extends App implements IBootstrap {
 	public const string APP_ID = 'password_policy';
 
 	public function __construct() {
@@ -49,9 +48,5 @@ class Application extends App implements IBootstrap {
 		$context->registerEventListener(BeforeUserLoggedInWithCookieEvent::class, BeforeUserLoggedInEventListener::class);
 		$context->registerEventListener(LoginFailedEvent::class, FailedLoginListener::class);
 		$context->registerEventListener(UserLoggedInEvent::class, SuccesfullLoginListener::class);
-	}
-
-	#[\Override]
-	public function boot(IBootContext $context): void {
 	}
 }

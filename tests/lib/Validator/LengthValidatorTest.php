@@ -17,12 +17,15 @@ use OCP\IL10N;
 use OCP\Security\PasswordContext;
 use PHPUnit\Framework\MockObject\MockObject;
 
-class LengthValidatorTest extends TestCase {
+final class LengthValidatorTest extends TestCase {
 
 	private PasswordPolicyConfig&MockObject $config;
+
 	private IL10N&MockObject $l;
+
 	private IValidator $validator;
 
+	#[\Override]
 	protected function setUp(): void {
 		parent::setUp();
 
@@ -68,7 +71,7 @@ class LengthValidatorTest extends TestCase {
 	/**
 	 * @dataProvider dataValidate
 	 */
-	public function testValidate(string $password, int $length, bool $valid) {
+	public function testValidate(string $password, int $length, bool $valid): void {
 		$this->config->method('getMinLength')
 			->willReturn($length);
 
@@ -80,7 +83,7 @@ class LengthValidatorTest extends TestCase {
 		$this->validator->validate($password);
 	}
 
-	public static function dataValidate() {
+	public static function dataValidate(): array {
 		return [
 			['password', 10, false],
 			['password',  8,  true],

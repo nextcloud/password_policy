@@ -8,18 +8,18 @@ declare(strict_types=1);
 
 namespace OCA\Password_Policy;
 
-use OCP\IConfig;
+use OCP\Config\IUserConfig;
 use OCP\IUser;
 use OCP\IUserManager;
 use Psr\Log\LoggerInterface;
 
-class FailedLoginCompliance {
+final readonly class FailedLoginCompliance {
 
 	public function __construct(
-		private IConfig $config,
 		private IUserManager $userManager,
 		private LoggerInterface $logger,
 		private PasswordPolicyConfig $passwordPolicyConfig,
+		private IUserConfig $userConfig,
 	) {
 	}
 
@@ -43,7 +43,7 @@ class FailedLoginCompliance {
 		}
 
 		$attempts = $this->getAttempts($uid);
-		$attempts++;
+		++$attempts;
 
 		if ($attempts >= $allowedAttempts) {
 			$this->setAttempts($uid, 0);
@@ -63,10 +63,10 @@ class FailedLoginCompliance {
 	}
 
 	private function getAttempts(string $uid): int {
-		return (int)$this->config->getUserValue($uid, 'password_policy', 'failedLoginAttempts', '0');
+		return $this->userConfig->getValueInt($uid, 'password_policy', 'failedLoginAttempts');
 	}
 
 	private function setAttempts(string $uid, int $attempts): void {
-		$this->config->setUserValue($uid, 'password_policy', 'failedLoginAttempts', (string)$attempts);
+		$this->userConfig->setValueInt($uid, 'password_policy', 'failedLoginAttempts', $attempts);
 	}
 }

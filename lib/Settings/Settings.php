@@ -14,7 +14,7 @@ use OCP\AppFramework\Services\IInitialState;
 use OCP\Settings\ISettings;
 use OCP\Util;
 
-class Settings implements ISettings {
+final readonly class Settings implements ISettings {
 
 	public function __construct(
 		private string $appName,

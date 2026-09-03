@@ -16,7 +16,7 @@ use OCP\Security\Events\ValidatePasswordPolicyEvent;
 /**
  * @template-implements IEventListener<ValidatePasswordPolicyEvent>
  */
-class ValidatePasswordPolicyEventListener implements IEventListener {
+final readonly class ValidatePasswordPolicyEventListener implements IEventListener {
 
 	public function __construct(
 		private PasswordValidator $passwordValidator,
