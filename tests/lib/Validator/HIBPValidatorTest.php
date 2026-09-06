@@ -21,16 +21,22 @@ use OCP\Security\PasswordContext;
 use PHPUnit\Framework\MockObject\MockObject;
 use Psr\Log\LoggerInterface;
 
-class HIBPValidatorTest extends TestCase {
+final class HIBPValidatorTest extends TestCase {
 
 	private PasswordPolicyConfig&MockObject $config;
+
 	private IL10N&MockObject $l;
+
 	private IClientService&MockObject $clientService;
+
 	private LoggerInterface&MockObject $logger;
+
 	private IValidator $validator;
 
+	/** @var array<int, resource> */
 	protected static array $resources = [];
 
+	#[\Override]
 	protected function setUp(): void {
 		parent::setUp();
 
@@ -47,10 +53,12 @@ class HIBPValidatorTest extends TestCase {
 		);
 	}
 
+	#[\Override]
 	protected function tearDown(): void {
 		foreach (self::$resources as $resource) {
 			fclose($resource);
 		}
+
 		self::$resources = [];
 
 		parent::tearDown();
@@ -98,6 +106,7 @@ class HIBPValidatorTest extends TestCase {
 	}
 
 	/**
+	 * @param string|resource $responseBody
 	 * @dataProvider dataValidate
 	 */
 	public function testValidate($responseBody, bool $expected): void {
@@ -135,15 +144,8 @@ class HIBPValidatorTest extends TestCase {
 	}
 
 	public static function dataValidate(): array {
-		function mkResource(string $text) {
-			$resource = fopen('php://temp', 'r+');
-			fwrite($resource, $text);
-			rewind($resource);
-			return $resource;
-		}
-
-		$resourceBad = mkResource("7EB3AD72E4AC6182E6E831E33395F97C419:1\n7F12A5AB6972A0895D290C4792F0A326EA8:270322");
-		$resourceGood = mkResource('7EB3AD72E4AC6182E6E831E33395F97C419:1');
+		$resourceBad = self::mkResource("7EB3AD72E4AC6182E6E831E33395F97C419:1\n7F12A5AB6972A0895D290C4792F0A326EA8:270322");
+		$resourceGood = self::mkResource('7EB3AD72E4AC6182E6E831E33395F97C419:1');
 
 		return [
 			'pwned' => ["7EB3AD72E4AC6182E6E831E33395F97C419:1\n7F12A5AB6972A0895D290C4792F0A326EA8:270322", false],
@@ -152,5 +154,19 @@ class HIBPValidatorTest extends TestCase {
 			'resource like pwned' => [$resourceBad, false],
 			'resource like' => [$resourceGood, true],
 		];
+	}
+
+	/**
+	 * @return resource
+	 */
+	private static function mkResource(string $text) {
+		$resource = fopen('php://temp', 'r+');
+		if ($resource === false) {
+			throw new \RuntimeException('Failed to open temporary stream');
+		}
+
+		fwrite($resource, $text);
+		rewind($resource);
+		return $resource;
 	}
 }

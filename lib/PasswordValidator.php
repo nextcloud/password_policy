@@ -21,7 +21,7 @@ use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 
-class PasswordValidator {
+final readonly class PasswordValidator {
 
 	public function __construct(
 		private ContainerInterface $container,
@@ -64,7 +64,7 @@ class PasswordValidator {
 			}
 		}
 
-		if (!empty($errors)) {
+		if ($errors !== []) {
 			throw new HintException(
 				implode(' ', $errors),
 				implode(' ', $hints)

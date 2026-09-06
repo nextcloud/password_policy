@@ -15,7 +15,7 @@ use OCP\IL10N;
 use OCP\Security\PasswordContext;
 use Psr\Log\LoggerInterface;
 
-class HIBPValidator implements IValidator {
+final readonly class HIBPValidator implements IValidator {
 
 	public function __construct(
 		private PasswordPolicyConfig $config,
@@ -27,45 +27,49 @@ class HIBPValidator implements IValidator {
 
 	#[\Override]
 	public function validate(string $password, ?PasswordContext $context = null): void {
-		if ($this->config->getEnforceHaveIBeenPwned($context)) {
-			$hash = sha1($password);
-			$range = substr($hash, 0, 5);
-			$needle = strtoupper(substr($hash, 5));
+		if (!$this->config->getEnforceHaveIBeenPwned($context)) {
+			return;
+		}
 
-			$client = $this->clientService->newClient();
+		$hash = sha1($password);
+		$range = substr($hash, 0, 5);
+		$needle = strtoupper(substr($hash, 5));
 
-			try {
-				$response = $client->get(
-					'https://api.pwnedpasswords.com/range/' . $range,
-					[
-						'timeout' => 5,
-						'headers' => [
-							'Add-Padding' => 'true'
-						]
+		$client = $this->clientService->newClient();
+
+		try {
+			$response = $client->get(
+				'https://api.pwnedpasswords.com/range/' . $range,
+				[
+					'timeout' => 5,
+					'headers' => [
+						'Add-Padding' => 'true'
 					]
-				);
-			} catch (\Exception $e) {
-				$this->logger->info('Could not connect to HaveIBeenPwned API', ['exception' => $e]);
-				return;
-			}
+				]
+			);
+		} catch (\Exception $exception) {
+			$this->logger->info('Could not connect to HaveIBeenPwned API', ['exception' => $exception]);
+			return;
+		}
 
-			$result = $response->getBody();
-			if (is_resource($result)) {
-				$result = stream_get_contents($result);
-			}
-			if ($result === null || $result === false) {
-				$this->logger->info('Could not read content from HaveIBeenPwned API, body was null');
-				return;
-			}
-			$result = preg_replace('/^([0-9A-Z]+:0)$/m', '', $result);
+		$result = $response->getBody();
+		if (is_resource($result)) {
+			$result = stream_get_contents($result);
+		}
 
-			if ($result !== null && str_contains($result, $needle)) {
-				$message = 'Password is present in compromised password list. Please choose a different password.';
-				$message_t = $this->l->t(
-					'Password is present in compromised password list. Please choose a different password.'
-				);
-				throw new HintException($message, $message_t);
-			}
+		if ($result === null || $result === false) {
+			$this->logger->info('Could not read content from HaveIBeenPwned API, body was null');
+			return;
+		}
+
+		$result = preg_replace('/^([0-9A-Z]+:0)$/m', '', $result);
+
+		if ($result !== null && str_contains($result, $needle)) {
+			$message = 'Password is present in compromised password list. Please choose a different password.';
+			$message_t = $this->l->t(
+				'Password is present in compromised password list. Please choose a different password.'
+			);
+			throw new HintException($message, $message_t);
 		}
 	}
 }

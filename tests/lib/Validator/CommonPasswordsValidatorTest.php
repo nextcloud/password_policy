@@ -17,12 +17,15 @@ use OCP\IL10N;
 use OCP\Security\PasswordContext;
 use PHPUnit\Framework\MockObject\MockObject;
 
-class CommonPasswordsValidatorTest extends TestCase {
+final class CommonPasswordsValidatorTest extends TestCase {
 
 	private PasswordPolicyConfig&MockObject $config;
+
 	private IL10N&MockObject $l;
+
 	private IValidator $validator;
 
+	#[\Override]
 	protected function setUp(): void {
 		parent::setUp();
 
@@ -88,9 +91,10 @@ class CommonPasswordsValidatorTest extends TestCase {
 			'enforced and common' => ['banana', true, false],
 			'enforced unique' => ['bananabananabananabanana', true, true],
 		];
-		for ($i = 1; $i <= 39; $i++) {
+		for ($i = 1; $i <= 39; ++$i) {
 			$attempts[] = [str_repeat('$', $i), true, $i !== 6];
 		}
+
 		return $attempts;
 	}
 }

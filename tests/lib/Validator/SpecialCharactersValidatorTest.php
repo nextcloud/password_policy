@@ -17,12 +17,15 @@ use OCP\IL10N;
 use OCP\Security\PasswordContext;
 use PHPUnit\Framework\MockObject\MockObject;
 
-class SpecialCharactersValidatorTest extends TestCase {
+final class SpecialCharactersValidatorTest extends TestCase {
 
 	private PasswordPolicyConfig&MockObject $config;
+
 	private IL10N&MockObject $l;
+
 	private IValidator $validator;
 
+	#[\Override]
 	protected function setUp(): void {
 		parent::setUp();
 
@@ -68,7 +71,7 @@ class SpecialCharactersValidatorTest extends TestCase {
 	/**
 	 * @dataProvider dataValidate
 	 */
-	public function testValidate(string $password, bool $enforced, bool $valid) {
+	public function testValidate(string $password, bool $enforced, bool $valid): void {
 		$this->config->method('getEnforceSpecialCharacters')
 			->willReturn($enforced);
 
@@ -80,7 +83,7 @@ class SpecialCharactersValidatorTest extends TestCase {
 		$this->validator->validate($password);
 	}
 
-	public static function dataValidate() {
+	public static function dataValidate(): array {
 		return [
 			['password', false,  true],
 			['p@ssword', false,  true],

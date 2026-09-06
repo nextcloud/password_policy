@@ -11,67 +11,60 @@ namespace OCA\Password_Policy\Tests\Compliance;
 use ChristophWurst\Nextcloud\Testing\TestCase;
 use OCA\Password_Policy\Compliance\HistoryCompliance;
 use OCA\Password_Policy\PasswordPolicyConfig;
+use OCP\Config\IUserConfig;
 use OCP\HintException;
-use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IUser;
-use OCP\IUserSession;
 use OCP\Security\IHasher;
 use PHPUnit\Framework\MockObject\MockObject;
-use Psr\Log\LoggerInterface;
 
-class HistoryComplianceTest extends TestCase {
+final class HistoryComplianceTest extends TestCase {
 
 	protected HistoryCompliance $instance;
+
 	protected PasswordPolicyConfig&MockObject $policyConfig;
-	protected IConfig&MockObject $config;
-	protected IUserSession&MockObject $session;
+
+	protected IUserConfig&MockObject $userConfig;
+
 	protected IHasher&MockObject $hasher;
 
+	#[\Override]
 	public function setUp(): void {
 		parent::setUp();
 
 		$this->policyConfig = $this->createMock(PasswordPolicyConfig::class);
-		$this->config = $this->createMock(IConfig::class);
-		$this->session = $this->createMock(IUserSession::class);
+		$this->userConfig = $this->createMock(IUserConfig::class);
 		$this->hasher = $this->createMock(IHasher::class);
 
 		/** @var IL10N&MockObject */
 		$l10n = $this->createMock(IL10N::class);
-		/** @var LoggerInterface&MockObject */
-		$logger = $this->createMock(LoggerInterface::class);
 
 		$this->instance = new HistoryCompliance(
 			$this->policyConfig,
-			$this->config,
-			$this->session,
 			$this->hasher,
 			$l10n,
-			$logger,
+			$this->userConfig,
 		);
 	}
 
 	/**
 	 * @dataProvider auditCaseProvider
 	 */
-	public function testAudit(int $historySize, array $history, string $newPasswordHash, bool $expectException) {
+	public function testAudit(int $historySize, array $history, string $newPasswordHash, bool $expectException): void {
 		[$uid, $user] = $this->getUserMock();
 
 		$this->policyConfig->expects($this->any())
 			->method('getHistorySize')
 			->willReturn($historySize);
 
-		$history = \json_encode($history);
-		$this->config->expects($this->any())
-			->method('getUserValue')
-			->with($uid, 'password_policy', 'passwordHistory', '[]')
+		$this->userConfig->expects($this->any())
+			->method('getValueArray')
+			->with($uid, 'password_policy', 'passwordHistory')
 			->willReturn($history);
 
 		$this->hasher->expects($this->any())
 			->method('verify')
-			->willReturnCallback(function ($pwd, $compareHash) use ($newPasswordHash) {
-				return $newPasswordHash === $compareHash;
-			});
+			->willReturnCallback(fn (string $pwd, string $compareHash): bool => $newPasswordHash === $compareHash);
 
 		if ($expectException) {
 			$this->expectException(HintException::class);
@@ -84,24 +77,23 @@ class HistoryComplianceTest extends TestCase {
 	/**
 	 * @dataProvider updateCaseProvider
 	 */
-	public function testUpdate(int $historySize, array $history, string $newPasswordHash) {
+	public function testUpdate(int $historySize, array $history, string $newPasswordHash): void {
 		[$uid, $user] = $this->getUserMock();
 
 		$this->policyConfig->expects($this->any())
 			->method('getHistorySize')
 			->willReturn($historySize);
 
-		$history = \json_encode($history);
-		$this->config->expects($this->any())
-			->method('getUserValue')
-			->with($uid, 'password_policy', 'passwordHistory', '[]')
+		$this->userConfig->expects($this->any())
+			->method('getValueArray')
+			->with($uid, 'password_policy', 'passwordHistory')
 			->willReturn($history);
-		$this->config->expects($this->once())
-			->method('setUserValue')
+		$this->userConfig->expects($this->once())
+			->method('setValueArray')
 			->with($uid, 'password_policy', 'passwordHistory', $this->anything())
-			->willReturnCallback(function ($uid, $app, $key, $value) use ($newPasswordHash) {
-				$history = \json_decode($value, true);
-				$this->assertSame($newPasswordHash, $history[0]);
+			->willReturnCallback(function (string $uid, string $app, string $key, array $value) use ($newPasswordHash): bool {
+				$this->assertSame($newPasswordHash, $value[0]);
+				return true;
 			});
 
 		$this->hasher->expects($this->once())
@@ -144,6 +136,9 @@ class HistoryComplianceTest extends TestCase {
 		];
 	}
 
+	/**
+	 * @return array{string, IUser&MockObject}
+	 */
 	protected function getUserMock(): array {
 		$uid = 'alice';
 		$user = $this->createMock(IUser::class);

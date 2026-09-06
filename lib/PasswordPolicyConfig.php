@@ -21,13 +21,13 @@ use OCP\Security\PasswordContext;
  *
  * @package OCA\Password_Policy
  */
-class PasswordPolicyConfig {
+final readonly class PasswordPolicyConfig {
 	/**
 	 * PasswordContext that are supported by the app.
 	 * This does not mean all of those have been setup by the admin!
 	 * @since 3.0.0
 	 */
-	protected const array SUPPORTED_CONTEXTS = [PasswordContext::ACCOUNT, PasswordContext::SHARING];
+	private const array SUPPORTED_CONTEXTS = [PasswordContext::ACCOUNT, PasswordContext::SHARING];
 
 	/**
 	 * Config constructor.
@@ -151,8 +151,6 @@ class PasswordPolicyConfig {
 
 	/**
 	 * Enforce checking against haveibeenpwned.com
-	 *
-	 * @param bool $enforceHaveIBeenPwned
 	 */
 	public function setEnforceHaveIBeenPwned(bool $enforceHaveIBeenPwned, ?PasswordContext $context = null): void {
 		$this->appConfig->setValueBool(
@@ -221,7 +219,6 @@ class PasswordPolicyConfig {
 	/**
 	 * Check if a configuration for this password context is available
 	 * @param PasswordContext $context
-	 * @return bool
 	 * @since 3.0.0
 	 */
 	private function hasConfigurationContext(?PasswordContext $context = null): bool {
@@ -234,7 +231,7 @@ class PasswordPolicyConfig {
 	}
 
 	private function getScopedAppConfig(string $key, ?PasswordContext $context): string {
-		if ($context === null || $this->hasConfigurationContext($context) === false) {
+		if (!$context instanceof \OCP\Security\PasswordContext || $this->hasConfigurationContext($context) === false) {
 			$context = PasswordContext::ACCOUNT;
 		}
 

@@ -22,8 +22,8 @@ use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 
-class ComplianceService {
-	protected const array COMPLIANCERS = [
+final readonly class ComplianceService {
+	private const array COMPLIANCERS = [
 		HistoryCompliance::class,
 		Expiration::class,
 	];
@@ -40,7 +40,7 @@ class ComplianceService {
 			try {
 				$instance->update($user, $password);
 			} catch (HintException $e) {
-				$this->logger->info('Password could not be updated ' . get_class($instance) . ' with following hint: ' . $e->getMessage());
+				$this->logger->info('Password could not be updated ' . $instance::class . ' with following hint: ' . $e->getMessage());
 				throw $e;
 			}
 		}
@@ -51,7 +51,7 @@ class ComplianceService {
 			try {
 				$instance->audit($user, $password);
 			} catch (HintException $e) {
-				$this->logger->info('Password failed audit ' . get_class($instance) . ' with following hint: ' . $e->getMessage());
+				$this->logger->info('Password failed audit ' . $instance::class . ' with following hint: ' . $e->getMessage());
 				throw $e;
 			}
 		}
@@ -67,7 +67,8 @@ class ComplianceService {
 		/** @var IEntryControl $instance */
 		foreach ($this->getInstance(IEntryControl::class) as $instance) {
 			try {
-				$user = $this->userManager->get((string)$uid);
+				/** @var string $uid */
+				$user = $this->userManager->get($uid);
 
 				if ($user === null) {
 					break;
@@ -75,7 +76,7 @@ class ComplianceService {
 
 				$instance->entryControl($user, $password);
 			} catch (HintException $e) {
-				throw new LoginException($e->getHint());
+				throw new LoginException($e->getHint(), $e->getCode(), $e);
 			}
 		}
 	}
@@ -85,7 +86,7 @@ class ComplianceService {
 	 * @psalm-param class-string<T> $interface
 	 * @return Iterable<T>
 	 */
-	protected function getInstance($interface): iterable {
+	private function getInstance(string $interface): iterable {
 		foreach (self::COMPLIANCERS as $compliance) {
 			try {
 				$instance = $this->container->get($compliance);

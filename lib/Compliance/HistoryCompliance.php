@@ -9,24 +9,20 @@ declare(strict_types=1);
 namespace OCA\Password_Policy\Compliance;
 
 use OCA\Password_Policy\PasswordPolicyConfig;
+use OCP\Config\IUserConfig;
 use OCP\HintException;
-use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IUser;
-use OCP\IUserSession;
 use OCP\PreConditionNotMetException;
 use OCP\Security\IHasher;
-use Psr\Log\LoggerInterface;
 
-class HistoryCompliance implements IAuditor, IUpdatable {
+final readonly class HistoryCompliance implements IAuditor, IUpdatable {
 
 	public function __construct(
-		protected PasswordPolicyConfig $policyConfig,
-		protected IConfig $config,
-		protected IUserSession $session,
-		protected IHasher $hasher,
-		protected IL10N $l,
-		protected LoggerInterface $logger,
+		private PasswordPolicyConfig $policyConfig,
+		private IHasher $hasher,
+		private IL10N $l,
+		private IUserConfig $userConfig,
 	) {
 	}
 
@@ -59,7 +55,7 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 	public function update(IUser $user, string $password): void {
 		$historySize = $this->policyConfig->getHistorySize();
 		if ($historySize === 0) {
-			$this->config->deleteUserValue($user->getUID(), 'password_policy', 'passwordHistory');
+			$this->userConfig->deleteUserConfig($user->getUID(), 'password_policy', 'passwordHistory');
 			return;
 		}
 
@@ -67,35 +63,28 @@ class HistoryCompliance implements IAuditor, IUpdatable {
 		array_unshift($history, $this->hasher->hash($password));
 		$history = \array_slice($history, 0, $historySize);
 
-		$this->config->setUserValue(
+		$this->userConfig->setValueArray(
 			$user->getUID(),
 			'password_policy',
 			'passwordHistory',
-			(string)\json_encode($history)
+			$history
 		);
 	}
 
 	/**
 	 * @return list<string> List of previously used passwords (hashed)
 	 */
-	protected function getHistory(IUser $user): array {
-		$history = $this->config->getUserValue(
+	private function getHistory(IUser $user): array {
+		$history = $this->userConfig->getValueArray(
 			$user->getUID(),
 			'password_policy',
 			'passwordHistory',
-			'[]'
 		);
-		/** @var string[]|string */
-		$history = \json_decode($history, true);
-		if (!is_array($history)) {
-			$this->logger->warning(
-				'Received password history of {uid} had the unexpected value of {history}, resetting.',
-				['app' => 'password_policy', 'uid' => $user->getUID(), 'history' => $history]
-			);
-			$history = [];
-		}
+
 		$history = \array_slice($history, 0, $this->policyConfig->getHistorySize());
 
-		return \array_values($history);
+		/** @var list<string> $history */
+		$history = \array_values($history);
+		return $history;
 	}
 }
