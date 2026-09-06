@@ -14,11 +14,6 @@
       <code><![CDATA[setUserValue]]></code>
     </DeprecatedMethod>
   </file>
-  <file src="lib/ComplianceService.php">
-    <DeprecatedMethod>
-      <code><![CDATA[\OCP\Util::emitHook('\OCA\Files_Sharing\API\Server2Server', 'preLoginNameUsedAsUserName', ['uid' => &$uid])]]></code>
-    </DeprecatedMethod>
-  </file>
   <file src="lib/FailedLoginCompliance.php">
     <DeprecatedMethod>
       <code><![CDATA[getUserValue]]></code>
