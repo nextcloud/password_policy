@@ -16,7 +16,7 @@ OC.L10N.register(
     "Add policy set" : "Pridať zoznam zásad",
     "Login policies" : "Zásady prihlasovania",
     "Password history size" : "Veľkosť histórie hesiel",
-    "Number of passwords to keep (securely hashed) to prevent users from reusing previously used passwords." : "Počet hesiel, ktoré sa majú uchovávať (bezpečne hašované), aby sa užívateľom zabránilo v opätovnom použití predtým použitých hesiel.",
+    "Number of passwords to keep (securely hashed) to prevent users from reusing previously used passwords." : "Počet hesiel, ktoré sa majú uchovávať (bezpečne hašované), aby sa používateľom zabránilo v opätovnom použití predtým použitých hesiel.",
     "Maximum login attempts" : "Maximálny počet pokusov o prihlásenie",
     "Number of login attempts before the user account will be disabled until manual action is taken. (0 for no limit)" : "Počet pokusov o prihlásenie pred deaktiváciou užívateľského účtu, kým sa nevykoná manuálna akcia. (0 bez obmedzenia)",
     "Please note, this option is meant to protect attacked accounts. Disabled accounts have to be re-enabled manually by administration. Attackers that try to guess passwords of accounts will have their IP address blocked by the bruteforce protection independent from this setting." : "Upozorňujeme, že táto možnosť je určená na ochranu napadnutých účtov. Deaktivované účty je potrebné znova povoliť manuálne administráciou. Útočníkom, ktorí sa pokúsia uhádnuť heslá účtov, bude ich IP adresa zablokovaná ochranou bruteforce nezávisle od tohto nastavenia.",
