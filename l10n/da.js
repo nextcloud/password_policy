@@ -14,7 +14,7 @@ OC.L10N.register(
     "Allow admin to define certain pre-conditions for password, e.g. enforce a minimum length" : "Tillad en administrator af fastsætte krav til adgangskoder, f.eks. at sætte en mindstelængde",
     "General password policies" : "Generelle adgangskodepolitikker",
     "Add policy set" : "Tilføj politiksæt",
-    "Login policies" : "Log på politikker",
+    "Login policies" : "Politikker for login",
     "Password history size" : "Størrelse på adgangskodehistorik",
     "Number of passwords to keep (securely hashed) to prevent users from reusing previously used passwords." : "Antal adgangskoder, der skal opbevares (sikkert hashed) for at forhindre brugere i at genbruge tidligere brugte adgangskoder.",
     "Maximum login attempts" : "Maksimalt antal loginforsøg",
