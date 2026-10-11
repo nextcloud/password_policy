@@ -11,15 +11,17 @@ namespace OCA\Password_Policy\Settings;
 use OCA\Password_Policy\PasswordPolicyConfig;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Services\IInitialState;
-use OCP\Settings\ISettings;
+use OCP\IL10N;
+use OCP\Settings\IDelegatedSettings;
 use OCP\Util;
 
-class Settings implements ISettings {
+class Settings implements IDelegatedSettings {
 
 	public function __construct(
 		private string $appName,
 		private PasswordPolicyConfig $config,
 		private IInitialState $initialStateService,
+		private IL10N $l10n,
 	) {
 	}
 
@@ -45,5 +47,15 @@ class Settings implements ISettings {
 	#[\Override]
 	public function getPriority(): int {
 		return 50;
+	}
+
+	#[\Override]
+	public function getName(): string {
+		return $this->l10n->t('Password Policy');
+	}
+
+	#[\Override]
+	public function getAuthorizedAppConfig(): array {
+		return [];
 	}
 }
