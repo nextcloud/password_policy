@@ -13,8 +13,9 @@ import NcInputField from '@nextcloud/vue/components/NcInputField'
 import NcNoteCard from '@nextcloud/vue/components/NcNoteCard'
 import { logger } from '../logger.ts'
 
-const config = ref(loadState<ILoginConfig>('password_policy', 'loginConfig'))
-const oldConfig = ref(loadState<ILoginConfig>('password_policy', 'loginConfig'))
+const initialConfig = loadState<ILoginConfig>('password_policy', 'loginConfig')
+const config = ref(initialConfig)
+const oldConfig = <ILoginConfig>{ ...initialConfig }
 
 watch(config, saveComplianceConfig, { deep: true })
 /**
@@ -26,17 +27,17 @@ function saveComplianceConfig(): void {
 		let numericValue = Math.max(value || 0, 0)
 		numericValue = Number.isNaN(numericValue) ? 0 : numericValue
 
-		logger.debug('Saving compliance config', { numericValue, value, oldValue: oldConfig.value[key] })
+		logger.debug('Saving compliance config', { numericValue, value, oldValue: oldConfig[key] })
 
-		if (oldConfig.value[key] !== numericValue) {
+		if (oldConfig[key] !== numericValue) {
 			// save the value on the backend
 			window.OCP.AppConfig.setValue('password_policy', key, JSON.stringify(numericValue))
 			// update in the config
-			oldConfig.value[key] = numericValue
+			oldConfig[key] = numericValue
 		}
 		// check if the current config has an invalid value and replace with the sanitized if it has
-		if (config.value[key] !== numericValue) {
-			config.value[key] = numericValue
+		if (config[key] !== numericValue) {
+			config[key] = numericValue
 		}
 	}
 }
