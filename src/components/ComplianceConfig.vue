@@ -36,8 +36,8 @@ function saveComplianceConfig(): void {
 			oldConfig[key] = numericValue
 		}
 		// check if the current config has an invalid value and replace with the sanitized if it has
-		if (config[key] !== numericValue) {
-			config[key] = numericValue
+		if (config.value[key] !== numericValue) {
+			config.value[key] = numericValue
 		}
 	}
 }
