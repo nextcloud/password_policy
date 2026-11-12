@@ -71,7 +71,7 @@ const enforceUpperLowerCase = computed({
 		<NcInputField
 			v-model="minLength"
 			:class="$style.inputField"
-			:label="t('password_policy', 'Minimum password length')"
+			:label="t('password_policy', 'Minimum password length (characters)')"
 			type="number"
 			min="0" />
 		<NcCheckboxRadioSwitch
