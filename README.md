@@ -8,7 +8,9 @@
 
 This app enables the the admin to define certain rules for passwords, for example the minimum length of a password.
 
-By default the app enforces a minimum password length of 8 characters and checks every password against the 1.000.000 most common passwords.
+By default the app enforces a minimum password length of 10 characters and checks every password against the 1.000.000 most common passwords.
+
+Password length counts Unicode code points, not UTF-8 bytes. Combining marks and emoji sequences can therefore count as multiple characters even when displayed as a single character.
 
 Currently the app checks passwords for public link shares and for user passwords if the database backend is used.
 

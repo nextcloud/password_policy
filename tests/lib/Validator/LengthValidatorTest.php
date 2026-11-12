@@ -83,8 +83,16 @@ class LengthValidatorTest extends TestCase {
 	public static function dataValidate() {
 		return [
 			['password', 10, false],
-			['password',  8,  true],
-			['password',  6,  true],
+			['password', 8, true],
+			['password', 6, true],
+			['密码密码', 4, true],
+			['密码密码', 5, false],
+			['éééééééé', 8, true],
+			['éééééééé', 9, false],
+			["\u{1F600}", 1, true],
+			["\u{1F600}", 2, false],
+			["e\u{0301}", 2, true],
+			["e\u{0301}", 3, false],
 		];
 	}
 }
