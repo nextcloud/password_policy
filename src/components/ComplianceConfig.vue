@@ -15,7 +15,7 @@ import { logger } from '../logger.ts'
 
 const initialConfig = loadState<ILoginConfig>('password_policy', 'loginConfig')
 const config = ref(initialConfig)
-const oldConfig = { ...initialConfig } as ILoginConfig
+const oldConfig: ILoginConfig = { ...initialConfig }
 
 watch(config, saveComplianceConfig, { deep: true })
 /**
