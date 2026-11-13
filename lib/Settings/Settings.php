@@ -32,6 +32,8 @@ class Settings implements ISettings {
 			'historySize' => $this->config->getHistorySize(),
 			'expiration' => $this->config->getExpiryInDays(),
 			'maximumLoginAttempts' => $this->config->getMaximumLoginAttempts(),
+			'failedLoginLockoutDuration' => $this->config->getFailedLoginLockoutDuration(),
+			'notifyUserOnLockout' => $this->config->getNotifyUserOnLockout()
 		]);
 
 		return new TemplateResponse($this->appName, 'settings');
