@@ -24,7 +24,7 @@ class LengthValidator implements IValidator {
 	#[\Override]
 	public function validate(string $password, ?PasswordContext $context = null): void {
 		$minLength = $this->config->getMinLength($context);
-		if (strlen($password) < $minLength) {
+		if (mb_strlen($password, 'UTF-8') < $minLength) {
 			$message = 'Password needs to be at least ' . $minLength . ' characters long.';
 			$message_t = $this->l->t(
 				'Password needs to be at least %s characters long.', [$minLength]
