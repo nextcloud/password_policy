@@ -21,4 +21,6 @@ export interface ILoginConfig {
 	historySize: number
 	maximumLoginAttempts: number
 	expiration: number
+	failedLoginLockoutDuration: number
+	notifyUserOnLockout: boolean
 }

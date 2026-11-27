@@ -15,6 +15,7 @@ use OCA\Password_Policy\Compliance\HistoryCompliance;
 use OCA\Password_Policy\Compliance\IAuditor;
 use OCA\Password_Policy\Compliance\IEntryControl;
 use OCA\Password_Policy\Compliance\IUpdatable;
+use OCA\Password_Policy\Compliance\Lockout;
 use OCP\HintException;
 use OCP\IUser;
 use OCP\IUserManager;
@@ -26,6 +27,7 @@ class ComplianceService {
 	protected const array COMPLIANCERS = [
 		HistoryCompliance::class,
 		Expiration::class,
+		Lockout::class,
 	];
 
 	public function __construct(

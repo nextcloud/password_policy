@@ -24,6 +24,10 @@
 		<nextcloud min-version="36" max-version="36" />
 	</dependencies>
 
+	<commands>
+		<command>OCA\Password_Policy\Command\Lockout</command>
+	</commands>
+
 	<settings>
 		<admin>OCA\Password_Policy\Settings\Settings</admin>
 	</settings>

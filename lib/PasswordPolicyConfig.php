@@ -29,6 +29,8 @@ class PasswordPolicyConfig {
 	 */
 	protected const array SUPPORTED_CONTEXTS = [PasswordContext::ACCOUNT, PasswordContext::SHARING];
 
+	protected const int DEFAULT_LOCKOUT_DURATION = 15;
+	protected const bool DEFAULT_NOTIFY_USER_ON_LOCKOUT = true;
 	/**
 	 * Config constructor.
 	 */
@@ -183,6 +185,22 @@ class PasswordPolicyConfig {
 		return $this->appConfig->getValueInt(
 			Application::APP_ID,
 			'maximumLoginAttempts',
+		);
+	}
+
+	public function getFailedLoginLockoutDuration(): int {
+		return $this->appConfig->getValueInt(
+			Application::APP_ID,
+			'failedLoginLockoutDuration',
+			self::DEFAULT_LOCKOUT_DURATION
+		);
+	}
+
+	public function getNotifyUserOnLockout(): bool {
+		return $this->appConfig->getValueBool(
+			Application::APP_ID,
+			'notifyUserOnLockout',
+			self::DEFAULT_NOTIFY_USER_ON_LOCKOUT
 		);
 	}
 

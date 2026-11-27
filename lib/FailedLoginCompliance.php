@@ -8,7 +8,8 @@ declare(strict_types=1);
 
 namespace OCA\Password_Policy;
 
-use OCP\IConfig;
+use OCA\Password_Policy\AppInfo\Application;
+use OCP\Config\IUserConfig;
 use OCP\IUser;
 use OCP\IUserManager;
 use Psr\Log\LoggerInterface;
@@ -16,10 +17,11 @@ use Psr\Log\LoggerInterface;
 class FailedLoginCompliance {
 
 	public function __construct(
-		private IConfig $config,
+		private IUserConfig $config,
 		private IUserManager $userManager,
 		private LoggerInterface $logger,
 		private PasswordPolicyConfig $passwordPolicyConfig,
+		private LockoutService $lockoutService,
 	) {
 	}
 
@@ -47,11 +49,14 @@ class FailedLoginCompliance {
 
 		if ($attempts >= $allowedAttempts) {
 			$this->setAttempts($uid, 0);
-			$user->setEnabled(false);
+			$this->lockoutService->lockout($user);
 			$this->logger->warning(
-				'Too many consecutive failed login attempts, disabling user',
-				['app' => 'password_policy', 'uid' => $uid]
+				'Too many consecutive failed login attempts, locking out user',
+				['app' => Application::APP_ID, 'uid' => $uid]
 			);
+			if ($this->passwordPolicyConfig->getNotifyUserOnLockout()) {
+				$this->lockoutService->notifyMail($user);
+			}
 			return;
 		}
 
@@ -63,10 +68,10 @@ class FailedLoginCompliance {
 	}
 
 	private function getAttempts(string $uid): int {
-		return (int)$this->config->getUserValue($uid, 'password_policy', 'failedLoginAttempts', '0');
+		return (int)$this->config->getValueString($uid, Application::APP_ID, 'failedLoginAttempts', '0');
 	}
 
 	private function setAttempts(string $uid, int $attempts): void {
-		$this->config->setUserValue($uid, 'password_policy', 'failedLoginAttempts', (string)$attempts);
+		$this->config->setValueString($uid, Application::APP_ID, 'failedLoginAttempts', (string)$attempts);
 	}
 }
